@@ -1,0 +1,11 @@
+\beamer@endinputifotherversion {3.24pt}
+\select@language {english}
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@sectionintoc {2}{Super Resolution}{5}{0}{2}
+\beamer@sectionintoc {3}{Problem Statement}{8}{0}{3}
+\beamer@sectionintoc {4}{Dataset}{9}{0}{4}
+\beamer@sectionintoc {5}{Deep Learning}{11}{0}{5}
+\beamer@sectionintoc {6}{Super Resolution Convolutional Neural Network}{15}{0}{6}
+\beamer@sectionintoc {7}{Research}{23}{0}{7}
+\beamer@sectionintoc {8}{Conclusion}{41}{0}{8}
+\beamer@sectionintoc {9}{Future work}{44}{0}{9}

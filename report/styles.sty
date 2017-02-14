@@ -1,0 +1,446 @@
+\usepackage{standalone}
+\usepackage{longtable}
+\usepackage{pbox}
+\usepackage[table]{xcolor}
+\definecolor{light-gray}{gray}{0.8}
+%\rowcolors{1}{magenta}{cyan}
+\rowcolors{1}{}{light-gray}
+\let\oldtabular\tabular
+\let\endoldtabular\endtabular
+\renewenvironment{tabular}{\global\rownum=0\relax\oldtabular}{\endoldtabular}
+\usepackage[acronym,toc,nomain]{glossaries}
+\makeglossaries
+\usepackage{etex}
+\usepackage{makecell}
+\usepackage{bytefield}
+\usepackage{xcolor,colortbl}
+\usepackage{a4wide}
+\usepackage[inner=1.5in, outer=1.0in, bottom=1in]{geometry}
+\usepackage[utf8] {inputenc}
+\usepackage[T1] {fontenc}
+% \usepackage{amsmath}
+\usepackage{amsthm} % is included in mathtools
+\newtheorem{theorem}{Theorem}
+\usepackage{mathtools}
+\usepackage{relsize}
+\usepackage{hhline}
+\DeclarePairedDelimiter{\ceil}{\lceil}{\rceil}
+\DeclarePairedDelimiter{\floor}{\lfloor}{\rfloor}
+\usepackage{amsfonts}
+\usepackage{verbatim}
+\usepackage{todonotes}
+\usepackage{calc}
+\usepackage{algorithm}
+\usepackage{algorithmicx}
+\makeatletter
+\renewcommand{\ALG@beginalgorithmic}{\scriptsize}
+\makeatother
+\usepackage{algpseudocode}
+\usepackage{multirow}
+\usepackage{array}
+\usepackage{styles/arydshln}
+\usepackage{styles/pgf-umlsd}
+\usepackage{pgfgantt}
+\algtext*{EndWhile}% Remove "end while" text
+\algtext*{EndIf}% Remove "end if" text
+\algtext*{EndFor}% Remove "end for" text
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{setspace}
+\usepackage{pdfpages}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\setitemize{noitemsep}
+\usepackage{wrapfig}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usetikzlibrary{chains}
+\usepgflibrary{shapes.geometric}
+\usetikzlibrary{shapes}
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows}
+\usetikzlibrary{automata}
+\usetikzlibrary{patterns}
+\usetikzlibrary{positioning}
+\usepackage{styles/tikz-3dplot}
+\usepackage{ifthen}
+\usepackage{xifthen}
+\usepackage{xstring}
+\usepackage{pgfopts}
+\usepackage{calc}
+\usepackage{rotating}
+\usepackage{styles/tikz-uml}
+\include{styles/tikz-uml-krillo}
+\include{styles/tikz-codarts}
+\include{styles/tikz-telecom}
+\include{styles/tikz-computer}
+\include{styles/tikz-cisco}
+\usepackage{circuitikz}
+\usepackage{multicol}
+\newcommand*{\tabbox}[2][t]{\vspace{0pt}\parbox[#1][3.7\baselineskip]{1cm}{\strut#2\strut}}
+\usepackage{float}
+\usepackage{graphicx}
+\usepackage{tabu}
+\usepackage{lastpage}
+\usepackage{lmodern}
+\usepackage[toc,page]{appendix}
+\usepackage[titles]{tocloft}
+\usepackage{listings}
+\usepackage{DejaVuSansMono}
+\usepackage{tabularx}
+\usepackage{fancyhdr}
+\usepackage{cancel}
+\setlength{\headheight}{15pt}
+\pagestyle{fancyplain}
+\usepackage{chngcntr}
+\usepackage{footnote}
+\makesavenoteenv{tabular}
+\makesavenoteenv{table}
+\counterwithout{footnote}{chapter}
+\usepackage[hang,flushmargin,multiple]{footmisc}
+\fancyhf{} % Ingen linje
+% Skriv kapitelnavn som lowercase
+\renewcommand{\chaptermark}[1]{\markboth{#1}{}}
+\lhead[\fancyplain{}{\textit{\thechapter.\ \leftmark}}]{}
+\rhead[]{\fancyplain{}{\textit{\leftmark\ \thechapter.}}}
+\rfoot[]{\thepage}
+\lfoot[\thepage]{}
+
+\definecolor{lightgray}{gray}{0.90}
+\newcommand{\colorbitbox}[3]{%
+\rlap{\bitbox{#2}{\color{#1}\rule{\width}{\height}}}%
+\bitbox{#2}{#3}}
+
+\setcounter{tocdepth}{1}
+
+%\renewcommand{\appendixname}{Bilag}
+%\renewcommand{\appendixpagename}{Bilag}
+%\renewcommand{\appendixtocname}{Bilag}
+
+\usepackage{caption}
+\captionsetup{font=footnotesize,labelfont=bf}
+\captionsetup[figure]{labelfont=bf}
+\usepackage{titlesec}
+\titleformat{\chapter}{\normalfont\LARGE\bfseries}{\thechapter}{1em}{}
+\titlespacing*{\chapter}{0pt}{-50pt}{20pt}
+%\captionsetup[lstlisting]{labelfont=bf}
+\usepackage{MnSymbol}
+%\lstset{basicstyle=\scriptsize, tabsize=2, captionpos=b, frame=single}
+\lstset{prebreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\rhookswarrow}}}
+\lstset{breaklines=true, breakatwhitespace=true}
+\renewcommand{\lstlistingname}{Code}
+
+\lstset{
+  language=c,
+  basicstyle=\ttfamily\scriptsize,
+  identifierstyle=\ttfamily,
+  keywordstyle=\ttfamily,
+  numbers=left,
+  numbersep=5pt,
+  xleftmargin=20pt,
+  frame=tb,
+  framexleftmargin=20pt,
+  showstringspaces=false
+}
+
+\renewcommand*\thelstnumber{\arabic{lstnumber}:}
+
+\DeclareCaptionFormat{mylst}{\hrule#1#2#3}
+\captionsetup[lstlisting]{format=mylst,labelfont=bf,singlelinecheck=off,labelsep=space}
+
+
+\usepackage{suffix}
+\newcommand{\algoref}[1]{Algorithm~\ref{alg:#1}}
+\newcommand{\appendixref}[1]{Appendix~-~\emph{\nameref{app:#1}}}
+\newcommand{\appendixfigref}[2]{Appendix~\emph{\nameref{app:#1}~-~Figure~\ref{fig:#2}}}
+\WithSuffix\newcommand\appendixref*[1]{Appendix~-~\emph{\nameref{app:#1}}}
+%\newcommand{\@@appendixref}[1]{Appendix~\emph{\ref{app:#1}}}
+\newcommand{\reqref}[1]{Req. \ref{req:#1_long}}
+\newcommand{\reqrefnotext}[1]{Req. \ref{req:#1}}
+\newcommand{\reqrefshort}[1]{\ref{req:#1_long}}
+\newcommand{\reqrefshortnotext}[1]{\ref{req:#1}}
+\captionsetup[subfigure]{labelformat=parens}
+\newcommand{\subfigref}[1]{(\subref{fig:#1})}
+\newcommand{\sectionref}[1]{Section~\emph{\ref{sec:#1}~\nameref{sec:#1}}}
+\WithSuffix\newcommand\sectionref*[1]{Section~\emph{\ref{sec:#1}}}
+\newcommand{\chapterref}[1]{Chapter~\emph{\ref{sec:#1}~\nameref{sec:#1}}}
+\WithSuffix\newcommand\chapterref*[1]{Chapter~\emph{\ref{sec:#1}}}
+\newcommand{\figref}[1]{Figure~\ref{fig:#1}}
+\newcommand{\listingref}[1]{\lstlistingname~\ref{lst:#1}}
+\newcommand{\tableref}[1]{Table~\ref{tab:#1}}
+\newcommand{\theoremref}[1]{Theorem~\ref{th:#1}}
+\newcommand{\equationref}[1]{Equation~\ref{eq:#1}}
+
+
+\newcounter{req_counter}
+\setcounter{req_counter}{1}
+
+\makeatletter
+\newcommand{\reqlabel}[2]{%
+  \label{#1}
+  \protected@write \@auxout {}{\string \newlabel {#1_long}{{\ref{#1} (#2)}{\thepage}{#2}{#1}{}}}%
+  \hypertarget{#1}{#2}
+}
+\makeatother
+
+\newcommand{\fullfigure}[3]{
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[width=.95\textwidth]{#1}
+    \caption{#3}
+    \label{fig:#2}
+  \end{figure}
+}
+
+\newcommand{\fullfigurehere}[3]{
+  \begin{figure}[H]
+    \centering
+    \includegraphics[width=.95\textwidth]{#1}
+    \caption{#3}
+    \label{fig:#2}
+  \end{figure}
+}
+
+\newcommand{\fullfigureimport}[3]{
+  \begin{figure}[ht]
+    \centering
+    \input{#1}
+    \ifthenelse{\equal{#3}{}}{}{
+      \caption{#3}
+    }
+    \ifthenelse{\equal{#2}{}}{}{
+      \label{fig:#2}
+    }
+  \end{figure}
+}
+
+\newcommand{\largefigureimport}[3]{
+  \begin{figure}[ht]
+    \centering
+    \scalebox{0.8}{\input{#1}}
+    \ifthenelse{\equal{#3}{}}{}{
+      \caption{#3}
+    }
+    \ifthenelse{\equal{#2}{}}{}{
+      \label{fig:#2}
+    }
+  \end{figure}
+}
+
+\newcommand{\mediumfigureimport}[3]{
+  \begin{figure}[ht]
+    \centering
+    \scalebox{0.66}{\input{#1}}
+    \ifthenelse{\equal{#3}{}}{}{
+      \caption{#3}
+    }
+    \ifthenelse{\equal{#2}{}}{}{
+      \label{fig:#2}
+    }
+  \end{figure}
+}
+
+\newcommand{\smallfigureimport}[3]{
+  \begin{figure}[ht]
+    \centering
+    \scalebox{0.50}{\input{#1}}
+    \ifthenelse{\equal{#3}{}}{}{
+      \caption{#3}
+    }
+    \ifthenelse{\equal{#2}{}}{}{
+      \label{fig:#2}
+    }
+  \end{figure}
+}
+
+\newcommand{\tinyfigureimport}[3]{
+  \begin{figure}[ht]
+    \centering
+    \scalebox{0.25}{\input{#1}}
+    \ifthenelse{\equal{#3}{}}{}{
+      \caption{#3}
+    }
+    \ifthenelse{\equal{#2}{}}{}{
+      \label{fig:#2}
+    }
+  \end{figure}
+}
+
+\newcommand{\fullfigureimporthere}[3]{
+  \begin{figure}[H]
+    \centering
+    \input{#1}
+    \ifthenelse{\equal{#3}{}}{}{
+      \caption{#3}
+    }
+    \ifthenelse{\equal{#2}{}}{}{
+      \label{fig:#2}
+    }
+  \end{figure}
+}
+
+\newcommand{\fullfigureimporttop}[3]{
+  \begin{figure}[t]
+    \centering
+    \input{#1}
+    \ifthenelse{\equal{#3}{}}{}{
+      \caption{#3}
+    }
+    \ifthenelse{\equal{#2}{}}{}{
+      \label{fig:#2}
+    }
+  \end{figure}
+}
+
+\newcommand{\fullpagefigure}[3]{
+  \begin{figure}[hbtp]
+    \centering
+    \includegraphics{#1}
+    \caption{#3}
+    \label{fig:#2}
+  \end{figure}
+}
+
+
+\newcommand{\fullpagefigureimport}[3]{
+  \begin{figure}[hbtp]
+    \centering
+    \input{#1}
+    \caption{#3}
+    \label{fig:#2}
+  \end{figure}
+}
+
+\newcommand{\smallfigure}[3]{
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[width=.55\textwidth,height=.55\textwidth,keepaspectratio]{#1}
+    \caption{#3}
+    \label{fig:#2}
+  \end{figure}
+}
+
+\newcommand{\smallerfigure}[3]{
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[width=.50\textwidth,height=.55\textwidth,keepaspectratio]{#1}
+    \caption{#3}
+    \label{fig:#2}
+  \end{figure}
+}
+
+\newcommand{\tinyfigure}[3]{
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[width=.25\textwidth,height=.25\textwidth,keepaspectratio]{#1}
+    \caption{#3}
+    \label{fig:#2}
+  \end{figure}
+}
+
+
+\newcommand{\mediumfigure}[3]{
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[width=.65\textwidth,height=.65\textwidth,keepaspectratio]{#1}
+    \caption{#3}
+    \label{fig:#2}
+  \end{figure}
+}
+
+\newcommand{\largefigure}[3]{
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[width=.75\textwidth,height=.75\textwidth,keepaspectratio]{#1}
+    \caption{#3}
+    \label{fig:#2}
+  \end{figure}
+}
+
+\newcommand{\largerfigure}[3]{
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[width=.85\textwidth,height=.85\textwidth,keepaspectratio]{#1}
+    \caption{#3}
+    \label{fig:#2}
+  \end{figure}
+}
+
+\newcommand{\evenlargerfigure}[3]{
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[width=.99\textwidth,height=.95\textwidth,keepaspectratio]{#1}
+    \caption{#3}
+    \label{fig:#2}
+  \end{figure}
+}
+
+\newcommand{\largestfigure}[3]{
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[width=1.05\textwidth,height=1.05\textwidth,keepaspectratio]{#1}
+    \caption{#3}
+    \label{fig:#2}
+  \end{figure}
+}
+
+
+% \twofigures{width}{fig1name}{fig1label}{fig1caption}{fig2name}{fig2label}{fig2caption}{overall_label}{overall_caption}
+\newcommand{\twofigures}[9]{
+  \begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{#1\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{#2}
+		\caption{#4}
+        \label{fig:#3}
+	\end{subfigure}
+    \quad
+	\begin{subfigure}[b]{#1\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{#5}
+		\caption{#7}
+        \label{fig:#6}
+	\end{subfigure}
+	\caption{#9}
+    \label{fig:#8}
+  \end{figure}
+}
+
+% \threefigures{width}{fig1name}{fig1caption}{fig2name}{fig2caption}{fig3name}{fig3caption}{fig4name}{fig4caption}{fig5name}{fig5caption}{overall_label}{overall_caption}
+\newcommand{\threefigures}[9]{
+  \begin{figure}[H]
+	\centering
+	\begin{subfigure}[b]{#1\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{#2}
+		\caption{#3}
+        \label{fig:#2}
+	\end{subfigure}
+    \quad
+	\begin{subfigure}[b]{#1\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{#4}
+		\caption{#5}
+        \label{fig:#4}
+	\end{subfigure}
+    \quad
+	\begin{subfigure}[b]{#1\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{#6}
+		\caption{#7}
+        \label{fig:#6}
+	\end{subfigure}
+	\caption{#9}
+    \label{fig:#8}
+  \end{figure}
+}
+
+
+
+% Bibliography
+\bibliographystyle{IEEE}
+
+\usepackage[footnote,draft,danish,silent,nomargin]{fixme}
+\newcommand{\unit}[1]{~\text{#1}}
+\newcommand{\rom}[1]{\uppercase\expandafter{\romannumeral #1}}

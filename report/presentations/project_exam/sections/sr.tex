@@ -1,0 +1,88 @@
+\section{Super Resolution}
+% motivation for creating this theme
+\begin{frame}{Super Resolution}{}
+    \begin{block}{Increase spatial resolution to create a more detailed image.}
+
+        \begin{figure}[H]
+            \centering
+            \begin{subfigure}[b]{0.25\textwidth}
+                \includegraphics[width=\textwidth]{figs//butterfly_low.jpg}
+                \caption*{\scriptsize LR image}
+            \end{subfigure}
+            \quad
+            \begin{subfigure}[b]{0.25\textwidth}
+                \includegraphics[width=\textwidth]{figs/butterfly_high.jpg}
+                \caption*{\scriptsize HR image}
+            \end{subfigure}
+        \end{figure}
+
+        \begin{itemize}
+            \item Direct solution: Increase pixel density of the image sensor.
+            \item Super-Resolution: Transform one or more LR images into a HR image.
+        \end{itemize}
+
+
+    \end{block}
+\end{frame}
+
+
+
+
+\begin{frame}{Super Resolution}{}
+    \begin{block}{Pros (P) and cons (C) of increasing sensor resolution vs. performing Super Resolution}
+        ~\\
+        \begin{columns}
+            \begin{column}{0.5\textwidth}
+                \textbf{Increasing sensor resolution}
+                \begin{itemize}
+                    \item \textbf{P} - Actual increase of resolution/details.
+                    \item \textbf{C} - Expensive and cumbersome.
+                    \item \textbf{C} - Higher requirements to storage capacity.
+                    \item \textbf{C} - Can introduce noise and blur.
+                \end{itemize}
+            \end{column}
+            \begin{column}{0.5\textwidth}
+                \textbf{Performing SR}
+                \begin{itemize}
+                    \item \textbf{P} - A generic cost effective solution.
+                    \item \textbf{P} - Can be used only when needed to limit storage needs.
+                    \item \textbf{C} - Enhancement is a "guess".
+                    \item \textbf{C} - SoTA methods are still limited.
+                \end{itemize}
+
+            \end{column}
+        \end{columns}
+
+
+
+
+    \end{block}
+\end{frame}
+
+
+
+
+\begin{frame}{Super Resolution}{}
+
+
+    \begin{block}{Super-Resolution methods:}
+
+        \begin{itemize}
+            \item Multiple image methods, based on sub-pixel shifts between LR-images.
+            \item Single image methods, typically learning based.
+        \end{itemize}
+
+        \centering
+        \begin{columns}
+            \begin{column}{0.5\textwidth}
+                \textbf{SoTA Super-Resolution:} Deep Learning, scientific computing accelerated using GPUs.
+            \end{column}
+            \begin{column}{0.5\textwidth}
+
+                \includegraphics[width=0.5\textwidth]{figs/tesla.jpg}\footnotemark
+            \end{column}
+        \end{columns}
+        \footnotetext{Image source: http://www.nvidia.com/object/tesla-workstations.html}
+    \end{block}
+\end{frame}
+

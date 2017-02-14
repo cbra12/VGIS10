@@ -1,0 +1,108 @@
+\documentclass[11pt,twoside,titlepage]{report}
+
+\input{styles.sty}
+\input{abbr.tex}
+%\makeatletter\@addtoreset{chapter}{part}\makeatother%
+
+\usepackage[pdftex,
+pdfauthor={Christoffer Bøgelund Rasmussen},
+pdfsubject={Vision Graphics and Interactive Systems - P9 Internship Report, Aalborg University},
+pdftitle={Navicon Internship Report},
+pdfborder={0 0 0}
+]{hyperref}
+
+\usepackage{todonotes}
+\newcommand{\unsure}[2][1=]{\todo[linecolor=red,backgroundcolor=red!25,bordercolor=red,#1]{#2}}
+\newcommand{\change}[2][1=]{\todo[linecolor=blue,backgroundcolor=blue!25,bordercolor=blue,#1]{#2}}
+\newcommand{\add}[2][1=]{\todo[linecolor=yellow,backgroundcolor=yellow!25,bordercolor=yellow,#1]{#2}}
+\newcommand{\info}[2][1=]{\todo[linecolor=OliveGreen,backgroundcolor=OliveGreen!25,bordercolor=OliveGreen,#1]{#2}}
+\newcommand{\improvement}[2][1=]{\todo[linecolor=Plum,backgroundcolor=Plum!25,bordercolor=Plum,#1]{#2}}
+\newcommand{\thiswillnotshow}[2][1=]{\todo[disable,#1]{#2}}
+
+\makeatletter
+\renewcommand\part{%
+  \if@openright
+    \cleardoublepage
+  \else
+    \clearpage
+  \fi
+  \thispagestyle{empty}%
+  \if@twocolumn
+    \onecolumn
+    \@tempswatrue
+  \else
+    \@tempswafalse
+  \fi
+  \null\vfil
+  \secdef\@part\@spart}
+\makeatother
+
+\begin{document}
+
+% FRONT PAGE
+\lhead[\fancyplain{}{\textit{\leftmark}}]{}
+\rhead[]{\fancyplain{}{\textit{\leftmark}}}
+%\listoffixmes
+\input{frontpage.tex}
+\thispagestyle{empty}
+\newpage
+\cleardoublepage
+\newpage
+\thispagestyle{empty}
+
+% SYNOPSIS
+\input{Sections/Introduction/synopsis.tex}
+\newpage
+\thispagestyle{empty}
+
+% PREFACE
+\input{Sections/Introduction/preface.tex}
+\cleardoublepage
+\pagenumbering{roman}
+\renewcommand{\thepage}{\arabic{page}}% Arabic numerals for page counter
+\thispagestyle{empty}
+\tableofcontents
+\printglossary[type=\acronymtype,nogroupskip,nonumberlist,title=Abbreviations]
+\lhead[\fancyplain{}{\textit{\thechapter.\ \leftmark}}]{}
+\rhead[]{\fancyplain{}{\textit{\leftmark\ \thechapter.}}}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+
+\begin{comment}
+% CHAPTERS
+\chapter{Introduction}
+\input{Sections/Introduction/intro.tex}\label{sec:intro}
+
+\chapter{Problem Analysis}
+\input{Sections/Problemanalysis/related.tex}
+\input{Sections/Problemanalysis/probStatement.tex}
+
+\chapter{Technical Analysis}
+\input{Sections/Techanalysis/introduction.tex}
+
+\chapter{Discussion}\label{sec:discussion}
+\input{Sections/Assessment/discussion.tex}
+
+\chapter{Conclusion}
+\input{Sections/Assessment/conclusion.tex}
+\end{comment}
+
+% LITERATURE AND APPENDIX
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\phantomsection \label{bibtex}
+\addcontentsline{toc}{chapter}{Literature}
+\bibliography{bibtex}
+\label{appendices}
+\clearpage{\pagestyle{empty}\cleardoublepage}
+\begin{appendices}
+    %\chapter{Appendix A}
+    %\input{Sections/Appendix/tools.tex}
+    %\input{Sections/Appendix/fineFigures.tex}      
+
+    %\chapter{Appendix B}
+    %\section{Related Work - Deep Learning Super Resolution}\label{app:deep_related_work}
+    %\input{Sections/Appendix/cascadeNetwork.tex}
+
+\end{appendices}
+\newpage
+\listoftodos[Notes]
+\end{document}

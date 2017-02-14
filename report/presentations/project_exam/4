@@ -1,0 +1,112 @@
+\section{Technical Analysis}
+\begin{frame}{Deep Learning}{Overview}
+    \begin{columns}
+        \column{0.5\textwidth}
+    
+    \begin{block}{}
+        Convolutional Neural Networks
+        \begin{itemize}
+            \item Based on Artificial Neural Networks
+            \item Originally presented in 1979
+                \begin{itemize}
+                    \item Renaissance due to GPU computing
+                \end{itemize}
+        \end{itemize}
+    \end{block}
+        \column{0.5\textwidth}
+            \begin{figure}
+            \includegraphics[width=0.7\linewidth]{../../Figs/Techanal/ann.tex}
+            \caption*{Artificial Neural Network}
+ \end{figure}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Deep Learning}{CNN Architecture}
+    \begin{block}{}
+        Layers
+        \begin{itemize}
+            \item Convolutional
+            \item Activation
+                \begin{itemize}
+                    \item ReLU, Sigmoid
+                \end{itemize}
+            \item Final
+                \begin{itemize}
+                    \item Classification: Fully-connected output scores
+                    \item Regression: Single output neuron
+                \end{itemize}
+        \end{itemize}
+        \begin{figure}
+            \includegraphics[width=0.5\linewidth]{../../Figs/Introduction/cnn.tex}
+            \caption*{CNN architecture}
+        \end{figure}
+\end{block}
+\end{frame}
+
+\begin{frame}{Deep Learning}{CNN Architecture}
+    \begin{block}{}
+        Convolutional Layer
+\begin{figure}
+    \includegraphics[width=0.5\linewidth]{figs/convolution.tex}
+            \caption*{CNN architecture}
+        \end{figure}
+    \end{block}
+\end{frame}
+
+\begin{frame}{Deep Learning}{Training}
+    \begin{columns}
+        \column{0.5\textwidth}
+    \begin{block}{}
+        Gradient Descent
+        \begin{itemize}
+            \item Minimising a loss function
+            \item Backpropagate loss to update weights \& biases
+        \end{itemize}
+
+        \begin{figure}
+            \includegraphics[width=0.7\linewidth]{../../Figs/Techanal/ann.tex}
+            \caption*{ANN architecture}
+        \end{figure}
+    
+    \end{block}
+    \column{0.5\textwidth}
+        \begin{figure}
+            \includegraphics[width=0.8\linewidth]{../../Figs/Design/minimisation.tex}
+            \caption*{Gradient descent minimisation}
+        \end{figure}
+    
+\end{columns}
+\end{frame}
+
+
+\begin{frame}{SRCNN}{Overview}
+    \begin{block}{}
+        \begin{figure}
+            \includegraphics[width=0.5\linewidth]{../../Figs/Design/srcnn.tex}
+            \caption*{SRCNN Outline}
+        \end{figure}
+    \end{block}
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
