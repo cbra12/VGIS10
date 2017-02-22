@@ -1,24 +1,28 @@
-% Short presentation of the problem
-%   Low resolution on some surveillance cameras
-%   Some cameras covers a large area and people can be far away
-%   Often difficult to recognize faces
-% 
-% Introduce Milestone
-%   Who are they?
-%   Why do they care?
-%   What do they want?
-%
-% How can the problem be solved?
-%   Better cameras
-%   More cameras
-%   Super resolution (single/multiple images)
-
-
-Cameras have become an increasing part of everyday life, and they can be used for anything between astronomy, microscopy, surveillance and selfies. In some occasions the quality of the images delivered from the respective camera is too low and an enhancement is needed. An example is the video feed from surveillance cameras, which can be used for different purposes, but are mainly of interest in the occasion of robbery, vandalism or other illegal acts. If the quality of the recorded material is high, it may assist the police in identifying criminals. However, the output quality of the video cameras is often compromised due to factors such as a wide \gls{fov}, limited resolution, compression artefacts and poor lighting conditions. Research done in 2013 by Peter Lauritsen, professor in surveillance at Aarhus University, found that the technical quality of surveillance cameras in Denmark were generally poor \cite{ing-cam}. Due to this, it can be difficult to recognise individual faces in the images captured by the cameras, which decreases the usability of the recorded footage.
-
-A way to solve this problem is to update the currently installed cameras with better hardware, install more of the present hardware or a combination of both. However, these can be expensive methods compared to a software solution. Enhancing the quality of the images from the already installed surveillance cameras using a \gls{sr} method, may be sufficient to make identification of the faces possible. \gls{sr} will be explained in further details later, but generally uses one or more \gls{lr} images to create a \gls{hr} image. This is a more flexible method as the same sort of software can be used independently on the hardware. 
-
-One of the companies working with surveillance cameras is Milestone Systems \cite{milestone}. They are currently interested in an algorithm that can create a single high-quality image on basis of a lower quality video sequence. This semester report is made in collaboration with Milestone Systems, in order to propose a solution to the aforementioned problem.
+\begin{comment}
+	%%%%Overview%%%%
+	- fundamental problem in CV
+		- much work over previous decades
+	- goal: find specific category in a given image
+		- of interest by itself. Localise and classification
+		- also a pre-requisite step to higher-level vision tasks
+			- activity & event recognition, scene understanding, + find more
+	- difficulties 
+		- inter-class differences small
+		- intra-class variations large
+			- shape, pose, colour, texture, background, differences in illumination/viewpoint etc between images
+	- GPU/deep learning advances have meant that performance is starting to become satisfactory for real-world use in scenarios requiring high precision and accuracy
+		- autonomous vehicles, military, medicinal
+	- much discussion of AI taking labor jobs
+		- find articles and specific examples
+			- elon musk, bill gates, etc (leaders of tech)
+		- object detection needed
+		- improvements still to be made before being completely realised
+	- next section, overview of object detection definition, key task and challenges within. Also SOTA related work
+\end{comment}
 
 \section{Initial Problem Statement}
-How can a \gls{hr} face image be produced from one or more \gls{lr} face images, in order to assist in the identification of the person?
+
+\begin{comment}
+	- what are specific problems within object detection?
+	- 
+\end{comment}

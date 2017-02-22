@@ -1,0 +1,29 @@
+\begin{comment}
+	%%%%Overview%%%%
+	- intro to older (non-CNN/deep) methods
+		- find from survey
+		- eg hand picked feature extractors/SVMS
+		- sliding window approaches
+		- DPM
+	- CNN based methods - taken over since Alexnet (2012) on Imagenet
+		- was this classification
+		- extended to object detection (use classification network)
+		- increase in complexity with CNNs, increase in time per window
+			- overcome with region proposals
+		- became a 2 step process
+			1. find a number of region proposals where an object may be situated
+			2. determine if a given proposal is a given pre-defined class
+		- overview of proposal methods
+			- grouping & window scoring
+				- summary of both
+			- should be accurate & have high repeatability (see why in dollar cite)
+		- pipeline therefore:
+			- with a given region proposal method apply deep-based classifier on regions
+			- multiple current SOTA do this or similar
+				- R-CNN, Fast R-CNN, Faster R-CNN (accurate but not real-time)
+				- SSD, YOLOv2/YOLO9000, R-FCN 
+					- alternatives to R-CNN 
+						- often use some of the same methods (RPN)
+				- best instance segmentation COCO 2016 - 2nd best bbox COCO 2016 (2016????)
+
+\end{comment}
