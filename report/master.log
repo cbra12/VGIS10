@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.30)  27 FEB 2017 10:22
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.30)  27 FEB 2017 15:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2392,7 +2392,7 @@ LaTeX Info: Redefining \nameref on input line 40.
 
 {/home/christoffer/.texmf-var/fonts/map/pdftex/updmap/pdftex.map}]) [2
 
-] (./Sections/Introduction/synopsis.tex <Sections/Introduction/logo.jpg, id=71,
+] (./Sections/Introduction/synopsis.tex <Sections/Introduction/logo.jpg, id=83,
  205.2468pt x 38.7849pt>
 File: Sections/Introduction/logo.jpg Graphic file (type jpg)
 
@@ -2498,49 +2498,143 @@ l.68 \clearpage{\pagestyle{empty}\cleardoublepage
 
 ]
 Chapter 1.
-(./Sections/Introduction/intro.tex)pdfTeX warning (ext4): destination with the 
-same identifier (name{page.3}) has been already used, duplicate ignored
+(./Sections/Introduction/intro.tex
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
+
+ []
+
+)
+Underfull \hbox (badness 10000) in paragraph at lines 39--74
+
+ []
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.75 \chapter
-             {Problem Analysis} [3
+             {Problem Analysis} \label{sec:problemanalysis} [3
 
 ]
 Chapter 2.
-(./Sections/Problemanalysis/problem.tex)
-(./Sections/Problemanalysis/objectdetection.tex)pdfTeX warning (ext4): destinat
-ion with the same identifier (name{page.4}) has been already used, duplicate ig
-nored
+(./Sections/Problemanalysis/problem.tex
+
+LaTeX Warning: Reference `sec:sota' on page 4 undefined on input line 47.
+
+
+LaTeX Warning: Reference `sec:sota' on page 4 undefined on input line 47.
+
+
+LaTeX Warning: Reference `sec:methodoverview' on page 4 undefined on input line
+ 47.
+
+
+LaTeX Warning: Reference `sec:methodoverview' on page 4 undefined on input line
+ 47.
+
+
+LaTeX Warning: Reference `sec:challenges' on page 4 undefined on input line 47.
+
+
+
+LaTeX Warning: Reference `sec:challenges' on page 4 undefined on input line 47.
+
+
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
+ine 50.
+<Figs/Problem/objfieldscat.png, id=137, 90.3375pt x 120.45pt>
+File: Figs/Problem/objfieldscat.png Graphic file (type png)
+
+<use Figs/Problem/objfieldscat.png>
+Package pdftex.def Info: Figs/Problem/objfieldscat.png used on input line 56.
+(pdftex.def)             Requested size: 86.72267pt x 115.63066pt.
+
+<Figs/Problem/objfieldsbbox.png, id=139, 90.3375pt x 120.45pt>
+File: Figs/Problem/objfieldsbbox.png Graphic file (type png)
+
+<use Figs/Problem/objfieldsbbox.png>
+Package pdftex.def Info: Figs/Problem/objfieldsbbox.png used on input line 61.
+(pdftex.def)             Requested size: 86.72267pt x 115.63066pt.
+
+<Figs/Problem/objfieldsfiguresegmentation.png, id=140, 90.3375pt x 120.45pt>
+File: Figs/Problem/objfieldsfiguresegmentation.png Graphic file (type png)
+
+<use Figs/Problem/objfieldsfiguresegmentation.png>
+Package pdftex.def Info: Figs/Problem/objfieldsfiguresegmentation.png used on i
+nput line 66.
+(pdftex.def)             Requested size: 86.72267pt x 115.63066pt.
+
+<Figs/Problem/objfieldssegmentation.png, id=141, 90.3375pt x 120.45pt>
+File: Figs/Problem/objfieldssegmentation.png Graphic file (type png)
+
+<use Figs/Problem/objfieldssegmentation.png>
+Package pdftex.def Info: Figs/Problem/objfieldssegmentation.png used on input l
+ine 71.
+(pdftex.def)             Requested size: 86.72267pt x 115.63066pt.
+pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
+been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.79 \chapter
-             {Technical Analysis} [4
+l.79 
+      [4
 
-]
+ <./Figs/Problem/objfieldscat.png> <./Figs/Problem/objfieldsbbox.png> <./Figs/P
+roblem/objfieldsfiguresegmentation.png> <./Figs/Problem/objfieldssegmentation.p
+ng>]
+LaTeX Font Info:    Try loading font information for TS1+lmr on input line 85.
+ (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+<Figs/Problem/chair1.jpeg, id=159, 376.40625pt x 501.875pt>
+File: Figs/Problem/chair1.jpeg Graphic file (type jpg)
+
+<use Figs/Problem/chair1.jpeg>
+Package pdftex.def Info: Figs/Problem/chair1.jpeg used on input line 95.
+(pdftex.def)             Requested size: 86.72267pt x 115.62791pt.
+
+<Figs/Problem/chair2.jpeg, id=160, 376.40625pt x 501.875pt>
+File: Figs/Problem/chair2.jpeg Graphic file (type jpg)
+
+<use Figs/Problem/chair2.jpeg>
+Package pdftex.def Info: Figs/Problem/chair2.jpeg used on input line 100.
+(pdftex.def)             Requested size: 86.72267pt x 115.62791pt.
+
+<Figs/Problem/chair3.jpeg, id=161, 376.40625pt x 501.875pt>
+File: Figs/Problem/chair3.jpeg Graphic file (type jpg)
+
+<use Figs/Problem/chair3.jpeg>
+Package pdftex.def Info: Figs/Problem/chair3.jpeg used on input line 105.
+(pdftex.def)             Requested size: 86.72267pt x 115.62791pt.
+
+<Figs/Problem/chair4.jpeg, id=162, 376.40625pt x 501.875pt>
+File: Figs/Problem/chair4.jpeg Graphic file (type jpg)
+
+<use Figs/Problem/chair4.jpeg>
+Package pdftex.def Info: Figs/Problem/chair4.jpeg used on input line 110.
+(pdftex.def)             Requested size: 86.72267pt x 115.62791pt.
+ [5 <./Figs/Problem/chair1.jpeg> <./Figs/Problem/chair2.jpeg> <./Figs/Problem/c
+hair3.jpeg> <./Figs/Problem/chair4.jpeg>])
+[6]
 Chapter 3.
-[5
+[7
 
 ]
 Chapter 4.
-[6
+[8
 
 ]
 Chapter 5.
-[7
-
-] [8
-
-
-] (./master.bbl
-
-LaTeX Warning: Empty `thebibliography' environment on input line 24.
-
-) [9
+[9
 
 ] [10
 
 
-] [11
+] (./master.bbl) [11
+
+] [12
+
+
+] [13
 
 
 ] (./master.tdo)
@@ -2549,41 +2643,44 @@ LaTeX Warning: Empty `thebibliography' environment on input line 24.
 
 
 
-Package caption Warning: Unused \captionsetup[subfigure] on input line 162.
-See the caption package documentation for explanation.
-
-
 AED: lastpage setting LastPage
-[12
+[14
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 106.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 106.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 105.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 105.
  (./master.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 106.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 106.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 105.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 105.
 Package rerunfilecheck Info: File `master.out' has not changed.
-(rerunfilecheck)             Checksum: 69400AA8DEBFC8F3D34822E5965CD3EE;466.
+(rerunfilecheck)             Checksum: DB58B0CFDBF1F7EF64B8EA88AA00D32C;656.
+
+
+LaTeX Warning: There were undefined references.
+
  ) 
 Here is how much of TeX's memory you used:
- 46363 strings out of 495028
- 976089 string characters out of 6181496
- 1349657 words of memory out of 5000000
- 48473 multiletter control sequences out of 15000+600000
- 71003 words of font info for 65 fonts, out of 8000000 for 9000
+ 46573 strings out of 495028
+ 980390 string characters out of 6181496
+ 1355991 words of memory out of 5000000
+ 48652 multiletter control sequences out of 15000+600000
+ 87609 words of font info for 71 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 78i,17n,96p,1953b,1124s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/home/christoffer/texmf/fonts/enc/dvips/dejavu/dejavumono_t1-type1.enc}{/usr
-/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</home/christoffer/texmf/fonts/type1/
-public/dejavu/DejaVuSansMono.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10
-.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts
-/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb>
-</usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1
-/public/lm/lmri8.pfb>
-Output written on master.pdf (16 pages, 242801 bytes).
+ 78i,17n,96p,2068b,1124s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{/usr/share/texmf/fonts/enc/dv
+ips/lm/lm-ts1.enc}{/home/christoffer/texmf/fonts/enc/dvips/dejavu/dejavumono_t1
+-type1.enc}</home/christoffer/texmf/fonts/type1/public/dejavu/DejaVuSansMono.pf
+b></usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/ty
+pe1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx9.pfb></us
+r/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fonts/type1/p
+ublic/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/shar
+e/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/
+lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri8.pfb></usr/share/texmf/
+fonts/type1/public/lm/lmri9.pfb>
+Output written on master.pdf (18 pages, 2105952 bytes).
 PDF statistics:
- 178 PDF objects out of 1000 (max. 8388607)
- 134 compressed objects within 2 object streams
- 26 named destinations out of 1000 (max. 500000)
- 186 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 280 PDF objects out of 1000 (max. 8388607)
+ 215 compressed objects within 3 object streams
+ 43 named destinations out of 1000 (max. 500000)
+ 250 words of extra memory for PDF output out of 10000 (max. 10000000)
 

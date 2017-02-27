@@ -2,8 +2,11 @@
 \contentsline {section}{\numberline {1.1}Initial Problem Statement}{3}{section.1.1}
 \contentsline {chapter}{\numberline {2}Problem Analysis}{4}{chapter.2}
 \contentsline {section}{\numberline {2.1}Object Detection}{4}{section.2.1}
-\contentsline {chapter}{\numberline {3}Technical Analysis}{5}{chapter.3}
-\contentsline {chapter}{\numberline {4}Discussion}{6}{chapter.4}
-\contentsline {chapter}{\numberline {5}Conclusion}{7}{chapter.5}
-\contentsline {chapter}{Literature}{9}{section*.3}
-\contentsline {chapter}{Appendices}{11}{section*.5}
+\contentsline {section}{\numberline {2.2}Main Challenges}{5}{section.2.2}
+\contentsline {section}{\numberline {2.3}Implementation Outline}{5}{section.2.3}
+\contentsline {section}{\numberline {2.4}Related Work}{6}{section.2.4}
+\contentsline {chapter}{\numberline {3}Technical Analysis}{7}{chapter.3}
+\contentsline {chapter}{\numberline {4}Discussion}{8}{chapter.4}
+\contentsline {chapter}{\numberline {5}Conclusion}{9}{chapter.5}
+\contentsline {chapter}{Literature}{11}{section*.7}
+\contentsline {chapter}{Appendices}{13}{section*.9}
