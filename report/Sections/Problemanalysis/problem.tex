@@ -86,6 +86,10 @@ The challenges of object detection can be split into two groups as per \cite{zha
 	\item Computational-complexity and scalability-related.
 \end{itemize}
 
+The following sections will outline the above.
+
+\subsection{Robustness-related Challenges}
+
 Robustness-related refers to the challenges in appearance within the both of intra-class and inter-class. Intra-class is the differences in appearance of objects which are of the same class. For example as seen in \figref{intra_ex}, all of the images belong to the superclass chair from the ImageNet training set \cite{imagenet}, however, vary greatly in their overall appearance. 
 
 \begin{figure}[H]
@@ -110,7 +114,7 @@ Robustness-related refers to the challenges in appearance within the both of int
         \includegraphics[width=\textwidth]{Figs/Problem/chair4.jpeg}
         \caption{}
     \end{subfigure}
-    \caption{Examples of intra-class appearance variation. All images have the label \textit{chair} in the ImageNet training set \cite{imagenet}.}
+    \caption{Examples of intra-class appearance variation. All images have the label chair in the ImageNet training set \cite{imagenet}.}
     \label{fig:intra_ex}
 \end{figure} 
 
@@ -121,7 +125,75 @@ An object detection system must be able to learn \add[inline]{explanation that t
 	\item Image variations.
 \end{itemize}
 
+Object variations consist of appearance differences between instances of colour, texture, shape, and size. Image variations are differences not related to the object instances themselves but rather consist of conditions such as lighting, viewpoint, scale, occlusion, and clutter. Based upon these conditions the task of both classifying a given object as a given class but also differentiating the potentially largely varying objects into the same class challenging.
+\unsure[inline]{unsure if to add explanation of structured and unstructured classes}
 
+Robustness-related challenges can also occur with inter-class appearance differences. This refers to the differences between objects that are regarded as different categories. Challenges arise in scenarios where an object detector must decide if an instance is between classes that are very similar. For example using images and their respective classes from ImageNet \cite{imagenet}, in \figref{inter1} and \figref{inter2} the differences between the two examples are very similar, however, their class labels are different. In \figref{inter1a} and \figref{inter1b} the class labels are mini-bus and delivery truck respectively. In \figref{inter2a} and \figref{inter2b} the labels are white wolf and German shepherd. 
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.45\textwidth}
+        \center
+        \includegraphics[width=\textwidth]{Figs/Problem/minibus.jpeg}
+        \caption{}\label{fig:inter1a}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \center
+        \includegraphics[width=\textwidth]{Figs/Problem/deliverytruck.jpeg}
+        \caption{}\label{fig:inter1b}
+    \end{subfigure}
+    \caption{Examples of inter-class appearance variation. Both images are from the ImageNet training set \cite{imagenet} and have the labels mini-bus (a) and delivery truck (b).}
+    \label{fig:inter1}
+\end{figure} 
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.3\textwidth}
+        \center
+        \includegraphics[width=\textwidth]{Figs/Problem/wolf.jpeg}
+        \caption{}\label{fig:inter2a}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.45\textwidth}
+        \center
+        \includegraphics[width=\textwidth]{Figs/Problem/germanshepherd.jpeg}
+        \caption{}\label{fig:inter2b}
+    \end{subfigure}
+    \caption{Examples of inter-class appearance variation. Both images are from the ImageNet training set \cite{imagenet} and have the labels White wolf (a) and German shepherd (b).}
+    \label{fig:inter2}
+\end{figure} 
+
+It should be noted that this is a task-specific if inter-class appearance similarities is a problem or not. It can be argued that both the examples in \figref{inter1} and \figref{inter2} can be grouped into a larger superclass label if the given task does not require training of a model to such granularity. In both examples the classes stated are of the lowest class available in the overall hierarchy. ImageNet has labels available for each image along a larger array of classes and sub-classes. \figref{inter1_hierachy} visualises the granularity possible where both images belong to the superclass animal.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.25\textwidth}
+        \center
+        \includegraphics[width=\textwidth]{Figs/Problem/wolf.jpeg}
+        \caption{}\label{fig:interhier1a}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.20\textwidth}
+        \center
+        \includegraphics[width=\textwidth]{Figs/Problem/wolf_hier.png}
+        \caption{}\label{fig:interhier1b}
+    \end{subfigure}
+        \begin{subfigure}[b]{0.25\textwidth}
+        \center
+        \includegraphics[width=\textwidth]{Figs/Problem/germanshepherd.jpeg}
+        \caption{}\label{fig:interhier2a}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.20\textwidth}
+        \center
+        \includegraphics[width=\textwidth]{Figs/Problem/german_hier.png}
+        \caption{}\label{fig:interhier2b}
+    \end{subfigure}
+    \caption{Visualisation of the hierarchy of potential classes for two examples in the ImageNet training set \cite{imagenet}.}
+    \label{fig:inter1_hierachy}
+\end{figure}
+
+\subsection{Computational-complexity and Scalability-related Challenges}
+The second challenge as per \cite{zhang} is related to the potential scale of object detection. When deciding on which type of model to use it must be complex enough to be able to capture the previously mentioned challenges both in inter- and intra-class. On top of this there is an extremely large number of potential classes in object detection. If the aim is to train a model to classify between an extreme number of classes then naturally a large number of images are also needed for each category. The large number of images need also to be representative enough in training to capture the necessary visual features to generalise on non-training images. In 2016 the ImageNet object detection challenge there is a total of 200 object categories, with 456,567 images comprising the training set. Therefore, a complex enough model is needed in order to learn and generalise on such a dataset but this of course places high requirements on the amount of training needed.
+
+Issues can also arise over time when designing an object detection system.  Over time the visual appearance of an object can change, which is very difficult to take into account when training a model. For example, the visual appearance of televisions have changed greatly in the past century. If a system were only to be trained on images from an earlier time period it may not be able to generalise on new instances. Therefore, it is important that a model is able to be updated as the appearance of objects change. On top of this, new categories of objects can come to fruition which may needed to be added to a model. 
 
 \section{Implementation Outline}
 As per \cite{zhang} the steps in the general pipeline for an object detection system is as follows:
@@ -133,4 +205,3 @@ As per \cite{zhang} the steps in the general pipeline for an object detection sy
 \end{enumerate}
 
 
-\section{Related Work}
