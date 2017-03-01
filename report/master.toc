@@ -7,8 +7,8 @@
 \contentsline {subsection}{\numberline {2.2.2}Computational-complexity and Scalability-related Challenges}{7}{subsection.2.2.2}
 \contentsline {section}{\numberline {2.3}Implementation Outline}{8}{section.2.3}
 \contentsline {section}{\numberline {2.4}Related Work}{8}{section.2.4}
-\contentsline {chapter}{\numberline {3}Technical Analysis}{10}{chapter.3}
-\contentsline {chapter}{\numberline {4}Discussion}{11}{chapter.4}
-\contentsline {chapter}{\numberline {5}Conclusion}{12}{chapter.5}
-\contentsline {chapter}{Literature}{13}{section*.11}
-\contentsline {chapter}{Appendices}{15}{section*.13}
+\contentsline {chapter}{\numberline {3}Technical Analysis}{11}{chapter.3}
+\contentsline {chapter}{\numberline {4}Discussion}{12}{chapter.4}
+\contentsline {chapter}{\numberline {5}Conclusion}{13}{chapter.5}
+\contentsline {chapter}{Literature}{15}{section*.13}
+\contentsline {chapter}{Appendices}{17}{section*.15}
