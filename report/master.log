@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.30)  1 MAR 2017 13:40
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.30)  2 MAR 2017 14:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2695,22 +2695,21 @@ Underfull \hbox (badness 10000) in paragraph at lines 50--78
 
  []
 
-[10]
+[10] [11]
 Chapter 3.
-[11
-
-]
-Chapter 4.
 [12
 
 ]
-Chapter 5.
+Chapter 4.
 [13
 
-] [14
-
+]
+Chapter 5.
+[14
 
 ] (./master.bbl) [15
+
+
 
 ] [16
 
@@ -2739,15 +2738,12 @@ Package rerunfilecheck Info: File `master.out' has not changed.
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 46809 strings out of 495028
- 984324 string characters out of 6181496
- 1360429 words of memory out of 5000000
- 48860 multiletter control sequences out of 15000+600000
+ 46869 strings out of 495028
+ 985180 string characters out of 6181496
+ 1363065 words of memory out of 5000000
+ 48920 multiletter control sequences out of 15000+600000
  83346 words of font info for 70 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  78i,17n,96p,2449b,1124s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2763,7 +2759,7 @@ m/lmcsc10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/te
 xmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr
 12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts
 /type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri8.pfb>
-Output written on master.pdf (22 pages, 2611932 bytes).
+Output written on master.pdf (22 pages, 2614956 bytes).
 PDF statistics:
  362 PDF objects out of 1000 (max. 8388607)
  280 compressed objects within 3 object streams

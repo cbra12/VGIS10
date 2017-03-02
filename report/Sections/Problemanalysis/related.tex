@@ -31,7 +31,7 @@ Fast R-CNN & \textbf{66.9} & \textbf{66.1} & \textbf{65.7} \\ \hline
 \end{tabular}
 \end{table}
 
-However, as the name Fast R-CNN implies the main improvement is the speed in respect to both training and testing. By computing a convolutional feature map for an entire image rather than per object proposal the number of passes in the network is lowered significantly. Also by making the detection training end-to-end with the two sibling layers lowers the training time needed. An overview of time spent training and testing both Fast R-CNN and R-CNN with a VGG16 \gls{cnn} can be seen in \tableref{fastspeed}.
+However, as the name Fast R-CNN implies the main improvement is the speed in respect to both training and testing. By computing a convolutional feature map for an entire image rather than per object proposal the number of passes in the network is lowered significantly. Also by makign the detection training end-to-end with the two sibling layers lowers the training time needed. An overview of time spent training and testing both Fast R-CNN and R-CNN with a VGG16 \gls{cnn} can be seen in \tableref{fastspeed}.
 
 \begin{table}[]
 \centering
@@ -41,12 +41,14 @@ However, as the name Fast R-CNN implies the main improvement is the speed in res
 \hline
                           & R-CNN & Fast R-CNN \\ \hline
 Train time (hours)        & 84    & \textbf{9.5}        \\ 
-Train speedup             & 1x    & \textbf{8.8$\times$}       \\ \hline
+Train speed-up             & 1x    & \textbf{8.8$\times$}       \\ \hline
 Test time (seconds/image) & 47.0  & \textbf{0.32}       \\ 
-Test speedup              & 1x    & \textbf{146$\times$}       \\ \hline
+Test speed-up              & 1x    & \textbf{146$\times$}       \\ \hline
 \end{tabular}
 \end{table}
 
 While Fast R-CNN provided improvements in both accuracy and speed, the increase in speed is only in relation to the actual object detection and assumes that the region proposals are pre-computed. Therefore, there is still a significant bottleneck per image as a region proposal method can typically take a couple of seconds. 
 \\\\
-The region proposal bottleneck was addressed in the third iteration of the R-CNN network with Faster R-CNN \cite{fasterrcnn}
+The region proposal bottleneck was addressed in the third iteration of the R-CNN network with Faster R-CNN \cite{fasterrcnn}. In this method it was shown how to compute region proposals with a deep \gls{cnn} with a part of the network called \gls{rpn}. A \gls{rpn} shares the convolutional layers and feature map used for computing features with \gls{roi} pooling in Fast R-CNN. As this deep network is already being computed on the entire image for the classification pipeline the added time for proposals using the \gls{rpn} is negligible (10ms) in comparison to a method such as SelectiveSearch. Apart from the change in how region proposals are computed there is no change in comparison to Fast R-CNN. 
+An \gls{rpn} takes the convolutional feature map as input and returns a number of object proposals. Each proposals is fed into two sibling layers, similar to that in Fast R-CNN, one layer scoring how likely to be an object or background and another performing bounding-box regression. The proposals are found through a method denoted as anchors. At each sliding-window location $k$ proposals are with anchors that are user-defined reference boxes for how an object proposal may be formed. The anchors can be built based upon scale and aspect ratio altering the size. In the original work three different scales and three aspect ratios are built, yielding a total of $k$ = 9 anchors at each sliding window position. These anchors are then placed on the feature map and the sibling layers calculate the likelihood of an object and regress the anchor as necessary.  
+Once the proposals have been found with the \gls{rpn} these are placed on the same convolutional feature map as earlier and the rest of the pipeline is identical to Fast R-CNN, classifying and regressing bounding-boxes with another set of sibling layers. As the only change is the addition of computing proposals in the network with \gls{rpn}, the results are similar in respect to \gls{map}. Only a slight improvement in made on \gls{pascalvoc} 2007 and 2012, from 66.9\% to 69.9\% and 65.7\% to 67.0\% respectively. However, the main contribution to the work is the speed-up of the entire object detection pipeline as the object proposal time is now minimal. On average processing an image on \gls{pascalvoc} 2007 with an Nvidia K40 with Fast R-CNN including proposals took 2 seconds per image. While in Faster R-CNN with the same hardware takes 0.2 seconds per image. A speed-up of 10$\times$ from Fast R-CNN to Faster R-CNN and 250$\times$ from the original R-CNN. The Faster R-CNN methods has also proved to be the foundation for the winning entry in multiple detection challenges including \gls{mscoco}. The results for this challenge with a VGG-16 model for Fast R-CNN were 35.9\% \gls{map}@0.5 \gls{iou} and 19.7\% \gls{map}@[0.5, 0.95]. Faster R-CNN improved this to 42.7\% \gls{map}@0.5 and 21.9\% \gls{map}@[0.5, 0.95].
