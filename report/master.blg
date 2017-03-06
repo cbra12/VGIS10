@@ -8,49 +8,51 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: bibtex.bib
+Warning--I didn't find a database entry for "cocolead"
 -- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 10 entries,
+You've used 28 entries,
             4039 wiz_defined-function locations,
-            876 strings with 9699 characters,
-and the built_in function-call counts, 8393 in all, are:
-= -- 631
-> -- 257
-< -- 64
-+ -- 136
-- -- 49
-* -- 427
-:= -- 1230
-add.period$ -- 21
-call.type$ -- 10
-change.case$ -- 10
-chr.to.int$ -- 156
-cite$ -- 10
-duplicate$ -- 567
-empty$ -- 686
-format.name$ -- 58
-if$ -- 1925
+            974 strings with 13456 characters,
+and the built_in function-call counts, 19422 in all, are:
+= -- 1524
+> -- 617
+< -- 99
++ -- 312
+- -- 130
+* -- 1020
+:= -- 3132
+add.period$ -- 58
+call.type$ -- 28
+change.case$ -- 27
+chr.to.int$ -- 210
+cite$ -- 28
+duplicate$ -- 1404
+empty$ -- 1564
+format.name$ -- 157
+if$ -- 4355
 int.to.chr$ -- 0
-int.to.str$ -- 10
-missing$ -- 110
-newline$ -- 63
-num.names$ -- 12
-pop$ -- 280
+int.to.str$ -- 28
+missing$ -- 286
+newline$ -- 151
+num.names$ -- 30
+pop$ -- 708
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 636
+skip$ -- 1481
 stack$ -- 0
-substring$ -- 371
-swap$ -- 471
-text.length$ -- 12
+substring$ -- 514
+swap$ -- 1065
+text.length$ -- 29
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 10
+type$ -- 28
 warning$ -- 0
-while$ -- 34
-width$ -- 12
-write$ -- 127
+while$ -- 60
+width$ -- 30
+write$ -- 339
+(There was 1 warning)
