@@ -65,6 +65,7 @@
 \glossaryentry{MS COCO?\glossentry{mscoco}|setentrycounter[]{page}\glsnumberformat}{11}
 \glossaryentry{ILSVRC?\glossentry{ilsvrc}|setentrycounter[]{page}\glsnumberformat}{11}
 \glossaryentry{CNN?\glossentry{cnn}|setentrycounter[]{page}\glsnumberformat}{11}
+\glossaryentry{RPN?\glossentry{rpn}|setentrycounter[]{page}\glsnumberformat}{11}
 \glossaryentry{MS COCO?\glossentry{mscoco}|setentrycounter[]{page}\glsnumberformat}{11}
 \glossaryentry{MS COCO?\glossentry{mscoco}|setentrycounter[]{page}\glsnumberformat}{11}
 \glossaryentry{MS COCO?\glossentry{mscoco}|setentrycounter[]{page}\glsnumberformat}{12}
@@ -90,12 +91,16 @@
 \glossaryentry{RoI?\glossentry{roi}|setentrycounter[]{page}\glsnumberformat}{12}
 \glossaryentry{CNN?\glossentry{cnn}|setentrycounter[]{page}\glsnumberformat}{12}
 \glossaryentry{SSD?\glossentry{ssd}|setentrycounter[]{page}\glsnumberformat}{12}
-\glossaryentry{RoI?\glossentry{roi}|setentrycounter[]{page}\glsnumberformat}{12}
+\glossaryentry{RoI?\glossentry{roi}|setentrycounter[]{page}\glsnumberformat}{13}
 \glossaryentry{SSD?\glossentry{ssd}|setentrycounter[]{page}\glsnumberformat}{13}
 \glossaryentry{CNN?\glossentry{cnn}|setentrycounter[]{page}\glsnumberformat}{13}
 \glossaryentry{SSD?\glossentry{ssd}|setentrycounter[]{page}\glsnumberformat}{13}
+\glossaryentry{SSD?\glossentry{ssd}|setentrycounter[]{page}\glsnumberformat}{13}
+\glossaryentry{SSD?\glossentry{ssd}|setentrycounter[]{page}\glsnumberformat}{13}
 \glossaryentry{PASCAL VOC?\glossentry{pascalvoc}|setentrycounter[]{page}\glsnumberformat}{13}
 \glossaryentry{MS COCO?\glossentry{mscoco}|setentrycounter[]{page}\glsnumberformat}{13}
+\glossaryentry{SSD?\glossentry{ssd}|setentrycounter[]{page}\glsnumberformat}{13}
+\glossaryentry{SSD?\glossentry{ssd}|setentrycounter[]{page}\glsnumberformat}{13}
 \glossaryentry{PASCAL VOC?\glossentry{pascalvoc}|setentrycounter[]{page}\glsnumberformat}{13}
 \glossaryentry{CNN?\glossentry{cnn}|setentrycounter[]{page}\glsnumberformat}{13}
 \glossaryentry{ILSVRC?\glossentry{ilsvrc}|setentrycounter[]{page}\glsnumberformat}{13}

@@ -1,0 +1,22 @@
+\begin{comment}
+	previous SOTA models used in obj detect VGG 16/30 layers
+	intuitively deep learning improve with more layers
+		resnets proved this was not necessarily the case
+		poor performance when simply stacking layers
+	denoted a degradation problem
+		training accuracy was poor - not all systems easy to optimise
+		accuracy becomes saturated
+		not overfitting, as their is higher training error - harder to optimise
+	 present a new idea
+	 	construction with identity mapping
+	 	added layers are identity mapping - all other layers copied from learned shallower model
+	 	therefore, deeper model should have no higher training error than shallower counterpart
+	 	current solvers unable to do this
+ 	introduce deep residual learning framework
+ 		instead of hoping few stacked layers directly fit a desired underlying mapping
+ 		let layers fit residual mapping - hypothesis that this is easier to optimise
+ 		similar to shortcut connections - show figure and equation
+ 		this performs the identity mapping, no extra parameters, minimal complexity (addition)
+\end{comment}
+
+\section{Residual Networks}
