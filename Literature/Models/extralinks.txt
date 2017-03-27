@@ -1,0 +1,8 @@
+Deep Networks with Stochastic Depth
+https://gab41.lab41.org/lab41-reading-group-deep-networks-with-stochastic-depth-564321956729#.3798nqe3m
+
+ResNet
+https://gab41.lab41.org/lab41-reading-group-deep-residual-learning-for-image-recognition-ffeb94745a1f#.fddset4a9
+
+Swapout
+https://gab41.lab41.org/lab41-reading-group-swapout-learning-an-ensemble-of-deep-architectures-e67d2b822f8a#.75dd4ngk3

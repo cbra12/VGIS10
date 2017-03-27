@@ -18,7 +18,7 @@
 		- from pipeline RCNN to end-to-end Fast and Faster 
 \end{comment}
 
-\section{Related Work}
+\section{Related Work}\label{sec:related}
 One of the first methods to show that \glspl{cnn} could significantly improve object detection was that of R-CNN \cite{rcnn}. The method obtains the name R-CNN based upon a \gls{cnn} is used on regions of the image. Many earlier object detection approaches were used in a sliding window fashion testing all areas of an image. This can lead to a huge amount of potential testing windows especially if the object detection is done at a multitude of different scales. The method was heavily inspired by the AlexNet model that started the deep learning renaissance in 2012 by winning classification challenge in the \gls{ilsvrc}. The authors of R-CNN aimed to show that the advances in classification with a model such as AlexNet could also be done in object detection. In R-CNN the model is used as a feature extractor from which a class-specific linear \gls{svm} can be trained on top of. The AlexNet-based feature extractor is firstly pre-trained on a large dataset designed for classification, in this case the training set from \gls{ilsvrc} 2012. This pre-trained model is then adapted to the new domain of object detection by fine-tuning the model accordingly. In this instance the authors fine-tuned warped training instances from the \gls{pascalvoc} dataset. The AlexNet model was also altered to classify the 20 classes present in \gls{pascalvoc} rather than the 1000 classes in \gls{ilsvrc}. The pipeline of the R-CNN is split into 3 modules:
 
 \begin{enumerate}
