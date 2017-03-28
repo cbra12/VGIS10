@@ -147,20 +147,47 @@
 \newlabel{tab:fastresults}{{2.1}{10}{A comparison of R-CNN and Fast R-CNN \gls {pascalvoc} \gls {map} results on the test set from 2007, 2010, and 2012.\relax }{table.caption.11}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {2.2}{\ignorespaces Speedup between R-CNN and Fast R-CNN in regards to both training and testing. Both methods are train a VGG16 network for object detection.\relax }}{10}{table.caption.12}}
 \newlabel{tab:fastspeed}{{2.2}{10}{Speedup between R-CNN and Fast R-CNN in regards to both training and testing. Both methods are train a VGG16 network for object detection.\relax }{table.caption.12}{}}
-\citation{rfcn}
+\citation{deepres}
+\citation{vgg16}
+\citation{deepres}
 \@writefile{toc}{\contentsline {chapter}{\numberline {3}Technical Analysis}{15}{chapter.3}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{toc}{\contentsline {section}{\numberline {3.1}Deep Learning}{15}{section.3.1}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.2}Object Detectors}{15}{section.3.2}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Regional Fully-Connected Network}{15}{subsection.3.2.1}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.3}Residual Networks}{15}{section.3.3}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Architecture of \gls {rfcn}. Region proposals are found using the \gls {rpn} followed by classification based on a bank of position-sensitive score maps.\relax }}{16}{figure.caption.13}}
-\newlabel{fig:rfcnarch}{{3.1}{16}{Architecture of \gls {rfcn}. Region proposals are found using the \gls {rpn} followed by classification based on a bank of position-sensitive score maps.\relax }{figure.caption.13}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {4}Discussion}{17}{chapter.4}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.2}Residual Networks}{15}{section.3.2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces Core concept of residual blocks used in ResNets.\relax }}{15}{figure.caption.13}}
+\newlabel{fig:resblock}{{3.1}{15}{Core concept of residual blocks used in ResNets.\relax }{figure.caption.13}{}}
+\citation{vgg16}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces PLACEHOLDER. Overview of 34 layer plain and residual networks.\relax }}{16}{figure.caption.14}}
+\newlabel{fig:plainres}{{3.2}{16}{PLACEHOLDER. Overview of 34 layer plain and residual networks.\relax }{figure.caption.14}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces Top-1 error(\%) on ImageNet validation set.\relax }}{16}{table.caption.15}}
+\newlabel{tab:plainrestable}{{3.1}{16}{Top-1 error(\%) on ImageNet validation set.\relax }{table.caption.15}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.2}{\ignorespaces Results of various deep ResNet architectures on ImageNet validation set.\relax }}{17}{table.caption.17}}
+\newlabel{tab:deepresimagenet}{{3.2}{17}{Results of various deep ResNet architectures on ImageNet validation set.\relax }{table.caption.17}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces Residual block used in deeper ResNet architectures.\relax }}{17}{figure.caption.16}}
+\newlabel{fig:newresblock}{{3.3}{17}{Residual block used in deeper ResNet architectures.\relax }{figure.caption.16}{}}
+\citation{rfcn}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Object Detection with ResNets}{18}{subsection.3.2.1}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Benchmark Datasets}{18}{section.3.3}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Evaluation Metrics}{18}{section.3.4}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.5}Object Detectors}{18}{section.3.5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.1}Regional Fully-Connected Network}{18}{subsection.3.5.1}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Architecture of \gls {rfcn}. Region proposals are found using the \gls {rpn} followed by classification based on a bank of position-sensitive score maps.\relax }}{19}{figure.caption.18}}
+\newlabel{fig:rfcnarch}{{3.4}{19}{Architecture of \gls {rfcn}. Region proposals are found using the \gls {rpn} followed by classification based on a bank of position-sensitive score maps.\relax }{figure.caption.18}{}}
+\@writefile{tdo}{\contentsline {todo}{update score maps figure}{19}{section*.19}}
+\pgfsyspdfmark {pgfid6}{21296906}{24740220}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces PLACEHOLDER. Score maps.\relax }}{19}{figure.caption.20}}
+\newlabel{fig:scoremaps}{{3.5}{19}{PLACEHOLDER. Score maps.\relax }{figure.caption.20}{}}
+\@writefile{tdo}{\contentsline {todo}{update score maps figure}{19}{section*.21}}
+\pgfsyspdfmark {pgfid7}{18928762}{45070081}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces PLACEHOLDER. Position-sensitive \gls {roi}-pooling operation for a given class.\relax }}{20}{figure.caption.22}}
+\newlabel{fig:rfcnpooling}{{3.6}{20}{PLACEHOLDER. Position-sensitive \gls {roi}-pooling operation for a given class.\relax }{figure.caption.22}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.2}You Only Look Once}{20}{subsection.3.5.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.5.3}Benchmark Results}{20}{subsection.3.5.3}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {4}Discussion}{21}{chapter.4}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{\numberline {5}Conclusion}{18}{chapter.5}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {5}Conclusion}{22}{chapter.5}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \bibdata{bibtex}
@@ -177,8 +204,8 @@
 \bibcite{fasterrcnn}{11}
 \bibcite{deepres}{12}
 \bibcite{incepres}{13}
-\newlabel{bibtex}{{5}{19}{Conclusion}{section*.14}{}}
-\@writefile{toc}{\contentsline {chapter}{Literature}{19}{section*.14}}
+\newlabel{bibtex}{{5}{23}{Conclusion}{section*.23}{}}
+\@writefile{toc}{\contentsline {chapter}{Literature}{23}{section*.23}}
 \bibcite{speedacc}{14}
 \bibcite{multipath}{15}
 \bibcite{ion}{16}
@@ -194,8 +221,8 @@
 \bibcite{rfcn}{26}
 \bibcite{semfcn}{27}
 \bibcite{instancefcn}{28}
-\newlabel{appendices}{{5}{21}{Conclusion}{chapter*.15}{}}
-\@writefile{toc}{\contentsline {chapter}{Appendices}{23}{section*.16}}
-\newlabel{LastPage}{{}{24}{}{page.24}{}}
-\xdef\lastpage@lastpage{24}
-\xdef\lastpage@lastpageHy{24}
+\newlabel{appendices}{{5}{25}{Conclusion}{chapter*.24}{}}
+\@writefile{toc}{\contentsline {chapter}{Appendices}{27}{section*.25}}
+\newlabel{LastPage}{{}{28}{}{page.28}{}}
+\xdef\lastpage@lastpage{28}
+\xdef\lastpage@lastpageHy{28}
