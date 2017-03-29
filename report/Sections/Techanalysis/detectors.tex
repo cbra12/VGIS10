@@ -36,20 +36,38 @@ Once the bank of score maps have been computed, position-sensitive \gls{roi}-poo
 \end{figure}
 
 \subsection{You Only Look Once}
+YOLOv2 \cite{yolov2} is one of the current best performing single shot detectors, with results on par with more commonly used object detectors while being considerably faster at test time. YOLOv2 uses a different approach than the common 2-step method of region proposal and region classification seen in Faster R-CNN and \gls{rfcn} by directly computing class probabilities on each \gls{roi}. Some of the main distinct difference between YOLOv2 and region-based methods is the use of directly predicting bounding boxes, using a modified model, and altering how the priors for anchor boxes are computed during region proposals with the \gls{rpn}. The distinct differentiator for YOLO and YOLOv2 is that bounding boxes for a given object are predicted directly rather than predicting offsets to anchors with the \gls{rpn}. This is done by splitting the image into $S \times S$ grid cells, with each cell predicting $B$ bounding boxes. Each of the $B$ boxes predict a total of 5 values: $[t_x, t_y, t_w, t_h, t_o]$. Where $t_x, t_y$ are the coordinates of the centre of the given cell. The values $t_w, t_h$ are the width and height relative to the entire image. Finally, $t_\sigma$ is the confidence of how well the predicted box fits the ground truth. The location of the bounding box is determined by these values with respect to a given cell and the offset of the cell from the top left corner of the image $(c_x, c_y)$ and the size of the anchor box is $p_w, p_h$. Then the bounding box predictions are calculated by:
 
+\begin{equation}
+\begin{split}
+  b_x = \sigma(t_x) + c_x \\
+  b_y = \sigma(t_y) + c_y \\
+  b_w = p_we^{t_w} \\
+  b_h = p_he^{t_h}.
+\end{split}
+\end{equation}
 
+Finally, the probability that the given bounding box fitting given the probability of their being an object is:
 
+\begin{equation}  
+  Pr(object) * \gls{iou}(b, object) = \sigma(t_o).  
+\end{equation}
 
+Each of the $S^2$ cells predicts $C$ conditional probabilities of it containing a given class and also being object by $Pr(Class_i \rvert Object)$. With the predicted bounding boxes and class probabilities calculated for each cell the final detections can be determined by adjusting a threshold based upon the calculation:
 
+\begin{equation}
+  Pr(Class_i \rvert Object) *  Pr(object) * \gls{iou}(b, object). 
+\end{equation}
 
+This process of using grid cells, bounding box prediction, cell class probabilities and final detections can be seen in \figref{yolomodel}.
 
-
-
-
-
-
-
-
+\change[inline]{update figure}
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=0.8\textwidth]{Figs/Techanal/yolomodel.png}
+      \caption{PLACEHOLDER. \gls{yolo} model.}
+    \label{fig:yolomodel}
+\end{figure}
 
 
 

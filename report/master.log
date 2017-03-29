@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.30)  28 MAR 2017 16:03
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.30)  29 MAR 2017 16:04
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2829,36 +2829,44 @@ Package pdftex.def Info: Figs/Techanal/rfcnarchi.png used on input line 13.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [18]
-<Figs/Techanal/scoremaps.png, id=421, 294.09875pt x 261.97874pt>
+<Figs/Techanal/scoremaps.png, id=420, 294.09875pt x 261.97874pt>
 File: Figs/Techanal/scoremaps.png Graphic file (type png)
 
 <use Figs/Techanal/scoremaps.png>
 Package pdftex.def Info: Figs/Techanal/scoremaps.png used on input line 23.
 (pdftex.def)             Requested size: 173.44534pt x 154.50215pt.
 
-<Figs/Techanal/rfcnpooling.png, id=423, 593.21625pt x 257.96375pt>
+<Figs/Techanal/rfcnpooling.png, id=422, 593.21625pt x 257.96375pt>
 File: Figs/Techanal/rfcnpooling.png Graphic file (type png)
 
 <use Figs/Techanal/rfcnpooling.png>
 Package pdftex.def Info: Figs/Techanal/rfcnpooling.png used on input line 33.
 (pdftex.def)             Requested size: 260.17465pt x 113.14226pt.
- [19 <./Figs/Techanal/rfcnarchi.png> <./Figs/Techanal/scoremaps.png>]) [20 <./F
-igs/Techanal/rfcnpooling.png>]
+ [19 <./Figs/Techanal/rfcnarchi.png> <./Figs/Techanal/scoremaps.png>] [20 <./Fi
+gs/Techanal/rfcnpooling.png>]
+<Figs/Techanal/yolomodel.png, id=444, 790.955pt x 495.8525pt>
+File: Figs/Techanal/yolomodel.png Graphic file (type png)
+
+<use Figs/Techanal/yolomodel.png>
+Package pdftex.def Info: Figs/Techanal/yolomodel.png used on input line 67.
+(pdftex.def)             Requested size: 346.89732pt x 217.47212pt.
+) [21 <./Figs/Techanal/yolomodel.png>]
 Chapter 4.
-[21
+[22
 
 ]
 Chapter 5.
-[22
+[23
 
-] (./master.bbl [23
-
-
-
-] [24]) [25] [26
+] [24
 
 
-] [27
+] (./master.bbl [25
+
+] [26]) [27] [28
+
+
+] [29
 
 
 ] (./master.tdo)
@@ -2868,7 +2876,7 @@ Chapter 5.
 
 
 AED: lastpage setting LastPage
-[28
+[30
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 112.
@@ -2877,25 +2885,22 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 112.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 112.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 112.
 Package rerunfilecheck Info: File `master.out' has not changed.
-(rerunfilecheck)             Checksum: AD1B4F52DFB3AE4EBFD5D9098C1889A9;975.
+(rerunfilecheck)             Checksum: 13247CDBDBBB2E34261AF1A4228BE5A6;975.
 
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 47328 strings out of 495028
- 992335 string characters out of 6181496
- 1391303 words of memory out of 5000000
- 49308 multiletter control sequences out of 15000+600000
+ 47341 strings out of 495028
+ 992585 string characters out of 6181496
+ 1391399 words of memory out of 5000000
+ 49314 multiletter control sequences out of 15000+600000
  83346 words of font info for 70 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  78i,17n,96p,2666b,1124s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/christoffer/texmf/fonts/pk/ljfour/public/MnSymbol/MnSymbolD10.657pk>{
-/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/d
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc} </home/christoffer/texmf/
+fonts/pk/ljfour/public/MnSymbol/MnSymbolD10.657pk>{/usr/share/texmf/fonts/enc/d
 vips/lm/lm-rm.enc} </home/christoffer/texmf/fonts/pk/ljfour/public/MnSymbol/MnS
 ymbolE10.657pk> </home/christoffer/texmf/fonts/pk/ljfour/public/MnSymbol/MnSymb
 olC10.657pk>{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/f
@@ -2904,15 +2909,16 @@ avumono_t1-type1.enc}</home/christoffer/texmf/fonts/type1/public/dejavu/DejaVuS
 ansMono.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texm
 f/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx
 9.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fon
-ts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb
-></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type
-1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/sh
-are/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/l
-m/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri8.pfb>
-Output written on master.pdf (32 pages, 2945741 bytes).
+ts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb
+></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type
+1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/s
+hare/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/
+lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texm
+f/fonts/type1/public/lm/lmri8.pfb>
+Output written on master.pdf (34 pages, 3376939 bytes).
 PDF statistics:
- 598 PDF objects out of 1000 (max. 8388607)
- 486 compressed objects within 5 object streams
- 111 named destinations out of 1000 (max. 500000)
- 350 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 625 PDF objects out of 1000 (max. 8388607)
+ 503 compressed objects within 6 object streams
+ 117 named destinations out of 1000 (max. 500000)
+ 355 words of extra memory for PDF output out of 10000 (max. 10000000)
 
