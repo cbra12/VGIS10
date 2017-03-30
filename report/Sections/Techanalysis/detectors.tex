@@ -1,6 +1,9 @@
 \section{Object Detectors}
 This section will perform a technical analysis of the current primary \gls{cnn}-based object detectors.
 
+\subsection{Faster Region-Convolutional Neural Network}
+
+
 
 \subsection{Regional Fully-Connected Network}
 One of the current leading object detection methods is the \gls{rfcn} \cite{rfcn}, which as mentioned in \sectionref{related}, takes a different approach to that of the region-based methods such as Faster R-CNN. The authors of \gls{rfcn} were inspired by the recent advances in \gls{fcn} classification networks, such as ResNets, and argue that the addition of the \gls{roi}-pooling layer in the Faster R-CNN pipeline is unnatural and adds computational complexity. The authors hypothesise that the reasoning behind this addition is due to the trade-off between using a classification approach in an object detection pipeline. A defining factor in object detection is that the method should be able to respect translation variance, that translation of an object inside an object proposal should given a good indication as to how well the proposal fits the object. Whereas classification is more translation invariant, as the shifting of an object in an image does not effect how the system returns it's output. The use of the \gls{roi}-pooling layer placed in between convolutional layers means that any convolutions after this point are not translation invariant as it is not region specific. Rather than using this popular feature extractor, \gls{rfcn} uses position-sensitive score maps computed by a bank of convolutional layers. The maps add translation variance into the detection pipeline by computing scores in relation to position information with respect to the relative spatial position of an object. A \gls{roi}-pooling layer is added after the score-maps, however, no convolutional operations are done after this point ensuring translation variance.
@@ -69,7 +72,29 @@ This process of using grid cells, bounding box prediction, cell class probabilit
     \label{fig:yolomodel}
 \end{figure}
 
+As mentioned region proposals are found using the \gls{rpn} from Faster R-CNN \cite{fasterrcnn}. However, instead of using hand-picked priors for the anchor boxes, YOLOv2 proposed a method to learn more suitable sizes and aspect ratios. This is done by running k-means clustering on the annotated bounding boxes from the training set using a custom distance measurement. The custom measurement replaces Euclidean distance as these distances would create a bias due to more error on likely occurring on larger anchors. The custom distance measurement is designed for favourable \gls{iou} scores and is as follows:
 
+\begin{equation}
+  d(box, centroid) = 1 - IoU(box, centroid)
+\end{equation}
+
+where $box$ is the ground truth bounding box from the training set and $centroid$ is the predicted anchor box. By learning the priors YOLOv2 is able to use five anchor boxes at the same level of recall as the nine used in a typical \gls{rpn}.
+
+YOLOv2 also goes against the grain in comparison to other state-of-the-art object detectors in regards to the choice of classification model. Rather than using the common networks such as VGG or ResNets, YOLOv2 propose their own 19 layer model dubbed Darknet-19. The model is of similar paradigm to VGG nets in that it uses mostly $3 \times 3$ convolutions and doubles the number of channels after pooling, which is also present in ResNets. But it is of considerably lower complexity than VGG-16 which consists of 15.3 billion \gls{flops}, with only 5.58 billion \gls{flops}. The baseline model has competitive results on ImageNet which can be seen in \tableref{darknetimagenet}. The baseline can be improved using standard data augmentations and also by initially training on $224 \times 224$ images followed by fine-tuning on $448 \time 448$, this is also shown as Darknet-19++ in \tableref{darknetimagenet}.
+
+\begin{table}[]
+\centering
+\caption{ImageNet classification results for the Darknet-19 model.}
+\label{tab:darknetimagenet}
+\begin{tabular}{|l|l|l|}
+\hline
+Model                                                                                       & top-1 error (\%) & top-5 error (\%) \\ \hline
+Darknet-19                                                                                  & 27.1             & 8.8              \\ \hline
+Darknet-19++ & 23.5             & 6.7              \\ \hline
+\end{tabular}
+\end{table}
+
+To aid in the detection of small objects the Darknet-19 model is also pre-trained on high-resolution images from ImageNet prior to training for object detection. Also fine-grained features are passthrough from an earlier layer when performing prediction. This gives features from a $26 \times 26$ feature map instead of the $13 \time 13$ size at the \gls{rpn}. Finally multi-scale training is also performed.
 
 \subsection{Benchmark Results}
 \begin{comment}

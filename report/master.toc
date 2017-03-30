@@ -13,10 +13,11 @@
 \contentsline {section}{\numberline {3.3}Benchmark Datasets}{18}{section.3.3}
 \contentsline {section}{\numberline {3.4}Evaluation Metrics}{18}{section.3.4}
 \contentsline {section}{\numberline {3.5}Object Detectors}{18}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Regional Fully-Connected Network}{18}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}You Only Look Once}{20}{subsection.3.5.2}
-\contentsline {subsection}{\numberline {3.5.3}Benchmark Results}{21}{subsection.3.5.3}
-\contentsline {chapter}{\numberline {4}Discussion}{22}{chapter.4}
-\contentsline {chapter}{\numberline {5}Conclusion}{23}{chapter.5}
-\contentsline {chapter}{Literature}{25}{section*.25}
-\contentsline {chapter}{Appendices}{29}{section*.27}
+\contentsline {subsection}{\numberline {3.5.1}Faster Region-Convolutional Neural Network}{18}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Regional Fully-Connected Network}{18}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.3}You Only Look Once}{20}{subsection.3.5.3}
+\contentsline {subsection}{\numberline {3.5.4}Benchmark Results}{22}{subsection.3.5.4}
+\contentsline {chapter}{\numberline {4}Discussion}{23}{chapter.4}
+\contentsline {chapter}{\numberline {5}Conclusion}{24}{chapter.5}
+\contentsline {chapter}{Literature}{25}{section*.26}
+\contentsline {chapter}{Appendices}{29}{section*.28}
