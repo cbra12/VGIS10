@@ -100,6 +100,12 @@ K.~He, X.~Zhang, S.~Ren, and J.~Sun, ``Deep residual learning for image
   \url{http://arxiv.org/abs/1512.03385}
 \BIBentrySTDinterwordspacing
 
+\bibitem{cocolead}
+\BIBentryALTinterwordspacing
+M.~COCO. (2017) Ms coco detections leaderboard. [Online]. Available:
+  \url{http://http://mscoco.org/dataset/#detections-leaderboard}
+\BIBentrySTDinterwordspacing
+
 \bibitem{incepres}
 \BIBentryALTinterwordspacing
 C.~Szegedy, S.~Ioffe, and V.~Vanhoucke, ``Inception-v4, inception-resnet and

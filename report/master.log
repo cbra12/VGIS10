@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.30)  30 MAR 2017 13:56
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.30)  4 APR 2017 17:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2263,7 +2263,11 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip162
 )
-(./master.aux)
+(./master.aux
+
+LaTeX Warning: Label `my-label' multiply defined.
+
+)
 \openout1 = `master.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
@@ -2687,9 +2691,6 @@ LaTeX Warning: No positions in optional float specifier.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 48.
 
-
-LaTeX Warning: Citation `cocolead' on page 10 undefined on input line 70.
-
 )
 Underfull \hbox (badness 10000) in paragraph at lines 62--78
 
@@ -2777,7 +2778,7 @@ Chapter 3.
 
 pdfTeX warning: pdflatex (file ./Figs/Techanal/resblock.pdf): PDF inclusion: fo
 und PDF version <1.7>, but at most version <1.5> allowed
-<Figs/Techanal/resblock.pdf, id=353, 273.02pt x 263.98625pt>
+<Figs/Techanal/resblock.pdf, id=355, 273.02pt x 263.98625pt>
 File: Figs/Techanal/resblock.pdf Graphic file (type pdf)
 
 <use Figs/Techanal/resblock.pdf>
@@ -2789,7 +2790,7 @@ Underfull \vbox (badness 1377) has occurred while \output is active []
  [15
 
  <./Figs/Techanal/resblock.pdf>]
-<Figs/Techanal/plainres.png, id=375, 207.77625pt x 776.9025pt>
+<Figs/Techanal/plainres.png, id=377, 207.77625pt x 776.9025pt>
 File: Figs/Techanal/plainres.png Graphic file (type png)
 
 <use Figs/Techanal/plainres.png>
@@ -2799,7 +2800,7 @@ Package pdftex.def Info: Figs/Techanal/plainres.png used on input line 44.
 
 pdfTeX warning: pdflatex (file ./Figs/Techanal/newresblock.pdf): PDF inclusion:
  found PDF version <1.7>, but at most version <1.5> allowed
-<Figs/Techanal/newresblock.pdf, id=389, 218.8175pt x 282.05376pt>
+<Figs/Techanal/newresblock.pdf, id=391, 218.8175pt x 282.05376pt>
 File: Figs/Techanal/newresblock.pdf Graphic file (type pdf)
 
 <use Figs/Techanal/newresblock.pdf>
@@ -2815,62 +2816,92 @@ LaTeX Warning: No positions in optional float specifier.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [17 <./Figs/Techanal/newresblock.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 9--12
+<Figs/Techanal/fasterframework.png, id=417, 378.41376pt x 383.4325pt>
+File: Figs/Techanal/fasterframework.png Graphic file (type png)
 
- []
-
-<Figs/Techanal/rfcnarchi.png, id=413, 684.5575pt x 352.31625pt>
-File: Figs/Techanal/rfcnarchi.png Graphic file (type png)
-
-<use Figs/Techanal/rfcnarchi.png>
-Package pdftex.def Info: Figs/Techanal/rfcnarchi.png used on input line 16.
-(pdftex.def)             Requested size: 346.89732pt x 178.53922pt.
+<use Figs/Techanal/fasterframework.png>
+Package pdftex.def Info: Figs/Techanal/fasterframework.png used on input line 1
+0.
+(pdftex.def)             Requested size: 260.17465pt x 263.62674pt.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [18]
-<Figs/Techanal/scoremaps.png, id=421, 294.09875pt x 261.97874pt>
+<Figs/Techanal/rpnframework.png, id=429, 426.59375pt x 249.93375pt>
+File: Figs/Techanal/rpnframework.png Graphic file (type png)
+
+<use Figs/Techanal/rpnframework.png>
+Package pdftex.def Info: Figs/Techanal/rpnframework.png used on input line 20.
+(pdftex.def)             Requested size: 260.17465pt x 152.44029pt.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [19 <./Figs/Techanal/fasterframework.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 28--31
+
+ []
+
+[20 <./Figs/Techanal/rpnframework.png>]
+<Figs/Techanal/rfcnarchi.png, id=448, 684.5575pt x 352.31625pt>
+File: Figs/Techanal/rfcnarchi.png Graphic file (type png)
+
+<use Figs/Techanal/rfcnarchi.png>
+Package pdftex.def Info: Figs/Techanal/rfcnarchi.png used on input line 35.
+(pdftex.def)             Requested size: 346.89732pt x 178.53922pt.
+
+<Figs/Techanal/scoremaps.png, id=449, 294.09875pt x 261.97874pt>
 File: Figs/Techanal/scoremaps.png Graphic file (type png)
 
 <use Figs/Techanal/scoremaps.png>
-Package pdftex.def Info: Figs/Techanal/scoremaps.png used on input line 26.
+Package pdftex.def Info: Figs/Techanal/scoremaps.png used on input line 45.
 (pdftex.def)             Requested size: 173.44534pt x 154.50215pt.
-
-<Figs/Techanal/rfcnpooling.png, id=423, 593.21625pt x 257.96375pt>
+ [21 <./Figs/Techanal/rfcnarchi.png> <./Figs/Techanal/scoremaps.png>]
+<Figs/Techanal/rfcnpooling.png, id=461, 593.21625pt x 257.96375pt>
 File: Figs/Techanal/rfcnpooling.png Graphic file (type png)
 
 <use Figs/Techanal/rfcnpooling.png>
-Package pdftex.def Info: Figs/Techanal/rfcnpooling.png used on input line 36.
+Package pdftex.def Info: Figs/Techanal/rfcnpooling.png used on input line 55.
 (pdftex.def)             Requested size: 260.17465pt x 113.14226pt.
- [19 <./Figs/Techanal/rfcnarchi.png> <./Figs/Techanal/scoremaps.png>] [20 <./Fi
-gs/Techanal/rfcnpooling.png>]
-<Figs/Techanal/yolomodel.png, id=445, 790.955pt x 495.8525pt>
+ [22 <./Figs/Techanal/rfcnpooling.png>]
+<Figs/Techanal/yolomodel.png, id=475, 790.955pt x 495.8525pt>
 File: Figs/Techanal/yolomodel.png Graphic file (type png)
 
 <use Figs/Techanal/yolomodel.png>
-Package pdftex.def Info: Figs/Techanal/yolomodel.png used on input line 70.
+Package pdftex.def Info: Figs/Techanal/yolomodel.png used on input line 89.
 (pdftex.def)             Requested size: 346.89732pt x 217.47212pt.
- [21 <./Figs/Techanal/yolomodel.png>]
+ [23 <./Figs/Techanal/yolomodel.png>]
 
-LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 85.
+LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [22]
+[24]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Overfull \hbox (63.46095pt too wide) in paragraph at lines 190--204
+ [][] 
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [25] [26] [27]
 Chapter 4.
-[23
+[28
 
 ]
 Chapter 5.
-[24
+[29
 
-] (./master.bbl [25
-
-
-
-] [26]) [27] [28
+] [30
 
 
-] [29
+] (./master.bbl [31
+
+] [32]) [33] [34
+
+
+] [35
 
 
 ] (./master.tdo)
@@ -2880,7 +2911,7 @@ Chapter 5.
 
 
 AED: lastpage setting LastPage
-[30
+[36
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 112.
@@ -2889,21 +2920,21 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 112.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 112.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 112.
 Package rerunfilecheck Info: File `master.out' has not changed.
-(rerunfilecheck)             Checksum: 2878642044EA7BC0BC048CEBCF57216E;975.
+(rerunfilecheck)             Checksum: 5DCF09035356D05C6CA1B92F348EC639;975.
 
 
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 47375 strings out of 495028
- 993140 string characters out of 6181496
- 1391832 words of memory out of 5000000
- 49345 multiletter control sequences out of 15000+600000
- 83346 words of font info for 70 fonts, out of 8000000 for 9000
+ 47450 strings out of 495028
+ 994331 string characters out of 6181496
+ 1392495 words of memory out of 5000000
+ 49384 multiletter control sequences out of 15000+600000
+ 94465 words of font info for 90 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  78i,17n,96p,2666b,1124s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc} </home/christoffer/texmf/
@@ -2918,14 +2949,15 @@ f/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx
 9.pfb></usr/share/texmf/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texmf/fon
 ts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb
 ></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type
-1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/s
-hare/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/
-lm/lmr9.pfb></usr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texm
-f/fonts/type1/public/lm/lmri8.pfb>
-Output written on master.pdf (34 pages, 3381003 bytes).
+1/public/lm/lmmi9.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/s
+hare/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public
+/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf
+/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri8
+.pfb>
+Output written on master.pdf (40 pages, 3444473 bytes).
 PDF statistics:
- 632 PDF objects out of 1000 (max. 8388607)
- 509 compressed objects within 6 object streams
- 120 named destinations out of 1000 (max. 500000)
- 355 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 725 PDF objects out of 1000 (max. 8388607)
+ 591 compressed objects within 6 object streams
+ 136 named destinations out of 1000 (max. 500000)
+ 365 words of extra memory for PDF output out of 10000 (max. 10000000)
 
