@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.30)  4 APR 2017 17:41
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.30)  4 APR 2017 21:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2263,11 +2263,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip162
 )
-(./master.aux
-
-LaTeX Warning: Label `my-label' multiply defined.
-
-)
+(./master.aux)
 \openout1 = `master.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
@@ -2874,18 +2870,17 @@ Package pdftex.def Info: Figs/Techanal/yolomodel.png used on input line 89.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 [24]
+Underfull \vbox (badness 7221) has occurred while \output is active []
 
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
-Overfull \hbox (63.46095pt too wide) in paragraph at lines 190--204
+ [25]
+Overfull \hbox (29.46892pt too wide) in paragraph at lines 193--207
  [][] 
  []
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [25] [26] [27]
+) [26] [27]
 Chapter 4.
 [28
 
@@ -2926,14 +2921,14 @@ Package rerunfilecheck Info: File `master.out' has not changed.
 LaTeX Warning: There were undefined references.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 47450 strings out of 495028
- 994331 string characters out of 6181496
- 1392495 words of memory out of 5000000
- 49384 multiletter control sequences out of 15000+600000
+ 47481 strings out of 495028
+ 994743 string characters out of 6181496
+ 1391649 words of memory out of 5000000
+ 49415 multiletter control sequences out of 15000+600000
  94465 words of font info for 90 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  78i,17n,96p,2666b,1124s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2954,10 +2949,10 @@ hare/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public
 /lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf
 /fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri8
 .pfb>
-Output written on master.pdf (40 pages, 3444473 bytes).
+Output written on master.pdf (40 pages, 3447116 bytes).
 PDF statistics:
- 725 PDF objects out of 1000 (max. 8388607)
- 591 compressed objects within 6 object streams
+ 728 PDF objects out of 1000 (max. 8388607)
+ 594 compressed objects within 6 object streams
  136 named destinations out of 1000 (max. 500000)
  365 words of extra memory for PDF output out of 10000 (max. 10000000)
 

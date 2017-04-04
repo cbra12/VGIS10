@@ -18,7 +18,7 @@
 \contentsline {subsection}{\numberline {3.5.3}You Only Look Once}{22}{subsection.3.5.3}
 \contentsline {subsection}{\numberline {3.5.4}Benchmark Results}{24}{subsection.3.5.4}
 \contentsline {subsubsection}{\gls {pascalvoc}}{24}{subsubsection*.30}
-\contentsline {subsubsection}{\gls {mscoco}}{25}{subsubsection*.33}
+\contentsline {subsubsection}{\gls {mscoco}}{26}{subsubsection*.33}
 \contentsline {chapter}{\numberline {4}Discussion}{28}{chapter.4}
 \contentsline {chapter}{\numberline {5}Conclusion}{29}{chapter.5}
 \contentsline {chapter}{Literature}{31}{section*.35}
