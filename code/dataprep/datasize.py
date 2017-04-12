@@ -16,20 +16,21 @@ def plotHist(bboxlst, year):
     plt.title(year + " trainval Bounding Box Area")
     plt.xlabel("Area")
     plt.ylabel("Frequency")
-    plt.savefig('figs/data_' + year + '.pdf')
+    #plt.savefig('figs/data_' + year + '.pdf')
 
 #xml = ""
 #xmlfile = '../../../benchmarkdata/pascalvoc/2012/Annotations/2007_000423.xml'
 #xmlfile = '../../../benchmarkdata/pascalvoc/2012/Annotations/2008_003969.xml'
 
-# All xml in dir
-year = '2007'
-path = '../../../benchmarkdata/pascalvoc/' + year + '/Annotations/'
+year = '2007++2012'
 allbbox_id = []
 allbbox = []
 filenames = []
 fileno = 0
+iters = 2
 #for y in range(0,1):
+path = '../../../benchmarkdata/pascalvoc/' + year + '/Annotations/'
+print("Parsing files from {}".format(year))
 for filename in os.listdir(path):
     #filename = '2007_000423.xml'
     if not filename.endswith('.xml'): 
@@ -112,7 +113,7 @@ for filename in os.listdir(path):
     
     filenames.append(filename)
     fileno += 1
-    if fileno % 100 == 0:
+    if fileno % 1000 == 0:
         print("Parsed {} files".format(fileno))
 
-plotHist(allbbox, year) 
+plotHist(allbbox, '2007++2012') 
