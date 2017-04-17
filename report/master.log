@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.30)  12 APR 2017 14:48
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.30)  17 APR 2017 21:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2887,27 +2887,56 @@ Chapter 4.
 File: Figs/Implementation/0712hist.pdf Graphic file (type pdf)
 
 <use Figs/Implementation/0712hist.pdf>
-Package pdftex.def Info: Figs/Implementation/0712hist.pdf used on input line 14
+Package pdftex.def Info: Figs/Implementation/0712hist.pdf used on input line 24
 .
 (pdftex.def)             Requested size: 260.17465pt x 195.1391pt.
-) [28
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[28
 
  <./Figs/Implementation/0712hist.pdf>]
+<Figs/Implementation/testsmallhist.pdf, id=608, 462.52798pt x 346.89601pt>
+File: Figs/Implementation/testsmallhist.pdf Graphic file (type pdf)
+
+<use Figs/Implementation/testsmallhist.pdf>
+Package pdftex.def Info: Figs/Implementation/testsmallhist.pdf used on input li
+ne 56.
+(pdftex.def)             Requested size: 195.12767pt x 146.34639pt.
+
+<Figs/Implementation/testlargehist.pdf, id=609, 462.52798pt x 346.89601pt>
+File: Figs/Implementation/testlargehist.pdf Graphic file (type pdf)
+
+<use Figs/Implementation/testlargehist.pdf>
+Package pdftex.def Info: Figs/Implementation/testlargehist.pdf used on input li
+ne 61.
+(pdftex.def)             Requested size: 195.12767pt x 146.34639pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [29 <./Figs/Implementation/testsmallhist.pdf> <./Figs/Implementation/testlarg
+ehist.pdf
+
+pdfTeX warning: pdflatex (file ./Figs/Implementation/testlargehist.pdf): PDF in
+clusion: multiple pdfs with page group included in a single page
+>] [30]
 Chapter 5.
-[29
+[31
 
 ]
 Chapter 6.
-[30
+[32
 
-] (./master.bbl [31
-
-
-
-] [32]) [33] [34
+] (./master.bbl [33
 
 
-] [35
+
+] [34]) [35] [36
+
+
+] [37
 
 
 ] (./master.tdo)
@@ -2917,7 +2946,7 @@ Chapter 6.
 
 
 AED: lastpage setting LastPage
-[36
+[38
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 115.
@@ -2926,17 +2955,17 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 115.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 115.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 115.
 Package rerunfilecheck Info: File `master.out' has not changed.
-(rerunfilecheck)             Checksum: B30F81B35BBAABEB89CAC6685E06A49C;1105.
+(rerunfilecheck)             Checksum: 2945C0A93B76969F44A8D3EDD54AA559;1105.
 
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 47497 strings out of 495028
- 995133 string characters out of 6181496
- 1392769 words of memory out of 5000000
- 49422 multiletter control sequences out of 15000+600000
+ 47519 strings out of 495028
+ 995686 string characters out of 6181496
+ 1393094 words of memory out of 5000000
+ 49437 multiletter control sequences out of 15000+600000
  94465 words of font info for 90 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  78i,17n,96p,2666b,1124s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -2957,10 +2986,10 @@ hare/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public
 /lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf
 /fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri8
 .pfb>
-Output written on master.pdf (40 pages, 3463165 bytes).
+Output written on master.pdf (42 pages, 3490681 bytes).
 PDF statistics:
- 784 PDF objects out of 1000 (max. 8388607)
- 615 compressed objects within 7 object streams
- 139 named destinations out of 1000 (max. 500000)
- 386 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 886 PDF objects out of 1000 (max. 8388607)
+ 639 compressed objects within 7 object streams
+ 144 named destinations out of 1000 (max. 500000)
+ 396 words of extra memory for PDF output out of 10000 (max. 10000000)
 
