@@ -65,7 +65,7 @@ Testing was done on the 07 test set but also split according to the median thres
     \label{}
 \end{figure} 
 
-The results for the object detectors trained on the separate partitions of training data and a the baseline detector trained on all the data against the three sets of tests can be seen in \tableref{resresults}. The table shows that the detectors trained on the same relative size of data perform best.
+The results for the object detectors trained on the separate partitions of training data and a the baseline detector trained on all the data against the three sets of tests can be seen in \tableref{resresults}. The table shows that the detectors trained on the same relative size of data perform best. In the instance of 07Test$_{small}$, its counterpart 07++12$_{small}$ gives a result 04 0.34 \gls{map}. This is an improvement of 12\% in comparison to the model trained on all of the data (07++12) which has a \gls{map} of 22.16\%; a relative improvement of 35\%. The model trained on the data of larger objects, 07++12$_{larger}$, is very poor at detecting smaller objects scoring 3.08\%. In this case of 07Test$_{larger}$, the model trained on 07++12$_{larger}$ data is the best performing at 76.60\%. A similar improvement is \gls{map} is present in this instance in comparison to the model trained on all of the data. Overall there is an increase of 12.36\%, which is a relative improvement of 16\%. Finally, the best performing on all of the 07 test data is the model trained on 07++12.
 
 
 \begin{table}[h]
@@ -74,15 +74,15 @@ The results for the object detectors trained on the separate partitions of train
 \label{tab:resresults}
 \begin{tabular}{|l|l|l|}
 \hline
-\textbf{Train Data}    & \textbf{Test Data}     & \textbf{mAP} \\ \hline
-07++12$_{small}$ & 07Test$_{small}$  & \textbf{0.3410}   \\ \hline
-07++12$_{larger}$  & 07Test$_{small}$ & 0.0308     \\ \hline
-07++12   & 07Test$_{small}$           & 0.2216    \\ \hline
-07++12$_{small}$ & 07Test$_{larger}$  &  0.3640   \\ \hline
-07++12$_{larger}$ & 07Test$_{larger}$ &  \textbf{0.7660}   \\ \hline
-07++12 & 07Test$_{larger}$           &  0.6434   \\ \hline
-07++12$_{small}$       & 07   & 0.6265    \\ \hline
-07++12$_{larger}$       & 07  &  0.5965   \\ \hline
-07++12        & 07            &  \textbf{0.7635}   \\ \hline 
+\textbf{Train Data}    & \textbf{Test Data}     & \textbf{mAP (\%)} \\ \hline
+07++12$_{small}$ & 07Test$_{small}$  & \textbf{34.10}   \\ \hline
+07++12$_{larger}$  & 07Test$_{small}$ & 3.08     \\ \hline
+07++12   & 07Test$_{small}$           & 22.16    \\ \hline
+07++12$_{small}$ & 07Test$_{larger}$  &  36.40   \\ \hline
+07++12$_{larger}$ & 07Test$_{larger}$ &  \textbf{76.60}   \\ \hline
+07++12 & 07Test$_{larger}$           &  64.34   \\ \hline
+07++12$_{small}$       & 07   & 62.65    \\ \hline
+07++12$_{larger}$       & 07  &  59.65   \\ \hline
+07++12        & 07            &  \textbf{76.35}   \\ \hline 
 \end{tabular}
 \end{table}

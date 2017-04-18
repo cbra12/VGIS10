@@ -1,0 +1,46 @@
+\section{Resolution-Aware Object Detection}
+
+\begin{table}[h]
+\centering
+\caption{Results Test07$_{small}$}
+\label{my-label}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{|l|l|l||l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l||}
+\hline
+Train Data   & Test Data    & mAP   & aero  & bike  & bird  & boat  & bottle & bus   & car   & cat   & chair & cow   & table & dog   & horse & mbike & person & plant & sheep & sofa & train & tv \\ \hline
+07++12$_{small}$ & 07Test$_{small}$ & \textbf{34.10} & \textbf{28.32} & \textbf{31.47} & \textbf{50.08} & \textbf{52.30} & \textbf{46.47} & \textbf{17.04} & \textbf{50.08} & \textbf{13.36} & \textbf{45.58} & \textbf{63.96} & 0.38  & \textbf{16.54} & \textbf{15.72} & \textbf{34.19} & \textbf{55.16} & \textbf{31.02} & \textbf{65.25} & \textbf{2.52} & \textbf{9.07} & \textbf{53.46} \\ \hline
+ 07++12$_{larger}$ &  07Test$_{small}$ & 3.08 & 1.54 & 4.91 & 4.95 & 2.96 & 1.42 & 2.90 & 3.44 & 1.04 & 5.58 & 2.79 & 0.34 & 2.68 & 2.50 & 3.42 & 3.02 & 2.20 & 5.74 & 0.94 & 4.22 & 4.98  \\ \hline
+ 07++12 & 07Test$_{small}$ & 22.16 & 21.49 & 20.70 & 28.18 & 30.57 & 35.72 & 12.04 & 35.48 & 5.83 & 39.40 & 41.18 & \textbf{0.52} & 10.56 & 10.08 & 15.07 & 28.92 & 20.93 & 44.11 & 1.58 & 8.76 & 32.13  \\ \hline
+\end{tabular}%
+}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Results Test07$_{larger}$}
+\label{my-label}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{|l|l|l||l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l||}
+\hline
+Train Data   & Test Data    & mAP   & aero  & bike  & bird  & boat  & bottle & bus   & car   & cat   & chair & cow   & table & dog   & horse & mbike & person & plant & sheep & sofa & train & tv \\ \hline
+07++12$_{small}$ & 07Test$_{larger}$ & 36.40 & 53.91 & 46.30 & 29.28 & 12.45 & 13.91 & 62.50 & 35.16 & 71.09 & 4.57 & 22.06 & 43.96 & 61.90 & 56.13 & 44.99 & 17.84 & 5.09 & 17.14 & 52.30 & 64.13 & 13.35 \\ \hline
+ 07++12$_{larger}$ &  07Test$_{larger}$ & \textbf{76.60} & \textbf{87.49} & \textbf{78.95} & \textbf{76.57} & \textbf{66.74} & \textbf{67.98} & \textbf{86.49} & \textbf{86.40} & \textbf{88.44} & \textbf{50.11} & \textbf{82.56} & 74.15 & \textbf{86.59} & \textbf{86.16} & \textbf{82.57} & \textbf{84.00} & \textbf{46.13} & \textbf{67.78} & \textbf{78.31} & \textbf{84.39} & \textbf{71.11}  \\ \hline
+ 07++12 & 07Test$_{large}$ & 64.34 & 78.18 & 71.17 & 58.76 & 43.91 & 36.72 & 82.71 & 73.40 & 85.64 & 25.73 & 54.67 & \textbf{74.47} & 82.66 & 82.25 & 77.02 & 63.90 & 31.53 & 46.35 & 77.67 & 84.07 & 54.92  \\ \hline
+\end{tabular}%
+}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Results 07}
+\label{my-label}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{|l|l|l||l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l||}
+\hline
+Train Data   & Test Data    & mAP   & aero  & bike  & bird  & boat  & bottle & bus   & car   & cat   & chair & cow   & table & dog   & horse & mbike & person & plant & sheep & sofa & train & tv \\ \hline
+07++12$_{small}$ & 07 & 59.65 & 60.70 & 68.59 & 58.54 & 46.91 & 22.21 & 76.58 & 56.20 & 84.76 & 39.22 & 51.84 & 66.49 & 79.93 & 79.00 & 68.58 & 54.64 & 27.72 & 47.86 & 75.42 & 78.99 & 48.95 \\ \hline
+ 07++12$_{larger}$ &  07 & 62.65 & 75.46 & 69.93 & 69.03 & 50.15 & 51.35 & 74.68 & 80.54 & 77.36 & 40.38 & 75.05 & 40.65 & 73.59 & 69.38 & 67.94 & 59.37 & 31.35 & 68.72 & 54.13 & 69.66 & 54.23  \\ \hline
+ 07++12 & 07 & \textbf{76.35} & \textbf{79.14} & \textbf{80.16} & \textbf{76.97} & \textbf{68.68} & \textbf{57.11} & \textbf{86.36} & \textbf{85.95} & \textbf{88.34} & \textbf{60.06} & \textbf{86.85} & \textbf{67.12} & \textbf{87.91} & \textbf{86.51} & \textbf{80-36} & \textbf{78.14} & \textbf{45.67} & \textbf{77.74} & \textbf{76.98} & \textbf{83.75} & \textbf{73.30}  \\ \hline
+\end{tabular}%
+}
+\end{table}

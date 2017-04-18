@@ -25,3 +25,5 @@
 \contentsline {chapter}{\numberline {6}Conclusion}{32}{chapter.6}
 \contentsline {chapter}{Literature}{33}{section*.39}
 \contentsline {chapter}{Appendices}{37}{section*.41}
+\contentsline {chapter}{\numberline {A}Appendix A}{38}{Appendix.a.A}
+\contentsline {section}{\numberline {A.1}Resolution-Aware Object Detection}{38}{section.a.A.1}
