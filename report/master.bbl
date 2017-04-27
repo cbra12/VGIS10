@@ -230,4 +230,26 @@ Y.~Li, H.~Qi, J.~Dai, X.~Ji, and Y.~Wei, ``Fully convolutional instance-aware
   Available: \url{http://arxiv.org/abs/1611.07709}
 \BIBentrySTDinterwordspacing
 
+\bibitem{pascalvoc2010}
+\BIBentryALTinterwordspacing
+M.~Everingham, L.~Van~Gool, C.~K.~I. Williams, J.~Winn, and A.~Zisserman, ``The
+  pascal visual object classes (voc) challenge,'' \emph{International Journal
+  of Computer Vision}, vol.~88, no.~2, pp. 303--338, 2010. [Online]. Available:
+  \url{http://dx.doi.org/10.1007/s11263-009-0275-4}
+\BIBentrySTDinterwordspacing
+
+\bibitem{pascalvoc2015}
+\BIBentryALTinterwordspacing
+M.~Everingham, S.~M.~A. Eslami, L.~Van~Gool, C.~K.~I. Williams, J.~Winn, and
+  A.~Zisserman, ``The pascal visual object classes challenge: A
+  retrospective,'' \emph{International Journal of Computer Vision}, vol. 111,
+  no.~1, pp. 98--136, 2015. [Online]. Available:
+  \url{http://dx.doi.org/10.1007/s11263-014-0733-5}
+\BIBentrySTDinterwordspacing
+
+\bibitem{flickr}
+\BIBentryALTinterwordspacing
+flickr. flickr. [Online]. Available: \url{https://www.flickr.com/}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}

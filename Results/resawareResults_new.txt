@@ -1,0 +1,439 @@
+======================================================
+Large GT only
+
+resnet101_rfcn_largevoc
+P for aeroplane = 0.7224
+AP for bicycle = 0.5585
+AP for bird = 0.4813
+AP for boat = 0.2104
+AP for bottle = 0.1531
+AP for bus = 0.6974
+AP for car = 0.5244
+AP for cat = 0.7439
+AP for chair = 0.0572
+AP for cow = 0.3965
+AP for diningtable = 0.4596
+AP for dog = 0.6678
+AP for horse = 0.6304
+AP for motorbike = 0.5365
+AP for person = 0.2042
+AP for pottedplant = 0.0637
+AP for sheep = 0.3035
+AP for sofa = 0.5496
+AP for train = 0.6922
+AP for tvmonitor = 0.2085
+Mean AP = 0.4431
+~~~~~~~~
+Results:
+0.722
+0.558
+0.481
+0.210
+0.153
+0.697
+0.524
+0.744
+0.057
+0.397
+0.460
+0.668
+0.630
+0.537
+0.204
+0.064
+0.304
+0.550
+0.692
+0.208
+0.443
+~~~~~~~~
+
+
+resnet101_rfcn_smallvoc
+AP for aeroplane = 0.8936
+AP for bicycle = 0.8115
+AP for bird = 0.8364
+AP for boat = 0.7292
+AP for bottle = 0.6900
+AP for bus = 0.8806
+AP for car = 0.8943
+AP for cat = 0.8882
+AP for chair = 0.5369
+AP for cow = 0.8520
+AP for diningtable = 0.7648
+AP for dog = 0.8758
+AP for horse = 0.8825
+AP for motorbike = 0.8490
+AP for person = 0.8497
+AP for pottedplant = 0.4849
+AP for sheep = 0.7188
+AP for sofa = 0.8089
+AP for train = 0.8643
+AP for tvmonitor = 0.7480
+Mean AP = 0.7930
+~~~~~~~~
+Results:
+0.894
+0.811
+0.836
+0.729
+0.690
+0.881
+0.894
+0.888
+0.537
+0.852
+0.765
+0.876
+0.883
+0.849
+0.850
+0.485
+0.719
+0.809
+0.864
+0.748
+0.793
+~~~~~~~~
+
+resnet101_rfcn_allvoc
+AP for aeroplane = 0.8385
+AP for bicycle = 0.7779
+AP for bird = 0.7615
+AP for boat = 0.6206
+AP for bottle = 0.4528
+AP for bus = 0.8642
+AP for car = 0.8247
+AP for cat = 0.8701
+AP for chair = 0.3100
+AP for cow = 0.7596
+AP for diningtable = 0.7554
+AP for dog = 0.8534
+AP for horse = 0.8635
+AP for motorbike = 0.8211
+AP for person = 0.7032
+AP for pottedplant = 0.3599
+AP for sheep = 0.6294
+AP for sofa = 0.7975
+AP for train = 0.8649
+AP for tvmonitor = 0.6242
+Mean AP = 0.7176
+~~~~~~~~
+Results:
+0.838
+0.778
+0.761
+0.621
+0.453
+0.864
+0.825
+0.870
+0.310
+0.760
+0.755
+0.853
+0.864
+0.821
+0.703
+0.360
+0.629
+0.797
+0.865
+0.624
+0.718
+~~~~~~~~
+
+======================================================
+Small GT only
+
+resnet101_rfcn_largevoc
+AP for aeroplane = 0.5293
+AP for bicycle = 0.6403
+AP for bird = 0.6824
+AP for boat = 0.5689
+AP for bottle = 0.5911
+AP for bus = 0.2522
+AP for car = 0.6663
+AP for cat = 0.5373
+AP for chair = 0.5095
+AP for cow = 0.7328
+AP for diningtable = 0.0053
+AP for dog = 0.5985
+AP for horse = 0.3962
+AP for motorbike = 0.4635
+AP for person = 0.6364
+AP for pottedplant = 0.3636
+AP for sheep = 0.7127
+AP for sofa = 0.0652
+AP for train = 0.2423
+AP for tvmonitor = 0.6668
+Mean AP = 0.4930
+~~~~~~~~
+Results:
+0.529
+0.640
+0.682
+0.569
+0.591
+0.252
+0.666
+0.537
+0.509
+0.733
+0.005
+0.599
+0.396
+0.464
+0.636
+0.364
+0.713
+0.065
+0.242
+0.667
+0.493
+~~~~~~~~
+
+resnet101_rfcn_smallvoc
+
+AP for aeroplane = 0.0366
+AP for bicycle = 0.1479
+AP for bird = 0.1977
+AP for boat = 0.0485
+AP for bottle = 0.0285
+AP for bus = 0.0467
+AP for car = 0.0629
+AP for cat = 0.1005
+AP for chair = 0.0811
+AP for cow = 0.0586
+AP for diningtable = 0.0045
+AP for dog = 0.1268
+AP for horse = 0.0452
+AP for motorbike = 0.0681
+AP for person = 0.1195
+AP for pottedplant = 0.0366
+AP for sheep = 0.1019
+AP for sofa = 0.0177
+AP for train = 0.1040
+AP for tvmonitor = 0.1314
+Mean AP = 0.0782
+~~~~~~~~
+Results:
+0.037
+0.148
+0.198
+0.048
+0.029
+0.047
+0.063
+0.100
+0.081
+0.059
+0.005
+0.127
+0.045
+0.068
+0.120
+0.037
+0.102
+0.018
+0.104
+0.131
+0.078
+~~~~~~~~
+
+resnet101_rfcn_allvoc
+P for aeroplane = 0.4307
+AP for bicycle = 0.4742
+AP for bird = 0.6227
+AP for boat = 0.4609
+AP for bottle = 0.4829
+AP for bus = 0.1735
+AP for car = 0.5084
+AP for cat = 0.4023
+AP for chair = 0.4527
+AP for cow = 0.6238
+AP for diningtable = 0.0072
+AP for dog = 0.4987
+AP for horse = 0.1867
+AP for motorbike = 0.2761
+AP for person = 0.4184
+AP for pottedplant = 0.3061
+AP for sheep = 0.5625
+AP for sofa = 0.0289
+AP for train = 0.2237
+AP for tvmonitor = 0.5674
+Mean AP = 0.3854
+~~~~~~~~
+Results:
+0.431
+0.474
+0.623
+0.461
+0.483
+0.173
+0.508
+0.402
+0.453
+0.624
+0.007
+0.499
+0.187
+0.276
+0.418
+0.306
+0.562
+0.029
+0.224
+0.567
+0.385
+~~~~~~~~
+
+======================================================
+All GT
+
+resnet101_rfcn_largevoc
+AP for aeroplane = 0.7546
+AP for bicycle = 0.6993
+AP for bird = 0.6903
+AP for boat = 0.5015
+AP for bottle = 0.5135
+AP for bus = 0.7468
+AP for car = 0.8054
+AP for cat = 0.7736
+AP for chair = 0.4038
+AP for cow = 0.7505
+AP for diningtable = 0.4065
+AP for dog = 0.7359
+AP for horse = 0.6938
+AP for motorbike = 0.6794
+AP for person = 0.5937
+AP for pottedplant = 0.3135
+AP for sheep = 0.6872
+AP for sofa = 0.5413
+AP for train = 0.6966
+AP for tvmonitor = 0.5423
+Mean AP = 0.6265
+~~~~~~~~
+Results:
+0.755
+0.699
+0.690
+0.501
+0.513
+0.747
+0.805
+0.774
+0.404
+0.750
+0.406
+0.736
+0.694
+0.679
+0.594
+0.314
+0.687
+0.541
+0.697
+0.542
+0.626
+~~~~~~~~
+
+resnet101_rfcn_smallvoc
+AP for aeroplane = 0.6068
+AP for bicycle = 0.6859
+AP for bird = 0.5854
+AP for boat = 0.4691
+AP for bottle = 0.2221
+AP for bus = 0.7658
+AP for car = 0.5620
+AP for cat = 0.8476
+AP for chair = 0.3922
+AP for cow = 0.5184
+AP for diningtable = 0.6649
+AP for dog = 0.7993
+AP for horse = 0.7900
+AP for motorbike = 0.6858
+AP for person = 0.5464
+AP for pottedplant = 0.2772
+AP for sheep = 0.4786
+AP for sofa = 0.7542
+AP for train = 0.7899
+AP for tvmonitor = 0.4895
+Mean AP = 0.5965
+~~~~~~~~
+Results:
+0.607
+0.686
+0.585
+0.469
+0.222
+0.766
+0.562
+0.848
+0.392
+0.518
+0.665
+0.799
+0.790
+0.686
+0.546
+0.277
+0.479
+0.754
+0.790
+0.489
+0.597
+~~~~~~~~
+
+resnet101_rfcn_allvoc
+AP for aeroplane = 0.7914
+AP for bicycle = 0.8016
+AP for bird = 0.7697
+AP for boat = 0.6868
+AP for bottle = 0.5711
+AP for bus = 0.8636
+AP for car = 0.8595
+AP for cat = 0.8834
+AP for chair = 0.6006
+AP for cow = 0.8685
+AP for diningtable = 0.6712
+AP for dog = 0.8791
+AP for horse = 0.8651
+AP for motorbike = 0.8036
+AP for person = 0.7814
+AP for pottedplant = 0.4567
+AP for sheep = 0.7774
+AP for sofa = 0.7698
+AP for train = 0.8375
+AP for tvmonitor = 0.7330
+Mean AP = 0.7635
+~~~~~~~~
+Results:
+0.791
+0.802
+0.770
+0.687
+0.571
+0.864
+0.859
+0.883
+0.601
+0.869
+0.671
+0.879
+0.865
+0.804
+0.781
+0.457
+0.777
+0.770
+0.837
+0.733
+0.764
+~~~~~~~~
+
+
+
+=======================================
+extra test
+

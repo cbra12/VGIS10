@@ -1,0 +1,8 @@
+simple fusion on current system
+
+imbalanced data paper
+
+quality aware
+blur resolution, etc
+
+ideally CNN-based

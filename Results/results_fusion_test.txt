@@ -1,0 +1,98 @@
+Loaded detections from: /home/nav/Desktop/christoffer/py-R-FCN/output/rfcn_end2end/voc_0712_test/resnet101_rfcn_smallvoc_iter_110000/detections.pkl
+AP for aeroplane = 0.6068
+AP for bicycle = 0.6859
+AP for bird = 0.5854
+AP for boat = 0.4691
+AP for bottle = 0.2221
+AP for bus = 0.7658
+AP for car = 0.5620
+AP for cat = 0.8476
+AP for chair = 0.3922
+AP for cow = 0.5184
+AP for diningtable = 0.6649
+AP for dog = 0.7993
+AP for horse = 0.7900
+AP for motorbike = 0.6858
+AP for person = 0.5464
+AP for pottedplant = 0.2772
+AP for sheep = 0.4786
+AP for sofa = 0.7542
+AP for train = 0.7899
+AP for tvmonitor = 0.4895
+Mean AP = 0.5965
+~~~~~~~~
+Results:
+0.607
+0.686
+0.585
+0.469
+0.222
+0.766
+0.562
+0.848
+0.392
+0.518
+0.665
+0.799
+0.790
+0.686
+0.546
+0.277
+0.479
+0.754
+0.790
+0.489
+0.597
+~~~~~~~~
+
+
+----------------------------------------------------------
+FUSION
+Loaded detections from: /home/nav/Desktop/christoffer/py-R-FCN/output/rfcn_end2end/voc_0712_test/resnet101_rfcn_smallvoc_iter_110000/detections.pkl
+Loaded detections from: /home/nav/Desktop/christoffer/py-R-FCN/output/rfcn_end2end/voc_0712_test/resnet101_rfcn_largevoc_iter_110000/detections.pkl
+VOC07 metric? Yes
+AP for aeroplane = 0.5404
+AP for aeroplane = 0.2414
+AP for bicycle = 0.5607
+AP for bicycle = 0.2137
+AP for bird = 0.4491
+AP for bird = 0.3315
+AP for boat = 0.3997
+AP for boat = 0.2936
+AP for bottle = 0.1731
+AP for bottle = 0.4879
+AP for bus = 0.6956
+AP for bus = 0.0828
+AP for car = 0.4504
+AP for car = 0.3622
+AP for cat = 0.7996
+AP for cat = 0.0909
+AP for chair = 0.2619
+AP for chair = 0.3171
+AP for cow = 0.4299
+AP for cow = 0.4333
+AP for diningtable = 0.6752
+AP for diningtable = 0.0020
+AP for dog = 0.7604
+AP for dog = 0.1323
+AP for horse = 0.7111
+AP for horse = 0.1251
+AP for motorbike = 0.5911
+AP for motorbike = 0.1865
+AP for person = 0.4382
+AP for person = 0.3203
+AP for pottedplant = 0.2086
+AP for pottedplant = 0.2559
+AP for sheep = 0.3313
+AP for sheep = 0.4180
+AP for sofa = 0.7371
+AP for sofa = 0.0227
+AP for train = 0.7091
+AP for train = 0.0614
+AP for tvmonitor = 0.3623
+AP for tvmonitor = 0.3874
+Mean AP = 0.5142
+~~~~~~~~
+Mean AP1 = 0.2383
+~~~~~~~~
+~~~~~~~~

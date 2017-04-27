@@ -516,3 +516,48 @@ Results:
 
 
 resnet101_rfcn_allvoc
+AP for aeroplane = 0.7818
+AP for bicycle = 0.7117
+AP for bird = 0.5876
+AP for boat = 0.4391
+AP for bottle = 0.3672
+AP for bus = 0.8271
+AP for car = 0.7340
+AP for cat = 0.8564
+AP for chair = 0.2573
+AP for cow = 0.5467
+AP for diningtable = 0.7447
+AP for dog = 0.8266
+AP for horse = 0.8325
+AP for motorbike = 0.7702
+AP for person = 0.6390
+AP for pottedplant = 0.3153
+AP for sheep = 0.4635
+AP for sofa = 0.7767
+AP for train = 0.8407
+AP for tvmonitor = 0.5492
+Mean AP = 0.6434
+~~~~~~~~
+Results:
+0.782
+0.712
+0.588
+0.439
+0.367
+0.827
+0.734
+0.856
+0.257
+0.547
+0.745
+0.827
+0.833
+0.770
+0.639
+0.315
+0.464
+0.777
+0.841
+0.549
+0.643
+~~~~~~~~

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.30)  18 APR 2017 11:38
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.30)  27 APR 2017 16:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2814,12 +2814,46 @@ Package pdftex.def Info: Figs/Techanal/newresblock.pdf used on input line 67.
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 75.
 
-) (./Sections/Techanalysis/benchmarks.tex) (./Sections/Techanalysis/metrics.tex
-) (./Sections/Techanalysis/detectors.tex
-Underfull \vbox (badness 10000) has occurred while \output is active []
+) (./Sections/Techanalysis/benchmarks.tex
+Underfull \hbox (badness 10000) in paragraph at lines 6--9
 
- [17 <./Figs/Techanal/newresblock.pdf>]
-<Figs/Techanal/fasterframework.png, id=437, 378.41376pt x 383.4325pt>
+ []
+
+
+Underfull \vbox (badness 1577) has occurred while \output is active []
+
+ [17 <./Figs/Techanal/newresblock.pdf>] [18]
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2013/08/26 1.5b listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
+)
+<Figs/Techanal/000005.jpg, id=448, 501.875pt x 376.40625pt>
+File: Figs/Techanal/000005.jpg Graphic file (type jpg)
+
+<use Figs/Techanal/000005.jpg>
+Package pdftex.def Info: Figs/Techanal/000005.jpg used on input line 58.
+(pdftex.def)             Requested size: 303.53267pt x 227.66043pt.
+
+<Figs/Techanal/vochist07.png, id=452, 657.45625pt x 563.10374pt>
+File: Figs/Techanal/vochist07.png Graphic file (type png)
+
+<use Figs/Techanal/vochist07.png>
+Package pdftex.def Info: Figs/Techanal/vochist07.png used on input line 67.
+(pdftex.def)             Requested size: 216.81pt x 185.68733pt.
+
+
+LaTeX Warning: Reference `lst:vochist07' on page 19 undefined on input line 68.
+
+
+
+LaTeX Warning: Reference `lst:vochist07' on page 19 undefined on input line 68.
+
+
+) (./Sections/Techanalysis/metrics.tex [19 <./Figs/Techanal/000005.jpg>])
+(./Sections/Techanalysis/detectors.tex
+<Figs/Techanal/fasterframework.png, id=480, 378.41376pt x 383.4325pt>
 File: Figs/Techanal/fasterframework.png Graphic file (type png)
 
 <use Figs/Techanal/fasterframework.png>
@@ -2827,10 +2861,10 @@ Package pdftex.def Info: Figs/Techanal/fasterframework.png used on input line 1
 0.
 (pdftex.def)             Requested size: 260.17465pt x 263.62674pt.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 3646) has occurred while \output is active []
 
- [18]
-<Figs/Techanal/rpnframework.png, id=449, 426.59375pt x 249.93375pt>
+ [20 <./Figs/Techanal/vochist07.png>]
+<Figs/Techanal/rpnframework.png, id=493, 426.59375pt x 249.93375pt>
 File: Figs/Techanal/rpnframework.png Graphic file (type png)
 
 <use Figs/Techanal/rpnframework.png>
@@ -2839,47 +2873,47 @@ Package pdftex.def Info: Figs/Techanal/rpnframework.png used on input line 20.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [19 <./Figs/Techanal/fasterframework.png>]
+ [21 <./Figs/Techanal/fasterframework.png>]
 Underfull \hbox (badness 10000) in paragraph at lines 28--31
 
  []
 
-[20 <./Figs/Techanal/rpnframework.png>]
-<Figs/Techanal/rfcnarchi.png, id=469, 684.5575pt x 352.31625pt>
+[22 <./Figs/Techanal/rpnframework.png>]
+<Figs/Techanal/rfcnarchi.png, id=513, 684.5575pt x 352.31625pt>
 File: Figs/Techanal/rfcnarchi.png Graphic file (type png)
 
 <use Figs/Techanal/rfcnarchi.png>
 Package pdftex.def Info: Figs/Techanal/rfcnarchi.png used on input line 35.
 (pdftex.def)             Requested size: 346.89732pt x 178.53922pt.
 
-<Figs/Techanal/scoremaps.png, id=470, 294.09875pt x 261.97874pt>
+<Figs/Techanal/scoremaps.png, id=514, 294.09875pt x 261.97874pt>
 File: Figs/Techanal/scoremaps.png Graphic file (type png)
 
 <use Figs/Techanal/scoremaps.png>
 Package pdftex.def Info: Figs/Techanal/scoremaps.png used on input line 45.
 (pdftex.def)             Requested size: 173.44534pt x 154.50215pt.
- [21 <./Figs/Techanal/rfcnarchi.png> <./Figs/Techanal/scoremaps.png>]
-<Figs/Techanal/rfcnpooling.png, id=482, 593.21625pt x 257.96375pt>
+ [23 <./Figs/Techanal/rfcnarchi.png> <./Figs/Techanal/scoremaps.png>]
+<Figs/Techanal/rfcnpooling.png, id=525, 593.21625pt x 257.96375pt>
 File: Figs/Techanal/rfcnpooling.png Graphic file (type png)
 
 <use Figs/Techanal/rfcnpooling.png>
 Package pdftex.def Info: Figs/Techanal/rfcnpooling.png used on input line 55.
 (pdftex.def)             Requested size: 260.17465pt x 113.14226pt.
- [22 <./Figs/Techanal/rfcnpooling.png>]
-<Figs/Techanal/yolomodel.png, id=495, 790.955pt x 495.8525pt>
+ [24 <./Figs/Techanal/rfcnpooling.png>]
+<Figs/Techanal/yolomodel.png, id=538, 790.955pt x 495.8525pt>
 File: Figs/Techanal/yolomodel.png Graphic file (type png)
 
 <use Figs/Techanal/yolomodel.png>
 Package pdftex.def Info: Figs/Techanal/yolomodel.png used on input line 89.
 (pdftex.def)             Requested size: 346.89732pt x 217.47212pt.
- [23 <./Figs/Techanal/yolomodel.png>]
+ [25 <./Figs/Techanal/yolomodel.png>]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[24]
+[26]
 Underfull \vbox (badness 7221) has occurred while \output is active []
 
- [25]
+ [27]
 Overfull \hbox (29.46892pt too wide) in paragraph at lines 193--207
  [][] 
  []
@@ -2887,10 +2921,10 @@ Overfull \hbox (29.46892pt too wide) in paragraph at lines 193--207
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [26] [27]
+) [28] [29]
 Chapter 4.
 (./Sections/Implementation/resawareclassifier.tex
-<Figs/Implementation/0712hist.pdf, id=569, 462.52798pt x 346.89601pt>
+<Figs/Implementation/0712hist.pdf, id=613, 462.52798pt x 346.89601pt>
 File: Figs/Implementation/0712hist.pdf Graphic file (type pdf)
 
 <use Figs/Implementation/0712hist.pdf>
@@ -2901,10 +2935,10 @@ Package pdftex.def Info: Figs/Implementation/0712hist.pdf used on input line 24
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[28
+[30
 
  <./Figs/Implementation/0712hist.pdf>]
-<Figs/Implementation/testsmallhist.pdf, id=618, 462.52798pt x 346.89601pt>
+<Figs/Implementation/testsmallhist.pdf, id=662, 462.52798pt x 346.89601pt>
 File: Figs/Implementation/testsmallhist.pdf Graphic file (type pdf)
 
 <use Figs/Implementation/testsmallhist.pdf>
@@ -2912,7 +2946,7 @@ Package pdftex.def Info: Figs/Implementation/testsmallhist.pdf used on input li
 ne 56.
 (pdftex.def)             Requested size: 195.12767pt x 146.34639pt.
 
-<Figs/Implementation/testlargehist.pdf, id=619, 462.52798pt x 346.89601pt>
+<Figs/Implementation/testlargehist.pdf, id=663, 462.52798pt x 346.89601pt>
 File: Figs/Implementation/testlargehist.pdf Graphic file (type pdf)
 
 <use Figs/Implementation/testlargehist.pdf>
@@ -2923,32 +2957,32 @@ ne 61.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [29 <./Figs/Implementation/testsmallhist.pdf> <./Figs/Implementation/testlarg
+) [31 <./Figs/Implementation/testsmallhist.pdf> <./Figs/Implementation/testlarg
 ehist.pdf
 
 pdfTeX warning: pdflatex (file ./Figs/Implementation/testlargehist.pdf): PDF in
 clusion: multiple pdfs with page group included in a single page
->] [30]
+>] [32]
 Chapter 5.
-[31
+[33
 
 ]
 Chapter 6.
-[32
+[34
 
-] (./master.bbl [33
-
-
-
-] [34]) [35] [36
+] (./master.bbl [35
 
 
-] [37
+
+] [36]) [37] [38
+
+
+] [39
 
 
 ]
 Appendix A.
-(./Sections/Appendix/resawareappendix.tex) [38
+(./Sections/Appendix/resawareappendix.tex) [40
 
 ] (./master.tdo)
 \tf@tdo=\write9
@@ -2957,7 +2991,7 @@ Appendix A.
 
 
 AED: lastpage setting LastPage
-[39
+[41
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 115.
@@ -2966,7 +3000,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 115.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 115.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 115.
 Package rerunfilecheck Info: File `master.out' has not changed.
-(rerunfilecheck)             Checksum: A73F9BEB7759BB2F45A5943954A77588;1239.
+(rerunfilecheck)             Checksum: 7F233C1BF2CA15B8DC88E0DF96A2B720;1239.
 
 
 LaTeX Warning: There were undefined references.
@@ -2976,19 +3010,19 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 47532 strings out of 495028
- 995917 string characters out of 6181496
- 1393180 words of memory out of 5000000
- 49440 multiletter control sequences out of 15000+600000
- 94465 words of font info for 90 fonts, out of 8000000 for 9000
+ 47654 strings out of 495028
+ 997743 string characters out of 6181496
+ 1402626 words of memory out of 5000000
+ 49533 multiletter control sequences out of 15000+600000
+ 97457 words of font info for 91 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 78i,17n,96p,2666b,1124s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc} </home/christoffer/texmf/
-fonts/pk/ljfour/public/MnSymbol/MnSymbolD10.657pk>{/usr/share/texmf/fonts/enc/d
-vips/lm/lm-rm.enc} </home/christoffer/texmf/fonts/pk/ljfour/public/MnSymbol/MnS
-ymbolE10.657pk> </home/christoffer/texmf/fonts/pk/ljfour/public/MnSymbol/MnSymb
-olC10.657pk>{/usr/share/texmf/fonts/enc/dvips/lm/lm-ts1.enc}{/usr/share/texmf/f
-onts/enc/dvips/lm/lm-ec.enc}{/home/christoffer/texmf/fonts/enc/dvips/dejavu/dej
+ 78i,17n,96p,2666b,1247s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/en
+c/dvips/lm/lm-ec.enc} </home/christoffer/texmf/fonts/pk/ljfour/public/MnSymbol/
+MnSymbolD10.657pk>{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc} </home/christ
+offer/texmf/fonts/pk/ljfour/public/MnSymbol/MnSymbolE10.657pk> </home/christoff
+er/texmf/fonts/pk/ljfour/public/MnSymbol/MnSymbolC10.657pk>{/usr/share/texmf/fo
+nts/enc/dvips/lm/lm-ts1.enc}{/home/christoffer/texmf/fonts/enc/dvips/dejavu/dej
 avumono_t1-type1.enc}</home/christoffer/texmf/fonts/type1/public/dejavu/DejaVuS
 ansMono.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texm
 f/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx
@@ -3000,10 +3034,10 @@ hare/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public
 /lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf
 /fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri8
 .pfb>
-Output written on master.pdf (43 pages, 3495998 bytes).
+Output written on master.pdf (45 pages, 3632163 bytes).
 PDF statistics:
- 906 PDF objects out of 1000 (max. 8388607)
- 658 compressed objects within 7 object streams
- 150 named destinations out of 1000 (max. 500000)
- 412 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 958 PDF objects out of 1000 (max. 8388607)
+ 703 compressed objects within 8 object streams
+ 172 named destinations out of 1000 (max. 500000)
+ 422 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -10,20 +10,21 @@
 \contentsline {chapter}{\numberline {3}Technical Analysis}{15}{chapter.3}
 \contentsline {section}{\numberline {3.1}Deep Learning}{15}{section.3.1}
 \contentsline {section}{\numberline {3.2}Residual Networks}{15}{section.3.2}
-\contentsline {section}{\numberline {3.3}Benchmark Datasets}{18}{section.3.3}
-\contentsline {section}{\numberline {3.4}Evaluation Metrics}{18}{section.3.4}
-\contentsline {section}{\numberline {3.5}Object Detectors}{18}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Faster Region-Convolutional Neural Network}{18}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}Regional Fully-Connected Network}{20}{subsection.3.5.2}
-\contentsline {subsection}{\numberline {3.5.3}You Only Look Once}{22}{subsection.3.5.3}
-\contentsline {subsection}{\numberline {3.5.4}Benchmark Results}{24}{subsection.3.5.4}
-\contentsline {subsubsection}{\gls {pascalvoc}}{24}{subsubsection*.30}
-\contentsline {subsubsection}{\gls {mscoco}}{26}{subsubsection*.33}
-\contentsline {chapter}{\numberline {4}Implementation}{28}{chapter.4}
-\contentsline {section}{\numberline {4.1}Resolution-Aware Object Detection}{28}{section.4.1}
-\contentsline {chapter}{\numberline {5}Discussion}{31}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusion}{32}{chapter.6}
-\contentsline {chapter}{Literature}{33}{section*.39}
-\contentsline {chapter}{Appendices}{37}{section*.41}
-\contentsline {chapter}{\numberline {A}Appendix A}{38}{Appendix.a.A}
-\contentsline {section}{\numberline {A.1}Resolution-Aware Object Detection}{38}{section.a.A.1}
+\contentsline {section}{\numberline {3.3}Benchmark Datasets}{17}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}PASCAl Visual Object Classes Challenge}{18}{subsection.3.3.1}
+\contentsline {section}{\numberline {3.4}Evaluation Metrics}{20}{section.3.4}
+\contentsline {section}{\numberline {3.5}Object Detectors}{20}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Faster Region-Convolutional Neural Network}{20}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Regional Fully-Connected Network}{22}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.3}You Only Look Once}{24}{subsection.3.5.3}
+\contentsline {subsection}{\numberline {3.5.4}Benchmark Results}{26}{subsection.3.5.4}
+\contentsline {subsubsection}{\gls {pascalvoc}}{26}{subsubsection*.33}
+\contentsline {subsubsection}{\gls {mscoco}}{28}{subsubsection*.36}
+\contentsline {chapter}{\numberline {4}Implementation}{30}{chapter.4}
+\contentsline {section}{\numberline {4.1}Resolution-Aware Object Detection}{30}{section.4.1}
+\contentsline {chapter}{\numberline {5}Discussion}{33}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusion}{34}{chapter.6}
+\contentsline {chapter}{Literature}{35}{section*.42}
+\contentsline {chapter}{Appendices}{39}{section*.44}
+\contentsline {chapter}{\numberline {A}Appendix A}{40}{Appendix.a.A}
+\contentsline {section}{\numberline {A.1}Resolution-Aware Object Detection}{40}{section.a.A.1}
