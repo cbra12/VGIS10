@@ -13,6 +13,36 @@
 		RFCN ResNet-101: 0.7632
 		Model - 07++12 < 50th percentile
 			All data: 0.5960
+
+
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%% RFCN 5 Stage Split%%%%%%%%%%%%%%%%%%%%%%%%%
+    Train networks with object proposals from an RPN network
+        many more object proposals than using GTs - 9,979,342 vs 80,116
+            split also different due to this - skew towards smaller objects
+                Median of GTs - 19,205.5 vs RPN GTs - 4,864.0
+    Objective is to split data into equally size. What is more correct? Equal size based on true GTs or on RPNs
+        if based on GT median - Small - 6,410,914 (64.25\%) vs Large - 3,598,428 (35.75\%)
+        if based on RPN median - Both - 4,989,671 (50/50)
+    However, test may not be equally as split
+        Test proposals for network - Total - 1,418,317
+            Split on GT - Small - 790,607 (55.74\%) Large -  627,710 (44.25\%)
+            Split on RPN - Small - 540,767 (38.0\%) Large - 877,550 (61.87\%)
+
+    RPN GT Training
+        RPN proposals is much larger than training with only GTs
+            using only GTs 80,116 vs 9,989,342
+                due to proposals finding many more examples
+            however, still only the correct amount of GTs labels. eg. GT = 3, background = 300
+        therefore, when splitting important that one of the splits does not have significantly less GT examples.
+        if split by GT median (19,205.5)
+            equal number of GT training examples - 40,058 - fits well with GT
+            background examples - Small - 3,528,370 vs Large - 6,370,859
+        if split by all median
+            skew towards larger objects
+            Small - 19,992 vs Large - 60,116
+            Background  - Small - 4,929,297 vs Large - 4,969,369
+
+
 \end{comment}
 
 \section{Resolution-Aware Object Detection}
@@ -86,3 +116,11 @@ The results for the object detectors trained on the separate partitions of train
 07++12        & 07            &  \textbf{76.35}   \\ \hline 
 \end{tabular}
 \end{table}
+
+
+\change[inline]{update following explanation}
+Ensemble of above networks proved not to be possible due to Caffe network architecture. Once networks have been trained as an end-to-end method, the networks were not able to take object proposals as inputs. Solution instead to train the network in 5 stages. Much slower. Result on VOC2007: 79.59 vs end to end: 76.35 
+
+While \tableref{resresults} shows that it is possible for a \gls{rfcn} network to be optimised to objects of a certain size, a more powerful approach is to combine the two networks in an ensemble during testing. Given a potential object, the ensemble should weight one of the networks outputs accordingly. A simple example in this case would be to weight one of the outputs by 100\%, if the potential object is below or above the threshold found in the training data. The results gathered in \tableref{resresults} are much more naive than this, simply splitting the testing data and only using one trained network at a time. Object proposals will needed to be known during inference to ensure that the outputs of the networks in an ensemble are performing classification in the same locations. On top of this, new networks will needed to be trained on subsets of smaller and larger data due to the internal architecture of \gls{caffe} networks. The networks in the ensemble will need to take object proposals as inputs, however, the above mentioned networks are trained based upon the end-to-end versions of the \gls{rfcn}. These do not take proposals as inputs but rather have an internal \gls{rpn}. Therefore, the new networks are trained using 4-step alternating training used in the original Faster R-CNN paper \cite{fasterrcnn}. In this approach the overall network in trained in multiple steps rather than an end-to-end method. In step one a \gls{rpn} is trained to determine region proposals, the \gls{rpn} is initialised from a pre-trained ImageNet model and fine-tuned to the proposal task. Next a \gls{rfcn} is trained based upon the proposals found in the previous step. This network is also initialised with a pre-trained ImageNet model. In step three, another \gls{rpn} is trained but initialised using the \gls{rfcn} from step two. In this step the convolutional layers that are shared between the \gls{rfcn} and \gls{rpn} are fixed and only the layers unique to the \gls{rpn} are updated. In this final step, the shared layers between the two networks are again kept fixed and the layers unique to the \gls{rfcn} are updated. By training a model with this approach a testing image is able to run through the same steps as a \gls{rfcn} trained end-to-end, however, as the networks are split into different models it is also possible to use the stages of the method individually. Creating a solution for finding region proposals with an \gls{rpn} and having a \gls{rfcn} that can take the proposals as inputs. 
+\\\\
+A potential shortcoming of using \gls{rpn} proposals as inputs to training a \gls{rfcn} rather than using ground truth bounding boxes is that a \gls{rpn} likely finds many more examples of objects that actually exist in an image. For a given image, an \gls{rpn} may find hundreds of potential objects despite an image only containing a couple of true positive examples. This can be solved by setting the proposals with the highest confidence as the ground truth examples and labelling the remaining proposals as the background class. This is a stark comparison to the end-to-end training approach as there are now many more training examples and a large skew towards the background class. Whereas the end-to-end approach does not train on any background examples. With this approach, the total number of training examples is increased from 80,116 to 9,979,345. This large increase in training examples also poses a question on how to split the \gls{rpn} proposals such that two networks can be trained towards small and large objects respectively.
