@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.30)  27 APR 2017 16:01
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.30)  2 MAY 2017 15:12
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2928,7 +2928,7 @@ Chapter 4.
 File: Figs/Implementation/0712hist.pdf Graphic file (type pdf)
 
 <use Figs/Implementation/0712hist.pdf>
-Package pdftex.def Info: Figs/Implementation/0712hist.pdf used on input line 24
+Package pdftex.def Info: Figs/Implementation/0712hist.pdf used on input line 54
 .
 (pdftex.def)             Requested size: 260.17465pt x 195.1391pt.
 
@@ -2943,7 +2943,7 @@ File: Figs/Implementation/testsmallhist.pdf Graphic file (type pdf)
 
 <use Figs/Implementation/testsmallhist.pdf>
 Package pdftex.def Info: Figs/Implementation/testsmallhist.pdf used on input li
-ne 56.
+ne 86.
 (pdftex.def)             Requested size: 195.12767pt x 146.34639pt.
 
 <Figs/Implementation/testlargehist.pdf, id=663, 462.52798pt x 346.89601pt>
@@ -2951,38 +2951,48 @@ File: Figs/Implementation/testlargehist.pdf Graphic file (type pdf)
 
 <use Figs/Implementation/testlargehist.pdf>
 Package pdftex.def Info: Figs/Implementation/testlargehist.pdf used on input li
-ne 61.
+ne 91.
 (pdftex.def)             Requested size: 195.12767pt x 146.34639pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [31 <./Figs/Implementation/testsmallhist.pdf> <./Figs/Implementation/testlarg
-ehist.pdf
+[31 <./Figs/Implementation/testsmallhist.pdf> <./Figs/Implementation/testlargeh
+ist.pdf
 
 pdfTeX warning: pdflatex (file ./Figs/Implementation/testlargehist.pdf): PDF in
 clusion: multiple pdfs with page group included in a single page
->] [32]
+>]
+Underfull \hbox (badness 10000) in paragraph at lines 124--127
+
+ []
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [32])
+[33]
 Chapter 5.
-[33
+[34
 
 ]
 Chapter 6.
-[34
+[35
 
-] (./master.bbl [35
-
-
-
-] [36]) [37] [38
+] [36
 
 
-] [39
+] (./master.bbl [37
+
+] [38]) [39] [40
+
+
+] [41
 
 
 ]
 Appendix A.
-(./Sections/Appendix/resawareappendix.tex) [40
+(./Sections/Appendix/resawareappendix.tex) [42
 
 ] (./master.tdo)
 \tf@tdo=\write9
@@ -2991,7 +3001,7 @@ Appendix A.
 
 
 AED: lastpage setting LastPage
-[41
+[43
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 115.
@@ -3000,7 +3010,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 115.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 115.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 115.
 Package rerunfilecheck Info: File `master.out' has not changed.
-(rerunfilecheck)             Checksum: 7F233C1BF2CA15B8DC88E0DF96A2B720;1239.
+(rerunfilecheck)             Checksum: CD8867E7B757BBD67BA74A5741D9FA38;1239.
 
 
 LaTeX Warning: There were undefined references.
@@ -3010,10 +3020,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 47654 strings out of 495028
- 997743 string characters out of 6181496
- 1402626 words of memory out of 5000000
- 49533 multiletter control sequences out of 15000+600000
+ 47692 strings out of 495028
+ 998343 string characters out of 6181496
+ 1402580 words of memory out of 5000000
+ 49566 multiletter control sequences out of 15000+600000
  97457 words of font info for 91 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  78i,17n,96p,2666b,1247s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3034,10 +3044,10 @@ hare/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public
 /lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf
 /fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri8
 .pfb>
-Output written on master.pdf (45 pages, 3632163 bytes).
+Output written on master.pdf (47 pages, 3637438 bytes).
 PDF statistics:
- 958 PDF objects out of 1000 (max. 8388607)
- 703 compressed objects within 8 object streams
- 172 named destinations out of 1000 (max. 500000)
+ 976 PDF objects out of 1000 (max. 8388607)
+ 719 compressed objects within 8 object streams
+ 177 named destinations out of 1000 (max. 500000)
  422 words of extra memory for PDF output out of 10000 (max. 10000000)
 
