@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.30)  2 MAY 2017 15:12
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.30)  4 MAY 2017 15:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2270,6 +2270,15 @@ LaTeX Warning: Label `my-label' multiply defined.
 
 LaTeX Warning: Label `my-label' multiply defined.
 
+
+LaTeX Warning: Label `my-label' multiply defined.
+
+
+LaTeX Warning: Label `my-label' multiply defined.
+
+
+LaTeX Warning: Label `my-label' multiply defined.
+
 )
 \openout1 = `master.aux'.
 
@@ -2970,19 +2979,31 @@ Underfull \hbox (badness 10000) in paragraph at lines 124--127
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [32])
-[33]
+ [32]
+Underfull \hbox (badness 10000) in paragraph at lines 156--159
+
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [33] [34]
 Chapter 5.
-[34
+[35
 
 ]
 Chapter 6.
-[35
-
-] [36
-
+[36
 
 ] (./master.bbl [37
+
+
 
 ] [38]) [39] [40
 
@@ -3010,7 +3031,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 115.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 115.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 115.
 Package rerunfilecheck Info: File `master.out' has not changed.
-(rerunfilecheck)             Checksum: CD8867E7B757BBD67BA74A5741D9FA38;1239.
+(rerunfilecheck)             Checksum: F75E6AF8ABF3D1C8B299DE825C2CC8CC;1239.
 
 
 LaTeX Warning: There were undefined references.
@@ -3020,8 +3041,8 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 47692 strings out of 495028
- 998343 string characters out of 6181496
+ 47695 strings out of 495028
+ 998391 string characters out of 6181496
  1402580 words of memory out of 5000000
  49566 multiletter control sequences out of 15000+600000
  97457 words of font info for 91 fonts, out of 8000000 for 9000
@@ -3044,10 +3065,10 @@ hare/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public
 /lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf
 /fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri8
 .pfb>
-Output written on master.pdf (47 pages, 3637438 bytes).
+Output written on master.pdf (47 pages, 3638555 bytes).
 PDF statistics:
- 976 PDF objects out of 1000 (max. 8388607)
- 719 compressed objects within 8 object streams
- 177 named destinations out of 1000 (max. 500000)
+ 979 PDF objects out of 1000 (max. 8388607)
+ 722 compressed objects within 8 object streams
+ 180 named destinations out of 1000 (max. 500000)
  422 words of extra memory for PDF output out of 10000 (max. 10000000)
 
