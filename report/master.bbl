@@ -252,4 +252,24 @@ M.~Everingham, S.~M.~A. Eslami, L.~Van~Gool, C.~K.~I. Williams, J.~Winn, and
 flickr. flickr. [Online]. Available: \url{https://www.flickr.com/}
 \BIBentrySTDinterwordspacing
 
+\bibitem{deepiqa}
+\BIBentryALTinterwordspacing
+S.~Bosse, D.~Maniry, K.~M{\"{u}}ller, T.~Wiegand, and W.~Samek, ``Deep neural
+  networks for no-reference and full-reference image quality assessment,''
+  \emph{CoRR}, vol. abs/1612.01697, 2016. [Online]. Available:
+  \url{http://arxiv.org/abs/1612.01697}
+\BIBentrySTDinterwordspacing
+
+\bibitem{livepaper}
+H.~R. Sheikh, M.~F. Sabir, and A.~C. Bovik, ``A statistical evaluation of
+  recent full reference image quality assessment algorithms,'' \emph{IEEE
+  Transactions on Image Processing}, vol.~15, no.~11, pp. 3440--3451, Nov 2006.
+
+\bibitem{liveweb}
+\BIBentryALTinterwordspacing
+H.~R. Sheikh, M.~F. Sabir, and A.~C. Bovik. Live image quality assessment
+  database release 2. [Online]. Available:
+  \url{http://live.ece.utexas.edu/research/quality}
+\BIBentrySTDinterwordspacing
+
 \end{thebibliography}

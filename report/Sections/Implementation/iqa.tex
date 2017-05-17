@@ -1,0 +1,202 @@
+\section{Image Quality Assessment}
+To evaluate the amount of distortions in the dataset a method for \gls{iqa} is needed. A recent state of the art method is that of Deep IQA \cite{deepiqa}. Deep IQA is a \gls{cnn}-based \gls{nr} \gls{iqa} method.
+
+\subsection{Training Deep IQA}
+As per the original authors \cite{deepiqa}, the models are trained for each distortion type in the \gls{live} \gls{iqa} second release dataset \cite{livepaper} \cite{liveweb}. In the original work the Deep IQA model is trained for all five distortion types present in \gls{live}. While this can provide insights into general image quality, individual models are needed to create a more powerful ensemble. The \gls{nr} model was provided by the authors and by taking advantage of the fine-tuning technique, models for each of the individual distortions can be trained in a timely manner. Fine-tuning takes a previously trained model and uses these parameters as a starting point, rather than other commonly used initialisation techniques such as using a Gaussian distribution. As the model is already trained towards all distortions the assumption can be made that only a shorter training cycle is necessary to the new task. The five fine-tuned models are trained in a similar manner to that of the provided model following the guidelines in the original work \cite{deepiqa}. 
+\\\\
+In the \gls{live} dataset there are 29 reference images from where the respective distortions have been created. When training, the reference images are split into 17 training images, 6 validation images and 6 test images. The deep IQA models are trained using mini-batches consisting of a total of 128 patches per forward/backward pass. The patches are sampled from four randomly selected images from the training split and each image accounts for 32 of the 128 patches in the mini-batch. This process is continued until no more patches are available for mini-batch sampling. This constitutes a completed epoch and all patches are again available for the next epoch. The model provided by the authors was trained for 3,000 epochs, however, as mentioned fine-tuning can drastically reduce the number of epochs required. Therefore, the models trained for the five distortions are only run through 500 epochs. 
+
+
+\begin{table}[h]
+\centering
+\caption{Gaussian Blur}
+\label{my-label}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+Model & Best Epoch & LCC    & SROCC  & Mean Difference \\ \hline
+1     & 5          & 0.9879 & 0.9825 & 2.218           \\ \hline
+2     & 1          & 0.9552 & 0.9547 & 2.395           \\ \hline
+3     & 1          & 0.9872 & 0.9750 & 2.499           \\ \hline
+4     & 6          & 0.9767 & 0.9772 & 2.266           \\ \hline
+5     & 23         & 0.9864 & 0.9913 & 2.103           \\ \hline
+6     & 6          & 0.9633 & 0.9216 & 2.875           \\ \hline
+7     & 10         & 0.9914 & 0.9807 & 2.785           \\ \hline
+8     & 7          & 0.9686 & 0.9756 & 2.188           \\ \hline
+9     & 6          & 0.9807 & 0.9807 & 4.013           \\ \hline
+10    & 2          & 0.9528 & 0.9415 & 3.389           \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{White Noise}
+\label{my-label}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+Model & Best Epoch & LCC    & SROCC  & Mean Difference \\ \hline
+1     & 50         & 0.9958 & 0.9900 & 1.387           \\ \hline
+2     & 44         & 0.9935 & 0.9817 & 0.862           \\ \hline
+3     & 93         & 0.9940 & 0.9875 & 1.2946          \\ \hline
+4     & 8          & 0.9952 & 0.9862 & 1.312           \\ \hline
+5     & 96         & 0.9953 & 0.9886 & 1.3604          \\ \hline
+6     & 5          & 0.9953 & 0.9896 & 1.5867          \\ \hline
+7     & 5          & 0.9976 & 0.9952 & 0.9822          \\ \hline
+8     & 3          & 0.9953 & 0.9856 & 1.728           \\ \hline
+9     & 129        & 0.9981 & 0.9897 & 1.412           \\ \hline
+10    & 286        & 0.9968 & 0.9945 & 1.196           \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{JPEG}
+\label{my-label}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+Model & Best Epoch & LCC    & SROCC  & Mean Difference \\ \hline
+1     & 4          & 0.9861 & 0.9584 & 3.025           \\ \hline
+2     & 44         & 0.9766 & 0.9523 & 2.094           \\ \hline
+3     & 14         & 0.9766 & 0.9374 & 3.067           \\ \hline
+4     & 46         & 0.9838 & 0.9565 & 2.716           \\ \hline
+5     & 8          & 0.9783 & 0.9304 & 2.415           \\ \hline
+6     & 31         & 0.9761 & 0.9560 & 1.986           \\ \hline
+7     & 14         & 0.9927 & 0.9553 & 3.023           \\ \hline
+8     & 10         & 0.9771 & 0.9728 & 2.981           \\ \hline
+9     & 6          & 0.9834 & 0.9500 & 3.165           \\ \hline
+10    & 16         & 0.9732 & 0.9539 & 2.580           \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{JP2K}
+\label{my-label}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+Model & Best Epoch & LCC    & SROCC  & Mean Difference \\ \hline
+1     & 36         & 0.9823 & 0.9624 & 3.819           \\ \hline
+2     & 32         & 0.9879 & 0.9703 & 2.822           \\ \hline
+3     & 1          & 0.9658 & 0.9525 & 3.243           \\ \hline
+4     & 26         & 0.9861 & 0.9775 & 4.011           \\ \hline
+5     & 17         & 0.9790 & 0.9792 & 3.552           \\ \hline
+6     & 48         & 0.9885 & 0.9804 & 2.720           \\ \hline
+7     & 25         & 0.9836 & 0.9675 & 2.916           \\ \hline
+8     & 51         & 0.9871 & 0.9654 & 3.345           \\ \hline
+9     & 25         & 0.9714 & 0.9447 & 2.953           \\ \hline
+10    & 4          & 0.9567 & 0.9597 & 2.265           \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Fast Fading}
+\label{my-label}
+\begin{tabular}{|l|l|l|l|l|}
+\hline
+Model & Best Epoch & LCC    & SROCC  & Mean Difference \\ \hline
+1     & 2          & 0.9611 & 0.9379 & 2.585           \\ \hline
+2     & 17         & 0.9528 & 0.9343 & 2.740           \\ \hline
+3     & 10         & 0.9692 & 0.9521 & 2.341           \\ \hline
+4     & 2          & 0.9627 & 0.9585 & 3.004           \\ \hline
+5     & 3          & 0.9764 & 0.9487 & 3.620           \\ \hline
+6     & 39         & 0.9848 & 0.9748 & 3.121           \\ \hline
+7     & 8          & 0.9504 & 0.9376 & 3.445           \\ \hline
+8     & 1          & 0.9772 & 0.9668 & 4.188           \\ \hline
+9     & 59         & 0.9747 & 0.9477 & 2.578           \\ \hline
+10    & 2          & 0.9697 & 0.9467 & 3.105           \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Average Results}
+\label{my-label}
+\begin{tabular}{|l|l|l|}
+\hline
+Distortion Type & LCC    & SROCC  \\ \hline
+Gaussian Blur   & 0.9750 & 0.9681 \\ \hline
+White Noise     & 0.9957 & 0.9887 \\ \hline
+JPEG            & 0.9805 & 0.9523 \\ \hline
+JP2K            & 0.9788 & 0.9600 \\ \hline
+Fast Fading     & 0.9679 & 0.9505 \\ \hline
+\end{tabular}
+\end{table}
+
+Matches across various subsets of data.
+\begin{table}[h]
+\centering
+\caption{Lower}
+\label{my-label}
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+              & White Noise    & Gaussian Blur  & JPEG           & JP2K           & Fast Fading    \\ \hline
+White Noise   &                & 3511 / 42.42\% & 2918 / 35.25\% & 2263 / 27.34\% & 3722 / 44.97\% \\ \hline
+Gaussian Blur & 3511 / 42.42\% &                & 6136 / 74.14\% & 5858 / 70.78\% & 6879 / 83.12\% \\ \hline
+JPEG          & 3511 / 42.42\% & 6136 / 74.14\% &                & 6672 / 80.62\% & 6454 / 77.98\% \\ \hline
+JP2K          & 2263 / 27.34\% & 5857 / 70.78\%  & 6672 / 80.62\% &                & 6021 / 72.75\% \\ \hline
+Fast Fading   & 3722 / 44.97\% & 6879 / 83.12\% & 6454 / 77.98\% & 6021 / 72.75\% &                \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Upper}
+\label{my-label}
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+              & White Noise    & Gaussian Blur  & JPEG           & JP2K           & Fast Fading    \\ \hline
+White Noise   &                & 3510 / 42.17\% & 2917 / 35.25\% & 2262 / 27.34\% & 3721 / 44.96\% \\ \hline
+Gaussian Blur & 3510 / 42.17\% &                & 6135 74.14\%   & 5857 / 70.78\% & 6878 / 83.11\% \\ \hline
+JPEG          & 2917 / 35.25\% & 6135 / 74.14\% &                & 6671 / 80.62\% & 6453 / 77.98\% \\ \hline
+JP2K          & 2262 / 27.34\% & 5857 / 70.78\% & 6671 / 80.62\% &                & 6020 / 72.75\% \\ \hline
+Fast Fading   & 3721 / 44.96\% & 6878 / 83.11\% & 6453 / 77.98\% & 6020 / 72.75\% &                \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[]
+\centering
+\caption{Lower / Upper}
+\label{my-label}
+\begin{tabular}{|l|l|l|l|l|l|}
+\hline
+                    & White Noise$_{upper}$ & Gaussian Blur$_{upper}$ & JPEG$_{upper}$ & JP2K$_{upper}$ & FF$_{upper}$ \\ \hline
+White Noise$_{lower}$   & 0\%           & 57.57\%      & 64.74\% & 72.66\% & 55.03\%    \\ \hline
+Gaussian Blur$_{lower}$ & 57.58\%    & 0\%             & 25.86\% & 29.22\% & 16.88\%    \\ \hline
+JPEG$_{lower}$          & 64.74\%    & 25.86\%      & 0\%        & 19.38\% & 22.02\%    \\ \hline
+JP2K$_{lower}$          & 72.66\%    & 29.22\%      & 19.38\% & 0\%        & 27.25\%    \\ \hline
+Fast Fading$_{lower}$   & 55.03\%    & 16.88\%      & 22.02\% & 27.25\% & 0\%           \\ \hline
+\end{tabular}
+\end{table}
+
+%%%%%%%%5
+\begin{comment}
+	\begin{table}[]
+	\centering
+	\caption{Lower / Upper}
+	\label{my-label}
+	\begin{tabular}{|l|l|l|l|l|l|}
+	\hline
+	                    & White Noise Upper & Gaussian Blur Upper & JPEG Upper     & JP2K Upper     & Fast Fading Upper \\ \hline
+	White Noise Lower   & 0 / 0\%           & 4765 / 57.57\%      & 5358 / 64.74\% & 6013 / 72.66\% & 4554 / 55.03\%    \\ \hline
+	Gaussian Blur Lower & 4756 / 57.58\%    & 0 / 0\%             & 2140 / 25.86\% & 2418 / 29.22\% & 1397 / 16.88\%    \\ \hline
+	JPEG Lower          & 5358 / 64.74\%    & 2140 / 25.86\%      & 0 / 0\%        & 1604 / 19.38\% & 1822 / 22.02\%    \\ \hline
+	JP2K Lower          & 6013 / 72.66\%    & 2418 / 29.22\%      & 1604 / 19.38\% & 0 / 0\%        & 2255 / 27.25\%    \\ \hline
+	Fast Fading Lower   & 4554 / 55.03\%    & 1397 / 16.88\%      & 1822 / 22.02\% & 2255 / 27.25\% & 0 / 0\%           \\ \hline
+	\end{tabular}
+\end{table}
+\end{comment}
+
+
+\begin{comment}
+	Results of training Deep IQA for LIVE distortions
+	- given model trained on all distortion types in LIVE dataset provided by the authors, finetune to each of the 5 distortions
+		- trained for 500 epochs in same training style as Deep IQA
+	- best model for each distortion type for further work determined by average of LCC and SROCC for each model
+	- these are as follows:
+		- GB: 5 - 0.98885
+		- WN: 7 - 0.9964
+		- JPEG: 7 - 0.974
+		- JP2K: 6 - 0.98445
+		- FF: 6 - 0.9798
+
+\end{comment}
