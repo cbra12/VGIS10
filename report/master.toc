@@ -23,12 +23,13 @@
 \contentsline {chapter}{\numberline {4}Implementation}{30}{chapter.4}
 \contentsline {section}{\numberline {4.1}Resolution-Aware Object Detection}{30}{section.4.1}
 \contentsline {section}{\numberline {4.2}Image Quality Assessment}{34}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}Training Deep IQA}{34}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}PASCAL VOC Data Split}{35}{subsection.4.2.2}
-\contentsline {chapter}{\numberline {5}Discussion}{39}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusion}{40}{chapter.6}
-\contentsline {chapter}{Literature}{41}{section*.56}
-\contentsline {chapter}{Appendices}{45}{section*.58}
-\contentsline {chapter}{\numberline {A}Appendix A}{46}{Appendix.a.A}
-\contentsline {section}{\numberline {A.1}Resolution-Aware Object Detection}{46}{section.a.A.1}
-\contentsline {section}{\numberline {A.2}Deep IQA Models}{46}{section.a.A.2}
+\contentsline {subsection}{\numberline {4.2.1}LIVE Image Quality Database}{35}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Training Deep IQA}{37}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}PASCAL VOC Data Split}{39}{subsection.4.2.3}
+\contentsline {chapter}{\numberline {5}Discussion}{42}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusion}{43}{chapter.6}
+\contentsline {chapter}{Literature}{45}{section*.60}
+\contentsline {chapter}{Appendices}{49}{section*.62}
+\contentsline {chapter}{\numberline {A}Appendix A}{50}{Appendix.a.A}
+\contentsline {section}{\numberline {A.1}Resolution-Aware Object Detection}{50}{section.a.A.1}
+\contentsline {section}{\numberline {A.2}Deep IQA Models}{50}{section.a.A.2}

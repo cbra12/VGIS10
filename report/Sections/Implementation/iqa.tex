@@ -1,5 +1,83 @@
 \section{Image Quality Assessment}
-To evaluate the amount of distortions in the dataset a method for \gls{iqa} is needed. A recent state of the art method is that of Deep IQA \cite{deepiqa}. Deep IQA is a \gls{cnn}-based \gls{nr} \gls{iqa} method.
+To evaluate the amount of distortions in the dataset a method for \gls{iqa} is needed. A recent state of the art method is that of Deep IQA \cite{deepiqa}. Deep IQA is a \gls{cnn}-based \gls{nr} \gls{iqa} method that can be trained to measure the visual quality of an image. It is deeper than previous deep-based \gls{iqa} methods with the architecture being inspired by VGG nets \cite{vgg}. Deep IQA consists of 14 convolutional layers, 5 max-pooling layers and 2 fully-connected layers. The architecture is shown in \figref{deepiqa_arch}. The convolutional layers are all 3 $\times$ 3 convolution kernels and activated using \gls{relu}. Inputs to each convolutional layer are zero-padded to ensure output size is equal to the input. Max-pooling layers consist of 2 $\times$ 2 sized kernels. The network is trained on mini-batches of 32 $\times$ 32 patches. During inference non-overlapping patches are sampled from the image and image quality scores are predicted for each instance. The patch scores are averaged for the final score for the entire image. 
+
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=0.3\textwidth]{Figs/Implementation/deepiqa_arch.pdf}
+      \caption{Architecture of the Deep IQA network. Notation for convolutional layers are conv(receptive field size)-(number of channels) and fully-connected layers are FC(number of channels).}
+    \label{fig:deepiqa_arch}
+\end{figure}
+
+Training Deep IQA requires a database of annotated images with both reference images and distorted counterparts. The following section will outline the database used in this project for \gls{iqa} training.
+
+\subsection{LIVE Image Quality Database}
+Deep IQA assesses three different datasets for this purpose. These are \gls{live} which consists of 5 different distortions \cite{livepaper}, TID2013 \cite{tid2013} with 24 different distortions and CSIQ \cite{cisq} with 5 types. For simplicity purposes the only \gls{live} dataset is chosen for this project. The dataset was made for the purposes of evaluating the subjective visual quality of images in regards to the five distortion types. The distortions are generated from 29 colour reference images that are of both high-resolution and high quality. An example of images from the dataset can be seen in \figref{live_ex}. The references image were collected to have a wide variety in different content, this includes faces, people, animals, nature and man-made objects.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.4\textwidth}
+        \center
+        \includegraphics[width=\textwidth]{Figs/Implementation/bikes.pdf}
+        \caption{}\label{fig:}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.4\textwidth}
+        \center
+        \includegraphics[width=\textwidth]{Figs/Implementation/buildings.pdf}
+        \caption{}\label{fig:}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.4\textwidth}
+        \center
+        \includegraphics[width=\textwidth]{Figs/Implementation/monarch.pdf}
+        \caption{}\label{fig:}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.4\textwidth}
+	    \center
+	    \includegraphics[width=\textwidth]{Figs/Implementation/paintedhouse.pdf}
+	    \caption{}\label{fig:}
+    \end{subfigure}
+    \caption{Examples of reference images from the \gls{live} dataset.}
+    \label{fig:live_ex}
+\end{figure} 
+
+The five distortions generated from the reference images are Gaussian blur, white noise, JPEG compression, JPEG2K compression and fast fading. By varying the parameters used in creation of the distortions a larger database is created for each type. The total number of images is 982 where 174 are for Gaussian blur, white noise and fast fading. JPEG and JP2K compression have 233 and 227 images respectively. The distorted images were created as follows:
+
+\begin{itemize}
+	\item Gaussian blur: blur is added to the images using a circular-symmetric Gaussian kernel of standard deviation $\sigma_B$. The values of $\sigma_b$ are sampled between the range of 0.42 to 15 pixels.
+	\item White noise: Gaussian white noise of standard deviation $\sigma_N$ is added to all RGB pixels. Firstly, pixel values are scaled to between 0 and 1. $\sigma_N$ varying between 0.012 and 2.0 is added, afterwards pixel values are rescaled back between 0 and 255.
+	\item JPEG compression: compression artefacts are added to the reference bitmap images with JPEG at bit rates between 0.15 \gls{bpp} to 3.34 \gls{bpp}.
+	\item JP2K compression: artefacts added ranging between 0.028 \gls{bpp} to 3.15 \gls{bpp}.
+	\item Fast fading: this distortions represents errors that can occur when a JP2K bitstream is transmitted over a wireless channel. The receiver signal-to-noise-ratio is varied between 15.5 to 26.1dB for bit errors.
+\end{itemize}
+
+Subjective image quality values were calculated by showing human subjects all images, including reference images, and asking them to rate the image as either bad, poor, fair, good, or excellent. The rating was done using a slider on a graphical interface with the five possibilities being evenly spaced. A value between [1, 100] was then found depending on where the subject paced their rating. \gls{dmos} were calculated for each image and averaged between all users for the final image quality annotation for an image. A low \gls{dmos} represents high image quality and a high \gls{dmos} is a low quality image. \figref{gb_ex} shows an example of an image with four varying levels of Gaussian blur and their \gls{dmos} values.
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.4\textwidth}
+        \center
+        \includegraphics[width=\textwidth]{Figs/Implementation/img173.pdf}
+        \caption{\gls{dmos}: 0.0}\label{fig:}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.4\textwidth}
+        \center
+        \includegraphics[width=\textwidth]{Figs/Implementation/img96.pdf}
+        \caption{\gls{dmos}: 23.24}\label{fig:}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.4\textwidth}
+        \center
+        \includegraphics[width=\textwidth]{Figs/Implementation/img103.pdf}
+        \caption{\gls{dmos}: 40.40}\label{fig:}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.4\textwidth}
+	    \center
+	    \includegraphics[width=\textwidth]{Figs/Implementation/img11.pdf}
+	    \caption{\gls{dmos}: 75.92}\label{fig:}
+    \end{subfigure}
+    \caption{Four example images from the distortion set. Respective \gls{dmos} scores are shown on the image and below.}
+    \label{fig:gb_ex}
+\end{figure} 
+
+Given the annotated \gls{dmos} values a system can be trained to predict the image quality of an image. The following section will outline how to train Deep IQA for this purpose.
 
 \subsection{Training Deep IQA}
 As per the original authors \cite{deepiqa}, the models are trained for each distortion type in the \gls{live} \gls{iqa} second release dataset \cite{livepaper} \cite{liveweb}. In the original work the Deep IQA model is trained for all five distortion types present in \gls{live}. While this can provide insights into general image quality, individual models are needed to create a more powerful ensemble. The \gls{nr} model was provided by the authors and by taking advantage of the fine-tuning technique, models for each of the individual distortions can be trained in a timely manner. Fine-tuning takes a previously trained model and uses these parameters as a starting point, rather than other commonly used initialisation techniques such as using a Gaussian distribution. As the model is already trained towards all distortions the assumption can be made that only a shorter training cycle is necessary to the new task. The five fine-tuned models are trained in a similar manner to that of the provided model following the guidelines in the original work \cite{deepiqa}. 
@@ -26,6 +104,7 @@ FF     & 0.9679 & 0.9505 \\ \hline
 
 \subsection{PASCAL VOC Data Split}
 Each model for the five distortion types and run through the 07++12 dataset in order to give an indication to the respective distributions, as done for the object sizes in \sectionref{resawareSec}. The distributions can been seen in the histograms in \figref{iqdist}.
+
 \begin{figure}[H]
     \centering
     \begin{subfigure}[b]{0.4\textwidth}
@@ -78,19 +157,17 @@ A skewed distribution of data was also present for object sizes, however, creati
 \\\\
 The 07++12 dataset has a total of 16,551 images and as this data is to be distributed into eight different subsets there is a possibility that there is a high level of overlap between the sets. As the aim of the ensemble is to learn to detect objects based upon different information, if subsets are two similar there may be potentially no advantage gained between two or more models. Therefore, a comparison matrix is used to evaluate how much the different combinations of 07++12 match. This can be seen for higher quality subsets in \tableref{highcomp}, lower quality in \tableref{lowcomp} and between lower and higher quality in \tableref{lowhighcomp}.
 
-Matches across various subsets of data.
 \begin{table}[h]
 \centering
 \caption{Higher Quality}
 \label{tab:highcomp}
-\begin{tabular}{|l|l|l|l|l|l|}
+\begin{tabular}{|l|l|l|l|l|}
 \hline
-              & White Noise    & Gaussian Blur  & JPEG           & JP2K           & FF    \\ \hline
-White Noise   &                & 42.42\% & 35.25\% & 27.34\% & 44.97\% \\ \hline
-Gaussian Blur & 42.42\% &                & 74.14\% & 70.78\% & 83.12\% \\ \hline
-JPEG          & 35.25\% & 74.14\% &                & 80.62\% & 77.98\% \\ \hline
-JP2K          & 27.34\% & 70.78\%  & 80.62\% &                & 72.75\% \\ \hline
-FF   & 44.97\% & 83.12\% & 77.98\% & 72.75\% &                \\ \hline
+             & \textbf{Gaussian Blur}  & \textbf{JPEG} & \textbf{JP2K} & \textbf{FF}    \\ \hline
+\textbf{Gaussian Blur} &                & 74.14\% & 70.78\% & 83.12\% \\ \hline
+\textbf{JPEG}   & 74.14\% &                & 80.62\% & 77.98\% \\ \hline
+\textbf{JP2K}   & 70.78\%  & 80.62\% &                & 72.75\% \\ \hline
+\textbf{FF}   & 83.12\% & 77.98\% & 72.75\% &                \\ \hline
 \end{tabular}
 \end{table}
 
@@ -98,29 +175,31 @@ FF   & 44.97\% & 83.12\% & 77.98\% & 72.75\% &                \\ \hline
 \centering
 \caption{Lower Quality}
 \label{tab:lowcomp}
-\begin{tabular}{|l|l|l|l|l|l|}
+\begin{tabular}{|l|l|l|l|l|}
 \hline
-              & White Noise    & Gaussian Blur  & JPEG           & JP2K           & FF    \\ \hline
-White Noise   &                & 42.17\% & 35.25\% & 27.34\% & 44.96\% \\ \hline
-Gaussian Blur & 42.17\% &                & 74.14\%   & 70.78\% & 83.11\% \\ \hline
-JPEG          & 35.25\% & 74.14\% &                & 80.62\% & 77.98\% \\ \hline
-JP2K          & 27.34\% & 70.78\% & 80.62\% &                & 72.75\% \\ \hline
-FF   & 44.96\% & 83.11\% & 77.98\% & 72.75\% &                \\ \hline
+             & \textbf{Gaussian Blur}  & \textbf{JPEG} & \textbf{JP2K} & \textbf{FF}     \\ \hline
+\textbf{Gaussian Blur}  &                & 74.14\%   & 70.78\% & 83.11\% \\ \hline
+\textbf{JPEG}    & 74.14\% &                & 80.62\% & 77.98\% \\ \hline
+\textbf{JP2K}   & 70.78\% & 80.62\% &                & 72.75\% \\ \hline
+\textbf{FF}  & 83.11\% & 77.98\% & 72.75\% &                \\ \hline
 \end{tabular}
 \end{table}
+
+For the subsets of data for both higher and lower quality there are a few instances of relatively high overlap in images. The largest is between \gls{ff} \add[inline]{gls for FF} and Gaussian blur with 83.12\% and 83.11\%. Other instances of overlap also appears between JPEG and JP2K compression which could be intuitively explained due to their similarities in their distortions. However, in general it is deemed that enough difference is present between the splits to train variants of R-FCN networks.
+
+Finally, \tableref{lowhighcomp} shows the comparison matrix between all eight data subsets. There is much less overlap between these sets as much of the overlaps are present in respective higher and lower configurations as seen in \tableref{highcomp} and \tableref{lowcomp}.
 
 \begin{table}[]
 \centering
 \caption{Lower / Upper}
 \label{tab:lowhighcomp}
-\begin{tabular}{|l|l|l|l|l|l|}
+\begin{tabular}{|l|l|l|l|l|}
 \hline
-                    & White Noise$_{Lower}$ & Gaussian Blur$_{Lower}$ & JPEG$_{Lower}$ & JP2K$_{Lower}$ & FF$_{Lower}$ \\ \hline
-White Noise$_{Higher}$   & 0\%           & 57.57\%      & 64.74\% & 72.66\% & 55.03\%    \\ \hline
-Gaussian Blur$_{Higher}$ & 57.58\%    & 0\%             & 25.86\% & 29.22\% & 16.88\%    \\ \hline
-JPEG$_{Higher}$          & 64.74\%    & 25.86\%      & 0\%        & 19.38\% & 22.02\%    \\ \hline
-JP2K$_{Higher}$          & 72.66\%    & 29.22\%      & 19.38\% & 0\%        & 27.25\%    \\ \hline
-FF$_{Higher}$   & 55.03\%    & 16.88\%      & 22.02\% & 27.25\% & 0\%           \\ \hline
+                 & \textbf{Gaussian Blur$_{Lower}$} & \textbf{JPEG$_{Lower}$} & \textbf{JP2K$_{Lower}$} & \textbf{FF$_{Lower}$} \\ \hline
+\textbf{Gaussian Blur$_{Higher}$}  & 0\%             & 25.86\% & 29.22\% & 16.88\%    \\ \hline
+\textbf{JPEG$_{Higher}$} & 25.86\%      & 0\%        & 19.38\% & 22.02\%    \\ \hline
+\textbf{JP2K$_{Higher}$} & 29.22\%      & 19.38\% & 0\%        & 27.25\%    \\ \hline
+\textbf{FF$_{Higher}$} & 16.88\%      & 22.02\% & 27.25\% & 0\%           \\ \hline
 \end{tabular}
 \end{table}
 

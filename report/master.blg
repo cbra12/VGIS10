@@ -8,49 +8,51 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: bibtex.bib
+Warning--I didn't find a database entry for "vgg"
 -- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 35 entries,
+You've used 38 entries,
             4039 wiz_defined-function locations,
-            1010 strings with 14585 characters,
-and the built_in function-call counts, 24106 in all, are:
-= -- 1908
-> -- 742
-< -- 133
-+ -- 379
-- -- 154
-* -- 1242
-:= -- 3883
-add.period$ -- 72
-call.type$ -- 35
-change.case$ -- 34
-chr.to.int$ -- 282
-cite$ -- 35
-duplicate$ -- 1736
-empty$ -- 1916
-format.name$ -- 186
-if$ -- 5408
+            1025 strings with 15091 characters,
+and the built_in function-call counts, 26107 in all, are:
+= -- 2052
+> -- 812
+< -- 142
++ -- 415
+- -- 169
+* -- 1337
+:= -- 4178
+add.period$ -- 78
+call.type$ -- 38
+change.case$ -- 37
+chr.to.int$ -- 303
+cite$ -- 38
+duplicate$ -- 1887
+empty$ -- 2089
+format.name$ -- 204
+if$ -- 5866
 int.to.chr$ -- 0
-int.to.str$ -- 35
-missing$ -- 354
-newline$ -- 184
-num.names$ -- 37
-pop$ -- 875
+int.to.str$ -- 38
+missing$ -- 388
+newline$ -- 195
+num.names$ -- 40
+pop$ -- 968
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1837
+skip$ -- 1990
 stack$ -- 0
-substring$ -- 685
-swap$ -- 1339
-text.length$ -- 39
+substring$ -- 737
+swap$ -- 1449
+text.length$ -- 41
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 35
+type$ -- 38
 warning$ -- 0
-while$ -- 78
-width$ -- 37
-write$ -- 418
+while$ -- 84
+width$ -- 40
+write$ -- 446
+(There was 1 warning)
