@@ -14,45 +14,45 @@ Warning--I didn't find a database entry for "vgg"
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 38 entries,
+You've used 39 entries,
             4039 wiz_defined-function locations,
-            1025 strings with 15091 characters,
-and the built_in function-call counts, 26107 in all, are:
-= -- 2052
-> -- 812
+            1029 strings with 15165 characters,
+and the built_in function-call counts, 26484 in all, are:
+= -- 2077
+> -- 821
 < -- 142
-+ -- 415
-- -- 169
-* -- 1337
-:= -- 4178
-add.period$ -- 78
-call.type$ -- 38
++ -- 419
+- -- 171
+* -- 1350
+:= -- 4239
+add.period$ -- 80
+call.type$ -- 39
 change.case$ -- 37
 chr.to.int$ -- 303
-cite$ -- 38
-duplicate$ -- 1887
-empty$ -- 2089
-format.name$ -- 204
-if$ -- 5866
+cite$ -- 39
+duplicate$ -- 1917
+empty$ -- 2137
+format.name$ -- 207
+if$ -- 5954
 int.to.chr$ -- 0
-int.to.str$ -- 38
-missing$ -- 388
-newline$ -- 195
-num.names$ -- 40
-pop$ -- 968
+int.to.str$ -- 39
+missing$ -- 394
+newline$ -- 198
+num.names$ -- 41
+pop$ -- 988
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 1990
+skip$ -- 2023
 stack$ -- 0
 substring$ -- 737
-swap$ -- 1449
+swap$ -- 1465
 text.length$ -- 41
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 38
+type$ -- 39
 warning$ -- 0
-while$ -- 84
-width$ -- 40
-write$ -- 446
+while$ -- 85
+width$ -- 41
+write$ -- 453
 (There was 1 warning)

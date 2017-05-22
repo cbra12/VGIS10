@@ -230,6 +230,10 @@ Y.~Li, H.~Qi, J.~Dai, X.~Ji, and Y.~Wei, ``Fully convolutional instance-aware
   Available: \url{http://arxiv.org/abs/1611.07709}
 \BIBentrySTDinterwordspacing
 
+\bibitem{ensemblebook}
+C.~Zhang and Y.~Ma, \emph{Ensemble Machine Learning}.\hskip 1em plus 0.5em
+  minus 0.4em\relax Springer US, 2012.
+
 \bibitem{pascalvoc2010}
 \BIBentryALTinterwordspacing
 M.~Everingham, L.~Van~Gool, C.~K.~I. Williams, J.~Winn, and A.~Zisserman, ``The
