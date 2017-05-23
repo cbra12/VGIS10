@@ -70,6 +70,21 @@ Of the 500,000 potential images, 9,963 were annotated for the VOC2007 challenges
 \end{figure}
 
 
+Evaluation of a object detector on \gls{pascalvoc} is based upon \gls{ap} which summarises the precision and recall of detections. The metric requires that for each detection both a bounding-box and an associated confidence. With these a precision/curve can be calculated and the overall \gls{ap} for the curve represents the performance of the detector. By altering the threshold corresponding to the confidence of each detection a precision and recall curve can be calculated and the \gls{ap} summarises the shape of the this. Precision is the number of true positives in relation to both true positives and false positives. Whereas, recall is the number of true positives in relation to all detections. However firstly, a detection must be classified as either a true or false positive. This is determined by measuring the bounding-box overlap between the detection and ground truth annotation. In \gls{pascalvoc} a bounding box is a true positive if the overlap is above 50\% according to the following calculation:
+
+\begin{equation}\label{pascalBB}
+	a_o = \frac{area(B_p \bigcap B_{gt})}{area(B_p \bigcup B_{gt})}
+\end{equation}
+ 
+where $B_p \bigcap B_{gt}$ is the intersection of the predicted bounding box and the ground truth and $B_p \bigcup G_{gt}$ is the union between the two. It should also be noted that for a given ground truth object it is only possible to have one true positive detection. If multiple detections satisfy Equation \ref{pascalBB} the remaining will be denoted as a false positive. Now that detections can be as classified as either a true or false positive \gls{ap} can be calculated. Before 2007, in \gls{pascalvoc} this was calculated as the mean precision at eleven equally space recalls [0, 0.1, ..., 1] by:
+
+\begin{equation}
+	AP = \frac{1}{11} \sum_{r\epsilon[0, 0.1, ..., 1]}p_{interp}(r)  
+\end{equation}
+
+where $r$ is the recall and $p_{interp}$ is the interpolated precision.
+\add[inline]{explanation of interpolated precision}
 
 
-Evaluation of a object detector on \gls{pascalvoc} is based upon \gls{ap} which summarises the precision and recall of detections. The metric requires that for each detection both a bounding-box and an associated confidence. With these a precision/curve can be calculated and the overall \gls{ap} for the curve represents the performance of the detector. Firstly, the bounding-box
+\subsection{Microsoft Common Object in Context}
+\gls{mscoco} \cite{mscoco} is a relatively new dataset within the realm of object recognition.
