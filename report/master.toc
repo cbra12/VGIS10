@@ -14,24 +14,26 @@
 \contentsline {section}{\numberline {3.3}Residual Networks}{16}{section.3.3}
 \contentsline {section}{\numberline {3.4}Benchmark Datasets}{19}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}PASCAL Visual Object Classes Challenge}{19}{subsection.3.4.1}
-\contentsline {section}{\numberline {3.5}Evaluation Metrics}{22}{section.3.5}
-\contentsline {section}{\numberline {3.6}Object Detectors}{22}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1}Faster Region-Convolutional Neural Network}{22}{subsection.3.6.1}
-\contentsline {subsection}{\numberline {3.6.2}Regional Fully-Connected Network}{24}{subsection.3.6.2}
-\contentsline {subsection}{\numberline {3.6.3}You Only Look Once}{26}{subsection.3.6.3}
-\contentsline {subsection}{\numberline {3.6.4}Benchmark Results}{28}{subsection.3.6.4}
-\contentsline {subsubsection}{\gls {pascalvoc}}{28}{subsubsection*.33}
-\contentsline {subsubsection}{\gls {mscoco}}{30}{subsubsection*.36}
-\contentsline {chapter}{\numberline {4}Implementation}{32}{chapter.4}
-\contentsline {section}{\numberline {4.1}Resolution-Aware Object Detection}{32}{section.4.1}
-\contentsline {section}{\numberline {4.2}Image Quality Assessment}{36}{section.4.2}
-\contentsline {subsection}{\numberline {4.2.1}LIVE Image Quality Database}{37}{subsection.4.2.1}
-\contentsline {subsection}{\numberline {4.2.2}Training Deep IQA}{39}{subsection.4.2.2}
-\contentsline {subsection}{\numberline {4.2.3}PASCAL VOC Data Split}{41}{subsection.4.2.3}
-\contentsline {chapter}{\numberline {5}Discussion}{44}{chapter.5}
-\contentsline {chapter}{\numberline {6}Conclusion}{45}{chapter.6}
-\contentsline {chapter}{Literature}{47}{section*.60}
-\contentsline {chapter}{Appendices}{51}{section*.62}
-\contentsline {chapter}{\numberline {A}Appendix A}{52}{Appendix.a.A}
-\contentsline {section}{\numberline {A.1}Resolution-Aware Object Detection}{52}{section.a.A.1}
-\contentsline {section}{\numberline {A.2}Deep IQA Models}{52}{section.a.A.2}
+\contentsline {subsection}{\numberline {3.4.2}Microsoft Common Object in Context}{23}{subsection.3.4.2}
+\contentsline {section}{\numberline {3.5}Object Detectors}{23}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Faster Region-Convolutional Neural Network}{23}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Regional Fully-Connected Network}{25}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.3}You Only Look Once}{27}{subsection.3.5.3}
+\contentsline {subsection}{\numberline {3.5.4}Benchmark Results}{29}{subsection.3.5.4}
+\contentsline {subsubsection}{\gls {pascalvoc}}{29}{subsubsection*.34}
+\contentsline {subsubsection}{\gls {mscoco}}{31}{subsubsection*.37}
+\contentsline {chapter}{\numberline {4}Implementation}{33}{chapter.4}
+\contentsline {section}{\numberline {4.1}Resolution-Aware Object Detection}{33}{section.4.1}
+\contentsline {section}{\numberline {4.2}Image Quality Assessment}{37}{section.4.2}
+\contentsline {subsection}{\numberline {4.2.1}LIVE Image Quality Database}{38}{subsection.4.2.1}
+\contentsline {subsection}{\numberline {4.2.2}Training Deep IQA}{40}{subsection.4.2.2}
+\contentsline {subsection}{\numberline {4.2.3}PASCAL VOC Data Split}{42}{subsection.4.2.3}
+\contentsline {section}{\numberline {4.3}Ensemble}{44}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Weighted Average Ensemble}{44}{subsection.4.3.1}
+\contentsline {chapter}{\numberline {5}Discussion}{47}{chapter.5}
+\contentsline {chapter}{\numberline {6}Conclusion}{48}{chapter.6}
+\contentsline {chapter}{Literature}{49}{section*.63}
+\contentsline {chapter}{Appendices}{53}{section*.65}
+\contentsline {chapter}{\numberline {A}Appendix A}{54}{Appendix.a.A}
+\contentsline {section}{\numberline {A.1}Resolution-Aware Object Detection}{54}{section.a.A.1}
+\contentsline {section}{\numberline {A.2}Deep IQA Models}{54}{section.a.A.2}

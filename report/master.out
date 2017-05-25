@@ -10,15 +10,15 @@
 \BOOKMARK [1][-]{section.3.2}{Ensemble Methods}{chapter.3}% 10
 \BOOKMARK [1][-]{section.3.3}{Residual Networks}{chapter.3}% 11
 \BOOKMARK [1][-]{section.3.4}{Benchmark Datasets}{chapter.3}% 12
-\BOOKMARK [1][-]{section.3.5}{Evaluation Metrics}{chapter.3}% 13
-\BOOKMARK [1][-]{section.3.6}{Object Detectors}{chapter.3}% 14
-\BOOKMARK [0][-]{chapter.4}{Implementation}{}% 15
-\BOOKMARK [1][-]{section.4.1}{Resolution-Aware Object Detection}{chapter.4}% 16
-\BOOKMARK [1][-]{section.4.2}{Image Quality Assessment}{chapter.4}% 17
+\BOOKMARK [1][-]{section.3.5}{Object Detectors}{chapter.3}% 13
+\BOOKMARK [0][-]{chapter.4}{Implementation}{}% 14
+\BOOKMARK [1][-]{section.4.1}{Resolution-Aware Object Detection}{chapter.4}% 15
+\BOOKMARK [1][-]{section.4.2}{Image Quality Assessment}{chapter.4}% 16
+\BOOKMARK [1][-]{section.4.3}{Ensemble}{chapter.4}% 17
 \BOOKMARK [0][-]{chapter.5}{Discussion}{}% 18
 \BOOKMARK [0][-]{chapter.6}{Conclusion}{}% 19
-\BOOKMARK [0][-]{section*.60}{Literature}{}% 20
-\BOOKMARK [0][-]{section*.62}{Appendices}{}% 21
+\BOOKMARK [0][-]{section*.63}{Literature}{}% 20
+\BOOKMARK [0][-]{section*.65}{Appendices}{}% 21
 \BOOKMARK [0][-]{Appendix.a.A}{Appendix A}{}% 22
 \BOOKMARK [1][-]{section.a.A.1}{Resolution-Aware Object Detection}{Appendix.a.A}% 23
 \BOOKMARK [1][-]{section.a.A.2}{Deep IQA Models}{Appendix.a.A}% 24
