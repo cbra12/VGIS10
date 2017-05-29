@@ -252,6 +252,91 @@ Finally, \tableref{lowhighcomp} shows the comparison matrix between all eight da
 \end{table}
 \end{comment}
 
+\subsection{Evaluating Image Quality Experts}
+As in the resolution-aware R-FCN networks individual tests are run to evaluate whether or not the models trained on the above data are candidate experts. Firstly, using the same measures as in \sectionref{resawareSec}, the 07 test set is split into lower and upper subsets for each distortion type according to their respective medians. The two respective experts trained on each of their subset and the baseline R-FCN model are evaluated on each split of the test set to see if experts have been trained.
+\\\\
+Firstly, the results for the Gaussian blur experts can be seen in \tableref{gblur_experts}. Unfortunately, the models trained on each of the subsets of data do not appear to give any advantage over training on all of the 07++12 data. Regardless of the test data the best performing model is that trained on all of the data, outperforming by 3-5\%. Similar results can be seen in \tableref{jpeg_experts}, \tableref{jp2k_experts} and \tableref{ff_experts} for each the remaining models trained on subsets of JPEG, JP2K, and fast fading distortions. This seems to indicate that the distortions are not as apparent for the R-FCN models such that it is possible to train expert members to either subset.
+
+\begin{table}[h]
+\centering
+\caption{Gaussian Blur Experts}
+\label{tab:gb_experts}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Train Data}           & \textbf{Test Data}        & \textbf{AP (\%)} \\ \hline
+07++12 Gaussian Blur$_{lower}$ & 07 Gaussian Blur$_{lower}$ & 75.76\% \\ \hline
+07++12 Gaussian Blur$_{upper}$ & 07 Gaussian Blur$_{lower}$ & 74.75\% \\ \hline
+07++12               & 07 Gaussian Blur$_{lower}$ & \textbf{79.08\%} \\ \hline
+07++12 Gaussian Blur$_{lower}$ & 07 Gaussian Blur$_{upper}$ & 76.33\% \\ \hline
+07++12 Gaussian Blur$_{upper}$ & 07 Gaussian Blur$_{upper}$ & 76.50\% \\ \hline
+07++12               & 07 Gaussian Blur$_{upper}$ & \textbf{80.22\%} \\ \hline
+07++12 Gaussian Blur$_{lower}$ & 07               & 76.25\% \\ \hline
+07++12 Gaussian Blur$_{upper}$ & 07               & 75.39\% \\ \hline
+07++12               & 07               & \textbf{79.59\%} \\ \hline
+\end{tabular}
+\end{table}
+
+
+
+\begin{table}[h]
+\centering
+\caption{JPEG Experts}
+\label{tab:jpeg_experts}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Train Data}           & \textbf{Test Data}        & \textbf{AP (\%)} \\ \hline
+07++12 JPEG$_{lower}$ & 07 JPEG$_{lower}$ & 74.33\% \\ \hline
+07++12 JPEG$_{upper}$ & 07 JPEG$_{lower}$ & 73.46\% \\ \hline
+07++12               & 07 JPEG$_{lower}$ & \textbf{78.51\%} \\ \hline
+07++12 JPEG$_{lower}$ & 07 JPEG$_{upper}$ & 76.69\% \\ \hline
+07++12 JPEG$_{upper}$ & 07 JPEG$_{upper}$ & 76.27\% \\ \hline
+07++12               & 07 JPEG$_{upper}$ & \textbf{80.05\%} \\ \hline
+07++12 JPEG$_{lower}$ & 07               & 76.01\% \\ \hline
+07++12 JPEG$_{upper}$ & 07               & 75.26\% \\ \hline
+07++12               & 07               & \textbf{79.59\%} \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{JP2K Experts}
+\label{tab:jp2k_experts}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Train Data}           & \textbf{Test Data}        & \textbf{AP (\%)} \\ \hline
+07++12 JP2K$_{lower}$ & 07 JP2K$_{lower}$ & 74.75\% \\ \hline
+07++12 JP2K$_{upper}$ & 07 JP2K$_{lower}$ & 74.65\% \\ \hline
+07++12               & 07 JP2K$_{lower}$ & \textbf{79.18\%} \\ \hline
+07++12 JP2K$_{lower}$ & 07 JP2K$_{upper}$ & 75.86\% \\ \hline
+07++12 JP2K$_{upper}$ & 07 JP2K$_{upper}$ & 76.66\% \\ \hline
+07++12               & 07 JP2K$_{upper}$ & \textbf{80.01\%} \\ \hline
+07++12 JP2K$_{lower}$ & 07               & 75.69\% \\ \hline
+07++12 JP2K$_{upper}$ & 07               & 75.64\% \\ \hline
+07++12               & 07               & \textbf{79.59\%} \\ \hline
+\end{tabular}
+\end{table}
+
+
+\begin{table}[h]
+\centering
+\caption{FF Experts}
+\label{tab:ff_experts}
+\begin{tabular}{|l|l|l|}
+\hline
+\textbf{Train Data}           & \textbf{Test Data}        & \textbf{AP (\%)} \\ \hline
+07++12 FF$_{lower}$ & 07 FF$_{lower}$ & 75.94\% \\ \hline
+07++12 FF$_{upper}$ & 07 FF$_{lower}$ & 74.56\% \\ \hline
+07++12               & 07 FF$_{lower}$ & \textbf{79.02\%} \\ \hline
+07++12 FF$_{lower}$ & 07 FF$_{upper}$ & 77.18\% \\ \hline
+07++12 FF$_{upper}$ & 07 FF$_{upper}$ & 76.26\% \\ \hline
+07++12               & 07 FF$_{upper}$ & \textbf{80.79\%} \\ \hline
+07++12 FF$_{lower}$ & 07               & 76.40\% \\ \hline
+07++12 FF$_{upper}$ & 07               & 74.93\% \\ \hline
+07++12               & 07               & \textbf{79.59\%} \\ \hline
+\end{tabular}
+\end{table}
+
+Regardless, of this result the following section will present a method to ensemble these members and the models trained for smaller and larger object sizes. Future methods may still be able to benefit from an ensemble where a clearer factor that the four distortions covered here.
 
 \begin{comment}
 	Results of training Deep IQA for LIVE distortions

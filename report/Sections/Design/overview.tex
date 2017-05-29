@@ -1,0 +1,22 @@
+\section{Design Overview}
+Based upon current SOTA ensemble methods is common practice to improve generalisation of a system.
+As shown in results of COCO, resolution of an object in an image a major factor in performance.
+Another issue not often discussed in works is image quality. Can be a factor in performance - cite IQDNN paper
+Different methods to tackle this problem. 
+for resolution, dependent on two parts of the the object detector, 1. object proposals 2. classification of proposals
+	if proposals have a low recall then classification part of detector is never presented with objects and no way to classify them
+	if classification is poor then cannot classify.....
+possible to create an ensemble for either, chosen to concentrate on the latter
+
+plan
+address pillars 1 and 3 of an ensemble system
+1 - train on different subsets of data
+previous works have done this randomly and tested on a validation set
+here, instead actively create different subsets to train on and to test on
+3 - ensemble detections of above models
+majority, dynamic, etc
+
+present method as to how to measure image quality
+what is FR IQA / NR IQA?
+
+show figure of how to ensemble

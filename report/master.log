@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.30)  25 MAY 2017 20:14
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.30)  29 MAY 2017 15:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2336,6 +2336,9 @@ LaTeX Warning: Label `my-label' multiply defined.
 
 LaTeX Warning: Label `my-label' multiply defined.
 
+
+LaTeX Warning: Label `my-label' multiply defined.
+
 )
 \openout1 = `master.aux'.
 
@@ -2465,7 +2468,7 @@ LaTeX Info: Redefining \nameref on input line 40.
 
 {/home/christoffer/.texmf-var/fonts/map/pdftex/updmap/pdftex.map}]) [2
 
-] (./Sections/Introduction/synopsis.tex <Sections/Introduction/logo.jpg, id=131
+] (./Sections/Introduction/synopsis.tex <Sections/Introduction/logo.jpg, id=139
 , 205.2468pt x 38.7849pt>
 File: Sections/Introduction/logo.jpg Graphic file (type jpg)
 
@@ -2615,21 +2618,21 @@ LaTeX Warning: Reference `sec:challenges' on page 4 undefined on input line 47.
 
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
 ine 50.
-<Figs/Problem/objfieldscat.png, id=198, 90.3375pt x 120.45pt>
+<Figs/Problem/objfieldscat.png, id=208, 90.3375pt x 120.45pt>
 File: Figs/Problem/objfieldscat.png Graphic file (type png)
 
 <use Figs/Problem/objfieldscat.png>
 Package pdftex.def Info: Figs/Problem/objfieldscat.png used on input line 56.
 (pdftex.def)             Requested size: 86.72267pt x 115.63066pt.
 
-<Figs/Problem/objfieldsbbox.png, id=200, 90.3375pt x 120.45pt>
+<Figs/Problem/objfieldsbbox.png, id=210, 90.3375pt x 120.45pt>
 File: Figs/Problem/objfieldsbbox.png Graphic file (type png)
 
 <use Figs/Problem/objfieldsbbox.png>
 Package pdftex.def Info: Figs/Problem/objfieldsbbox.png used on input line 61.
 (pdftex.def)             Requested size: 86.72267pt x 115.63066pt.
 
-<Figs/Problem/objfieldsfiguresegmentation.png, id=201, 90.3375pt x 120.45pt>
+<Figs/Problem/objfieldsfiguresegmentation.png, id=211, 90.3375pt x 120.45pt>
 File: Figs/Problem/objfieldsfiguresegmentation.png Graphic file (type png)
 
 <use Figs/Problem/objfieldsfiguresegmentation.png>
@@ -2637,7 +2640,7 @@ Package pdftex.def Info: Figs/Problem/objfieldsfiguresegmentation.png used on i
 nput line 66.
 (pdftex.def)             Requested size: 86.72267pt x 115.63066pt.
 
-<Figs/Problem/objfieldssegmentation.png, id=202, 90.3375pt x 120.45pt>
+<Figs/Problem/objfieldssegmentation.png, id=212, 90.3375pt x 120.45pt>
 File: Figs/Problem/objfieldssegmentation.png Graphic file (type png)
 
 <use Figs/Problem/objfieldssegmentation.png>
@@ -2658,28 +2661,28 @@ LaTeX Font Info:    Try loading font information for TS1+lmr on input line 85.
  (/usr/share/texmf/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-<Figs/Problem/chair1.jpeg, id=220, 376.40625pt x 501.875pt>
+<Figs/Problem/chair1.jpeg, id=230, 376.40625pt x 501.875pt>
 File: Figs/Problem/chair1.jpeg Graphic file (type jpg)
 
 <use Figs/Problem/chair1.jpeg>
 Package pdftex.def Info: Figs/Problem/chair1.jpeg used on input line 99.
 (pdftex.def)             Requested size: 86.72267pt x 115.62791pt.
 
-<Figs/Problem/chair2.jpeg, id=221, 376.40625pt x 501.875pt>
+<Figs/Problem/chair2.jpeg, id=231, 376.40625pt x 501.875pt>
 File: Figs/Problem/chair2.jpeg Graphic file (type jpg)
 
 <use Figs/Problem/chair2.jpeg>
 Package pdftex.def Info: Figs/Problem/chair2.jpeg used on input line 104.
 (pdftex.def)             Requested size: 86.72267pt x 115.62791pt.
 
-<Figs/Problem/chair3.jpeg, id=222, 376.40625pt x 501.875pt>
+<Figs/Problem/chair3.jpeg, id=232, 376.40625pt x 501.875pt>
 File: Figs/Problem/chair3.jpeg Graphic file (type jpg)
 
 <use Figs/Problem/chair3.jpeg>
 Package pdftex.def Info: Figs/Problem/chair3.jpeg used on input line 109.
 (pdftex.def)             Requested size: 86.72267pt x 115.62791pt.
 
-<Figs/Problem/chair4.jpeg, id=223, 376.40625pt x 501.875pt>
+<Figs/Problem/chair4.jpeg, id=233, 376.40625pt x 501.875pt>
 File: Figs/Problem/chair4.jpeg Graphic file (type jpg)
 
 <use Figs/Problem/chair4.jpeg>
@@ -2687,14 +2690,14 @@ Package pdftex.def Info: Figs/Problem/chair4.jpeg used on input line 114.
 (pdftex.def)             Requested size: 86.72267pt x 115.62791pt.
  [5 <./Figs/Problem/chair1.jpeg> <./Figs/Problem/chair2.jpeg> <./Figs/Problem/c
 hair3.jpeg> <./Figs/Problem/chair4.jpeg>]
-<Figs/Problem/minibus.jpeg, id=243, 200.75pt x 150.5625pt>
+<Figs/Problem/minibus.jpeg, id=253, 200.75pt x 150.5625pt>
 File: Figs/Problem/minibus.jpeg Graphic file (type jpg)
 
 <use Figs/Problem/minibus.jpeg>
 Package pdftex.def Info: Figs/Problem/minibus.jpeg used on input line 137.
 (pdftex.def)             Requested size: 195.12767pt x 146.35558pt.
 
-<Figs/Problem/deliverytruck.jpeg, id=244, 120.45pt x 80.4606pt>
+<Figs/Problem/deliverytruck.jpeg, id=254, 120.45pt x 80.4606pt>
 File: Figs/Problem/deliverytruck.jpeg Graphic file (type jpg)
 
 <use Figs/Problem/deliverytruck.jpeg>
@@ -2702,14 +2705,14 @@ Package pdftex.def Info: Figs/Problem/deliverytruck.jpeg used on input line 142
 .
 (pdftex.def)             Requested size: 195.12767pt x 130.35773pt.
 
-<Figs/Problem/wolf.jpeg, id=247, 96.36pt x 120.45pt>
+<Figs/Problem/wolf.jpeg, id=257, 96.36pt x 120.45pt>
 File: Figs/Problem/wolf.jpeg Graphic file (type jpg)
 
 <use Figs/Problem/wolf.jpeg>
 Package pdftex.def Info: Figs/Problem/wolf.jpeg used on input line 153.
 (pdftex.def)             Requested size: 130.08733pt x 162.60965pt.
 
-<Figs/Problem/germanshepherd.jpeg, id=248, 501.875pt x 334.24875pt>
+<Figs/Problem/germanshepherd.jpeg, id=258, 501.875pt x 334.24875pt>
 File: Figs/Problem/germanshepherd.jpeg Graphic file (type jpg)
 
 <use Figs/Problem/germanshepherd.jpeg>
@@ -2726,7 +2729,7 @@ File: Figs/Problem/wolf.jpeg Graphic file (type jpg)
 Package pdftex.def Info: Figs/Problem/wolf.jpeg used on input line 171.
 (pdftex.def)             Requested size: 108.405pt x 135.50589pt.
 
-<Figs/Problem/wolf_hier.png, id=261, 172.4844pt x 308.352pt>
+<Figs/Problem/wolf_hier.png, id=271, 172.4844pt x 308.352pt>
 File: Figs/Problem/wolf_hier.png Graphic file (type png)
 
 <use Figs/Problem/wolf_hier.png>
@@ -2738,7 +2741,7 @@ Package pdftex.def Info: Figs/Problem/germanshepherd.jpeg used on input line 18
 1.
 (pdftex.def)             Requested size: 108.405pt x 72.19359pt.
 
-<Figs/Problem/german_hier.png, id=262, 172.4844pt x 308.352pt>
+<Figs/Problem/german_hier.png, id=272, 172.4844pt x 308.352pt>
 File: Figs/Problem/german_hier.png Graphic file (type png)
 
 <use Figs/Problem/german_hier.png>
@@ -2854,7 +2857,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 2--6
 
 pdfTeX warning: pdflatex (file ./Figs/Techanal/resblock.pdf): PDF inclusion: fo
 und PDF version <1.7>, but at most version <1.5> allowed
-<Figs/Techanal/resblock.pdf, id=404, 273.02pt x 263.98625pt>
+<Figs/Techanal/resblock.pdf, id=414, 273.02pt x 263.98625pt>
 File: Figs/Techanal/resblock.pdf Graphic file (type pdf)
 
 <use Figs/Techanal/resblock.pdf>
@@ -2864,7 +2867,7 @@ Package pdftex.def Info: Figs/Techanal/resblock.pdf used on input line 27.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [16]
-<Figs/Techanal/plainres.png, id=412, 207.77625pt x 776.9025pt>
+<Figs/Techanal/plainres.png, id=422, 207.77625pt x 776.9025pt>
 File: Figs/Techanal/plainres.png Graphic file (type png)
 
 <use Figs/Techanal/plainres.png>
@@ -2877,7 +2880,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 pdfTeX warning: pdflatex (file ./Figs/Techanal/newresblock.pdf): PDF inclusion:
  found PDF version <1.7>, but at most version <1.5> allowed
-<Figs/Techanal/newresblock.pdf, id=437, 218.8175pt x 282.05376pt>
+<Figs/Techanal/newresblock.pdf, id=447, 218.8175pt x 282.05376pt>
 File: Figs/Techanal/newresblock.pdf Graphic file (type pdf)
 
 <use Figs/Techanal/newresblock.pdf>
@@ -2903,14 +2906,14 @@ File: lstlang1.sty 2013/08/26 1.5b listings language file
 (/usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2013/08/26 1.5b (Carsten Heinz)
 ) [20]
-<Figs/Techanal/000005.jpg, id=483, 501.875pt x 376.40625pt>
+<Figs/Techanal/000005.jpg, id=493, 501.875pt x 376.40625pt>
 File: Figs/Techanal/000005.jpg Graphic file (type jpg)
 
 <use Figs/Techanal/000005.jpg>
 Package pdftex.def Info: Figs/Techanal/000005.jpg used on input line 58.
 (pdftex.def)             Requested size: 303.53267pt x 227.66043pt.
 
-<Figs/Techanal/vochist07.png, id=487, 657.45625pt x 563.10374pt>
+<Figs/Techanal/vochist07.png, id=497, 657.45625pt x 563.10374pt>
 File: Figs/Techanal/vochist07.png Graphic file (type png)
 
 <use Figs/Techanal/vochist07.png>
@@ -2930,7 +2933,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [21 <./Figs/Techanal/000005.jpg>]) (./Sections/Techanalysis/detectors.tex [22 
 <./Figs/Techanal/vochist07.png>]
-<Figs/Techanal/fasterframework.png, id=525, 378.41376pt x 383.4325pt>
+<Figs/Techanal/fasterframework.png, id=535, 378.41376pt x 383.4325pt>
 File: Figs/Techanal/fasterframework.png Graphic file (type png)
 
 <use Figs/Techanal/fasterframework.png>
@@ -2941,7 +2944,7 @@ Package pdftex.def Info: Figs/Techanal/fasterframework.png used on input line 1
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [23]
-<Figs/Techanal/rpnframework.png, id=538, 426.59375pt x 249.93375pt>
+<Figs/Techanal/rpnframework.png, id=548, 426.59375pt x 249.93375pt>
 File: Figs/Techanal/rpnframework.png Graphic file (type png)
 
 <use Figs/Techanal/rpnframework.png>
@@ -2956,28 +2959,28 @@ Underfull \hbox (badness 10000) in paragraph at lines 28--31
  []
 
 [25 <./Figs/Techanal/rpnframework.png>]
-<Figs/Techanal/rfcnarchi.png, id=557, 684.5575pt x 352.31625pt>
+<Figs/Techanal/rfcnarchi.png, id=567, 684.5575pt x 352.31625pt>
 File: Figs/Techanal/rfcnarchi.png Graphic file (type png)
 
 <use Figs/Techanal/rfcnarchi.png>
 Package pdftex.def Info: Figs/Techanal/rfcnarchi.png used on input line 35.
 (pdftex.def)             Requested size: 346.89732pt x 178.53922pt.
 
-<Figs/Techanal/scoremaps.png, id=558, 294.09875pt x 261.97874pt>
+<Figs/Techanal/scoremaps.png, id=568, 294.09875pt x 261.97874pt>
 File: Figs/Techanal/scoremaps.png Graphic file (type png)
 
 <use Figs/Techanal/scoremaps.png>
 Package pdftex.def Info: Figs/Techanal/scoremaps.png used on input line 45.
 (pdftex.def)             Requested size: 173.44534pt x 154.50215pt.
  [26 <./Figs/Techanal/rfcnarchi.png> <./Figs/Techanal/scoremaps.png>]
-<Figs/Techanal/rfcnpooling.png, id=569, 593.21625pt x 257.96375pt>
+<Figs/Techanal/rfcnpooling.png, id=579, 593.21625pt x 257.96375pt>
 File: Figs/Techanal/rfcnpooling.png Graphic file (type png)
 
 <use Figs/Techanal/rfcnpooling.png>
 Package pdftex.def Info: Figs/Techanal/rfcnpooling.png used on input line 55.
 (pdftex.def)             Requested size: 260.17465pt x 113.14226pt.
  [27 <./Figs/Techanal/rfcnpooling.png>]
-<Figs/Techanal/yolomodel.png, id=583, 790.955pt x 495.8525pt>
+<Figs/Techanal/yolomodel.png, id=593, 790.955pt x 495.8525pt>
 File: Figs/Techanal/yolomodel.png Graphic file (type png)
 
 <use Figs/Techanal/yolomodel.png>
@@ -3000,8 +3003,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 ) [31] [32]
 Chapter 4.
+(./Sections/Design/overview.tex) [33
+
+]
+Chapter 5.
 (./Sections/Implementation/resawareclassifier.tex
-<Figs/Implementation/0712hist.pdf, id=657, 462.52798pt x 346.89601pt>
+<Figs/Implementation/0712hist.pdf, id=672, 462.52798pt x 346.89601pt>
 File: Figs/Implementation/0712hist.pdf Graphic file (type pdf)
 
 <use Figs/Implementation/0712hist.pdf>
@@ -3012,10 +3019,10 @@ Package pdftex.def Info: Figs/Implementation/0712hist.pdf used on input line 54
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[33
+[34
 
  <./Figs/Implementation/0712hist.pdf>]
-<Figs/Implementation/testsmallhist.pdf, id=707, 462.52798pt x 346.89601pt>
+<Figs/Implementation/testsmallhist.pdf, id=721, 462.52798pt x 346.89601pt>
 File: Figs/Implementation/testsmallhist.pdf Graphic file (type pdf)
 
 <use Figs/Implementation/testsmallhist.pdf>
@@ -3023,7 +3030,7 @@ Package pdftex.def Info: Figs/Implementation/testsmallhist.pdf used on input li
 ne 86.
 (pdftex.def)             Requested size: 195.12767pt x 146.34639pt.
 
-<Figs/Implementation/testlargehist.pdf, id=708, 462.52798pt x 346.89601pt>
+<Figs/Implementation/testlargehist.pdf, id=722, 462.52798pt x 346.89601pt>
 File: Figs/Implementation/testlargehist.pdf Graphic file (type pdf)
 
 <use Figs/Implementation/testlargehist.pdf>
@@ -3034,7 +3041,7 @@ ne 91.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[34 <./Figs/Implementation/testsmallhist.pdf> <./Figs/Implementation/testlargeh
+[35 <./Figs/Implementation/testsmallhist.pdf> <./Figs/Implementation/testlargeh
 ist.pdf
 
 pdfTeX warning: pdflatex (file ./Figs/Implementation/testlargehist.pdf): PDF in
@@ -3047,7 +3054,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 124--127
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [35]
+ [36]
 Underfull \hbox (badness 10000) in paragraph at lines 156--159
 
  []
@@ -3063,16 +3070,16 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 ) (./Sections/Implementation/iqa.tex
 
-LaTeX Warning: Citation `vgg' on page 36 undefined on input line 2.
+LaTeX Warning: Citation `vgg' on page 37 undefined on input line 2.
 
 
 Underfull \vbox (badness 7326) has occurred while \output is active []
 
- [36]
+ [37]
 
 pdfTeX warning: pdflatex (file ./Figs/Implementation/deepiqa_arch.pdf): PDF inc
 lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Figs/Implementation/deepiqa_arch.pdf, id=819, 191.71625pt x 480.79625pt>
+<Figs/Implementation/deepiqa_arch.pdf, id=834, 191.71625pt x 480.79625pt>
 File: Figs/Implementation/deepiqa_arch.pdf Graphic file (type pdf)
 
 <use Figs/Implementation/deepiqa_arch.pdf>
@@ -3082,16 +3089,16 @@ e 6.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [37]
-[38 <./Figs/Implementation/deepiqa_arch.pdf>]
-<Figs/Implementation/bikes.pdf, id=849, 770.88pt x 513.92pt>
+ [38]
+[39 <./Figs/Implementation/deepiqa_arch.pdf>]
+<Figs/Implementation/bikes.pdf, id=864, 770.88pt x 513.92pt>
 File: Figs/Implementation/bikes.pdf Graphic file (type pdf)
 
 <use Figs/Implementation/bikes.pdf>
 Package pdftex.def Info: Figs/Implementation/bikes.pdf used on input line 20.
 (pdftex.def)             Requested size: 173.44534pt x 115.627pt.
 
-<Figs/Implementation/buildings.pdf, id=850, 770.88pt x 513.92pt>
+<Figs/Implementation/buildings.pdf, id=865, 770.88pt x 513.92pt>
 File: Figs/Implementation/buildings.pdf Graphic file (type pdf)
 
 <use Figs/Implementation/buildings.pdf>
@@ -3099,7 +3106,7 @@ Package pdftex.def Info: Figs/Implementation/buildings.pdf used on input line 2
 5.
 (pdftex.def)             Requested size: 173.44534pt x 115.627pt.
 
-<Figs/Implementation/monarch.pdf, id=851, 770.88pt x 513.92pt>
+<Figs/Implementation/monarch.pdf, id=866, 770.88pt x 513.92pt>
 File: Figs/Implementation/monarch.pdf Graphic file (type pdf)
 
 <use Figs/Implementation/monarch.pdf>
@@ -3107,14 +3114,14 @@ Package pdftex.def Info: Figs/Implementation/monarch.pdf used on input line 30.
 
 (pdftex.def)             Requested size: 173.44534pt x 115.627pt.
 
-<Figs/Implementation/paintedhouse.pdf, id=852, 770.88pt x 513.92pt>
+<Figs/Implementation/paintedhouse.pdf, id=867, 770.88pt x 513.92pt>
 File: Figs/Implementation/paintedhouse.pdf Graphic file (type pdf)
 
 <use Figs/Implementation/paintedhouse.pdf>
 Package pdftex.def Info: Figs/Implementation/paintedhouse.pdf used on input lin
 e 35.
 (pdftex.def)             Requested size: 173.44534pt x 115.627pt.
- [39 <./Figs/Implementation/bikes.pdf> <./Figs/Implementation/buildings.pdf
+ [40 <./Figs/Implementation/bikes.pdf> <./Figs/Implementation/buildings.pdf
 
 pdfTeX warning: pdflatex (file ./Figs/Implementation/buildings.pdf): PDF inclus
 ion: multiple pdfs with page group included in a single page
@@ -3126,28 +3133,28 @@ n: multiple pdfs with page group included in a single page
 
 pdfTeX warning: pdflatex (file ./Figs/Implementation/paintedhouse.pdf): PDF inc
 lusion: multiple pdfs with page group included in a single page
->] <Figs/Implementation/img173.pdf, id=885, 770.39822pt x 513.8397pt>
+>] <Figs/Implementation/img173.pdf, id=899, 770.39822pt x 513.8397pt>
 File: Figs/Implementation/img173.pdf Graphic file (type pdf)
 
 <use Figs/Implementation/img173.pdf>
 Package pdftex.def Info: Figs/Implementation/img173.pdf used on input line 58.
 (pdftex.def)             Requested size: 173.44534pt x 115.6795pt.
 
-<Figs/Implementation/img96.pdf, id=886, 770.39822pt x 513.8397pt>
+<Figs/Implementation/img96.pdf, id=900, 770.39822pt x 513.8397pt>
 File: Figs/Implementation/img96.pdf Graphic file (type pdf)
 
 <use Figs/Implementation/img96.pdf>
 Package pdftex.def Info: Figs/Implementation/img96.pdf used on input line 63.
 (pdftex.def)             Requested size: 173.44534pt x 115.6795pt.
 
-<Figs/Implementation/img103.pdf, id=887, 770.39822pt x 513.8397pt>
+<Figs/Implementation/img103.pdf, id=901, 770.39822pt x 513.8397pt>
 File: Figs/Implementation/img103.pdf Graphic file (type pdf)
 
 <use Figs/Implementation/img103.pdf>
 Package pdftex.def Info: Figs/Implementation/img103.pdf used on input line 68.
 (pdftex.def)             Requested size: 173.44534pt x 115.6795pt.
 
-<Figs/Implementation/img11.pdf, id=888, 770.39822pt x 513.8397pt>
+<Figs/Implementation/img11.pdf, id=902, 770.39822pt x 513.8397pt>
 File: Figs/Implementation/img11.pdf Graphic file (type pdf)
 
 <use Figs/Implementation/img11.pdf>
@@ -3158,7 +3165,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--85
 
  []
 
-[40 <./Figs/Implementation/img173.pdf> <./Figs/Implementation/img96.pdf
+[41 <./Figs/Implementation/img173.pdf> <./Figs/Implementation/img96.pdf
 
 pdfTeX warning: pdflatex (file ./Figs/Implementation/img96.pdf): PDF inclusion:
  multiple pdfs with page group included in a single page
@@ -3178,8 +3185,8 @@ Underfull \hbox (badness 10000) in paragraph at lines 85--87
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [41]
-<Figs/Implementation/WhiteNoisedist.pdf, id=963, 462.52798pt x 346.89601pt>
+ [42]
+<Figs/Implementation/WhiteNoisedist.pdf, id=978, 462.52798pt x 346.89601pt>
 File: Figs/Implementation/WhiteNoisedist.pdf Graphic file (type pdf)
 
 <use Figs/Implementation/WhiteNoisedist.pdf>
@@ -3187,7 +3194,7 @@ Package pdftex.def Info: Figs/Implementation/WhiteNoisedist.pdf used on input l
 ine 112.
 (pdftex.def)             Requested size: 173.44534pt x 130.08568pt.
 
-<Figs/Implementation/GaussianBlurdist.pdf, id=964, 462.52798pt x 346.89601pt>
+<Figs/Implementation/GaussianBlurdist.pdf, id=979, 462.52798pt x 346.89601pt>
 File: Figs/Implementation/GaussianBlurdist.pdf Graphic file (type pdf)
 
 <use Figs/Implementation/GaussianBlurdist.pdf>
@@ -3195,7 +3202,7 @@ Package pdftex.def Info: Figs/Implementation/GaussianBlurdist.pdf used on input
  line 117.
 (pdftex.def)             Requested size: 173.44534pt x 130.08568pt.
 
-<Figs/Implementation/JPEGCompressiondist.pdf, id=965, 462.52798pt x 346.89601pt
+<Figs/Implementation/JPEGCompressiondist.pdf, id=980, 462.52798pt x 346.89601pt
 >
 File: Figs/Implementation/JPEGCompressiondist.pdf Graphic file (type pdf)
  <use Figs/Implementation/JPEGCompressiondist.pdf>
@@ -3203,7 +3210,7 @@ Package pdftex.def Info: Figs/Implementation/JPEGCompressiondist.pdf used on in
 put line 122.
 (pdftex.def)             Requested size: 173.44534pt x 130.08568pt.
 
-<Figs/Implementation/JP2KCompressiondist.pdf, id=966, 462.52798pt x 346.89601pt
+<Figs/Implementation/JP2KCompressiondist.pdf, id=981, 462.52798pt x 346.89601pt
 >
 File: Figs/Implementation/JP2KCompressiondist.pdf Graphic file (type pdf)
  <use Figs/Implementation/JP2KCompressiondist.pdf>
@@ -3211,14 +3218,14 @@ Package pdftex.def Info: Figs/Implementation/JP2KCompressiondist.pdf used on in
 put line 127.
 (pdftex.def)             Requested size: 173.44534pt x 130.08568pt.
 
-<Figs/Implementation/FastFadingdist.pdf, id=967, 462.52798pt x 346.89601pt>
+<Figs/Implementation/FastFadingdist.pdf, id=982, 462.52798pt x 346.89601pt>
 File: Figs/Implementation/FastFadingdist.pdf Graphic file (type pdf)
 
 <use Figs/Implementation/FastFadingdist.pdf>
 Package pdftex.def Info: Figs/Implementation/FastFadingdist.pdf used on input l
 ine 132.
 (pdftex.def)             Requested size: 173.44534pt x 130.08568pt.
- [42 <./Figs/Implementation/WhiteNoisedist.pdf> <./Figs/Implementation/Gaussian
+ [43 <./Figs/Implementation/WhiteNoisedist.pdf> <./Figs/Implementation/Gaussian
 Blurdist.pdf
 
 pdfTeX warning: pdflatex (file ./Figs/Implementation/GaussianBlurdist.pdf): PDF
@@ -3243,35 +3250,72 @@ Underfull \hbox (badness 10000) in paragraph at lines 156--159
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[43]
+[44]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 192.
 
+
+LaTeX Warning: Reference `tab:gblur_experts' on page 45 undefined on input line
+ 258.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 256--259
+
+ []
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 ) (./Sections/Implementation/ensemble.tex
+<Figs/Implementation/ensemble.pdf, id=1229, 528.2937pt x 582.4962pt>
+File: Figs/Implementation/ensemble.pdf Graphic file (type pdf)
 
-LaTeX Warning: Reference `fig:ensemble_ex' on page 44 undefined on input line 2
-.
+<use Figs/Implementation/ensemble.pdf>
+Package pdftex.def Info: Figs/Implementation/ensemble.pdf used on input line 5.
 
-[44]
+(pdftex.def)             Requested size: 216.81pt x 239.05608pt.
+ [45]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [46]
+Underfull \vbox (badness 3009) has occurred while \output is active []
+
+ [47 <./Figs/Implementation/ensemble.pdf>]
 File: Figs/Implementation/GaussianBlurdist.pdf Graphic file (type pdf)
  <use Figs/Implementation/GaussianBlurdist.pdf>
 Package pdftex.def Info: Figs/Implementation/GaussianBlurdist.pdf used on input
- line 19.
+ line 27.
 (pdftex.def)             Requested size: 346.89732pt x 260.18724pt.
- [45]) [46]
-Chapter 5.
-[47
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [48]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) [49] [50]
+Chapter 6.
+[51
 
 ]
-Chapter 6.
-[48
+Chapter 7.
+[52
 
-] (./master.bbl [49
+] (./master.bbl [53
 
 
 
-] [50]) [51] [52] [53
+] [54]) [55] [56] [57
 
 
 
@@ -3294,24 +3338,24 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [54
+) [58
 
-] [55] [56] (./master.tdo)
+] [59] [60] (./master.tdo)
 \tf@tdo=\write9
 \openout9 = `master.tdo'.
 
  
 AED: lastpage setting LastPage
-[57
+[61
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 118.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 118.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 121.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 121.
  (./master.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 118.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 118.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 121.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 121.
 Package rerunfilecheck Info: File `master.out' has not changed.
-(rerunfilecheck)             Checksum: 09240ECF1859A0B65AF28A901BF35041;1430.
+(rerunfilecheck)             Checksum: CED8587676FEF91B2164195ACD295E7C;1534.
 
 
 LaTeX Warning: There were undefined references.
@@ -3321,10 +3365,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 48115 strings out of 495028
- 1005868 string characters out of 6181496
- 1418527 words of memory out of 5000000
- 49903 multiletter control sequences out of 15000+600000
+ 48144 strings out of 495028
+ 1006395 string characters out of 6181496
+ 1419760 words of memory out of 5000000
+ 49914 multiletter control sequences out of 15000+600000
  97457 words of font info for 91 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  78i,17n,96p,2666b,1247s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3348,10 +3392,10 @@ i9.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/font
 s/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></
 usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/pu
 blic/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri8.pfb>
-Output written on master.pdf (61 pages, 12536887 bytes).
+Output written on master.pdf (65 pages, 12883578 bytes).
 PDF statistics:
- 1487 PDF objects out of 1728 (max. 8388607)
- 980 compressed objects within 10 object streams
- 240 named destinations out of 1000 (max. 500000)
- 516 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1540 PDF objects out of 1728 (max. 8388607)
+ 1025 compressed objects within 11 object streams
+ 254 named destinations out of 1000 (max. 500000)
+ 537 words of extra memory for PDF output out of 10000 (max. 10000000)
 

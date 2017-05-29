@@ -1,5 +1,13 @@
 \section{Ensemble}
-A number of different strategies for combining the ensemble members will be described in this section. This includes averaging and weighted averaging the detections. The method for inferring each of the ensemble will be the same apart from the combination set. This is shown in \figref{ensemble_ex}. Firstly, for a object proposal in an image found with the \gls{rpn} each network will infer a bounding box and associated confidence for all classes. After this the given ensemble combination method determines the final detection. 
+A number of different strategies for combining the ensemble members will be described in this section. This includes averaging and weighted averaging the detections. The method for inferring each of the ensemble will be the same apart from the combination set. This is shown in \figref{ensemble_general}. Firstly, for a object proposal in an image found with the \gls{rpn} each network will infer a bounding box and associated confidence for all classes. After this the given ensemble combination method determines the final detection. 
+\begin{figure}[H]
+  \centering
+    \includegraphics[width=0.5\textwidth]{Figs/Implementation/ensemble.pdf}
+      \caption{}
+    \label{fig:ensemble_general}
+\end{figure}
+
+A number of different combination strategies will be presented and evaluated in the remainder of this section. 
 
 \subsection{Weighted Average Ensemble}
 Each of then 10 trained networks will be used on all object proposals found using the \gls{rpn}. Weights will be distributed evenly across each of the five different types of factors. The weighted average ensemble is determined for each bounding-box and the associated confidence by:
@@ -47,52 +55,20 @@ and lower weight $w_{Lower}$:
 	w_{Lower} = 2 - w_{Upper}.
 \end{equation}
 
-\subsubsections{Results}
-\begin{comment}
-AP for aeroplane = 0.2492
-AP for bicycle = 0.3045
-AP for bird = 0.2650
-AP for boat = 0.2639
-AP for bottle = 0.2409
-AP for bus = 0.2693
-AP for car = 0.2630
-AP for cat = 0.3153
-AP for chair = 0.2175
-AP for cow = 0.2320
-AP for diningtable = 0.3623
-AP for dog = 0.2826
-AP for horse = 0.3163
-AP for motorbike = 0.2991
-AP for person = 0.3278
-AP for pottedplant = 0.2012
-AP for sheep = 0.2438
-AP for sofa = 0.2620
-AP for train = 0.3121
-AP for tvmonitor = 0.2691
-Mean AP = 0.2748
-~~~~~~~~
-Results:
-0.249
-0.304
-0.265
-0.264
-0.241
-0.269
-0.263
-0.315
-0.218
-0.232
-0.362
-0.283
-0.316
-0.299
-0.328
-0.201
-0.244
-0.262
-0.312
-0.269
-0.275
-~~~~~~~~
-\end{comment}
+\subsubsection{Results}
+
+\begin{table}[h]
+\centering
+\caption{Results 07}
+\label{my-label}
+\resizebox{\columnwidth}{!}{%
+\begin{tabular}{|l|l||l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l||}
+\hline
+Method  & mAP  & aero  & bike  & bird  & boat  & bottle & bus   & car   & cat   & chair & cow   & table & dog   & horse & mbike & person & plant & sheep & sofa & train & tv \\ \hline
+Baseline R-FCN  & \textbf{76.35} & \textbf{79.14} & \textbf{80.16} & \textbf{76.97} & \textbf{68.68} & \textbf{57.11} & \textbf{86.36} & \textbf{85.95} & \textbf{88.34} & \textbf{60.06} & \textbf{86.85} & \textbf{67.12} & \textbf{87.91} & \textbf{86.51} & \textbf{80-36} & \textbf{78.14} & \textbf{45.67} & \textbf{77.74} & \textbf{76.98} & \textbf{83.75} & \textbf{73.30}  \\ \hline
+  Weighted Ensemble & 62.65 & 75.46 & 69.93 & 69.03 & 50.15 & 51.35 & 74.68 & 80.54 & 77.36 & 40.38 & 75.05 & 40.65 & 73.59 & 69.38 & 67.94 & 59.37 & 31.35 & 68.72 & 54.13 & 69.66 & 54.23  \\ \hline
+\end{tabular}%
+}
+\end{table}
+
 
