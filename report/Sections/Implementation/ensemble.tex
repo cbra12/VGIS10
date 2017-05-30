@@ -9,6 +9,15 @@ A number of different strategies for combining the ensemble members will be desc
 
 A number of different combination strategies will be presented and evaluated in the remainder of this section. 
 
+\subsection{Average Ensemble}
+One of the combination strategies is similar to that used when evaluating the resolution-aware object detector in \sectionref{resawareSec}. Each of the five ensemble factors are weighted evenly in the overall ensemble. Within each ensemble factor pair, the detection for one of the pairs will be chosen and the other discarded. This is determined by where the given factor lies in relation to the training data distribution. For example, if for the given test image it is measured with Deep IQA to have JPEG compression below the threshold used to split the data, then the detection found using the model trained on that data will be used. This results in five detections that will be weighted equally to find the final detection by:
+
+\begin{equation}
+  E_{j} = \frac{1}{n} \sum_{i=1}^{n} p_{i,j} 
+\end{equation}
+where $n$ is the number of detections found by the $n$ ensemble factor, $p$ is the detection result to be averaged and $i$ represents one of the ensemble factors. Finally, $j$ is one of the five values found by each detection, namely the four corners of the bounding-box and the associated confidence.
+
+
 \subsection{Weighted Average Ensemble}
 Each of then 10 trained networks will be used on all object proposals found using the \gls{rpn}. Weights will be distributed evenly across each of the five different types of factors. The weighted average ensemble is determined for each bounding-box and the associated confidence by:
 
@@ -16,7 +25,6 @@ Each of then 10 trained networks will be used on all object proposals found usin
 	E_{j} = \frac{1}{n} \sum_{i=1}^{n} w_ip_{i,j} 
 \end{equation}
 
-where $n$ is the number of detections found by the $n$ networks, $w_i$ is the weight associated with the i-th ensemble factor and $p$ is the detection value to be averaged. Finally, $j$ is one of the five values found by each detection, namely the four corners of the bounding-box and the associated confidence.
 Weights are determined in pairs for each of the 5 ensemble factors, where the total sum of weights is equal to $n$. If each detection were to be weighted equally all $w$ would be equal to 1. As the weights are calculated in pairs each ensemble factor is overall weighted equally as the pair of weights can at most be equal to 2. By using this tactic in between the two sets of network for a given factor can be weighted differently but overall each factor is weighted equally.
 Weights for a given factor is found according to where the the test image lies for that factors training distribution data. For example, the subsets of training data for Gaussian blur was determined according to the line shown in \figref{blur_dist}. 
 
@@ -56,19 +64,23 @@ and lower weight $w_{Lower}$:
 \end{equation}
 
 \subsubsection{Results}
+In this section the results for the two above mentioned ensemble combinations strategies will be presented. Each presentation will be accompanied with the result for the baseline R-FCN ResNet-101 model trained on all of the 07++12 training data and will be dubbed as baseline. The results presented will be on the 2007 \gls{pascalvoc} test set as also shown in earlier preliminary results in this report.
+\\\\
+The results for both combination strategies can be seen in \tableref{avgres1}.
 
 \begin{table}[h]
 \centering
-\caption{Results 07}
-\label{my-label}
-\resizebox{\columnwidth}{!}{%
-\begin{tabular}{|l|l||l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l|l||}
+\caption{Results for the two ensemble combination strategies and for the baseline model on the 2007 test set.}
+\label{tab:avgres1}
+\begin{tabular}{|l|l|}
 \hline
-Method  & mAP  & aero  & bike  & bird  & boat  & bottle & bus   & car   & cat   & chair & cow   & table & dog   & horse & mbike & person & plant & sheep & sofa & train & tv \\ \hline
-Baseline R-FCN  & \textbf{76.35} & \textbf{79.14} & \textbf{80.16} & \textbf{76.97} & \textbf{68.68} & \textbf{57.11} & \textbf{86.36} & \textbf{85.95} & \textbf{88.34} & \textbf{60.06} & \textbf{86.85} & \textbf{67.12} & \textbf{87.91} & \textbf{86.51} & \textbf{80-36} & \textbf{78.14} & \textbf{45.67} & \textbf{77.74} & \textbf{76.98} & \textbf{83.75} & \textbf{73.30}  \\ \hline
-  Weighted Ensemble & 62.65 & 75.46 & 69.93 & 69.03 & 50.15 & 51.35 & 74.68 & 80.54 & 77.36 & 40.38 & 75.05 & 40.65 & 73.59 & 69.38 & 67.94 & 59.37 & 31.35 & 68.72 & 54.13 & 69.66 & 54.23  \\ \hline
-\end{tabular}%
-}
+\textbf{Method}           & \textbf{AP (\%)} \\ \hline
+Average          & 79.21\% \\ \hline
+Weighted Average & 79.13\% \\ \hline
+Baseline         & \textbf{79.59\%} \\ \hline
+\end{tabular}
 \end{table}
+
+While neither of the combinations provide an improvement over the baseline method both provide an increase in performance in comparison to the image quality expert results found shown in \sectionref{iq_experts} 
 
 

@@ -252,7 +252,7 @@ Finally, \tableref{lowhighcomp} shows the comparison matrix between all eight da
 \end{table}
 \end{comment}
 
-\subsection{Evaluating Image Quality Experts}
+\subsection{Evaluating Image Quality Experts}\label{sec:iq_experts}
 As in the resolution-aware R-FCN networks individual tests are run to evaluate whether or not the models trained on the above data are candidate experts. Firstly, using the same measures as in \sectionref{resawareSec}, the 07 test set is split into lower and upper subsets for each distortion type according to their respective medians. The two respective experts trained on each of their subset and the baseline R-FCN model are evaluated on each split of the test set to see if experts have been trained.
 \\\\
 Firstly, the results for the Gaussian blur experts can be seen in \tableref{gblur_experts}. Unfortunately, the models trained on each of the subsets of data do not appear to give any advantage over training on all of the 07++12 data. Regardless of the test data the best performing model is that trained on all of the data, outperforming by 3-5\%. Similar results can be seen in \tableref{jpeg_experts}, \tableref{jp2k_experts} and \tableref{ff_experts} for each the remaining models trained on subsets of JPEG, JP2K, and fast fading distortions. This seems to indicate that the distortions are not as apparent for the R-FCN models such that it is possible to train expert members to either subset.
