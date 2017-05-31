@@ -81,6 +81,51 @@ Baseline         & \textbf{79.59\%} \\ \hline
 \end{tabular}
 \end{table}
 
-While neither of the combinations provide an improvement over the baseline method both provide an increase in performance in comparison to the image quality expert results found shown in \sectionref{iq_experts} 
+While neither of the combinations provide an improvement over the baseline method both provide an increase in performance in comparison to the image quality expert results found shown in \sectionref{iq_experts} where individual members were 3-4\% worse in performance in comparison to the baseline model on their trained expert areas. Additionally, the weighted average only performs slightly worse than that of the non-weighted version. This is interesting as the intra-factor experts for the image quality factors are similar in performance, however, while disregarding this and weighting models still provides a performance increase.
+\\\\
+Next, to the evaluate the contribution of both the eight quality factor ensemble members and the two resolution members these were combined separately based on the two strategies. The results for the average ensemble can be seen in \tableref{avgresind} and the weighted ensemble in \tableref{weiavgind}.
+
+\begin{table}[h]
+\centering
+\caption{Results for the the image quality ensemble members and resolution members individually combined using average strategy on the 2007 test set.}
+\label{tab:avgresind}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Ensemble Members}        & \textbf{AP (\%)} \\ \hline
+Image Quality Members & 78.15\% \\ \hline
+Resolution Members    & 78.13\% \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Results for the the image quality ensemble members and resolution members individually combined using the weighted average strategy on the 2007 test set.}
+\label{tab:weiavgind}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Ensemble Members}        & \textbf{AP (\%)} \\ \hline
+Image Quality Members & 78.44\% \\ \hline
+Resolution Members    & 75.00\% \\ \hline
+\end{tabular}
+\end{table}
+
+By separating the quality and resolution members \tableref{avgresind} shows that the performance decreases by over 1\% for both in comparison the the average ensemble result of 79.21\%. This appears to indicate that the two complement each other well and have their own expertises for this problem. \tableref{weiavgind} also shows a decrease in performance when separating the members based on their expertise factors. The weighted average combination strategy does not show as large of a decrease in performance for only image quality as the average combination does, however, there is still a performance drop from 79.13\% to 78.44\%. There is a significant decrease in performance for the two resolution members showing an \gls{ap} of 75.00\% on the test set. This seems to show that the addition of weighing individual detections based on proposal size as a poorer approach. Comparing the two tables seems to indicate that image quality members are well suited to adding a weight to detections but the resolution members are better suited to simply taking the detection from the appropriate model. Therefore, combinations of average and weighted average ensembles could be of interest. The results for these can be seen in \tableref{weandavgres}. The two strategies are shown as either Image Quality or Resolution followed by the subscript $_{Avg}$ or $_{WAvg}$ indicating the combination strategies of average or weighted average respectively. 
+
+\begin{table}[h]
+\centering
+\caption{Results for the the image quality ensemble members and resolution members individually combined using the weighted average strategy on the 2007 test set.}
+\label{tab:weandavgres}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Ensemble Members}                  & \textbf{AP (\%)} \\ \hline
+Image Quality$_{WAvg}$ / Resolution$_{Avg}$ & \textbf{79.90\%} \\ \hline
+Image Quality$_{Avg}$ / Resolution$_{WAvg}$ & 78.71\% \\ \hline
+Baseline                          & 79.59\% \\ \hline
+\end{tabular}
+\end{table}
+
+Results in \tableref{weandavgres} show that by using separate strategies with image quality members are weighted and when one of the resolution members are weighted 100\% the performance on the test set surpasses the baseline model. The increase is slight from 79.59\% to 79.90\%. However, again it appears that the members of the ensemble compliment each other well both intra-factor and inter-factor. As suspected the opposite strategy of average combination for image quality and weighted average for resolution does not surpass previous results. 
+
+
 
 

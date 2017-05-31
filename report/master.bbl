@@ -230,6 +230,13 @@ Y.~Li, H.~Qi, J.~Dai, X.~Ji, and Y.~Wei, ``Fully convolutional instance-aware
   Available: \url{http://arxiv.org/abs/1611.07709}
 \BIBentrySTDinterwordspacing
 
+\bibitem{lenet}
+Y.~LeCun, B.~Boser, J.~S. Denker, D.~Henderson, R.~E. Howard, W.~Hubbard, and
+  L.~D. Jackel, ``Handwritten digit recognition with a back-propagation
+  network,'' in \emph{Advances in Neural Information Processing Systems (NIPS
+  1989)}, D.~Touretzky, Ed., vol.~2.\hskip 1em plus 0.5em minus 0.4em\relax
+  Denver, CO: Morgan Kaufman, 1990.
+
 \bibitem{ensemblebook}
 C.~Zhang and Y.~Ma, \emph{Ensemble Machine Learning}.\hskip 1em plus 0.5em
   minus 0.4em\relax Springer US, 2012.
