@@ -1,14 +1,14 @@
 \contentsline {todo}{correct section refs to above}{4}{section*.3}
 \contentsline {todo}{explanation that typically obj detection is supervised learning}{5}{section*.6}
 \contentsline {todo}{unsure if to add explanation of structured and unstructured classes}{6}{section*.7}
-\contentsline {todo}{explanation of interpolated precision}{24}{section*.22}
-\contentsline {todo}{update faster rcnn framework figure}{25}{section*.23}
-\contentsline {todo}{update rpn framework figure}{26}{section*.25}
-\contentsline {todo}{update score maps figure}{28}{section*.28}
-\contentsline {todo}{update score maps figure}{29}{section*.30}
-\contentsline {todo}{update figure}{30}{section*.32}
-\contentsline {todo}{update following explanation}{37}{section*.44}
-\contentsline {todo}{explanation of adam solver}{44}{section*.53}
-\contentsline {todo}{add results for all model}{44}{section*.54}
-\contentsline {todo}{gls for FF}{46}{section*.60}
-\contentsline {todo}{line showing split in training data}{50}{section*.67}
+\contentsline {todo}{explanation of interpolated precision}{11}{section*.14}
+\contentsline {todo}{update faster rcnn framework figure}{27}{section*.24}
+\contentsline {todo}{update rpn framework figure}{28}{section*.26}
+\contentsline {todo}{update score maps figure}{29}{section*.29}
+\contentsline {todo}{update score maps figure}{30}{section*.31}
+\contentsline {todo}{update figure}{31}{section*.33}
+\contentsline {todo}{update following explanation}{39}{section*.45}
+\contentsline {todo}{explanation of adam solver}{46}{section*.54}
+\contentsline {todo}{add results for all model}{46}{section*.55}
+\contentsline {todo}{gls for FF}{48}{section*.61}
+\contentsline {todo}{line showing split in training data}{52}{section*.68}
