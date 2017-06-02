@@ -1,4 +1,4 @@
-\section{Design Overview}
+\begin{comment}
 Based upon current SOTA ensemble methods is common practice to improve generalisation of a system.
 As shown in results of COCO, resolution of an object in an image a major factor in performance.
 Another issue not often discussed in works is image quality. Can be a factor in performance - cite IQDNN paper
@@ -22,3 +22,41 @@ what is FR IQA / NR IQA?
 show figure of how to ensemble
 
 choice of ResNet-101 GPU size
+\end{comment}
+
+\section{Design Overview}
+Now that an analysis of the technical aspects of object detection with deep learning has been conducted an overview of the design of the system will be made in this section. 
+Multiple choices can be made with respect to the overall architecture of the \gls{cnn}-based object detector. As covered in \sectionref{objdet}, two of the best performing systems are Faster R-CNN and R-FCN. Both methods have similarities in their overall architecture. Such as taking advantage of an \gls{rpn} to efficiently find region proposals. Additionally the current core classification model used in both is the ResNet architecture. As the addition of ResNets significantly increases performance the use of these in this work is deemed as crucial part. However, the choice of either Faster R-CNN or R-FCN is not immediately as clear. Both methods perform similarly with respect to benchmarks such as \gls{pascalvoc} and \gls{mscoco}. However, as the decision has been made to incorporate ResNets a decision on this matter was indirectly made. The GPU available in this project while being large in regards to memory was only available to train R-FCN with the ResNet-101 model. Unfortunately, due to the internal architecture of Faster R-CNN the 8Gb memory on the NVIDIA GPU was not able to store all parameters while training a Faster R-CNN with ResNets. However, due to the more efficient classification module in R-FCN, a ResNet backbone could be trained.
+\\\\
+As mentioned, leading object detection systems take advantage of ensemble methods. However, many of them are trained with regards to the internal architecture and not specifically training experts towards solving specific challenges. Therefore, the system in this project will take advantage of the first point in \sectionref{build_ensemble}, namely data sampling and selection. The aim will be to train R-FCN with ResNet-101 on different subsets of training data with the aim to create expert ensemble members in regards to factors present. Two separate factors will be chosen, one with respect to variations in the object and the other in terms of image variations. The first factor chosen in object size, as seen in \sectionref{benchresults}, in general object detection systems find it challenging to detect and classify smaller objects. Therefore, if a system can be trained towards a subset of sizes in the training data, ideally the individual ensemble members will increase their performance on the respective sizes. The second factor chosen is in with image quality. As mentioned in \sectionref{qualityprob}, the quality of an image can be a factor in the overall performance of \gls{cnn}-based classification systems. Therefore members will also be trained towards subsets data split based upon this.
+Lastly, individual members predictions much be combined in an ensemble system. Therefore, approaches must be taken to combine outputs. The combination strategy is greater than only voting on which class a potential object is associated to. Bounding-boxes and the confidence of each detection is used in the calculation of metrics in both \gls{pascalvoc} and \gls{mscoco}. Therefore these must be combined in the ensemble system as well.
+\\\\
+Based upon these issues the following design requirements are set with respect to the previously discussed items.
+
+\begin{itemize}
+	
+	\item Object Detector Architecture.
+	\begin{itemize}
+		\item \gls{cnn}-based method.
+		\item ResNets as backbone model.
+	\end{itemize}
+
+	\item Ensemble Data Sampling and Selection.
+	\begin{itemize}
+		\item Ability to measure object and image variations with respect to: 
+		\begin{itemize}
+			\item Object size.
+			\item Image Quality.
+		\end{itemize}
+	\end{itemize}
+
+	\item Ensemble Training of Classifiers.
+	\begin{itemize}
+		\item Must be kept constant to measure effect of differing data sampling strategies.
+	\end{itemize}
+
+	\item Ensemble Combination.
+	\begin{itemize}
+		\item Method to combine individual bounding-boxes and confidences between individual ensemble members.
+	\end{itemize}
+\end{itemize}

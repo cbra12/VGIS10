@@ -1,4 +1,4 @@
-\section{Object Detectors}
+\section{Object Detectors}\label{sec:objdet}
 This section will perform a technical analysis of the current primary \gls{cnn}-based object detectors.
 
 \subsection{Faster Region-Convolutional Neural Network}
@@ -115,7 +115,7 @@ Darknet-19++ & 23.5             & 6.7              \\ \hline
 
 To aid in the detection of small objects the Darknet-19 model is also pre-trained on high-resolution images from ImageNet prior to training for object detection. Also fine-grained features are passthrough from an earlier layer when performing prediction. This gives features from a $26 \times 26$ feature map instead of the $13 \time 13$ size at the \gls{rpn}. Finally multi-scale training is also performed.
 
-\subsection{Benchmark Results}
+\subsection{Benchmark Results}\label{sec:benchresults}
 \begin{comment}
 	RFCN
 		train data union of voc 2007 trainval and voc 2012 trainval (07+12)
