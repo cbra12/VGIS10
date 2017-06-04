@@ -41,10 +41,10 @@ CITE: R-FCN 2016
 
 \end{comment}
 
-This chapter will outline object detection and it's key challenges. This includes aspects within robustness, computational-complexity and scalability. Once completed the key works within object detection will be analysed, both current state-of-the-art and notable older methods.
+This chapter will outline object detection and it's key challenges. This includes aspects within robustness, computational-complexity and scalability. Once completed the current key works within object detection will be analysed, both current state-of-the-art. \add[inline]{what else is covered in this chapter}
 
 \section{Object Detection}
-As mentioned in \sectionref{intro}, object detection consists of two larger tasks; classification and localisation. Depending on the problem at hand, object detection can be split into two categories. If only a single class is of interest, such as detecting a specific traffic sign, the object detection task is denoted as class-specific detection. Whereas, the more general case when multiple classes are of interest in an image is denoted as multi-class detection \cite{zhang}. Key challenges such as \gls{pascalvoc}, ImageNet, and \gls{mscoco} are of the latter task. This thesis will be within the multi-class detection domain and take these challenges into account when analysing related works in \sectionref{sota} and determining the algorithm to be implemented and evaluated in \sectionref{methodoverview}. An analysis of these key challenges is done in \sectionref{challenges}. The goal of a detector is to output a list of labels from a predefined list of categories indicating which objects are present and where they are located in an image. Object detection has a number of related fields which share to common goal of categories relevant objects. This can be seen in \figref{objfields}. In all four instances the goal is to categorise the two objects person and skateboard, however, the difference lies in the level of localisation precision. In \figref{objcat}, object categorisation aims to only classify the objects in the image without providing any indication as to where the objects are located. Object class detection in \figref{objbb}, localises the classified objects with the use of bounding-boxes, where ideally the bounding-boxes are placed as tightly around the given object as possible. Figure-ground segmentation in \figref{objfig}, indicates localisation with a lasso outline around the objects. Finally, in \figref{objseg}, semantic-segmentation localises objects at a pixel-level classifying each pixel that is related to the given object. 
+As mentioned in \sectionref{intro}, object detection consists of two larger tasks; classification and localisation. Depending on the problem at hand, object detection can be split into two categories. If only a single class is of interest, such as detecting a specific traffic sign, the object detection task is denoted as class-specific detection. Whereas, in the more general case when multiple classes are of interest, it is denoted as multi-class detection \cite{zhang}. Key challenges such as \gls{pascalvoc}, ImageNet and \gls{mscoco} are of the latter task. This thesis will be within the multi-class detection domain and take these challenges into account when analysing related works and determining the algorithm to be implemented. The goal of an object detector is to output a list of labels from a predefined list of categories indicating which objects are present and where they are located in an image. Object detection has a number of related fields which share the common goal of categorising relevant objects. This can be seen in \figref{objfields}. In all four instances the goal is to categorise the two objects person and skateboard, however, the difference lies in the level of localisation precision. In \figref{objcat}, object categorisation aims to only classify the objects in the image without providing any indication as to where the objects are located. Object class detection in \figref{objbb}, localises the classified objects with the use of bounding-boxes, where ideally the bounding-boxes are placed as tightly around the given object as possible. Figure-ground segmentation in \figref{objfig}, indicates localisation with a lasso outline around the objects. Finally, in \figref{objseg}, semantic-segmentation localises objects at a pixel-level classifying each pixel that is related to the given object. 
 
 
 \add[inline]{correct section refs to above}
@@ -75,7 +75,7 @@ As mentioned in \sectionref{intro}, object detection consists of two larger task
     \label{fig:objfields}
 \end{figure} 
 
-A more recent example of segmentation is that of instance segmentation. Instance segmentation varies to semantic segmentation in that individual instances of objects are classified as such. If multiple instances of the same object is present, such as an image of a crowd with many people, in semantic segmentation all people will be given the same label as one large group. However, in instance segmentation the people are still given the same label but individual instances of a person is also found. This area of research within segmentation is relatively new, however, is beginning to become more popular in comparison to semantic segmentation. For example, the \gls{mscoco} segmentation challenge which has been held in 2015 and 2016 only accepts instance segmentation entries.
+A recent boom in the domain of segmentation has been that of instance segmentation. Instance segmentation differs to semantic segmentation in that individual instances of objects are classified as such. If multiple instances of the same object is present, such as an image of a crowd with many people, in semantic segmentation all people will be given the same label as one large group. However, in instance segmentation the people are still given the same label but individual instances of a person is also found. This area of research within segmentation is relatively new, however, is beginning to become more popular in comparison to semantic segmentation. For example, the \gls{mscoco} segmentation challenge which has been held in 2015 and 2016 only accepts instance segmentation entries.
 
 
 \section{Main Challenges}\label{sec:probchallenges}
@@ -90,7 +90,7 @@ The following sections will outline the above.
 
 \subsection{Robustness-related Challenges}
 
-Robustness-related refers to the challenges in appearance within the both of intra-class and inter-class. Intra-class is the differences in appearance of objects which are of the same class. For example as seen in \figref{intra_ex}, all of the images belong to the superclass chair from the ImageNet training set \cite{imagenet}, however, vary greatly in their overall appearance. 
+Robustness-related refers to the challenges in appearance within the both of intra-class and inter-class. Intra-class is the differences in appearance of objects which are of the same class. For example, as seen in \figref{intra_ex}, all of the images belong to the superclass chair from the ImageNet training set \cite{imagenet}, however, vary greatly in their overall appearance. 
 
 \begin{figure}[H]
     \centering
@@ -118,7 +118,7 @@ Robustness-related refers to the challenges in appearance within the both of int
     \label{fig:intra_ex}
 \end{figure} 
 
-An object detection system must be able to learn \add[inline]{explanation that typically obj detection is supervised learning} the appearance variations that can occur intra-class. These variations can be categorised into two types as per \cite{schroff}:
+An object detection system must be able to learn the appearance variations that can occur intra-class. These variations can be categorised into two types as per \cite{schroff}:
 
 \begin{itemize}
 	\item Object variations.
@@ -126,7 +126,6 @@ An object detection system must be able to learn \add[inline]{explanation that t
 \end{itemize}
 
 Object variations consist of appearance differences between instances of colour, texture, shape, and size. Image variations are differences not related to the object instances themselves but rather consist of conditions such as lighting, viewpoint, scale, occlusion, and clutter. Based upon these conditions the task of both classifying a given object as a given class but also differentiating the potentially largely varying objects into the same class challenging.
-\unsure[inline]{unsure if to add explanation of structured and unstructured classes}
 
 Robustness-related challenges can also occur with inter-class appearance differences. This refers to the differences between objects that are regarded as different categories. Challenges arise in scenarios where an object detector must decide if an instance is between classes that are very similar. For example using images and their respective classes from ImageNet \cite{imagenet}, in \figref{inter1} and \figref{inter2} the differences between the two examples are very similar, however, their class labels are different. In \figref{inter1a} and \figref{inter1b} the class labels are mini-bus and delivery truck respectively. In \figref{inter2a} and \figref{inter2b} the labels are white wolf and German shepherd. 
 
@@ -194,14 +193,4 @@ It should be noted that this is a task-specific if inter-class appearance simila
 The second challenge as per \cite{zhang} is related to the potential scale of object detection. When deciding on which type of model to use it must be complex enough to be able to capture the previously mentioned challenges both in inter- and intra-class. On top of this there is an extremely large number of potential classes in object detection. If the aim is to train a model to classify between an extreme number of classes then naturally a large number of images are also needed for each category. The large number of images need also to be representative enough in training to capture the necessary visual features to generalise on non-training images. In 2016 the ImageNet object detection challenge there is a total of 200 object categories, with 456,567 images comprising the training set. Therefore, a complex enough model is needed in order to learn and generalise on such a dataset but this of course places high requirements on the amount of training needed.
 
 Issues can also arise over time when designing an object detection system.  Over time the visual appearance of an object can change, which is very difficult to take into account when training a model. For example, the visual appearance of televisions have changed greatly in the past century. If a system were only to be trained on images from an earlier time period it may not be able to generalise on new instances. Therefore, it is important that a model is able to be updated as the appearance of objects change. On top of this, new categories of objects can come to fruition which may needed to be added to a model. 
-
-\section{Implementation Outline}
-As per \cite{zhang} the steps in the general pipeline for an object detection system is as follows:
-
-\begin{enumerate}
-	\item Find all possible object regions in the image.
-	\item Determine if the regions correspond to any of the predefined categories.
-	\item Evaluate all responses from step 2 to determine final detections.
-\end{enumerate}
-
 

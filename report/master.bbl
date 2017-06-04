@@ -56,6 +56,28 @@ F.~Schroff, \emph{Semantic Image Segmentation and Web-supervised Visual
   [Online]. Available: \url{https://books.google.dk/books?id=4EqZYgEACAAJ}
 \BIBentrySTDinterwordspacing
 
+\bibitem{pascalvoc2010}
+\BIBentryALTinterwordspacing
+M.~Everingham, L.~Van~Gool, C.~K.~I. Williams, J.~Winn, and A.~Zisserman, ``The
+  pascal visual object classes (voc) challenge,'' \emph{International Journal
+  of Computer Vision}, vol.~88, no.~2, pp. 303--338, 2010. [Online]. Available:
+  \url{http://dx.doi.org/10.1007/s11263-009-0275-4}
+\BIBentrySTDinterwordspacing
+
+\bibitem{pascalvoc2015}
+\BIBentryALTinterwordspacing
+M.~Everingham, S.~M.~A. Eslami, L.~Van~Gool, C.~K.~I. Williams, J.~Winn, and
+  A.~Zisserman, ``The pascal visual object classes challenge: A
+  retrospective,'' \emph{International Journal of Computer Vision}, vol. 111,
+  no.~1, pp. 98--136, 2015. [Online]. Available:
+  \url{http://dx.doi.org/10.1007/s11263-014-0733-5}
+\BIBentrySTDinterwordspacing
+
+\bibitem{flickr}
+\BIBentryALTinterwordspacing
+flickr. flickr. [Online]. Available: \url{https://www.flickr.com/}
+\BIBentrySTDinterwordspacing
+
 \bibitem{rcnn}
 R.~Girshick, J.~Donahue, T.~Darrell, and J.~Malik, ``Rich feature hierarchies
   for accurate object detection and semantic segmentation,'' in
@@ -241,40 +263,22 @@ Y.~LeCun, B.~Boser, J.~S. Denker, D.~Henderson, R.~E. Howard, W.~Hubbard, and
 C.~Zhang and Y.~Ma, \emph{Ensemble Machine Learning}.\hskip 1em plus 0.5em
   minus 0.4em\relax Springer US, 2012.
 
-\bibitem{pascalvoc2010}
-\BIBentryALTinterwordspacing
-M.~Everingham, L.~Van~Gool, C.~K.~I. Williams, J.~Winn, and A.~Zisserman, ``The
-  pascal visual object classes (voc) challenge,'' \emph{International Journal
-  of Computer Vision}, vol.~88, no.~2, pp. 303--338, 2010. [Online]. Available:
-  \url{http://dx.doi.org/10.1007/s11263-009-0275-4}
-\BIBentrySTDinterwordspacing
-
-\bibitem{pascalvoc2015}
-\BIBentryALTinterwordspacing
-M.~Everingham, S.~M.~A. Eslami, L.~Van~Gool, C.~K.~I. Williams, J.~Winn, and
-  A.~Zisserman, ``The pascal visual object classes challenge: A
-  retrospective,'' \emph{International Journal of Computer Vision}, vol. 111,
-  no.~1, pp. 98--136, 2015. [Online]. Available:
-  \url{http://dx.doi.org/10.1007/s11263-014-0733-5}
-\BIBentrySTDinterwordspacing
-
-\bibitem{flickr}
-\BIBentryALTinterwordspacing
-flickr. flickr. [Online]. Available: \url{https://www.flickr.com/}
-\BIBentrySTDinterwordspacing
-
-\bibitem{deepiqa}
-\BIBentryALTinterwordspacing
-S.~Bosse, D.~Maniry, K.~M{\"{u}}ller, T.~Wiegand, and W.~Samek, ``Deep neural
-  networks for no-reference and full-reference image quality assessment,''
-  \emph{CoRR}, vol. abs/1612.01697, 2016. [Online]. Available:
-  \url{http://arxiv.org/abs/1612.01697}
-\BIBentrySTDinterwordspacing
+\bibitem{caffe}
+Y.~Jia, E.~Shelhamer, J.~Donahue, S.~Karayev, J.~Long, R.~Girshick,
+  S.~Guadarrama, and T.~Darrell, ``Caffe: Convolutional architecture for fast
+  feature embedding,'' \emph{arXiv preprint arXiv:1408.5093}, 2014.
 
 \bibitem{livepaper}
 H.~R. Sheikh, M.~F. Sabir, and A.~C. Bovik, ``A statistical evaluation of
   recent full reference image quality assessment algorithms,'' \emph{IEEE
   Transactions on Image Processing}, vol.~15, no.~11, pp. 3440--3451, Nov 2006.
+
+\bibitem{liveweb}
+\BIBentryALTinterwordspacing
+H.~R. Sheikh, M.~F. Sabir, and A.~C. Bovik. Live image quality assessment
+  database release 2. [Online]. Available:
+  \url{http://live.ece.utexas.edu/research/quality}
+\BIBentrySTDinterwordspacing
 
 \bibitem{tid2013}
 N.~Ponomarenko, O.~Ieremeiev, V.~Lukin, K.~Egiazarian, L.~Jin, J.~Astola,
@@ -282,15 +286,16 @@ N.~Ponomarenko, O.~Ieremeiev, V.~Lukin, K.~Egiazarian, L.~Jin, J.~Astola,
   database tid2013: Peculiarities and preliminary results,'' in \emph{European
   Workshop on Visual Information Processing (EUVIP)}, June 2013, pp. 106--111.
 
-\bibitem{cisq}
+\bibitem{csiq}
 E.~Larson and D.~M. Chandler, ``Consumer subjective image quality database,''
   2009.
 
-\bibitem{liveweb}
+\bibitem{deepiqa}
 \BIBentryALTinterwordspacing
-H.~R. Sheikh, M.~F. Sabir, and A.~C. Bovik. Live image quality assessment
-  database release 2. [Online]. Available:
-  \url{http://live.ece.utexas.edu/research/quality}
+S.~Bosse, D.~Maniry, K.~M{\"{u}}ller, T.~Wiegand, and W.~Samek, ``Deep neural
+  networks for no-reference and full-reference image quality assessment,''
+  \emph{CoRR}, vol. abs/1612.01697, 2016. [Online]. Available:
+  \url{http://arxiv.org/abs/1612.01697}
 \BIBentrySTDinterwordspacing
 
 \bibitem{adam}
