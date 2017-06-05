@@ -7,44 +7,45 @@
 \contentsline {subsection}{\numberline {2.2.2}Computational-complexity and Scalability-related Challenges}{7}{subsection.2.2.2}
 \contentsline {section}{\numberline {2.3}Benchmark Datasets}{8}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}PASCAL Visual Object Classes Challenge}{8}{subsection.2.3.1}
-\contentsline {subsection}{\numberline {2.3.2}Microsoft Common Object in Context}{11}{subsection.2.3.2}
-\contentsline {section}{\numberline {2.4}Related Work}{12}{section.2.4}
+\contentsline {subsection}{\numberline {2.3.2}ImageNet Large Scale Visual Recognition Challenge}{11}{subsection.2.3.2}
+\contentsline {subsection}{\numberline {2.3.3}Microsoft Common Objects in Context}{11}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.4}Related Work}{13}{section.2.4}
 \contentsline {section}{\numberline {2.5}Problem Statement}{19}{section.2.5}
-\contentsline {chapter}{\numberline {3}Technical Analysis}{20}{chapter.3}
-\contentsline {section}{\numberline {3.1}Convolutional Neural Networks}{20}{section.3.1}
-\contentsline {section}{\numberline {3.2}Object Detectors with Convolutional Neural Networks}{22}{section.3.2}
-\contentsline {subsection}{\numberline {3.2.1}Faster Region-Convolutional Neural Network}{22}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Regional Fully-Connected Network}{24}{subsection.3.2.2}
-\contentsline {subsection}{\numberline {3.2.3}You Only Look Once}{26}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Benchmark Results}{28}{subsection.3.2.4}
-\contentsline {subsubsection}{\gls {pascalvoc}}{28}{subsubsection*.31}
-\contentsline {subsubsection}{\gls {mscoco}}{30}{subsubsection*.34}
-\contentsline {section}{\numberline {3.3}Models}{31}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}VGG}{32}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Residual Networks}{33}{subsection.3.3.2}
-\contentsline {section}{\numberline {3.4}Ensemble Methods}{36}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Building an Ensemble System}{37}{subsection.3.4.1}
-\contentsline {chapter}{\numberline {4}Design}{39}{chapter.4}
-\contentsline {section}{\numberline {4.1}Design Overview}{39}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Training R-FCN}{40}{subsection.4.1.1}
-\contentsline {subsubsection}{Object Size Data Sampling}{42}{subsubsection*.44}
-\contentsline {subsubsection}{Image Quality Data Sampling}{42}{subsubsection*.45}
-\contentsline {subsubsection}{\gls {rfcn} Training}{42}{subsubsection*.46}
-\contentsline {chapter}{\numberline {5}Implementation}{44}{chapter.5}
-\contentsline {section}{\numberline {5.1}Resolution-Aware Object Detection}{44}{section.5.1}
+\contentsline {chapter}{\numberline {3}Technical Analysis}{21}{chapter.3}
+\contentsline {section}{\numberline {3.1}Convolutional Neural Networks}{21}{section.3.1}
+\contentsline {section}{\numberline {3.2}Object Detectors with Convolutional Neural Networks}{23}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Faster Region-Convolutional Neural Network}{23}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Regional Fully-Connected Network}{25}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}You Only Look Once}{27}{subsection.3.2.3}
+\contentsline {subsection}{\numberline {3.2.4}Benchmark Results}{29}{subsection.3.2.4}
+\contentsline {subsubsection}{\gls {pascalvoc}}{29}{subsubsection*.31}
+\contentsline {subsubsection}{\gls {mscoco}}{31}{subsubsection*.34}
+\contentsline {section}{\numberline {3.3}Models}{33}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}VGG}{33}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}Residual Networks}{35}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.4}Ensemble Methods}{37}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}Building an Ensemble System}{38}{subsection.3.4.1}
+\contentsline {chapter}{\numberline {4}Design}{40}{chapter.4}
+\contentsline {section}{\numberline {4.1}Design Overview}{40}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Training R-FCN}{41}{subsection.4.1.1}
+\contentsline {subsubsection}{Object Size Data Sampling}{43}{subsubsection*.44}
+\contentsline {subsubsection}{Image Quality Data Sampling}{43}{subsubsection*.45}
+\contentsline {subsubsection}{\gls {rfcn} Training}{43}{subsubsection*.46}
+\contentsline {chapter}{\numberline {5}Implementation}{45}{chapter.5}
+\contentsline {section}{\numberline {5.1}Resolution-Aware Object Detection}{45}{section.5.1}
 \contentsline {section}{\numberline {5.2}Image Quality Assessment}{47}{section.5.2}
-\contentsline {subsection}{\numberline {5.2.1}LIVE Image Quality Database}{49}{subsection.5.2.1}
-\contentsline {subsection}{\numberline {5.2.2}Training Deep IQA}{51}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}PASCAL VOC Data Split}{52}{subsection.5.2.3}
-\contentsline {subsection}{\numberline {5.2.4}Evaluating Image Quality Experts}{55}{subsection.5.2.4}
-\contentsline {section}{\numberline {5.3}Ensemble}{55}{section.5.3}
-\contentsline {subsection}{\numberline {5.3.1}Average Ensemble}{58}{subsection.5.3.1}
-\contentsline {subsection}{\numberline {5.3.2}Weighted Average Ensemble}{58}{subsection.5.3.2}
-\contentsline {subsubsection}{Results}{59}{subsubsection*.77}
-\contentsline {chapter}{\numberline {6}Discussion}{62}{chapter.6}
-\contentsline {chapter}{\numberline {7}Conclusion}{63}{chapter.7}
-\contentsline {chapter}{Literature}{65}{section*.82}
-\contentsline {chapter}{Appendices}{69}{section*.84}
-\contentsline {chapter}{\numberline {A}Appendix A}{70}{Appendix.a.A}
-\contentsline {section}{\numberline {A.1}Resolution-Aware Object Detection}{70}{section.a.A.1}
-\contentsline {section}{\numberline {A.2}Deep IQA Models}{70}{section.a.A.2}
+\contentsline {subsection}{\numberline {5.2.1}LIVE Image Quality Database}{48}{subsection.5.2.1}
+\contentsline {subsection}{\numberline {5.2.2}Training Deep IQA}{50}{subsection.5.2.2}
+\contentsline {subsection}{\numberline {5.2.3}PASCAL VOC Data Split}{51}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.4}Evaluating Image Quality Experts}{54}{subsection.5.2.4}
+\contentsline {section}{\numberline {5.3}Ensemble}{54}{section.5.3}
+\contentsline {subsection}{\numberline {5.3.1}Average Ensemble}{57}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.2}Weighted Average Ensemble}{57}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.3}Ensemble Results}{58}{subsection.5.3.3}
+\contentsline {chapter}{\numberline {6}Discussion}{61}{chapter.6}
+\contentsline {chapter}{\numberline {7}Conclusion}{62}{chapter.7}
+\contentsline {chapter}{Literature}{63}{section*.78}
+\contentsline {chapter}{Appendices}{67}{section*.80}
+\contentsline {chapter}{\numberline {A}Appendix A}{68}{Appendix.a.A}
+\contentsline {section}{\numberline {A.1}Resolution-Aware Object Detection}{68}{section.a.A.1}
+\contentsline {section}{\numberline {A.2}Deep IQA Models}{68}{section.a.A.2}

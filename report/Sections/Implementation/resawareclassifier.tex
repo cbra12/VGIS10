@@ -54,73 +54,74 @@ A potential method of tackling this issue is to train multiple detectors on sepa
 
 \begin{figure}[H]
   \centering
-    \includegraphics[width=0.6\textwidth]{Figs/Implementation/0712hist.pdf}
+    \includegraphics[width=0.6\textwidth]{Figs/Implementation/0712histred.pdf}
       \caption{Histogram of the \gls{pascalvoc} 07++12 bounding box area.}
     \label{fig:0712hist}
 \end{figure}
 
-As there is no clear way to split the data into three sets with equal amounts of data, the split was instead done into into two sets, one for small objects and another for larger. The split was made at the median bounding box area which is 13,892 pixels. Therefore, the dataset with bounding box area less than 13,982 pixels is denoted 07++12$_{small}$ and objects larger make up the dataset 07++12$_{larger}$.
+\begin{comment}
+    As there is no clear way to split the data into three sets with equal amounts of data, the split was instead done into into two sets, one for small objects and another for larger. The split was made at the median bounding box area which is 13,892 pixels. Therefore, the dataset with bounding box area less than 13,982 pixels is denoted 07++12$_{small}$ and objects larger make up the dataset 07++12$_{larger}$.
 
-Identical \gls{rfcn} with ResNet-101 networks were trained on either sets of data. Additionally the exact same training strategies were used in both instances which are outlined in \tableref{resawareparams}.
+    Identical \gls{rfcn} with ResNet-101 networks were trained on either sets of data. Additionally the exact same training strategies were used in both instances which are outlined in \tableref{resawareparams}.
 
-\begin{table}[h]
-\centering
-\caption{Learning parameters for the set of resolution-aware \gls{rfcn} object detectors.}
-\label{tab:resawareparams}
-\begin{tabular}{|l|l|}
-\hline
-\textbf{Parameter}            & \textbf{Value}  \\ \hline
-base learning rate   & 0.001  \\ \hline
-learning rate policy & step   \\ \hline
-gamma                & 0.1    \\ \hline
-stepsize             & 80,000 \\ \hline
-momentum             & 0.9    \\ \hline
-weight decay         & 0.0005 \\ \hline
-\end{tabular}
-\end{table}
-
-Testing was done on the 07 test set but also split according to the median threshold found in the training data. The two testing sets are denoted as 07Test$_{small}$ and 07Test$_{larger}$. The size of the two test sets are 7,827 and 7,149 ground truth bounding boxes respectively. Histogram for the sets can be seen in \figref{smalltesthist} and \figref{largetesthist}.
-
-
-\begin{figure}[H]
+    \begin{table}[h]
     \centering
-    \begin{subfigure}[b]{0.45\textwidth}
-        \center
-        \includegraphics[width=\textwidth]{Figs/Implementation/testsmallhist.pdf}
-        \caption{}\label{fig:smalltesthist}
-    \end{subfigure}
-    \begin{subfigure}[b]{0.45\textwidth}
-        \center
-        \includegraphics[width=\textwidth]{Figs/Implementation/testlargehist.pdf}
-        \caption{}\label{fig:largetesthist}
-    \end{subfigure}
-    \caption{}
-    \label{}
-\end{figure} 
+    \caption{Learning parameters for the set of resolution-aware \gls{rfcn} object detectors.}
+    \label{tab:resawareparams}
+    \begin{tabular}{|l|l|}
+    \hline
+    \textbf{Parameter}            & \textbf{Value}  \\ \hline
+    base learning rate   & 0.001  \\ \hline
+    learning rate policy & step   \\ \hline
+    gamma                & 0.1    \\ \hline
+    stepsize             & 80,000 \\ \hline
+    momentum             & 0.9    \\ \hline
+    weight decay         & 0.0005 \\ \hline
+    \end{tabular}
+    \end{table}
 
-The results for the object detectors trained on the separate partitions of training data and a the baseline detector trained on all the data against the three sets of tests can be seen in \tableref{resresults}. The table shows that the detectors trained on the same relative size of data perform best. In the instance of 07Test$_{small}$, its counterpart 07++12$_{small}$ gives a result 04 0.34 \gls{map}. This is an improvement of 12\% in comparison to the model trained on all of the data (07++12) which has a \gls{map} of 22.16\%; a relative improvement of 35\%. The model trained on the data of larger objects, 07++12$_{larger}$, is very poor at detecting smaller objects scoring 3.08\%. In this case of 07Test$_{larger}$, the model trained on 07++12$_{larger}$ data is the best performing at 76.60\%. A similar improvement is \gls{map} is present in this instance in comparison to the model trained on all of the data. Overall there is an increase of 12.36\%, which is a relative improvement of 16\%. Finally, the best performing on all of the 07 test data is the model trained on 07++12.
-
-
-\begin{table}[h]
-\centering
-\caption{Results}
-\label{tab:resresults}
-\begin{tabular}{|l|l|l|}
-\hline
-\textbf{Train Data}    & \textbf{Test Data}     & \textbf{mAP (\%)} \\ \hline
-07++12$_{small}$ & 07Test$_{small}$  & \textbf{34.10}   \\ \hline
-07++12$_{larger}$  & 07Test$_{small}$ & 3.08     \\ \hline
-07++12   & 07Test$_{small}$           & 22.16    \\ \hline
-07++12$_{small}$ & 07Test$_{larger}$  &  36.40   \\ \hline
-07++12$_{larger}$ & 07Test$_{larger}$ &  \textbf{76.60}   \\ \hline
-07++12 & 07Test$_{larger}$           &  64.34   \\ \hline
-07++12$_{small}$       & 07   & 62.65    \\ \hline
-07++12$_{larger}$       & 07  &  59.65   \\ \hline
-07++12        & 07            &  \textbf{76.35}   \\ \hline 
-\end{tabular}
-\end{table}
+    Testing was done on the 07 test set but also split according to the median threshold found in the training data. The two testing sets are denoted as 07Test$_{small}$ and 07Test$_{larger}$. The size of the two test sets are 7,827 and 7,149 ground truth bounding boxes respectively. Histogram for the sets can be seen in \figref{smalltesthist} and \figref{largetesthist}.
 
 
+    \begin{figure}[H]
+        \centering
+        \begin{subfigure}[b]{0.45\textwidth}
+            \center
+            \includegraphics[width=\textwidth]{Figs/Implementation/testsmallhist.pdf}
+            \caption{}\label{fig:smalltesthist}
+        \end{subfigure}
+        \begin{subfigure}[b]{0.45\textwidth}
+            \center
+            \includegraphics[width=\textwidth]{Figs/Implementation/testlargehist.pdf}
+            \caption{}\label{fig:largetesthist}
+        \end{subfigure}
+        \caption{}
+        \label{}
+    \end{figure} 
+
+    The results for the object detectors trained on the separate partitions of training data and a the baseline detector trained on all the data against the three sets of tests can be seen in \tableref{resresults}. The table shows that the detectors trained on the same relative size of data perform best. In the instance of 07Test$_{small}$, its counterpart 07++12$_{small}$ gives a result 04 0.34 \gls{map}. This is an improvement of 12\% in comparison to the model trained on all of the data (07++12) which has a \gls{map} of 22.16\%; a relative improvement of 35\%. The model trained on the data of larger objects, 07++12$_{larger}$, is very poor at detecting smaller objects scoring 3.08\%. In this case of 07Test$_{larger}$, the model trained on 07++12$_{larger}$ data is the best performing at 76.60\%. A similar improvement is \gls{map} is present in this instance in comparison to the model trained on all of the data. Overall there is an increase of 12.36\%, which is a relative improvement of 16\%. Finally, the best performing on all of the 07 test data is the model trained on 07++12.
+
+
+    \begin{table}[h]
+    \centering
+    \caption{Results}
+    \label{tab:resresults}
+    \begin{tabular}{|l|l|l|}
+    \hline
+    \textbf{Train Data}    & \textbf{Test Data}     & \textbf{mAP (\%)} \\ \hline
+    07++12$_{small}$ & 07Test$_{small}$  & \textbf{34.10}   \\ \hline
+    07++12$_{larger}$  & 07Test$_{small}$ & 3.08     \\ \hline
+    07++12   & 07Test$_{small}$           & 22.16    \\ \hline
+    07++12$_{small}$ & 07Test$_{larger}$  &  36.40   \\ \hline
+    07++12$_{larger}$ & 07Test$_{larger}$ &  \textbf{76.60}   \\ \hline
+    07++12 & 07Test$_{larger}$           &  64.34   \\ \hline
+    07++12$_{small}$       & 07   & 62.65    \\ \hline
+    07++12$_{larger}$       & 07  &  59.65   \\ \hline
+    07++12        & 07            &  \textbf{76.35}   \\ \hline 
+    \end{tabular}
+    \end{table}
+
+\end{comment}
 \change[inline]{update following explanation}
 Ensemble of above networks proved not to be possible due to Caffe network architecture. Once networks have been trained as an end-to-end method, the networks were not able to take object proposals as inputs. Solution instead to train the network in 5 stages. Much slower. Result on VOC2007: 79.59 vs end to end: 76.35 
 
@@ -171,9 +172,8 @@ A baseline 4-step \gls{rfcn} with ResNet-101 model was trained on all the data (
 \hline
 \textbf{Train Data} & \textbf{\gls{ap}}      \\ \hline
 Small      & 46.74\% \\ \hline
-Large      & 56.91\% \\ \hline
-All        & 79.59\% \\ \hline
-Fusion     & \textbf{81.81\%} \\ \hline
+Large      & 62.48\% \\ \hline
+All        & \textbf{79.59\%} \\ \hline
 \end{tabular}
 \end{table}
 

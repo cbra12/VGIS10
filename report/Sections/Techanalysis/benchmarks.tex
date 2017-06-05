@@ -1,8 +1,6 @@
 \section{Benchmark Datasets}
 This section will outline some of the commonly used object detection datasets. This will include their purpose and the general setup.
 
-\subsection{ImageNet}
-
 
 \subsection{PASCAL Visual Object Classes Challenge}
 The \gls{pascalvoc} challenge \cite{pascalvoc2012} was held yearly between 2005 to 2012 and provided datasets for benchmarking within vision tasks of visual object category recognition and detection. Between that time period is was considered the top benchmark for the respective challenges. While being an annual competition, \gls{pascalvoc} evaluation in state-of-the-art literature is most often performed on data from the years 2007 and 2012. The competition saw a large shift in the former year as the number of classes increased from 10 to 20, in turn also significantly increasing the total amount of data. Additional data was added individually for the various recognition tasks between 2007 and 2012 and the performance metric was altered slightly between this time period, however, the overall ecosystem remained largely the same from 2007 until the competition's end. This section will be largely based upon the two retrospective papers, \cite{pascalvoc2010} and \cite{pascalvoc2015}, published by authors who were involved in the challenge and for the most part will be in respect to the challenge after 2007.
@@ -88,8 +86,34 @@ where $r$ is the recall and $p_{interp}$ is the interpolated precision.
 \add[inline]{explanation of interpolated precision}
 \add[inline]{explanation of new metric}
 
+\subsection{ImageNet Large Scale Visual Recognition Challenge}
+\gls{ilsvrc} is an extremely large benchmark in object recognition. The challenge has been held since 2010 with multiple challenge tasks such as image classification, scene recognition and object detection. Currently, in 2017 the only challenges being held are object detection in both images and video. The aim of \gls{ilsvrc} was to create an image recognition challenge on such a scale that had not been previously seen. Before this, the main challenge was \gls{pascalvoc} with 20 categories in the object detection challenge. \gls{ilsvrc} has 200 classes, roughly 500,000 annotated positive and negative images and just under 500,000 annotated objects in the positive examples. Once again, the goal of an algorithm is to learn object detection towards to 200 classes and return a bounding-box with an associated confidence for each object detected in an image.
+\\\\
+Creating such a large dataset is a difficult and cumbersome task. The majority of images come from another \gls{ilsvrc} challenge of single-object localisation, where the aim was to only return a single object detection. Additional images were supplemented from Flickr queries. Examples of images from the dataset can be seen in \figref{imagenet_ex}.
 
-\subsection{Microsoft Common Object in Context}
+
+\begin{figure}[H]
+    \centering
+    \begin{subfigure}[b]{0.4\textwidth}
+        \center
+        \includegraphics[width=\textwidth]{Figs/Problem/in1.jpeg}
+        \caption{}\label{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.4\textwidth}
+        \center
+        \includegraphics[width=\textwidth]{Figs/Problem/in2.jpeg}
+        \caption{}\label{}
+    \end{subfigure}
+    \caption{Example of images in the \gls{ilsvrc} object detection challenges.}
+    \label{fig:imagenet_ex}
+\end{figure} 
+
+Evaluation of detections was inspired by the \gls{ap} metric used in \gls{pascalvoc}. Again detections are determine to be correct or incorrect based on if the \gls{iou} is above 0.5. 
+While being a challenging dataset in terms of the number of classes present, the object sizes and number of objects is similar to that of \gls{pascalvoc}. Next will be an explanation of a new benchmark that addresses such challenges.
+
+
+
+\subsection{Microsoft Common Objects in Context}
 \gls{mscoco} \cite{mscoco} is a relatively new dataset within the realm of object recognition appearing in 2015. \gls{mscoco} holds competitions in object detection and segmentation. The object detection challenge is similar to \gls{pascalvoc}, in that detections must be shown using bounding-boxes. However, for the segmentation challenge \gls{mscoco} requires the results to be of more challenging instance form rather than semantic. The creators of the dataset had three core research problems they wanted to be present, these include:
 
 \begin{enumerate}

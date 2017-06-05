@@ -2,14 +2,13 @@
 \contentsline {todo}{correct section refs to above}{4}{section*.4}
 \contentsline {todo}{explanation of interpolated precision}{10}{section*.13}
 \contentsline {todo}{explanation of new metric}{11}{section*.14}
-\contentsline {todo}{update faster rcnn framework figure}{22}{section*.19}
-\contentsline {todo}{update rpn framework figure}{23}{section*.21}
-\contentsline {todo}{update score maps figure}{25}{section*.24}
-\contentsline {todo}{update score maps figure}{26}{section*.26}
-\contentsline {todo}{update figure}{27}{section*.28}
-\contentsline {todo}{intro explaining backbone of models and what is covered in this section}{31}{section*.36}
-\contentsline {todo}{update following explanation}{45}{section*.52}
-\contentsline {todo}{explanation of adam solver}{52}{section*.61}
-\contentsline {todo}{add results for all model}{52}{section*.62}
-\contentsline {todo}{gls for FF}{54}{section*.68}
-\contentsline {todo}{line showing split in training data}{58}{section*.75}
+\contentsline {todo}{update rpn framework figure}{24}{section*.21}
+\contentsline {todo}{update score maps figure}{26}{section*.24}
+\contentsline {todo}{update score maps figure}{27}{section*.26}
+\contentsline {todo}{update figure}{28}{section*.28}
+\contentsline {todo}{intro explaining backbone of models and what is covered in this section}{33}{section*.36}
+\contentsline {todo}{update following explanation}{45}{section*.49}
+\contentsline {todo}{explanation of adam solver}{51}{section*.58}
+\contentsline {todo}{add results for all model}{51}{section*.59}
+\contentsline {todo}{gls for FF}{53}{section*.65}
+\contentsline {todo}{line showing split in training data}{57}{section*.72}
