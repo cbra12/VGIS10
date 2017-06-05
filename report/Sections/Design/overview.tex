@@ -73,14 +73,37 @@ The training of the R-FCN object detectors will be done in the \gls{caffe} \cite
     \label{fig:4steptrain}
 \end{figure}
 
-In this approach the overall network in trained in multiple steps rather than an end-to-end method. In the first step a \gls{rpn} is trained to determine region proposals, the \gls{rpn} is initialised from a pre-trained ImageNet model and fine-tuned to the proposal task. Next a \gls{rfcn} is trained based upon the okproposals found in the previous step. This network is also initialised with a pre-trained ImageNet model. In step three, another \gls{rpn} is trained but initialised using the \gls{rfcn} from step two. In this step the convolutional layers that are shared between the \gls{rfcn} and \gls{rpn} are fixed and only the layers unique to the \gls{rpn} are updated. By training a model with this approach a testing image is able to run through the same steps as a \gls{rfcn} trained end-to-end, however, as the networks are split into different models it is also possible to use the stages of the method individually. Creating a solution for finding region proposals with an \gls{rpn} and having a \gls{rfcn} that can take the proposals as inputs. 
+In this approach the overall network in trained in multiple steps rather than an end-to-end method. In the first step a \gls{rpn} is trained to determine region proposals, the \gls{rpn} is initialised from a pre-trained ImageNet model and fine-tuned to the proposal task. Next a \gls{rfcn} is trained based upon the proposals found in the previous step. This network is also initialised with a pre-trained ImageNet model. In step three, another \gls{rpn} is trained but initialised using the \gls{rfcn} from step two. In this step the convolutional layers that are shared between the \gls{rfcn} and \gls{rpn} are fixed and only the layers unique to the \gls{rpn} are updated. By training a model with this approach a testing image is able to run through the same steps as a \gls{rfcn} trained end-to-end, however, as the networks are split into different models it is also possible to use the stages of the method individually. Creating a solution for finding region proposals with an \gls{rpn} and having a \gls{rfcn} that can take the proposals as inputs. 
 \\\\
 An additional benefit to training \glspl{rfcn} in this manner is that as the aim is to train ensemble members to different subsets of data, once a baseline model has been created only one part needs to be re-trained. This being the final step in stage 2, training the R-FCN detector. The \gls{rpn} in stage 3 should be kept constant based on the baseline model as it will provide the shared proposals for test images. Therefore, once a systematic approach has been found for splitting data for both train and test based on the data sampling and selection requirements the detection part of the \gls{rfcn} can be trained towards its expert area. The following sections will explain how the subsets of data will be selected.
 
-\subsubsection{Object Size Training}
+\subsubsection{Object Size Data Sampling}
 The area of a region proposal gives an indication as to the approximate size of a potential objects. Therefore, the area for all proposals on the training set can be computed from the output of the second step in stage 2 shown in \figref{4steptrain}. Once computing the area of all proposals an appropriate split of the data can be determined depending on the distribution for the given training data set. The main requirement in creating the subsets of data is that equal number of ground truth samples should be present in both.
 
-\subsubsection{Image Quality Training}
+\subsubsection{Image Quality Data Sampling}
 There are many choices for computing the quality of an image. A popular area of research for this purpose is \gls{iqa}. These methods aim to determine the subjective quality of an image. There are two popular forms of \gls{iqa}, \gls{friqa} and \gls{nriqa}. \gls{friqa} approaches require the original, undistorted reference image in order to determine quality. Whereas, \gls{nriqa} do not have this information available. As the aim is to determine the level of image quality on one of the benchmark datasets no reference image is present, therefore, an \gls{nriqa} method is required. Current state-of-the-art within \gls{nriqa} is also deep learning based and works are typically trained on \gls{iqa} datasets. Such datasets include \gls{live} dataset \cite{livepaper} \cite{liveweb}, TID2013 \cite{tid2013} and CSIQ \cite{csiq}. The datasets consist of source reference image and have artificially created distorted counterparts with varying levels of distortion. Distortions include, such as in the LIVE dataset, JPEG2000 compression, JPEG compression, additive white Gaussian noise, Gaussian blur and bit errors from a fast fading Rayleigh channel. Models can then be trained to predict subjective quality based on ground truth user determined quality measurement.
 \\\\
 Based upon this, an \gls{nriqa} method can be used to determine the level of image quality with respect to a number of different distortions. Then as in object size training, if possible, the data will be split into different training subsets. A leading \gls{cnn}-based \gls{nriqa} method will be used and the specific network and implementation details will be covered in \sectionref{iqaimp}.
+
+\subsubsection{\gls{rfcn} Training}
+Training of the baseline \gls{rfcn} model shown in \figref{4steptrain} is done using \gls{sgd} optimisation with largely the same parameters across the five different training parts. The parameters are adapted from \cite{rfcn} and can be seen in \tableref{trainparams}. All models start with a base learning rate of 0.001 which is dropped by a factor of 0.1 once in the process. This is done after 80,000 iterations for the \gls{rfcn} models and after 60,000 for the \glspl{rpn}. The learning rate is controlled with a momentum of 0.9 and weight decay of 0.0005. The two \gls{rfcn} models are trained for 120,000 iterations, while the three \glspl{rpn} are trained for 80,000.
+
+\begin{table}[h]
+\centering
+\caption{Common \gls{sgd} optimisation parameters for the 5 training parts of the baseline \gls{rfcn} model.}
+\label{tab:trainparams}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Parameter}            & \textbf{Value}  \\ \hline
+Base learning rate   & 0.001  \\ \hline
+Learning rate policy & step   \\ \hline
+Gamma                & 0.1    \\ \hline
+Momentum             & 0.9    \\ \hline
+Weight decay         & 0.0005 \\ \hline
+\end{tabular}
+\end{table}
+
+ Both networks are trained with a batchsize of one example per iteration. In the \gls{rpn} models the batches are simply one ground truth example per iteration. Whereas, the training of the \glspl{rfcn} sample mini-batches of size 128 from a given image. These mini-batches can consist of both object class samples and background samples. 
+ The only data augmentation used in training is horizontal flipping of images, effectively creating double as many training examples.
+
+

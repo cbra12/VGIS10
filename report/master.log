@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.30)  4 JUN 2017 16:19
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.30)  5 JUN 2017 11:03
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -3086,15 +3086,18 @@ Underfull \hbox (badness 10000) in paragraph at lines 76--79
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [41 <./Figs/Design/4steptrain1.pdf>])
-Underfull \hbox (badness 10000) in paragraph at lines 84--90
+ [41 <./Figs/Design/4steptrain1.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 84--87
 
  []
 
-[42]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[42]) [43]
 Chapter 5.
 (./Sections/Implementation/resawareclassifier.tex
-<Figs/Implementation/0712hist.pdf, id=795, 462.52798pt x 346.89601pt>
+<Figs/Implementation/0712hist.pdf, id=804, 462.52798pt x 346.89601pt>
 File: Figs/Implementation/0712hist.pdf Graphic file (type pdf)
 
 <use Figs/Implementation/0712hist.pdf>
@@ -3105,10 +3108,10 @@ Package pdftex.def Info: Figs/Implementation/0712hist.pdf used on input line 57
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[43
+[44
 
  <./Figs/Implementation/0712hist.pdf>]
-<Figs/Implementation/testsmallhist.pdf, id=844, 462.52798pt x 346.89601pt>
+<Figs/Implementation/testsmallhist.pdf, id=853, 462.52798pt x 346.89601pt>
 File: Figs/Implementation/testsmallhist.pdf Graphic file (type pdf)
 
 <use Figs/Implementation/testsmallhist.pdf>
@@ -3116,7 +3119,7 @@ Package pdftex.def Info: Figs/Implementation/testsmallhist.pdf used on input li
 ne 89.
 (pdftex.def)             Requested size: 195.12767pt x 146.34639pt.
 
-<Figs/Implementation/testlargehist.pdf, id=845, 462.52798pt x 346.89601pt>
+<Figs/Implementation/testlargehist.pdf, id=854, 462.52798pt x 346.89601pt>
 File: Figs/Implementation/testlargehist.pdf Graphic file (type pdf)
 
 <use Figs/Implementation/testlargehist.pdf>
@@ -3127,7 +3130,7 @@ ne 94.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[44 <./Figs/Implementation/testsmallhist.pdf> <./Figs/Implementation/testlargeh
+[45 <./Figs/Implementation/testsmallhist.pdf> <./Figs/Implementation/testlargeh
 ist.pdf
 
 pdfTeX warning: pdflatex (file ./Figs/Implementation/testlargehist.pdf): PDF in
@@ -3140,7 +3143,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 127--133
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [45]
+ [46]
 Underfull \hbox (badness 10000) in paragraph at lines 162--165
 
  []
@@ -3153,13 +3156,13 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 ) (./Sections/Implementation/iqa.tex
 
-LaTeX Warning: Citation `vgg' on page 46 undefined on input line 2.
+LaTeX Warning: Citation `vgg' on page 47 undefined on input line 2.
 
-[46]
+[47]
 
 pdfTeX warning: pdflatex (file ./Figs/Implementation/deepiqa_arch.pdf): PDF inc
 lusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Figs/Implementation/deepiqa_arch.pdf, id=960, 191.71625pt x 480.79625pt>
+<Figs/Implementation/deepiqa_arch.pdf, id=969, 191.71625pt x 480.79625pt>
 File: Figs/Implementation/deepiqa_arch.pdf Graphic file (type pdf)
 
 <use Figs/Implementation/deepiqa_arch.pdf>
@@ -3169,15 +3172,15 @@ e 6.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [47]
-<Figs/Implementation/bikes.pdf, id=972, 770.88pt x 513.92pt>
+ [48]
+<Figs/Implementation/bikes.pdf, id=981, 770.88pt x 513.92pt>
 File: Figs/Implementation/bikes.pdf Graphic file (type pdf)
 
 <use Figs/Implementation/bikes.pdf>
 Package pdftex.def Info: Figs/Implementation/bikes.pdf used on input line 20.
 (pdftex.def)             Requested size: 173.44534pt x 115.627pt.
 
-<Figs/Implementation/buildings.pdf, id=973, 770.88pt x 513.92pt>
+<Figs/Implementation/buildings.pdf, id=982, 770.88pt x 513.92pt>
 File: Figs/Implementation/buildings.pdf Graphic file (type pdf)
 
 <use Figs/Implementation/buildings.pdf>
@@ -3185,7 +3188,7 @@ Package pdftex.def Info: Figs/Implementation/buildings.pdf used on input line 2
 5.
 (pdftex.def)             Requested size: 173.44534pt x 115.627pt.
 
-<Figs/Implementation/monarch.pdf, id=974, 770.88pt x 513.92pt>
+<Figs/Implementation/monarch.pdf, id=983, 770.88pt x 513.92pt>
 File: Figs/Implementation/monarch.pdf Graphic file (type pdf)
 
 <use Figs/Implementation/monarch.pdf>
@@ -3193,7 +3196,7 @@ Package pdftex.def Info: Figs/Implementation/monarch.pdf used on input line 30.
 
 (pdftex.def)             Requested size: 173.44534pt x 115.627pt.
 
-<Figs/Implementation/paintedhouse.pdf, id=975, 770.88pt x 513.92pt>
+<Figs/Implementation/paintedhouse.pdf, id=984, 770.88pt x 513.92pt>
 File: Figs/Implementation/paintedhouse.pdf Graphic file (type pdf)
 
 <use Figs/Implementation/paintedhouse.pdf>
@@ -3203,7 +3206,7 @@ e 35.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [48 <./Figs/Implementation/deepiqa_arch.pdf>] [49 <./Figs/Implementation/bikes
+ [49 <./Figs/Implementation/deepiqa_arch.pdf>] [50 <./Figs/Implementation/bikes
 .pdf> <./Figs/Implementation/buildings.pdf
 
 pdfTeX warning: pdflatex (file ./Figs/Implementation/buildings.pdf): PDF inclus
@@ -3216,28 +3219,28 @@ n: multiple pdfs with page group included in a single page
 
 pdfTeX warning: pdflatex (file ./Figs/Implementation/paintedhouse.pdf): PDF inc
 lusion: multiple pdfs with page group included in a single page
->] <Figs/Implementation/img173.pdf, id=1019, 770.39822pt x 513.8397pt>
+>] <Figs/Implementation/img173.pdf, id=1028, 770.39822pt x 513.8397pt>
 File: Figs/Implementation/img173.pdf Graphic file (type pdf)
 
 <use Figs/Implementation/img173.pdf>
 Package pdftex.def Info: Figs/Implementation/img173.pdf used on input line 58.
 (pdftex.def)             Requested size: 173.44534pt x 115.6795pt.
 
-<Figs/Implementation/img96.pdf, id=1020, 770.39822pt x 513.8397pt>
+<Figs/Implementation/img96.pdf, id=1029, 770.39822pt x 513.8397pt>
 File: Figs/Implementation/img96.pdf Graphic file (type pdf)
 
 <use Figs/Implementation/img96.pdf>
 Package pdftex.def Info: Figs/Implementation/img96.pdf used on input line 63.
 (pdftex.def)             Requested size: 173.44534pt x 115.6795pt.
 
-<Figs/Implementation/img103.pdf, id=1021, 770.39822pt x 513.8397pt>
+<Figs/Implementation/img103.pdf, id=1030, 770.39822pt x 513.8397pt>
 File: Figs/Implementation/img103.pdf Graphic file (type pdf)
 
 <use Figs/Implementation/img103.pdf>
 Package pdftex.def Info: Figs/Implementation/img103.pdf used on input line 68.
 (pdftex.def)             Requested size: 173.44534pt x 115.6795pt.
 
-<Figs/Implementation/img11.pdf, id=1022, 770.39822pt x 513.8397pt>
+<Figs/Implementation/img11.pdf, id=1031, 770.39822pt x 513.8397pt>
 File: Figs/Implementation/img11.pdf Graphic file (type pdf)
 
 <use Figs/Implementation/img11.pdf>
@@ -3248,7 +3251,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 83--85
 
  []
 
-[50 <./Figs/Implementation/img173.pdf> <./Figs/Implementation/img96.pdf
+[51 <./Figs/Implementation/img173.pdf> <./Figs/Implementation/img96.pdf
 
 pdfTeX warning: pdflatex (file ./Figs/Implementation/img96.pdf): PDF inclusion:
  multiple pdfs with page group included in a single page
@@ -3265,7 +3268,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 85--87
 
  []
 
-<Figs/Implementation/WhiteNoisedist.pdf, id=1087, 462.52798pt x 346.89601pt>
+<Figs/Implementation/WhiteNoisedist.pdf, id=1097, 462.52798pt x 346.89601pt>
 File: Figs/Implementation/WhiteNoisedist.pdf Graphic file (type pdf)
 
 <use Figs/Implementation/WhiteNoisedist.pdf>
@@ -3273,7 +3276,7 @@ Package pdftex.def Info: Figs/Implementation/WhiteNoisedist.pdf used on input l
 ine 112.
 (pdftex.def)             Requested size: 173.44534pt x 130.08568pt.
 
-<Figs/Implementation/GaussianBlurdist.pdf, id=1088, 462.52798pt x 346.89601pt>
+<Figs/Implementation/GaussianBlurdist.pdf, id=1098, 462.52798pt x 346.89601pt>
 File: Figs/Implementation/GaussianBlurdist.pdf Graphic file (type pdf)
 
 <use Figs/Implementation/GaussianBlurdist.pdf>
@@ -3281,7 +3284,7 @@ Package pdftex.def Info: Figs/Implementation/GaussianBlurdist.pdf used on input
  line 117.
 (pdftex.def)             Requested size: 173.44534pt x 130.08568pt.
 
-<Figs/Implementation/JPEGCompressiondist.pdf, id=1089, 462.52798pt x 346.89601p
+<Figs/Implementation/JPEGCompressiondist.pdf, id=1099, 462.52798pt x 346.89601p
 t>
 File: Figs/Implementation/JPEGCompressiondist.pdf Graphic file (type pdf)
  <use Figs/Implementation/JPEGCompressiondist.pdf>
@@ -3289,7 +3292,7 @@ Package pdftex.def Info: Figs/Implementation/JPEGCompressiondist.pdf used on in
 put line 122.
 (pdftex.def)             Requested size: 173.44534pt x 130.08568pt.
 
-<Figs/Implementation/JP2KCompressiondist.pdf, id=1090, 462.52798pt x 346.89601p
+<Figs/Implementation/JP2KCompressiondist.pdf, id=1100, 462.52798pt x 346.89601p
 t>
 File: Figs/Implementation/JP2KCompressiondist.pdf Graphic file (type pdf)
  <use Figs/Implementation/JP2KCompressiondist.pdf>
@@ -3297,14 +3300,14 @@ Package pdftex.def Info: Figs/Implementation/JP2KCompressiondist.pdf used on in
 put line 127.
 (pdftex.def)             Requested size: 173.44534pt x 130.08568pt.
 
-<Figs/Implementation/FastFadingdist.pdf, id=1091, 462.52798pt x 346.89601pt>
+<Figs/Implementation/FastFadingdist.pdf, id=1101, 462.52798pt x 346.89601pt>
 File: Figs/Implementation/FastFadingdist.pdf Graphic file (type pdf)
 
 <use Figs/Implementation/FastFadingdist.pdf>
 Package pdftex.def Info: Figs/Implementation/FastFadingdist.pdf used on input l
 ine 132.
 (pdftex.def)             Requested size: 173.44534pt x 130.08568pt.
- [51]
+ [52]
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -3313,7 +3316,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 156--159
 
  []
 
-[52 <./Figs/Implementation/WhiteNoisedist.pdf> <./Figs/Implementation/GaussianB
+[53 <./Figs/Implementation/WhiteNoisedist.pdf> <./Figs/Implementation/GaussianB
 lurdist.pdf
 
 pdfTeX warning: pdflatex (file ./Figs/Implementation/GaussianBlurdist.pdf): PDF
@@ -3330,13 +3333,13 @@ PDF inclusion: multiple pdfs with page group included in a single page
 
 pdfTeX warning: pdflatex (file ./Figs/Implementation/FastFadingdist.pdf): PDF i
 nclusion: multiple pdfs with page group included in a single page
->] [53]
+>] [54]
 
 LaTeX Warning: No positions in optional float specifier.
                Default added (so using `tbp') on input line 192.
 
 
-LaTeX Warning: Reference `tab:gblur_experts' on page 54 undefined on input line
+LaTeX Warning: Reference `tab:gblur_experts' on page 55 undefined on input line
  258.
 
 
@@ -3357,20 +3360,20 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 ) (./Sections/Implementation/ensemble.tex
-<Figs/Implementation/ensemble.pdf, id=1349, 528.2937pt x 582.4962pt>
+<Figs/Implementation/ensemble.pdf, id=1358, 528.2937pt x 582.4962pt>
 File: Figs/Implementation/ensemble.pdf Graphic file (type pdf)
 
 <use Figs/Implementation/ensemble.pdf>
 Package pdftex.def Info: Figs/Implementation/ensemble.pdf used on input line 5.
 
 (pdftex.def)             Requested size: 216.81pt x 239.05608pt.
- [54]
+ [55]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [55]
+ [56]
 Underfull \vbox (badness 3009) has occurred while \output is active []
 
- [56 <./Figs/Implementation/ensemble.pdf>]
+ [57 <./Figs/Implementation/ensemble.pdf>]
 File: Figs/Implementation/GaussianBlurdist.pdf Graphic file (type pdf)
  <use Figs/Implementation/GaussianBlurdist.pdf>
 Package pdftex.def Info: Figs/Implementation/GaussianBlurdist.pdf used on input
@@ -3379,29 +3382,30 @@ Package pdftex.def Info: Figs/Implementation/GaussianBlurdist.pdf used on input
 
 Underfull \vbox (badness 1590) has occurred while \output is active []
 
- [57]
+ [58]
 Underfull \hbox (badness 10000) in paragraph at lines 67--70
 
  []
 
-[58]
+[59]
 Underfull \hbox (badness 10000) in paragraph at lines 84--87
 
  []
 
-[59]) [60]
+[60]) [61]
 Chapter 6.
-[61
+[62
 
 ]
 Chapter 7.
-[62
+[63
 
-] (./master.bbl [63
+] [64
 
 
+] (./master.bbl [65
 
-] [64] [65]) [66] [67
+] [66] [67]) [68] [69
 
 
 
@@ -3424,15 +3428,15 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-) [68
+) [70
 
-] [69] [70] (./master.tdo)
+] [71] [72] (./master.tdo)
 \tf@tdo=\write9
 \openout9 = `master.tdo'.
 
  
 AED: lastpage setting LastPage
-[71
+[73
 
 ]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 122.
@@ -3441,7 +3445,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 122.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 122.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 122.
 Package rerunfilecheck Info: File `master.out' has not changed.
-(rerunfilecheck)             Checksum: D000047FCA1B20D463AF0477CDC2CA8E;1569.
+(rerunfilecheck)             Checksum: 4615045549464596C9156A9DB5D45F74;1569.
 
 
 LaTeX Warning: There were undefined references.
@@ -3451,10 +3455,10 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 48305 strings out of 495028
- 1009066 string characters out of 6181496
- 1419751 words of memory out of 5000000
- 50040 multiletter control sequences out of 15000+600000
+ 48310 strings out of 495028
+ 1009130 string characters out of 6181496
+ 1419878 words of memory out of 5000000
+ 50041 multiletter control sequences out of 15000+600000
  97457 words of font info for 91 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  78i,17n,96p,2666b,1247s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -3478,10 +3482,10 @@ i9.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/font
 s/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></
 usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/pu
 blic/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri8.pfb>
-Output written on master.pdf (75 pages, 13165056 bytes).
+Output written on master.pdf (77 pages, 13167087 bytes).
 PDF statistics:
- 1686 PDF objects out of 1728 (max. 8388607)
- 1147 compressed objects within 12 object streams
- 281 named destinations out of 1000 (max. 500000)
+ 1700 PDF objects out of 1728 (max. 8388607)
+ 1159 compressed objects within 12 object streams
+ 285 named destinations out of 1000 (max. 500000)
  557 words of extra memory for PDF output out of 10000 (max. 10000000)
 
