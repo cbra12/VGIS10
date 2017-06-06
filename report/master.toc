@@ -15,7 +15,7 @@
 \contentsline {section}{\numberline {3.1}Convolutional Neural Networks}{21}{section.3.1}
 \contentsline {section}{\numberline {3.2}Object Detectors with Convolutional Neural Networks}{23}{section.3.2}
 \contentsline {subsection}{\numberline {3.2.1}Faster Region-Convolutional Neural Network}{23}{subsection.3.2.1}
-\contentsline {subsection}{\numberline {3.2.2}Regional Fully-Connected Network}{25}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.2}Region-Based Fully-Connected Network}{25}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}You Only Look Once}{27}{subsection.3.2.3}
 \contentsline {subsection}{\numberline {3.2.4}Benchmark Results}{30}{subsection.3.2.4}
 \contentsline {subsubsection}{\gls {pascalvoc}}{30}{subsubsection*.26}
@@ -42,10 +42,10 @@
 \contentsline {subsection}{\numberline {5.3.1}Average Ensemble}{57}{subsection.5.3.1}
 \contentsline {subsection}{\numberline {5.3.2}Weighted Average Ensemble}{57}{subsection.5.3.2}
 \contentsline {subsection}{\numberline {5.3.3}Ensemble Results}{58}{subsection.5.3.3}
-\contentsline {chapter}{\numberline {6}Discussion}{61}{chapter.6}
-\contentsline {chapter}{\numberline {7}Conclusion}{62}{chapter.7}
-\contentsline {chapter}{Literature}{63}{section*.73}
-\contentsline {chapter}{Appendices}{67}{section*.75}
-\contentsline {chapter}{\numberline {A}Appendix A}{68}{Appendix.a.A}
-\contentsline {section}{\numberline {A.1}Resolution-Aware Object Detection}{68}{section.a.A.1}
-\contentsline {section}{\numberline {A.2}Deep IQA Models}{68}{section.a.A.2}
+\contentsline {chapter}{\numberline {6}Discussion}{63}{chapter.6}
+\contentsline {chapter}{\numberline {7}Conclusion}{64}{chapter.7}
+\contentsline {chapter}{Literature}{65}{section*.77}
+\contentsline {chapter}{Appendices}{69}{section*.79}
+\contentsline {chapter}{\numberline {A}Appendix A}{70}{Appendix.a.A}
+\contentsline {section}{\numberline {A.1}Resolution-Aware Object Detection}{70}{section.a.A.1}
+\contentsline {section}{\numberline {A.2}Deep IQA Models}{70}{section.a.A.2}

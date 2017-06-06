@@ -186,6 +186,9 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces An example of a general \gls {cnn} with convolutional and fully-connected layers.\relax }}{22}{figure.caption.17}}
 \newlabel{fig:generalcnn}{{3.1}{22}{An example of a general \gls {cnn} with convolutional and fully-connected layers.\relax }{figure.caption.17}{}}
 \citation{fasterrcnn}
+\citation{rfcn}
+\citation{yolov2}
+\citation{fasterrcnn}
 \citation{fastrcnn}
 \citation{rcnn}
 \citation{fasterrccn}
@@ -200,7 +203,7 @@
 \citation{rfcn}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces \gls {rpn} framework. The $k$ anchor boxes are placed at each sliding window location on the last feature map. The \gls {rpn} uses two sibling layers to compute the classification of object or background and perform bounding-box regression.\relax }}{25}{figure.caption.19}}
 \newlabel{fig:rpnframework}{{3.3}{25}{\gls {rpn} framework. The $k$ anchor boxes are placed at each sliding window location on the last feature map. The \gls {rpn} uses two sibling layers to compute the classification of object or background and perform bounding-box regression.\relax }{figure.caption.19}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Regional Fully-Connected Network}{25}{subsection.3.2.2}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Region-Based Fully-Connected Network}{25}{subsection.3.2.2}}
 \citation{rfcn}
 \citation{rfcn}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Architecture of \gls {rfcn}. Region proposals are found using the \gls {rpn} followed by classification based on a bank of position-sensitive score maps \cite  {rfcn}.\relax }}{26}{figure.caption.20}}
@@ -229,8 +232,8 @@
 \citation{yolov2}
 \citation{deepres}
 \citation{rfcn}
-\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces ImageNet classification results for the Darknet-19 model.\relax }}{30}{table.caption.25}}
-\newlabel{tab:darknetimagenet}{{3.1}{30}{ImageNet classification results for the Darknet-19 model.\relax }{table.caption.25}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces \gls {ilsvrc} classification results for the Darknet-19 model.\relax }}{30}{table.caption.25}}
+\newlabel{tab:darknetimagenet}{{3.1}{30}{\gls {ilsvrc} classification results for the Darknet-19 model.\relax }{table.caption.25}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.4}Benchmark Results}{30}{subsection.3.2.4}}
 \newlabel{sec:benchresults}{{3.2.4}{30}{Benchmark Results}{subsection.3.2.4}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\gls {pascalvoc}}{30}{subsubsection*.26}}
@@ -252,10 +255,10 @@
 \citation{rfcn}
 \citation{rfcn}
 \citation{yolov2}
+\citation{deepres}
 \@writefile{lot}{\contentsline {table}{\numberline {3.2}{\ignorespaces PASCAL VOC 2007 results.\relax }}{31}{table.caption.27}}
 \newlabel{tab:07res}{{3.2}{31}{PASCAL VOC 2007 results.\relax }{table.caption.27}{}}
 \@writefile{toc}{\contentsline {subsubsection}{\gls {mscoco}}{31}{subsubsection*.29}}
-\citation{deepres}
 \citation{vgg}
 \@writefile{lot}{\contentsline {table}{\numberline {3.3}{\ignorespaces PASCAL VOC 2012 results.\relax }}{32}{table.caption.28}}
 \newlabel{tab:12res}{{3.3}{32}{PASCAL VOC 2012 results.\relax }{table.caption.28}{}}
@@ -418,12 +421,20 @@
 \newlabel{tab:avgresind}{{5.16}{59}{Results for the the image quality ensemble members and resolution members individually combined using average strategy on the 2007 test set.\relax }{table.caption.70}{}}
 \@writefile{lot}{\contentsline {table}{\numberline {5.17}{\ignorespaces Results for the the image quality ensemble members and resolution members individually combined using the weighted average strategy on the 2007 test set.\relax }}{59}{table.caption.71}}
 \newlabel{tab:weiavgind}{{5.17}{59}{Results for the the image quality ensemble members and resolution members individually combined using the weighted average strategy on the 2007 test set.\relax }{table.caption.71}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.18}{\ignorespaces Results for the the image quality ensemble members and resolution members individually combined using the weighted average strategy on the 2007 test set.\relax }}{60}{table.caption.72}}
-\newlabel{tab:weandavgres}{{5.18}{60}{Results for the the image quality ensemble members and resolution members individually combined using the weighted average strategy on the 2007 test set.\relax }{table.caption.72}{}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {6}Discussion}{61}{chapter.6}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.18}{\ignorespaces Results for the the image quality ensemble members and resolution members with both combinations of average and weighted average on the 2007 test set.\relax }}{60}{table.caption.72}}
+\newlabel{tab:weandavgres}{{5.18}{60}{Results for the the image quality ensemble members and resolution members with both combinations of average and weighted average on the 2007 test set.\relax }{table.caption.72}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.19}{\ignorespaces Results for the two ensemble combination strategies and for the baseline model on the 2007 test set. Shown is both the results with the expert ensemble members only and experts plus the baseline model.\relax }}{61}{table.caption.73}}
+\newlabel{tab:ensemble_base}{{5.19}{61}{Results for the two ensemble combination strategies and for the baseline model on the 2007 test set. Shown is both the results with the expert ensemble members only and experts plus the baseline model.\relax }{table.caption.73}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.20}{\ignorespaces Results for the the image quality ensemble members and resolution members individually combined using average strategy on the 2007 test set. Shown is both the results with the expert ensemble members only and experts plus the baseline model.\relax }}{61}{table.caption.74}}
+\newlabel{tab:ensembleavg_base}{{5.20}{61}{Results for the the image quality ensemble members and resolution members individually combined using average strategy on the 2007 test set. Shown is both the results with the expert ensemble members only and experts plus the baseline model.\relax }{table.caption.74}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.21}{\ignorespaces Results for the the image quality ensemble members and resolution members individually combined using weighted average strategy on the 2007 test set. Shown is both the results with the expert ensemble members only and experts plus the baseline model.\relax }}{61}{table.caption.75}}
+\newlabel{tab:ensemblewavg_base}{{5.21}{61}{Results for the the image quality ensemble members and resolution members individually combined using weighted average strategy on the 2007 test set. Shown is both the results with the expert ensemble members only and experts plus the baseline model.\relax }{table.caption.75}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.22}{\ignorespaces Results for the the image quality ensemble members and resolution members with both combinations of average and weighted average on the 2007 test set. Shown is both the results with the expert ensemble members only and experts plus the baseline model.\relax }}{62}{table.caption.76}}
+\newlabel{tab:ensemble_comb_base}{{5.22}{62}{Results for the the image quality ensemble members and resolution members with both combinations of average and weighted average on the 2007 test set. Shown is both the results with the expert ensemble members only and experts plus the baseline model.\relax }{table.caption.76}{}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {6}Discussion}{63}{chapter.6}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {chapter}{\numberline {7}Conclusion}{62}{chapter.7}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {7}Conclusion}{64}{chapter.7}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \bibdata{bibtex}
@@ -440,8 +451,8 @@
 \bibcite{fastrcnn}{11}
 \bibcite{alexnet}{12}
 \bibcite{vgg16}{13}
-\newlabel{bibtex}{{7}{63}{Conclusion}{section*.73}{}}
-\@writefile{toc}{\contentsline {chapter}{Literature}{63}{section*.73}}
+\newlabel{bibtex}{{7}{65}{Conclusion}{section*.77}{}}
+\@writefile{toc}{\contentsline {chapter}{Literature}{65}{section*.77}}
 \bibcite{fasterrcnn}{14}
 \bibcite{deepres}{15}
 \bibcite{cocolead}{16}
@@ -470,29 +481,29 @@
 \bibcite{csiq}{39}
 \bibcite{deepiqa}{40}
 \bibcite{adam}{41}
-\newlabel{appendices}{{7}{66}{Conclusion}{chapter*.74}{}}
-\@writefile{toc}{\contentsline {chapter}{Appendices}{67}{section*.75}}
-\@writefile{toc}{\contentsline {chapter}{\numberline {A}Appendix A}{68}{Appendix.a.A}}
+\newlabel{appendices}{{7}{68}{Conclusion}{chapter*.78}{}}
+\@writefile{toc}{\contentsline {chapter}{Appendices}{69}{section*.79}}
+\@writefile{toc}{\contentsline {chapter}{\numberline {A}Appendix A}{70}{Appendix.a.A}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {A.1}Resolution-Aware Object Detection}{68}{section.a.A.1}}
-\@writefile{lot}{\contentsline {table}{\numberline {A.1}{\ignorespaces Results Test07$_{small}$\relax }}{68}{table.caption.76}}
-\newlabel{my-label}{{A.1}{68}{Results Test07$_{small}$\relax }{table.caption.76}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {A.2}{\ignorespaces Results Test07$_{larger}$\relax }}{68}{table.caption.77}}
-\newlabel{my-label}{{A.2}{68}{Results Test07$_{larger}$\relax }{table.caption.77}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {A.3}{\ignorespaces Results 07\relax }}{68}{table.caption.78}}
-\newlabel{my-label}{{A.3}{68}{Results 07\relax }{table.caption.78}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {A.2}Deep IQA Models}{68}{section.a.A.2}}
-\@writefile{lot}{\contentsline {table}{\numberline {A.4}{\ignorespaces Gaussian Blur\relax }}{69}{table.caption.79}}
-\newlabel{my-label}{{A.4}{69}{Gaussian Blur\relax }{table.caption.79}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {A.5}{\ignorespaces White Noise\relax }}{69}{table.caption.80}}
-\newlabel{my-label}{{A.5}{69}{White Noise\relax }{table.caption.80}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {A.6}{\ignorespaces JPEG\relax }}{69}{table.caption.81}}
-\newlabel{my-label}{{A.6}{69}{JPEG\relax }{table.caption.81}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {A.7}{\ignorespaces JP2K\relax }}{70}{table.caption.82}}
-\newlabel{my-label}{{A.7}{70}{JP2K\relax }{table.caption.82}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {A.8}{\ignorespaces Fast Fading\relax }}{70}{table.caption.83}}
-\newlabel{my-label}{{A.8}{70}{Fast Fading\relax }{table.caption.83}{}}
-\newlabel{LastPage}{{}{71}{}{page.71}{}}
-\xdef\lastpage@lastpage{71}
-\xdef\lastpage@lastpageHy{71}
+\@writefile{toc}{\contentsline {section}{\numberline {A.1}Resolution-Aware Object Detection}{70}{section.a.A.1}}
+\@writefile{lot}{\contentsline {table}{\numberline {A.1}{\ignorespaces Results Test07$_{small}$\relax }}{70}{table.caption.80}}
+\newlabel{my-label}{{A.1}{70}{Results Test07$_{small}$\relax }{table.caption.80}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {A.2}{\ignorespaces Results Test07$_{larger}$\relax }}{70}{table.caption.81}}
+\newlabel{my-label}{{A.2}{70}{Results Test07$_{larger}$\relax }{table.caption.81}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {A.3}{\ignorespaces Results 07\relax }}{70}{table.caption.82}}
+\newlabel{my-label}{{A.3}{70}{Results 07\relax }{table.caption.82}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {A.2}Deep IQA Models}{70}{section.a.A.2}}
+\@writefile{lot}{\contentsline {table}{\numberline {A.4}{\ignorespaces Gaussian Blur\relax }}{71}{table.caption.83}}
+\newlabel{my-label}{{A.4}{71}{Gaussian Blur\relax }{table.caption.83}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {A.5}{\ignorespaces White Noise\relax }}{71}{table.caption.84}}
+\newlabel{my-label}{{A.5}{71}{White Noise\relax }{table.caption.84}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {A.6}{\ignorespaces JPEG\relax }}{71}{table.caption.85}}
+\newlabel{my-label}{{A.6}{71}{JPEG\relax }{table.caption.85}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {A.7}{\ignorespaces JP2K\relax }}{72}{table.caption.86}}
+\newlabel{my-label}{{A.7}{72}{JP2K\relax }{table.caption.86}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {A.8}{\ignorespaces Fast Fading\relax }}{72}{table.caption.87}}
+\newlabel{my-label}{{A.8}{72}{Fast Fading\relax }{table.caption.87}{}}
+\newlabel{LastPage}{{}{73}{}{page.73}{}}
+\xdef\lastpage@lastpage{73}
+\xdef\lastpage@lastpageHy{73}

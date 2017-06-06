@@ -99,7 +99,7 @@ YOLOv2 also goes against the grain in comparison to other state-of-the-art objec
 
 \begin{table}[h]
 \centering
-\caption{ImageNet classification results for the Darknet-19 model.}
+\caption{\gls{ilsvrc} classification results for the Darknet-19 model.}
 \label{tab:darknetimagenet}
 \begin{tabular}{|l|l|l|}
 \hline
@@ -128,7 +128,7 @@ To aid in the detection of small objects the Darknet-19 model is also pre-traine
     \subsection{Object Detection with ResNets}
     ResNets generalise well to computer vision tasks other than classification, such as object detection. The winning entries in 2015 from the authors of \cite{deepres} in \gls{ilsvrc} and \gls{mscoco} challenges for ImageNet detection, ImageNet localisation, COCO detection and COCO segmentation, were based upon the faster R-CNN framework with ResNets.
 \end{comment}
-This section will outline the results of the aforementioned \gls{cnn}-based object detectors on leading benchmarks such as \gls{pascalvoc} and \gls{mscoco}. This includes results on the methods with different combinations of \gls{cnn} models, training data, and other bells and whistles such as multi-scale training. All results are taken from the respective authors papers.
+This section will outline the results of the aforementioned \gls{cnn}-based object detectors on leading benchmarks \gls{pascalvoc} and \gls{mscoco}. This includes results on the methods with different combinations of \gls{cnn} models, training data, and additions such as multi-scale training. All results are taken from the respective authors papers.
 
 \subsubsection{\gls{pascalvoc}}
 A summary of the results on the test set of \gls{pascalvoc} 2007 can be seen in \tableref{07res}. The first column denotes which method is used while also stating the underlying \gls{cnn} model, for example VGG-16 or ResNet-101. Improvements to some of the baseline methods are also included in the first column if relevant. The improvements are online hard example mining (OHEM), multi-scale training (MSTR), multi-scale testing (MSTE), box refinement (BR), and global context (GC). Training data used in the various methods include the train set of \gls{pascalvoc} 2007 (07), train set of \gls{pascalvoc} 2012 (12), and trainval set from \gls{mscoco} (COCO). In entries when COCO is included, the detector is first trained on COCO followed by fine-tuning on 07+12. The best \gls{map} result for each combination of training data is shown in bold.

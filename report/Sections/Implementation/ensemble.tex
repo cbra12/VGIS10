@@ -92,8 +92,8 @@ Next, to the evaluate the contribution of both the eight quality factor ensemble
 \begin{tabular}{|l|l|}
 \hline
 \textbf{Ensemble Members}        & \textbf{AP (\%)} \\ \hline
-Image Quality Members & 78.15\% \\ \hline
-Resolution Members    & 78.13\% \\ \hline
+Image Quality & 78.15\% \\ \hline
+Resolution    & 78.13\% \\ \hline
 \end{tabular}
 \end{table}
 
@@ -104,8 +104,8 @@ Resolution Members    & 78.13\% \\ \hline
 \begin{tabular}{|l|l|}
 \hline
 \textbf{Ensemble Members}        & \textbf{AP (\%)} \\ \hline
-Image Quality Members & 78.44\% \\ \hline
-Resolution Members    & 75.00\% \\ \hline
+Image Quality & 78.44\% \\ \hline
+Resolution    & 75.00\% \\ \hline
 \end{tabular}
 \end{table}
 
@@ -113,7 +113,7 @@ By separating the quality and resolution members \tableref{avgresind} shows that
 
 \begin{table}[h]
 \centering
-\caption{Results for the the image quality ensemble members and resolution members individually combined using the weighted average strategy on the 2007 test set.}
+\caption{Results for the the image quality ensemble members and resolution members with both combinations of average and weighted average on the 2007 test set.}
 \label{tab:weandavgres}
 \begin{tabular}{|l|l|}
 \hline
@@ -125,9 +125,71 @@ Baseline                          & 79.59\% \\ \hline
 \end{table}
 
 Results in \tableref{weandavgres} show that by using separate strategies with image quality members are weighted and when one of the resolution members are weighted 100\% the performance on the test set surpasses the baseline model. The increase is slight from 79.59\% to 79.90\%. However, again it appears that the members of the ensemble compliment each other well both intra-factor and inter-factor. As suspected the opposite strategy of average combination for image quality and weighted average for resolution does not surpass previous results. 
+\\\\
+The results so far have only been with different combinations of the expert ensemble members. However, another strategy is to include the baseline model trained on all of the 07++12 data. As the baseline model performs well by itself the other ensemble members will act as support, as ideally there are parts of the \gls{pascalvoc} data that they perform better on due to the reduced training variance. The methods for ensemble are used as earlier, except that there is an additional member in the ensemble. Also it should be noted that as there is no complementary member to the baseline, its detections are weighted by 1.0 regardless of ensemble combination strategy. Firstly, the results for the average and weighted average ensemble, both with the baseline model can be seen in \tableref{ensemble_base}. The inclusion of the baseline model is shown by the subscript $_{base}$. The table shows that in both strategies the inclusion increases the overall performance. Using the weighted average the performance is increased by 0.22\%. While the average strategy is increased above the baseline result by 0.65\% to 79.86\%.
 
-The results so far have only been with different combinations of the expert ensemble members. However, another strategy is to include the baseline model trained on all of the 07++12 data. As the baseline model performs well by itself the other ensemble members will act as support, as ideally there are parts of the \gls{pascalvoc} data that they perform better on due to the reduced training variance.
+\begin{table}[h]
+\centering
+\caption{Results for the two ensemble combination strategies and for the baseline model on the 2007 test set. Shown is both the results with the expert ensemble members only and experts plus the baseline model.}
+\label{tab:ensemble_base}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Method}           & \textbf{AP (\%)} \\ \hline
+Average          & 79.21\% \\ \hline
+Average$_{base}$          & \textbf{79.86\%} \\ \hline
+Weighted Average & 79.13\% \\ \hline
+Weighted Average$_{base}$ & 79.35\% \\ \hline
+Baseline         & 79.59\% \\ \hline
+\end{tabular}
+\end{table}
 
+Next the addition of the baseline model with respective to each ensemble factor using the average ensemble strategy can be seen in \tableref{ensembleavg_base}. Both factors have a significant increase in \gls{ap} performance with the extra ensemble member. The image quality experts gain 0.77\%, while the two resolution members have their performance increased by 1.96\%. The result of 80.09 is higher than the result shown in \tableref{weandavgres} even without having members trained towards image quality factors.
 
+\begin{table}[h]
+\centering
+\caption{Results for the the image quality ensemble members and resolution members individually combined using average strategy on the 2007 test set. Shown is both the results with the expert ensemble members only and experts plus the baseline model.}
+\label{tab:ensembleavg_base}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Ensemble Members}        & \textbf{AP (\%)} \\ \hline
+Image Quality & 78.15\% \\ \hline
+Image Quality$_{base}$ & 78.92\% \\ \hline
+Resolution    & 78.13\% \\ \hline
+Resolution$_{base}$    & \textbf{80.09\%} \\ \hline
+Baseline         & 79.59\% \\ \hline
+\end{tabular}
+\end{table}
 
+Adding the baseline model to the factors and using the weighted average strategy does not result in an improvement over the baseline result as shown in \tableref{ensemblewavg_base}. However, both factors see a larger increase in performance that that of the average combination in \tableref{ensembleavg_base}. Image quality performance is increased by 0.71\% and resolution members increase by 3.21\%. Clearly regardless of ensemble strategy the addition of the baseline model aids in overall object detection on \gls{pascalvoc}.
 
+\begin{table}[h]
+\centering
+\caption{Results for the the image quality ensemble members and resolution members individually combined using weighted average strategy on the 2007 test set.  Shown is both the results with the expert ensemble members only and experts plus the baseline model.}
+\label{tab:ensemblewavg_base}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Ensemble Members}        & \textbf{AP (\%)} \\ \hline
+Image Quality & 78.44\% \\ \hline
+Image Quality$_{base}$ & 79.15\% \\ \hline
+Resolution    & 75.00\% \\ \hline
+Resolution$_{base}$    & 78.21\% \\ \hline
+Baseline         & \textbf{79.59\%} \\ \hline
+\end{tabular}
+\end{table}
+
+While improvements are seen for both strategies with the addition of baseline, the tendency is still that the resolution members perform best with the average ensemble and image quality with weighted average. Therefore, the two combinations of ensembles with the addition were tested. This is shown in \tableref{ensemble_comb_base} and shown is that this provided the best result of any ensemble combination. Image quality with the weighted average and resolution with average ensemble results in 80.15\%, an increase of 0.56\% in comparison to the baseline \gls{rfcn}.
+
+\begin{table}[h]
+\centering
+\caption{Results for the the image quality ensemble members and resolution members with both combinations of average and weighted average on the 2007 test set.  Shown is both the results with the expert ensemble members only and experts plus the baseline model.}
+\label{tab:ensemble_comb_base}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Ensemble Members}                  & \textbf{AP (\%)} \\ \hline
+Image Quality$_{WAvg}$ / Resolution$_{Avg}$  & 79.90\% \\ \hline
+Image Quality$_{WAvg}$ / Resolution$_{Avg}$ $_{base}$ & \textbf{80.15\%} \\ \hline
+Image Quality$_{Avg}$ / Resolution$_{WAvg}$ & 78.71\% \\ \hline
+Image Quality$_{Avg}$ / Resolution$_{WAvg}$ $_{base}$ & 79.10\% \\ \hline
+Baseline                          & 79.59\% \\ \hline
+\end{tabular}
+\end{table}
