@@ -17,10 +17,10 @@
 \contentsline {subsection}{\numberline {3.2.1}Faster Region-Convolutional Neural Network}{23}{subsection.3.2.1}
 \contentsline {subsection}{\numberline {3.2.2}Regional Fully-Connected Network}{25}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}You Only Look Once}{27}{subsection.3.2.3}
-\contentsline {subsection}{\numberline {3.2.4}Benchmark Results}{29}{subsection.3.2.4}
-\contentsline {subsubsection}{\gls {pascalvoc}}{29}{subsubsection*.31}
-\contentsline {subsubsection}{\gls {mscoco}}{31}{subsubsection*.34}
-\contentsline {section}{\numberline {3.3}Models}{33}{section.3.3}
+\contentsline {subsection}{\numberline {3.2.4}Benchmark Results}{30}{subsection.3.2.4}
+\contentsline {subsubsection}{\gls {pascalvoc}}{30}{subsubsection*.26}
+\contentsline {subsubsection}{\gls {mscoco}}{31}{subsubsection*.29}
+\contentsline {section}{\numberline {3.3}Models}{32}{section.3.3}
 \contentsline {subsection}{\numberline {3.3.1}VGG}{33}{subsection.3.3.1}
 \contentsline {subsection}{\numberline {3.3.2}Residual Networks}{35}{subsection.3.3.2}
 \contentsline {section}{\numberline {3.4}Ensemble Methods}{37}{section.3.4}
@@ -28,9 +28,9 @@
 \contentsline {chapter}{\numberline {4}Design}{40}{chapter.4}
 \contentsline {section}{\numberline {4.1}Design Overview}{40}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Training R-FCN}{41}{subsection.4.1.1}
-\contentsline {subsubsection}{Object Size Data Sampling}{43}{subsubsection*.44}
-\contentsline {subsubsection}{Image Quality Data Sampling}{43}{subsubsection*.45}
-\contentsline {subsubsection}{\gls {rfcn} Training}{43}{subsubsection*.46}
+\contentsline {subsubsection}{Object Size Data Sampling}{43}{subsubsection*.39}
+\contentsline {subsubsection}{Image Quality Data Sampling}{43}{subsubsection*.40}
+\contentsline {subsubsection}{\gls {rfcn} Training}{43}{subsubsection*.41}
 \contentsline {chapter}{\numberline {5}Implementation}{45}{chapter.5}
 \contentsline {section}{\numberline {5.1}Resolution-Aware Object Detection}{45}{section.5.1}
 \contentsline {section}{\numberline {5.2}Image Quality Assessment}{47}{section.5.2}
@@ -44,8 +44,8 @@
 \contentsline {subsection}{\numberline {5.3.3}Ensemble Results}{58}{subsection.5.3.3}
 \contentsline {chapter}{\numberline {6}Discussion}{61}{chapter.6}
 \contentsline {chapter}{\numberline {7}Conclusion}{62}{chapter.7}
-\contentsline {chapter}{Literature}{63}{section*.78}
-\contentsline {chapter}{Appendices}{67}{section*.80}
+\contentsline {chapter}{Literature}{63}{section*.73}
+\contentsline {chapter}{Appendices}{67}{section*.75}
 \contentsline {chapter}{\numberline {A}Appendix A}{68}{Appendix.a.A}
 \contentsline {section}{\numberline {A.1}Resolution-Aware Object Detection}{68}{section.a.A.1}
 \contentsline {section}{\numberline {A.2}Deep IQA Models}{68}{section.a.A.2}

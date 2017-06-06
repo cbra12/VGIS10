@@ -137,6 +137,7 @@
 \citation{alexnet}
 \citation{vgg16}
 \citation{fasterrcnn}
+\citation{cocolead}
 \citation{deepres}
 \citation{deepres}
 \citation{deepres}
@@ -166,6 +167,7 @@
 \citation{fasterrcnn}
 \citation{rfcn}
 \citation{rfcn}
+\citation{rfcn}
 \citation{rcnn}
 \citation{fastrcnn}
 \citation{fasterrcnn}
@@ -173,10 +175,6 @@
 \citation{deepres}
 \citation{semfcn}
 \citation{instancefcn}
-\@writefile{lot}{\contentsline {table}{\numberline {2.2}{\ignorespaces A comparison of R-CNN and Fast R-CNN \gls {pascalvoc} \gls {map} results on the test set from 2007, 2010, and 2012.\relax }}{15}{table.caption.17}}
-\newlabel{tab:fastresults}{{2.2}{15}{A comparison of R-CNN and Fast R-CNN \gls {pascalvoc} \gls {map} results on the test set from 2007, 2010, and 2012.\relax }{table.caption.17}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {2.3}{\ignorespaces Speedup between R-CNN and Fast R-CNN in regards to both training and testing. Both methods are train a VGG16 network for object detection.\relax }}{15}{table.caption.18}}
-\newlabel{tab:fastspeed}{{2.3}{15}{Speedup between R-CNN and Fast R-CNN in regards to both training and testing. Both methods are train a VGG16 network for object detection.\relax }{table.caption.18}{}}
 \citation{zhang}
 \@writefile{toc}{\contentsline {section}{\numberline {2.5}Problem Statement}{19}{section.2.5}}
 \citation{lenet}
@@ -185,8 +183,8 @@
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{toc}{\contentsline {section}{\numberline {3.1}Convolutional Neural Networks}{21}{section.3.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces An example of a general \gls {cnn} with convolutional and fully-connected layers.\relax }}{22}{figure.caption.19}}
-\newlabel{fig:generalcnn}{{3.1}{22}{An example of a general \gls {cnn} with convolutional and fully-connected layers.\relax }{figure.caption.19}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces An example of a general \gls {cnn} with convolutional and fully-connected layers.\relax }}{22}{figure.caption.17}}
+\newlabel{fig:generalcnn}{{3.1}{22}{An example of a general \gls {cnn} with convolutional and fully-connected layers.\relax }{figure.caption.17}{}}
 \citation{fasterrcnn}
 \citation{fastrcnn}
 \citation{rcnn}
@@ -197,36 +195,29 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Faster Region-Convolutional Neural Network}{23}{subsection.3.2.1}}
 \citation{vgg16}
 \citation{deepres}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Faster R-CNN framework. A \gls {cnn} computes a feature map from which a \gls {rpn} finds region proposals. Given these proposals and the same feature map proposals are classed accordingly \cite  {fasterrccn}.\relax }}{24}{figure.caption.20}}
-\newlabel{fig:fasterframework}{{3.2}{24}{Faster R-CNN framework. A \gls {cnn} computes a feature map from which a \gls {rpn} finds region proposals. Given these proposals and the same feature map proposals are classed accordingly \cite {fasterrccn}.\relax }{figure.caption.20}{}}
-\@writefile{tdo}{\contentsline {todo}{update rpn framework figure}{24}{section*.21}}
-\pgfsyspdfmark {pgfid7}{18928762}{5120180}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces Faster R-CNN framework. A \gls {cnn} computes a feature map from which a \gls {rpn} finds region proposals. Given these proposals and the same feature map proposals are classed accordingly \cite  {fasterrccn}.\relax }}{24}{figure.caption.18}}
+\newlabel{fig:fasterframework}{{3.2}{24}{Faster R-CNN framework. A \gls {cnn} computes a feature map from which a \gls {rpn} finds region proposals. Given these proposals and the same feature map proposals are classed accordingly \cite {fasterrccn}.\relax }{figure.caption.18}{}}
 \citation{rfcn}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces PLACEHOLDER. \gls {rpn} framework. The $k$ anchor boxes are placed at each sliding window location on the last feature map. The \gls {rpn} uses two sibling layers to compute the classification of object or background and perform bounding-box regression.\relax }}{25}{figure.caption.22}}
-\newlabel{fig:rpnframework}{{3.3}{25}{PLACEHOLDER. \gls {rpn} framework. The $k$ anchor boxes are placed at each sliding window location on the last feature map. The \gls {rpn} uses two sibling layers to compute the classification of object or background and perform bounding-box regression.\relax }{figure.caption.22}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces \gls {rpn} framework. The $k$ anchor boxes are placed at each sliding window location on the last feature map. The \gls {rpn} uses two sibling layers to compute the classification of object or background and perform bounding-box regression.\relax }}{25}{figure.caption.19}}
+\newlabel{fig:rpnframework}{{3.3}{25}{\gls {rpn} framework. The $k$ anchor boxes are placed at each sliding window location on the last feature map. The \gls {rpn} uses two sibling layers to compute the classification of object or background and perform bounding-box regression.\relax }{figure.caption.19}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}Regional Fully-Connected Network}{25}{subsection.3.2.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Architecture of \gls {rfcn}. Region proposals are found using the \gls {rpn} followed by classification based on a bank of position-sensitive score maps.\relax }}{26}{figure.caption.23}}
-\newlabel{fig:rfcnarch}{{3.4}{26}{Architecture of \gls {rfcn}. Region proposals are found using the \gls {rpn} followed by classification based on a bank of position-sensitive score maps.\relax }{figure.caption.23}{}}
-\@writefile{tdo}{\contentsline {todo}{update score maps figure}{26}{section*.24}}
-\pgfsyspdfmark {pgfid8}{18928762}{5120180}
+\citation{rfcn}
+\citation{rfcn}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces Architecture of \gls {rfcn}. Region proposals are found using the \gls {rpn} followed by classification based on a bank of position-sensitive score maps \cite  {rfcn}.\relax }}{26}{figure.caption.20}}
+\newlabel{fig:rfcnarch}{{3.4}{26}{Architecture of \gls {rfcn}. Region proposals are found using the \gls {rpn} followed by classification based on a bank of position-sensitive score maps \cite {rfcn}.\relax }{figure.caption.20}{}}
+\citation{rfcn}
+\citation{rfcn}
 \citation{yolov2}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces PLACEHOLDER. Score maps.\relax }}{27}{figure.caption.25}}
-\newlabel{fig:scoremaps}{{3.5}{27}{PLACEHOLDER. Score maps.\relax }{figure.caption.25}{}}
-\@writefile{tdo}{\contentsline {todo}{update score maps figure}{27}{section*.26}}
-\pgfsyspdfmark {pgfid9}{21296906}{26355403}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces PLACEHOLDER. Position-sensitive \gls {roi}-pooling operation for a given class.\relax }}{27}{figure.caption.27}}
-\newlabel{fig:rfcnpooling}{{3.6}{27}{PLACEHOLDER. Position-sensitive \gls {roi}-pooling operation for a given class.\relax }{figure.caption.27}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces A bank of score maps are present for each object category. For a given \gls {roi}, the score is sampled from the respective position in the corresponding score map.\relax }}{27}{figure.caption.21}}
+\newlabel{fig:scoremaps}{{3.5}{27}{A bank of score maps are present for each object category. For a given \gls {roi}, the score is sampled from the respective position in the corresponding score map.\relax }{figure.caption.21}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.6}{\ignorespaces Position-sensitive \gls {roi}-pooling operation for a given class \cite  {rfcn}.\relax }}{27}{figure.caption.22}}
+\newlabel{fig:rfcnpooling}{{3.6}{27}{Position-sensitive \gls {roi}-pooling operation for a given class \cite {rfcn}.\relax }{figure.caption.22}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}You Only Look Once}{27}{subsection.3.2.3}}
+\@writefile{tdo}{\contentsline {todo}{update figure}{28}{section*.23}}
+\pgfsyspdfmark {pgfid7}{18928762}{5120180}
 \citation{fasterrcnn}
-\@writefile{tdo}{\contentsline {todo}{update figure}{28}{section*.28}}
-\pgfsyspdfmark {pgfid10}{18928762}{21528375}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces PLACEHOLDER. \gls {yolo} model.\relax }}{28}{figure.caption.29}}
-\newlabel{fig:yolomodel}{{3.7}{28}{PLACEHOLDER. \gls {yolo} model.\relax }{figure.caption.29}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces ImageNet classification results for the Darknet-19 model.\relax }}{29}{table.caption.30}}
-\newlabel{tab:darknetimagenet}{{3.1}{29}{ImageNet classification results for the Darknet-19 model.\relax }{table.caption.30}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.4}Benchmark Results}{29}{subsection.3.2.4}}
-\newlabel{sec:benchresults}{{3.2.4}{29}{Benchmark Results}{subsection.3.2.4}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\gls {pascalvoc}}{29}{subsubsection*.31}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.7}{\ignorespaces PLACEHOLDER. \gls {yolo} model.\relax }}{29}{figure.caption.24}}
+\newlabel{fig:yolomodel}{{3.7}{29}{PLACEHOLDER. \gls {yolo} model.\relax }{figure.caption.24}{}}
 \citation{fasterrcnn}
 \citation{fasterrcnn}
 \citation{deepres}
@@ -238,8 +229,11 @@
 \citation{yolov2}
 \citation{deepres}
 \citation{rfcn}
-\@writefile{lot}{\contentsline {table}{\numberline {3.2}{\ignorespaces PASCAL VOC 2007 results.\relax }}{30}{table.caption.32}}
-\newlabel{tab:07res}{{3.2}{30}{PASCAL VOC 2007 results.\relax }{table.caption.32}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.1}{\ignorespaces ImageNet classification results for the Darknet-19 model.\relax }}{30}{table.caption.25}}
+\newlabel{tab:darknetimagenet}{{3.1}{30}{ImageNet classification results for the Darknet-19 model.\relax }{table.caption.25}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.4}Benchmark Results}{30}{subsection.3.2.4}}
+\newlabel{sec:benchresults}{{3.2.4}{30}{Benchmark Results}{subsection.3.2.4}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\gls {pascalvoc}}{30}{subsubsection*.26}}
 \citation{fasterrcnn}
 \citation{fasterrcnn}
 \citation{deepres}
@@ -248,9 +242,6 @@
 \citation{fasterrcnn}
 \citation{deepres}
 \citation{rfcn}
-\@writefile{lot}{\contentsline {table}{\numberline {3.3}{\ignorespaces PASCAL VOC 2012 results.\relax }}{31}{table.caption.33}}
-\newlabel{tab:12res}{{3.3}{31}{PASCAL VOC 2012 results.\relax }{table.caption.33}{}}
-\@writefile{toc}{\contentsline {subsubsection}{\gls {mscoco}}{31}{subsubsection*.34}}
 \citation{fasterrcnn}
 \citation{deepres}
 \citation{rfcn}
@@ -261,32 +252,37 @@
 \citation{rfcn}
 \citation{rfcn}
 \citation{yolov2}
+\@writefile{lot}{\contentsline {table}{\numberline {3.2}{\ignorespaces PASCAL VOC 2007 results.\relax }}{31}{table.caption.27}}
+\newlabel{tab:07res}{{3.2}{31}{PASCAL VOC 2007 results.\relax }{table.caption.27}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\gls {mscoco}}{31}{subsubsection*.29}}
 \citation{deepres}
-\@writefile{lot}{\contentsline {table}{\numberline {3.4}{\ignorespaces MS COCO test-dev results.\relax }}{32}{table.caption.35}}
-\newlabel{tab:cocores}{{3.4}{32}{MS COCO test-dev results.\relax }{table.caption.35}{}}
 \citation{vgg}
-\@writefile{toc}{\contentsline {section}{\numberline {3.3}Models}{33}{section.3.3}}
-\@writefile{tdo}{\contentsline {todo}{intro explaining backbone of models and what is covered in this section}{33}{section*.36}}
-\pgfsyspdfmark {pgfid11}{21296906}{26905591}
+\@writefile{lot}{\contentsline {table}{\numberline {3.3}{\ignorespaces PASCAL VOC 2012 results.\relax }}{32}{table.caption.28}}
+\newlabel{tab:12res}{{3.3}{32}{PASCAL VOC 2012 results.\relax }{table.caption.28}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Models}{32}{section.3.3}}
+\@writefile{tdo}{\contentsline {todo}{intro explaining backbone of models and what is covered in this section}{32}{section*.31}}
+\pgfsyspdfmark {pgfid8}{18928762}{5120180}
+\@writefile{lot}{\contentsline {table}{\numberline {3.4}{\ignorespaces MS COCO test-dev results.\relax }}{33}{table.caption.30}}
+\newlabel{tab:cocores}{{3.4}{33}{MS COCO test-dev results.\relax }{table.caption.30}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}VGG}{33}{subsection.3.3.1}}
 \citation{deepres}
 \citation{vgg16}
 \citation{deepres}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces Core concept of residual blocks used in ResNets.\relax }}{34}{figure.caption.37}}
-\newlabel{fig:vggarch}{{3.8}{34}{Core concept of residual blocks used in ResNets.\relax }{figure.caption.37}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces Core concept of residual blocks used in ResNets.\relax }}{34}{figure.caption.32}}
+\newlabel{fig:vggarch}{{3.8}{34}{Core concept of residual blocks used in ResNets.\relax }{figure.caption.32}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Residual Networks}{35}{subsection.3.3.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.9}{\ignorespaces Core concept of residual blocks used in ResNets.\relax }}{35}{figure.caption.38}}
-\newlabel{fig:resblock}{{3.9}{35}{Core concept of residual blocks used in ResNets.\relax }{figure.caption.38}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.9}{\ignorespaces Core concept of residual blocks used in ResNets.\relax }}{35}{figure.caption.33}}
+\newlabel{fig:resblock}{{3.9}{35}{Core concept of residual blocks used in ResNets.\relax }{figure.caption.33}{}}
 \citation{vgg16}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.10}{\ignorespaces PLACEHOLDER. Overview of 34 layer plain and residual networks.\relax }}{36}{figure.caption.39}}
-\newlabel{fig:plainres}{{3.10}{36}{PLACEHOLDER. Overview of 34 layer plain and residual networks.\relax }{figure.caption.39}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {3.5}{\ignorespaces Top-1 error(\%) on ImageNet validation set.\relax }}{36}{table.caption.40}}
-\newlabel{tab:plainrestable}{{3.5}{36}{Top-1 error(\%) on ImageNet validation set.\relax }{table.caption.40}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.10}{\ignorespaces PLACEHOLDER. Overview of 34 layer plain and residual networks.\relax }}{36}{figure.caption.34}}
+\newlabel{fig:plainres}{{3.10}{36}{PLACEHOLDER. Overview of 34 layer plain and residual networks.\relax }{figure.caption.34}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.5}{\ignorespaces Top-1 error(\%) on ImageNet validation set.\relax }}{36}{table.caption.35}}
+\newlabel{tab:plainrestable}{{3.5}{36}{Top-1 error(\%) on ImageNet validation set.\relax }{table.caption.35}{}}
 \citation{ensemblebook}
-\@writefile{lot}{\contentsline {table}{\numberline {3.6}{\ignorespaces Results of various deep ResNet architectures on ImageNet validation set.\relax }}{37}{table.caption.42}}
-\newlabel{tab:deepresimagenet}{{3.6}{37}{Results of various deep ResNet architectures on ImageNet validation set.\relax }{table.caption.42}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.11}{\ignorespaces Residual block used in deeper ResNet architectures.\relax }}{37}{figure.caption.41}}
-\newlabel{fig:newresblock}{{3.11}{37}{Residual block used in deeper ResNet architectures.\relax }{figure.caption.41}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {3.6}{\ignorespaces Results of various deep ResNet architectures on ImageNet validation set.\relax }}{37}{table.caption.37}}
+\newlabel{tab:deepresimagenet}{{3.6}{37}{Results of various deep ResNet architectures on ImageNet validation set.\relax }{table.caption.37}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.11}{\ignorespaces Residual block used in deeper ResNet architectures.\relax }}{37}{figure.caption.36}}
+\newlabel{fig:newresblock}{{3.11}{37}{Residual block used in deeper ResNet architectures.\relax }{figure.caption.36}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.4}Ensemble Methods}{37}{section.3.4}}
 \citation{ensemblebook}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.4.1}Building an Ensemble System}{38}{subsection.3.4.1}}
@@ -298,18 +294,18 @@
 \citation{caffe}
 \citation{fasterrcnn}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Training R-FCN}{41}{subsection.4.1.1}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Flow chart showing the 4-step alternating training method.\relax }}{42}{figure.caption.43}}
-\newlabel{fig:4steptrain}{{4.1}{42}{Flow chart showing the 4-step alternating training method.\relax }{figure.caption.43}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Flow chart showing the 4-step alternating training method.\relax }}{42}{figure.caption.38}}
+\newlabel{fig:4steptrain}{{4.1}{42}{Flow chart showing the 4-step alternating training method.\relax }{figure.caption.38}{}}
 \citation{livepaper}
 \citation{liveweb}
 \citation{tid2013}
 \citation{csiq}
 \citation{rfcn}
-\@writefile{toc}{\contentsline {subsubsection}{Object Size Data Sampling}{43}{subsubsection*.44}}
-\@writefile{toc}{\contentsline {subsubsection}{Image Quality Data Sampling}{43}{subsubsection*.45}}
-\@writefile{toc}{\contentsline {subsubsection}{\gls {rfcn} Training}{43}{subsubsection*.46}}
-\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Common \gls {sgd} optimisation parameters for the 5 training parts of the baseline \gls {rfcn} model.\relax }}{44}{table.caption.47}}
-\newlabel{tab:trainparams}{{4.1}{44}{Common \gls {sgd} optimisation parameters for the 5 training parts of the baseline \gls {rfcn} model.\relax }{table.caption.47}{}}
+\@writefile{toc}{\contentsline {subsubsection}{Object Size Data Sampling}{43}{subsubsection*.39}}
+\@writefile{toc}{\contentsline {subsubsection}{Image Quality Data Sampling}{43}{subsubsection*.40}}
+\@writefile{toc}{\contentsline {subsubsection}{\gls {rfcn} Training}{43}{subsubsection*.41}}
+\@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Common \gls {sgd} optimisation parameters for the 5 training parts of the baseline \gls {rfcn} model.\relax }}{44}{table.caption.42}}
+\newlabel{tab:trainparams}{{4.1}{44}{Common \gls {sgd} optimisation parameters for the 5 training parts of the baseline \gls {rfcn} model.\relax }{table.caption.42}{}}
 \citation{deepres}
 \citation{fasterrcnn}
 \@writefile{toc}{\contentsline {chapter}{\numberline {5}Implementation}{45}{chapter.5}}
@@ -317,113 +313,113 @@
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{toc}{\contentsline {section}{\numberline {5.1}Resolution-Aware Object Detection}{45}{section.5.1}}
 \newlabel{sec:resawareSec}{{5.1}{45}{Resolution-Aware Object Detection}{section.5.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Histogram of the \gls {pascalvoc} 07++12 bounding box area.\relax }}{45}{figure.caption.48}}
-\newlabel{fig:0712hist}{{5.1}{45}{Histogram of the \gls {pascalvoc} 07++12 bounding box area.\relax }{figure.caption.48}{}}
-\@writefile{tdo}{\contentsline {todo}{update following explanation}{45}{section*.49}}
-\pgfsyspdfmark {pgfid12}{21296906}{11416011}
-\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces My caption\relax }}{46}{table.caption.50}}
-\newlabel{tab:splitrpn}{{5.1}{46}{My caption\relax }{table.caption.50}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Histogram of the \gls {pascalvoc} 07++12 bounding box area.\relax }}{45}{figure.caption.43}}
+\newlabel{fig:0712hist}{{5.1}{45}{Histogram of the \gls {pascalvoc} 07++12 bounding box area.\relax }{figure.caption.43}{}}
+\@writefile{tdo}{\contentsline {todo}{update following explanation}{45}{section*.44}}
+\pgfsyspdfmark {pgfid9}{21296906}{11416011}
+\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces My caption\relax }}{46}{table.caption.45}}
+\newlabel{tab:splitrpn}{{5.1}{46}{My caption\relax }{table.caption.45}{}}
 \citation{deepiqa}
 \citation{vgg}
-\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces My caption\relax }}{47}{table.caption.51}}
-\newlabel{tab:splitgt}{{5.2}{47}{My caption\relax }{table.caption.51}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.3}{\ignorespaces My caption\relax }}{47}{table.caption.52}}
-\newlabel{my-label}{{5.3}{47}{My caption\relax }{table.caption.52}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.4}{\ignorespaces My caption\relax }}{47}{table.caption.53}}
-\newlabel{my-label}{{5.4}{47}{My caption\relax }{table.caption.53}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces My caption\relax }}{47}{table.caption.46}}
+\newlabel{tab:splitgt}{{5.2}{47}{My caption\relax }{table.caption.46}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.3}{\ignorespaces My caption\relax }}{47}{table.caption.47}}
+\newlabel{my-label}{{5.3}{47}{My caption\relax }{table.caption.47}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.4}{\ignorespaces My caption\relax }}{47}{table.caption.48}}
+\newlabel{my-label}{{5.4}{47}{My caption\relax }{table.caption.48}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {5.2}Image Quality Assessment}{47}{section.5.2}}
 \newlabel{sec:iqaimp}{{5.2}{47}{Image Quality Assessment}{section.5.2}{}}
 \citation{livepaper}
 \citation{tid2013}
 \citation{csiq}
-\@writefile{lot}{\contentsline {table}{\numberline {5.5}{\ignorespaces My caption\relax }}{48}{table.caption.54}}
-\newlabel{my-label}{{5.5}{48}{My caption\relax }{table.caption.54}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Architecture of the Deep IQA network. Notation for convolutional layers are conv(receptive field size)-(number of channels) and fully-connected layers are FC(number of channels).\relax }}{48}{figure.caption.55}}
-\newlabel{fig:deepiqa_arch}{{5.2}{48}{Architecture of the Deep IQA network. Notation for convolutional layers are conv(receptive field size)-(number of channels) and fully-connected layers are FC(number of channels).\relax }{figure.caption.55}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.5}{\ignorespaces My caption\relax }}{48}{table.caption.49}}
+\newlabel{my-label}{{5.5}{48}{My caption\relax }{table.caption.49}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Architecture of the Deep IQA network. Notation for convolutional layers are conv(receptive field size)-(number of channels) and fully-connected layers are FC(number of channels).\relax }}{48}{figure.caption.50}}
+\newlabel{fig:deepiqa_arch}{{5.2}{48}{Architecture of the Deep IQA network. Notation for convolutional layers are conv(receptive field size)-(number of channels) and fully-connected layers are FC(number of channels).\relax }{figure.caption.50}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}LIVE Image Quality Database}{48}{subsection.5.2.1}}
-\newlabel{fig:}{{5.3a}{49}{\relax }{figure.caption.56}{}}
-\newlabel{sub@fig:}{{a}{49}{\relax }{figure.caption.56}{}}
-\newlabel{fig:}{{5.3b}{49}{\relax }{figure.caption.56}{}}
-\newlabel{sub@fig:}{{b}{49}{\relax }{figure.caption.56}{}}
-\newlabel{fig:}{{5.3c}{49}{\relax }{figure.caption.56}{}}
-\newlabel{sub@fig:}{{c}{49}{\relax }{figure.caption.56}{}}
-\newlabel{fig:}{{5.3d}{49}{\relax }{figure.caption.56}{}}
-\newlabel{sub@fig:}{{d}{49}{\relax }{figure.caption.56}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Examples of reference images from the \gls {live} dataset.\relax }}{49}{figure.caption.56}}
-\newlabel{fig:live_ex}{{5.3}{49}{Examples of reference images from the \gls {live} dataset.\relax }{figure.caption.56}{}}
+\newlabel{fig:}{{5.3a}{49}{\relax }{figure.caption.51}{}}
+\newlabel{sub@fig:}{{a}{49}{\relax }{figure.caption.51}{}}
+\newlabel{fig:}{{5.3b}{49}{\relax }{figure.caption.51}{}}
+\newlabel{sub@fig:}{{b}{49}{\relax }{figure.caption.51}{}}
+\newlabel{fig:}{{5.3c}{49}{\relax }{figure.caption.51}{}}
+\newlabel{sub@fig:}{{c}{49}{\relax }{figure.caption.51}{}}
+\newlabel{fig:}{{5.3d}{49}{\relax }{figure.caption.51}{}}
+\newlabel{sub@fig:}{{d}{49}{\relax }{figure.caption.51}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.3}{\ignorespaces Examples of reference images from the \gls {live} dataset.\relax }}{49}{figure.caption.51}}
+\newlabel{fig:live_ex}{{5.3}{49}{Examples of reference images from the \gls {live} dataset.\relax }{figure.caption.51}{}}
 \citation{deepiqa}
 \citation{livepaper}
 \citation{liveweb}
 \citation{deepiqa}
 \citation{adam}
-\newlabel{fig:}{{5.4a}{50}{\gls {dmos}: 0.0\relax }{figure.caption.57}{}}
-\newlabel{sub@fig:}{{a}{50}{\gls {dmos}: 0.0\relax }{figure.caption.57}{}}
-\newlabel{fig:}{{5.4b}{50}{\gls {dmos}: 23.24\relax }{figure.caption.57}{}}
-\newlabel{sub@fig:}{{b}{50}{\gls {dmos}: 23.24\relax }{figure.caption.57}{}}
-\newlabel{fig:}{{5.4c}{50}{\gls {dmos}: 40.40\relax }{figure.caption.57}{}}
-\newlabel{sub@fig:}{{c}{50}{\gls {dmos}: 40.40\relax }{figure.caption.57}{}}
-\newlabel{fig:}{{5.4d}{50}{\gls {dmos}: 75.92\relax }{figure.caption.57}{}}
-\newlabel{sub@fig:}{{d}{50}{\gls {dmos}: 75.92\relax }{figure.caption.57}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Four example images from the distortion set. Respective \gls {dmos} scores are shown on the image and below.\relax }}{50}{figure.caption.57}}
-\newlabel{fig:gb_ex}{{5.4}{50}{Four example images from the distortion set. Respective \gls {dmos} scores are shown on the image and below.\relax }{figure.caption.57}{}}
+\newlabel{fig:}{{5.4a}{50}{\gls {dmos}: 0.0\relax }{figure.caption.52}{}}
+\newlabel{sub@fig:}{{a}{50}{\gls {dmos}: 0.0\relax }{figure.caption.52}{}}
+\newlabel{fig:}{{5.4b}{50}{\gls {dmos}: 23.24\relax }{figure.caption.52}{}}
+\newlabel{sub@fig:}{{b}{50}{\gls {dmos}: 23.24\relax }{figure.caption.52}{}}
+\newlabel{fig:}{{5.4c}{50}{\gls {dmos}: 40.40\relax }{figure.caption.52}{}}
+\newlabel{sub@fig:}{{c}{50}{\gls {dmos}: 40.40\relax }{figure.caption.52}{}}
+\newlabel{fig:}{{5.4d}{50}{\gls {dmos}: 75.92\relax }{figure.caption.52}{}}
+\newlabel{sub@fig:}{{d}{50}{\gls {dmos}: 75.92\relax }{figure.caption.52}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Four example images from the distortion set. Respective \gls {dmos} scores are shown on the image and below.\relax }}{50}{figure.caption.52}}
+\newlabel{fig:gb_ex}{{5.4}{50}{Four example images from the distortion set. Respective \gls {dmos} scores are shown on the image and below.\relax }{figure.caption.52}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}Training Deep IQA}{50}{subsection.5.2.2}}
-\@writefile{tdo}{\contentsline {todo}{explanation of adam solver}{51}{section*.58}}
-\pgfsyspdfmark {pgfid13}{21296906}{32496002}
-\@writefile{tdo}{\contentsline {todo}{add results for all model}{51}{section*.59}}
-\pgfsyspdfmark {pgfid14}{21296906}{17926933}
-\@writefile{lot}{\contentsline {table}{\numberline {5.6}{\ignorespaces Average Results\relax }}{51}{table.caption.60}}
-\newlabel{tab:iqaavg}{{5.6}{51}{Average Results\relax }{table.caption.60}{}}
+\@writefile{tdo}{\contentsline {todo}{explanation of adam solver}{51}{section*.53}}
+\pgfsyspdfmark {pgfid10}{21296906}{32496002}
+\@writefile{tdo}{\contentsline {todo}{add results for all model}{51}{section*.54}}
+\pgfsyspdfmark {pgfid11}{21296906}{17926933}
+\@writefile{lot}{\contentsline {table}{\numberline {5.6}{\ignorespaces Average Results\relax }}{51}{table.caption.55}}
+\newlabel{tab:iqaavg}{{5.6}{51}{Average Results\relax }{table.caption.55}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.2.3}PASCAL VOC Data Split}{51}{subsection.5.2.3}}
-\newlabel{fig:dist_wn}{{5.5a}{52}{\relax }{figure.caption.61}{}}
-\newlabel{sub@fig:dist_wn}{{a}{52}{\relax }{figure.caption.61}{}}
-\newlabel{fig:dist_gb}{{5.5b}{52}{\relax }{figure.caption.61}{}}
-\newlabel{sub@fig:dist_gb}{{b}{52}{\relax }{figure.caption.61}{}}
-\newlabel{fig:dist_jp}{{5.5c}{52}{\relax }{figure.caption.61}{}}
-\newlabel{sub@fig:dist_jp}{{c}{52}{\relax }{figure.caption.61}{}}
-\newlabel{fig:dist_jk}{{5.5d}{52}{\relax }{figure.caption.61}{}}
-\newlabel{sub@fig:dist_jk}{{d}{52}{\relax }{figure.caption.61}{}}
-\newlabel{fig:dist_ff}{{5.5e}{52}{\relax }{figure.caption.61}{}}
-\newlabel{sub@fig:dist_ff}{{e}{52}{\relax }{figure.caption.61}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Histograms representing the distribution of image quality for the five distortions trained from the \gls {live} image quality dataset. The distortions shown are white noise (a), Gaussian blur (b), JPEG compression (c), JP2k compression (d), fast fading (e).\relax }}{52}{figure.caption.61}}
-\newlabel{fig:iqdist}{{5.5}{52}{Histograms representing the distribution of image quality for the five distortions trained from the \gls {live} image quality dataset. The distortions shown are white noise (a), Gaussian blur (b), JPEG compression (c), JP2k compression (d), fast fading (e).\relax }{figure.caption.61}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.7}{\ignorespaces My caption\relax }}{53}{table.caption.62}}
-\newlabel{tab:iq_splits}{{5.7}{53}{My caption\relax }{table.caption.62}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.8}{\ignorespaces Higher Quality\relax }}{53}{table.caption.63}}
-\newlabel{tab:highcomp}{{5.8}{53}{Higher Quality\relax }{table.caption.63}{}}
-\@writefile{tdo}{\contentsline {todo}{gls for FF}{53}{section*.65}}
-\pgfsyspdfmark {pgfid15}{21296906}{8685340}
-\@writefile{lot}{\contentsline {table}{\numberline {5.9}{\ignorespaces Lower Quality\relax }}{54}{table.caption.64}}
-\newlabel{tab:lowcomp}{{5.9}{54}{Lower Quality\relax }{table.caption.64}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.10}{\ignorespaces Lower / Upper\relax }}{54}{table.caption.66}}
-\newlabel{tab:lowhighcomp}{{5.10}{54}{Lower / Upper\relax }{table.caption.66}{}}
+\newlabel{fig:dist_wn}{{5.5a}{52}{\relax }{figure.caption.56}{}}
+\newlabel{sub@fig:dist_wn}{{a}{52}{\relax }{figure.caption.56}{}}
+\newlabel{fig:dist_gb}{{5.5b}{52}{\relax }{figure.caption.56}{}}
+\newlabel{sub@fig:dist_gb}{{b}{52}{\relax }{figure.caption.56}{}}
+\newlabel{fig:dist_jp}{{5.5c}{52}{\relax }{figure.caption.56}{}}
+\newlabel{sub@fig:dist_jp}{{c}{52}{\relax }{figure.caption.56}{}}
+\newlabel{fig:dist_jk}{{5.5d}{52}{\relax }{figure.caption.56}{}}
+\newlabel{sub@fig:dist_jk}{{d}{52}{\relax }{figure.caption.56}{}}
+\newlabel{fig:dist_ff}{{5.5e}{52}{\relax }{figure.caption.56}{}}
+\newlabel{sub@fig:dist_ff}{{e}{52}{\relax }{figure.caption.56}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Histograms representing the distribution of image quality for the five distortions trained from the \gls {live} image quality dataset. The distortions shown are white noise (a), Gaussian blur (b), JPEG compression (c), JP2k compression (d), fast fading (e).\relax }}{52}{figure.caption.56}}
+\newlabel{fig:iqdist}{{5.5}{52}{Histograms representing the distribution of image quality for the five distortions trained from the \gls {live} image quality dataset. The distortions shown are white noise (a), Gaussian blur (b), JPEG compression (c), JP2k compression (d), fast fading (e).\relax }{figure.caption.56}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.7}{\ignorespaces My caption\relax }}{53}{table.caption.57}}
+\newlabel{tab:iq_splits}{{5.7}{53}{My caption\relax }{table.caption.57}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.8}{\ignorespaces Higher Quality\relax }}{53}{table.caption.58}}
+\newlabel{tab:highcomp}{{5.8}{53}{Higher Quality\relax }{table.caption.58}{}}
+\@writefile{tdo}{\contentsline {todo}{gls for FF}{53}{section*.60}}
+\pgfsyspdfmark {pgfid12}{21296906}{8685340}
+\@writefile{lot}{\contentsline {table}{\numberline {5.9}{\ignorespaces Lower Quality\relax }}{54}{table.caption.59}}
+\newlabel{tab:lowcomp}{{5.9}{54}{Lower Quality\relax }{table.caption.59}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.10}{\ignorespaces Lower / Upper\relax }}{54}{table.caption.61}}
+\newlabel{tab:lowhighcomp}{{5.10}{54}{Lower / Upper\relax }{table.caption.61}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.2.4}Evaluating Image Quality Experts}{54}{subsection.5.2.4}}
 \newlabel{sec:iq_experts}{{5.2.4}{54}{Evaluating Image Quality Experts}{subsection.5.2.4}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {5.3}Ensemble}{54}{section.5.3}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.11}{\ignorespaces Gaussian Blur Experts\relax }}{55}{table.caption.67}}
-\newlabel{tab:gb_experts}{{5.11}{55}{Gaussian Blur Experts\relax }{table.caption.67}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.12}{\ignorespaces JPEG Experts\relax }}{55}{table.caption.68}}
-\newlabel{tab:jpeg_experts}{{5.12}{55}{JPEG Experts\relax }{table.caption.68}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.13}{\ignorespaces JP2K Experts\relax }}{56}{table.caption.69}}
-\newlabel{tab:jp2k_experts}{{5.13}{56}{JP2K Experts\relax }{table.caption.69}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.14}{\ignorespaces FF Experts\relax }}{56}{table.caption.70}}
-\newlabel{tab:ff_experts}{{5.14}{56}{FF Experts\relax }{table.caption.70}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces \relax }}{56}{figure.caption.71}}
-\newlabel{fig:ensemble_general}{{5.6}{56}{\relax }{figure.caption.71}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.11}{\ignorespaces Gaussian Blur Experts\relax }}{55}{table.caption.62}}
+\newlabel{tab:gb_experts}{{5.11}{55}{Gaussian Blur Experts\relax }{table.caption.62}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.12}{\ignorespaces JPEG Experts\relax }}{55}{table.caption.63}}
+\newlabel{tab:jpeg_experts}{{5.12}{55}{JPEG Experts\relax }{table.caption.63}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.13}{\ignorespaces JP2K Experts\relax }}{56}{table.caption.64}}
+\newlabel{tab:jp2k_experts}{{5.13}{56}{JP2K Experts\relax }{table.caption.64}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.14}{\ignorespaces FF Experts\relax }}{56}{table.caption.65}}
+\newlabel{tab:ff_experts}{{5.14}{56}{FF Experts\relax }{table.caption.65}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces \relax }}{56}{figure.caption.66}}
+\newlabel{fig:ensemble_general}{{5.6}{56}{\relax }{figure.caption.66}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Average Ensemble}{57}{subsection.5.3.1}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Weighted Average Ensemble}{57}{subsection.5.3.2}}
-\@writefile{tdo}{\contentsline {todo}{line showing split in training data}{57}{section*.72}}
-\pgfsyspdfmark {pgfid16}{21296906}{5120180}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces \relax }}{58}{figure.caption.73}}
-\newlabel{fig:blur_dist}{{5.7}{58}{\relax }{figure.caption.73}{}}
+\@writefile{tdo}{\contentsline {todo}{line showing split in training data}{57}{section*.67}}
+\pgfsyspdfmark {pgfid13}{21296906}{5120180}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces \relax }}{58}{figure.caption.68}}
+\newlabel{fig:blur_dist}{{5.7}{58}{\relax }{figure.caption.68}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}Ensemble Results}{58}{subsection.5.3.3}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.15}{\ignorespaces Results for the two ensemble combination strategies and for the baseline model on the 2007 test set.\relax }}{59}{table.caption.74}}
-\newlabel{tab:avgres1}{{5.15}{59}{Results for the two ensemble combination strategies and for the baseline model on the 2007 test set.\relax }{table.caption.74}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.16}{\ignorespaces Results for the the image quality ensemble members and resolution members individually combined using average strategy on the 2007 test set.\relax }}{59}{table.caption.75}}
-\newlabel{tab:avgresind}{{5.16}{59}{Results for the the image quality ensemble members and resolution members individually combined using average strategy on the 2007 test set.\relax }{table.caption.75}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.17}{\ignorespaces Results for the the image quality ensemble members and resolution members individually combined using the weighted average strategy on the 2007 test set.\relax }}{59}{table.caption.76}}
-\newlabel{tab:weiavgind}{{5.17}{59}{Results for the the image quality ensemble members and resolution members individually combined using the weighted average strategy on the 2007 test set.\relax }{table.caption.76}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.18}{\ignorespaces Results for the the image quality ensemble members and resolution members individually combined using the weighted average strategy on the 2007 test set.\relax }}{60}{table.caption.77}}
-\newlabel{tab:weandavgres}{{5.18}{60}{Results for the the image quality ensemble members and resolution members individually combined using the weighted average strategy on the 2007 test set.\relax }{table.caption.77}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.15}{\ignorespaces Results for the two ensemble combination strategies and for the baseline model on the 2007 test set.\relax }}{59}{table.caption.69}}
+\newlabel{tab:avgres1}{{5.15}{59}{Results for the two ensemble combination strategies and for the baseline model on the 2007 test set.\relax }{table.caption.69}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.16}{\ignorespaces Results for the the image quality ensemble members and resolution members individually combined using average strategy on the 2007 test set.\relax }}{59}{table.caption.70}}
+\newlabel{tab:avgresind}{{5.16}{59}{Results for the the image quality ensemble members and resolution members individually combined using average strategy on the 2007 test set.\relax }{table.caption.70}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.17}{\ignorespaces Results for the the image quality ensemble members and resolution members individually combined using the weighted average strategy on the 2007 test set.\relax }}{59}{table.caption.71}}
+\newlabel{tab:weiavgind}{{5.17}{59}{Results for the the image quality ensemble members and resolution members individually combined using the weighted average strategy on the 2007 test set.\relax }{table.caption.71}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.18}{\ignorespaces Results for the the image quality ensemble members and resolution members individually combined using the weighted average strategy on the 2007 test set.\relax }}{60}{table.caption.72}}
+\newlabel{tab:weandavgres}{{5.18}{60}{Results for the the image quality ensemble members and resolution members individually combined using the weighted average strategy on the 2007 test set.\relax }{table.caption.72}{}}
 \@writefile{toc}{\contentsline {chapter}{\numberline {6}Discussion}{61}{chapter.6}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
@@ -444,8 +440,8 @@
 \bibcite{fastrcnn}{11}
 \bibcite{alexnet}{12}
 \bibcite{vgg16}{13}
-\newlabel{bibtex}{{7}{63}{Conclusion}{section*.78}{}}
-\@writefile{toc}{\contentsline {chapter}{Literature}{63}{section*.78}}
+\newlabel{bibtex}{{7}{63}{Conclusion}{section*.73}{}}
+\@writefile{toc}{\contentsline {chapter}{Literature}{63}{section*.73}}
 \bibcite{fasterrcnn}{14}
 \bibcite{deepres}{15}
 \bibcite{cocolead}{16}
@@ -474,29 +470,29 @@
 \bibcite{csiq}{39}
 \bibcite{deepiqa}{40}
 \bibcite{adam}{41}
-\newlabel{appendices}{{7}{66}{Conclusion}{chapter*.79}{}}
-\@writefile{toc}{\contentsline {chapter}{Appendices}{67}{section*.80}}
+\newlabel{appendices}{{7}{66}{Conclusion}{chapter*.74}{}}
+\@writefile{toc}{\contentsline {chapter}{Appendices}{67}{section*.75}}
 \@writefile{toc}{\contentsline {chapter}{\numberline {A}Appendix A}{68}{Appendix.a.A}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{toc}{\contentsline {section}{\numberline {A.1}Resolution-Aware Object Detection}{68}{section.a.A.1}}
-\@writefile{lot}{\contentsline {table}{\numberline {A.1}{\ignorespaces Results Test07$_{small}$\relax }}{68}{table.caption.81}}
-\newlabel{my-label}{{A.1}{68}{Results Test07$_{small}$\relax }{table.caption.81}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {A.2}{\ignorespaces Results Test07$_{larger}$\relax }}{68}{table.caption.82}}
-\newlabel{my-label}{{A.2}{68}{Results Test07$_{larger}$\relax }{table.caption.82}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {A.3}{\ignorespaces Results 07\relax }}{68}{table.caption.83}}
-\newlabel{my-label}{{A.3}{68}{Results 07\relax }{table.caption.83}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {A.1}{\ignorespaces Results Test07$_{small}$\relax }}{68}{table.caption.76}}
+\newlabel{my-label}{{A.1}{68}{Results Test07$_{small}$\relax }{table.caption.76}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {A.2}{\ignorespaces Results Test07$_{larger}$\relax }}{68}{table.caption.77}}
+\newlabel{my-label}{{A.2}{68}{Results Test07$_{larger}$\relax }{table.caption.77}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {A.3}{\ignorespaces Results 07\relax }}{68}{table.caption.78}}
+\newlabel{my-label}{{A.3}{68}{Results 07\relax }{table.caption.78}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {A.2}Deep IQA Models}{68}{section.a.A.2}}
-\@writefile{lot}{\contentsline {table}{\numberline {A.4}{\ignorespaces Gaussian Blur\relax }}{69}{table.caption.84}}
-\newlabel{my-label}{{A.4}{69}{Gaussian Blur\relax }{table.caption.84}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {A.5}{\ignorespaces White Noise\relax }}{69}{table.caption.85}}
-\newlabel{my-label}{{A.5}{69}{White Noise\relax }{table.caption.85}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {A.6}{\ignorespaces JPEG\relax }}{69}{table.caption.86}}
-\newlabel{my-label}{{A.6}{69}{JPEG\relax }{table.caption.86}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {A.7}{\ignorespaces JP2K\relax }}{70}{table.caption.87}}
-\newlabel{my-label}{{A.7}{70}{JP2K\relax }{table.caption.87}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {A.8}{\ignorespaces Fast Fading\relax }}{70}{table.caption.88}}
-\newlabel{my-label}{{A.8}{70}{Fast Fading\relax }{table.caption.88}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {A.4}{\ignorespaces Gaussian Blur\relax }}{69}{table.caption.79}}
+\newlabel{my-label}{{A.4}{69}{Gaussian Blur\relax }{table.caption.79}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {A.5}{\ignorespaces White Noise\relax }}{69}{table.caption.80}}
+\newlabel{my-label}{{A.5}{69}{White Noise\relax }{table.caption.80}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {A.6}{\ignorespaces JPEG\relax }}{69}{table.caption.81}}
+\newlabel{my-label}{{A.6}{69}{JPEG\relax }{table.caption.81}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {A.7}{\ignorespaces JP2K\relax }}{70}{table.caption.82}}
+\newlabel{my-label}{{A.7}{70}{JP2K\relax }{table.caption.82}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {A.8}{\ignorespaces Fast Fading\relax }}{70}{table.caption.83}}
+\newlabel{my-label}{{A.8}{70}{Fast Fading\relax }{table.caption.83}{}}
 \newlabel{LastPage}{{}{71}{}{page.71}{}}
 \xdef\lastpage@lastpage{71}
 \xdef\lastpage@lastpageHy{71}
