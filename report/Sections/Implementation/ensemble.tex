@@ -126,6 +126,8 @@ Baseline                          & 79.59\% \\ \hline
 
 Results in \tableref{weandavgres} show that by using separate strategies with image quality members are weighted and when one of the resolution members are weighted 100\% the performance on the test set surpasses the baseline model. The increase is slight from 79.59\% to 79.90\%. However, again it appears that the members of the ensemble compliment each other well both intra-factor and inter-factor. As suspected the opposite strategy of average combination for image quality and weighted average for resolution does not surpass previous results. 
 
+The results so far have only been with different combinations of the expert ensemble members. However, another strategy is to include the baseline model trained on all of the 07++12 data. As the baseline model performs well by itself the other ensemble members will act as support, as ideally there are parts of the \gls{pascalvoc} data that they perform better on due to the reduced training variance.
+
 
 
 
