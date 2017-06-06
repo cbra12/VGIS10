@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.30)  6 JUN 2017 18:02
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.12.30)  6 JUN 2017 23:43
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2342,6 +2342,12 @@ LaTeX Warning: Label `my-label' multiply defined.
 
 LaTeX Warning: Label `my-label' multiply defined.
 
+
+LaTeX Warning: Label `my-label' multiply defined.
+
+
+LaTeX Warning: Label `my-label' multiply defined.
+
 )
 \openout1 = `master.aux'.
 
@@ -3412,6 +3418,12 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 ) [61] [62]
 Chapter 6.
 [63
@@ -3458,13 +3470,13 @@ AED: lastpage setting LastPage
 [73
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 122.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 122.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 123.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 123.
  (./master.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 122.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 122.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 123.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 123.
 Package rerunfilecheck Info: File `master.out' has not changed.
-(rerunfilecheck)             Checksum: 02FAAB8FB4318CF6E614E340C3AECCBB;1569.
+(rerunfilecheck)             Checksum: D98D2E575219B2F723DC6F49C64AEC18;1569.
 
 
 LaTeX Warning: There were undefined references.
@@ -3474,13 +3486,13 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 48308 strings out of 495028
- 1009127 string characters out of 6181496
- 1420310 words of memory out of 5000000
+ 48310 strings out of 495028
+ 1009159 string characters out of 6181496
+ 1420500 words of memory out of 5000000
  50041 multiletter control sequences out of 15000+600000
  97457 words of font info for 91 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 78i,17n,96p,2708b,1247s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 78i,19n,96p,2708b,1247s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/christoffer/texmf/fonts/pk/ljfour/public/MnSymbol/MnSymbolD8.600pk> <
 /home/christoffer/texmf/fonts/pk/ljfour/public/MnSymbol/MnSymbolC8.600pk>{/usr/
 share/texmf/fonts/enc/dvips/lm/lm-mathit.enc} </home/christoffer/texmf/fonts/pk
@@ -3501,10 +3513,10 @@ i9.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/font
 s/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></
 usr/share/texmf/fonts/type1/public/lm/lmr9.pfb></usr/share/texmf/fonts/type1/pu
 blic/lm/lmri10.pfb></usr/share/texmf/fonts/type1/public/lm/lmri8.pfb>
-Output written on master.pdf (77 pages, 13464267 bytes).
+Output written on master.pdf (77 pages, 13466681 bytes).
 PDF statistics:
- 1474 PDF objects out of 1728 (max. 8388607)
- 1166 compressed objects within 12 object streams
- 282 named destinations out of 1000 (max. 500000)
+ 1477 PDF objects out of 1728 (max. 8388607)
+ 1169 compressed objects within 12 object streams
+ 284 named destinations out of 1000 (max. 500000)
  562 words of extra memory for PDF output out of 10000 (max. 10000000)
 
