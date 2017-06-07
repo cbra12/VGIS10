@@ -8,51 +8,58 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: bibtex.bib
-Warning--I didn't find a database entry for "vgg"
+I was expecting a `,' or a `}'---line 582 of file bibtex.bib
+ : 
+ : @INPROCEEDINGS{xavier,
+(Error may have been on previous line)
+I'm skipping whatever remains of this entry
+Warning--I didn't find a database entry for "mscocolead"
+Warning--I didn't find a database entry for "fasterrccn"
+Warning--I didn't find a database entry for "cisq"
 -- IEEEtran.bst version 1.13 (2008/09/30) by Michael Shell.
 -- http://www.michaelshell.org/tex/ieeetran/bibtex/
 -- See the "IEEEtran_bst_HOWTO.pdf" manual for usage information.
 
 Done.
-You've used 41 entries,
+You've used 44 entries,
             4039 wiz_defined-function locations,
-            1041 strings with 15694 characters,
-and the built_in function-call counts, 27839 in all, are:
-= -- 2164
-> -- 887
+            1056 strings with 16428 characters,
+and the built_in function-call counts, 29219 in all, are:
+= -- 2265
+> -- 917
 < -- 143
-+ -- 450
-- -- 187
-* -- 1419
-:= -- 4445
-add.period$ -- 85
-call.type$ -- 41
-change.case$ -- 41
++ -- 464
+- -- 194
+* -- 1480
+:= -- 4681
+add.period$ -- 91
+call.type$ -- 44
+change.case$ -- 44
 chr.to.int$ -- 303
-cite$ -- 41
-duplicate$ -- 2025
-empty$ -- 2260
-format.name$ -- 225
-if$ -- 6261
+cite$ -- 44
+duplicate$ -- 2139
+empty$ -- 2412
+format.name$ -- 234
+if$ -- 6571
 int.to.chr$ -- 0
-int.to.str$ -- 41
-missing$ -- 422
-newline$ -- 204
-num.names$ -- 45
-pop$ -- 1063
+int.to.str$ -- 44
+missing$ -- 447
+newline$ -- 217
+num.names$ -- 48
+pop$ -- 1136
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 2
-skip$ -- 2118
+skip$ -- 2230
 stack$ -- 0
-substring$ -- 739
-swap$ -- 1537
+substring$ -- 742
+swap$ -- 1598
 text.length$ -- 42
 text.prefix$ -- 0
 top$ -- 5
-type$ -- 41
+type$ -- 44
 warning$ -- 0
-while$ -- 88
-width$ -- 43
-write$ -- 471
-(There was 1 warning)
+while$ -- 91
+width$ -- 46
+write$ -- 500
+(There was 1 error message)

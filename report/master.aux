@@ -274,14 +274,14 @@
 \newlabel{tab:cocores}{{3.4}{33}{MS COCO test-dev results.\relax }{table.caption.27}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3.1}VGG}{33}{subsection.3.3.1}}
 \citation{vgg16}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces General architecture of the VGG nets. In this instance the VGG-19 model is shown. Notation for convolutional layers are conv(receptive field size)-(number of channels) and fully-connected layers are FC(number of channels).\relax }}{34}{figure.caption.29}}
+\newlabel{fig:vggarch}{{3.8}{34}{General architecture of the VGG nets. In this instance the VGG-19 model is shown. Notation for convolutional layers are conv(receptive field size)-(number of channels) and fully-connected layers are FC(number of channels).\relax }{figure.caption.29}{}}
 \citation{deepres}
 \citation{deepres}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.8}{\ignorespaces General architecture of the VGG nets. In this instance the VGG-19 model is shown.\relax }}{34}{figure.caption.29}}
-\newlabel{fig:vggarch}{{3.8}{34}{General architecture of the VGG nets. In this instance the VGG-19 model is shown.\relax }{figure.caption.29}{}}
-\citation{vgg16}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.3.2}Residual Networks}{35}{subsection.3.3.2}}
 \@writefile{lof}{\contentsline {figure}{\numberline {3.9}{\ignorespaces Core concept of residual blocks used in ResNets.\relax }}{35}{figure.caption.30}}
 \newlabel{fig:resblock}{{3.9}{35}{Core concept of residual blocks used in ResNets.\relax }{figure.caption.30}{}}
+\citation{vgg16}
 \@writefile{lot}{\contentsline {table}{\numberline {3.5}{\ignorespaces Top-1 error(\%) on ImageNet validation set.\relax }}{36}{table.caption.31}}
 \newlabel{tab:plainrestable}{{3.5}{36}{Top-1 error(\%) on ImageNet validation set.\relax }{table.caption.31}{}}
 \citation{ensemblebook}
@@ -299,6 +299,7 @@
 \citation{caffe}
 \citation{fasterrcnn}
 \@writefile{toc}{\contentsline {section}{\numberline {4.1}Training Ensemble Members}{41}{section.4.1}}
+\newlabel{sec:trainens}{{4.1}{41}{Training Ensemble Members}{section.4.1}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces Flow chart showing the alternating training method.\relax }}{42}{figure.caption.34}}
 \newlabel{fig:4steptrain}{{4.1}{42}{Flow chart showing the alternating training method.\relax }{figure.caption.34}{}}
 \citation{deepiqa}
@@ -312,35 +313,34 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1.3}\gls {rfcn} Training}{43}{subsection.4.1.3}}
 \@writefile{lot}{\contentsline {table}{\numberline {4.1}{\ignorespaces Common \gls {sgd} optimisation parameters for the 5 training parts of the baseline \gls {rfcn} model.\relax }}{44}{table.caption.35}}
 \newlabel{tab:trainparams}{{4.1}{44}{Common \gls {sgd} optimisation parameters for the 5 training parts of the baseline \gls {rfcn} model.\relax }{table.caption.35}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.4}Object Detection Benchmark Choice}{44}{subsection.4.1.4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.4}Object Detection Benchmark}{44}{subsection.4.1.4}}
 \citation{deepres}
-\citation{fasterrcnn}
 \@writefile{toc}{\contentsline {chapter}{\numberline {5}Implementation}{45}{chapter.5}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{toc}{\contentsline {section}{\numberline {5.1}Resolution-Aware Object Detection}{45}{section.5.1}}
 \newlabel{sec:resawareSec}{{5.1}{45}{Resolution-Aware Object Detection}{section.5.1}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Histogram of the \gls {pascalvoc} 07++12 bounding box area.\relax }}{45}{figure.caption.36}}
-\newlabel{fig:0712hist}{{5.1}{45}{Histogram of the \gls {pascalvoc} 07++12 bounding box area.\relax }{figure.caption.36}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.1}{\ignorespaces Histogram of the \gls {pascalvoc} 07+12 bounding box area.\relax }}{45}{figure.caption.36}}
+\newlabel{fig:0712hist}{{5.1}{45}{Histogram of the \gls {pascalvoc} 07+12 bounding box area.\relax }{figure.caption.36}{}}
 \@writefile{tdo}{\contentsline {todo}{update following explanation}{45}{section*.37}}
-\pgfsyspdfmark {pgfid6}{21296906}{11416011}
-\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces My caption\relax }}{46}{table.caption.38}}
-\newlabel{tab:splitrpn}{{5.1}{46}{My caption\relax }{table.caption.38}{}}
+\pgfsyspdfmark {pgfid6}{21296906}{7804523}
+\@writefile{lot}{\contentsline {table}{\numberline {5.1}{\ignorespaces Creating object resolution data subsets. If split by the median area of all region proposals training samples the larger dataset has significantly more ground truth object instance samples.\relax }}{46}{table.caption.38}}
+\newlabel{tab:splitrpn}{{5.1}{46}{Creating object resolution data subsets. If split by the median area of all region proposals training samples the larger dataset has significantly more ground truth object instance samples.\relax }{table.caption.38}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces Creating object resolution data subsets. If split by the median of area from ground truth objects there is an equal number of ground truth instances. However, \gls {rpn}$_larger$ has significantly more background samples.\relax }}{46}{table.caption.39}}
+\newlabel{tab:splitgt}{{5.2}{46}{Creating object resolution data subsets. If split by the median of area from ground truth objects there is an equal number of ground truth instances. However, \gls {rpn}$_larger$ has significantly more background samples.\relax }{table.caption.39}{}}
 \citation{deepiqa}
-\citation{vgg}
-\@writefile{lot}{\contentsline {table}{\numberline {5.2}{\ignorespaces My caption\relax }}{47}{table.caption.39}}
-\newlabel{tab:splitgt}{{5.2}{47}{My caption\relax }{table.caption.39}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.3}{\ignorespaces My caption\relax }}{47}{table.caption.40}}
-\newlabel{my-label}{{5.3}{47}{My caption\relax }{table.caption.40}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.4}{\ignorespaces My caption\relax }}{47}{table.caption.41}}
-\newlabel{my-label}{{5.4}{47}{My caption\relax }{table.caption.41}{}}
+\citation{vgg16}
+\@writefile{lot}{\contentsline {table}{\numberline {5.3}{\ignorespaces Results for \gls {rfcn} models trained on three different subsets of data and tested on only small objects from the 07 test set.\relax }}{47}{table.caption.40}}
+\newlabel{tab:small07res}{{5.3}{47}{Results for \gls {rfcn} models trained on three different subsets of data and tested on only small objects from the 07 test set.\relax }{table.caption.40}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.4}{\ignorespaces Results for \gls {rfcn} models trained on three different subsets of data and tested on only large objects from the 07 test set.\relax }}{47}{table.caption.41}}
+\newlabel{tab:large07res}{{5.4}{47}{Results for \gls {rfcn} models trained on three different subsets of data and tested on only large objects from the 07 test set.\relax }{table.caption.41}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.5}{\ignorespaces Results for \gls {rfcn} models trained on three different subsets of data and tested on all of the 07 test set.\relax }}{47}{table.caption.42}}
+\newlabel{tab:alldatares}{{5.5}{47}{Results for \gls {rfcn} models trained on three different subsets of data and tested on all of the 07 test set.\relax }{table.caption.42}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {5.2}Image Quality Assessment}{47}{section.5.2}}
 \newlabel{sec:iqaimp}{{5.2}{47}{Image Quality Assessment}{section.5.2}{}}
 \citation{livepaper}
 \citation{tid2013}
 \citation{csiq}
-\@writefile{lot}{\contentsline {table}{\numberline {5.5}{\ignorespaces My caption\relax }}{48}{table.caption.42}}
-\newlabel{my-label}{{5.5}{48}{My caption\relax }{table.caption.42}{}}
 \@writefile{lof}{\contentsline {figure}{\numberline {5.2}{\ignorespaces Architecture of the Deep IQA network. Notation for convolutional layers are conv(receptive field size)-(number of channels) and fully-connected layers are FC(number of channels).\relax }}{48}{figure.caption.43}}
 \newlabel{fig:deepiqa_arch}{{5.2}{48}{Architecture of the Deep IQA network. Notation for convolutional layers are conv(receptive field size)-(number of channels) and fully-connected layers are FC(number of channels).\relax }{figure.caption.43}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.2.1}LIVE Image Quality Database}{48}{subsection.5.2.1}}
@@ -357,6 +357,7 @@
 \citation{deepiqa}
 \citation{livepaper}
 \citation{liveweb}
+\citation{chainer}
 \citation{deepiqa}
 \citation{adam}
 \newlabel{fig:}{{5.4a}{50}{\gls {dmos}: 0.0\relax }{figure.caption.45}{}}
@@ -367,103 +368,99 @@
 \newlabel{sub@fig:}{{c}{50}{\gls {dmos}: 40.40\relax }{figure.caption.45}{}}
 \newlabel{fig:}{{5.4d}{50}{\gls {dmos}: 75.92\relax }{figure.caption.45}{}}
 \newlabel{sub@fig:}{{d}{50}{\gls {dmos}: 75.92\relax }{figure.caption.45}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Four example images from the distortion set. Respective \gls {dmos} scores are shown on the image and below.\relax }}{50}{figure.caption.45}}
-\newlabel{fig:gb_ex}{{5.4}{50}{Four example images from the distortion set. Respective \gls {dmos} scores are shown on the image and below.\relax }{figure.caption.45}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.4}{\ignorespaces Four example images from the Gaussian blur distortion set. Respective \gls {dmos} scores are shown on the image and below.\relax }}{50}{figure.caption.45}}
+\newlabel{fig:gb_ex}{{5.4}{50}{Four example images from the Gaussian blur distortion set. Respective \gls {dmos} scores are shown on the image and below.\relax }{figure.caption.45}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.2.2}Training Deep IQA}{50}{subsection.5.2.2}}
-\@writefile{tdo}{\contentsline {todo}{explanation of adam solver}{51}{section*.46}}
-\pgfsyspdfmark {pgfid7}{21296906}{32496002}
-\@writefile{tdo}{\contentsline {todo}{add results for all model}{51}{section*.47}}
-\pgfsyspdfmark {pgfid8}{21296906}{17926933}
-\@writefile{lot}{\contentsline {table}{\numberline {5.6}{\ignorespaces Average Results\relax }}{51}{table.caption.48}}
-\newlabel{tab:iqaavg}{{5.6}{51}{Average Results\relax }{table.caption.48}{}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.3}PASCAL VOC Data Split}{51}{subsection.5.2.3}}
-\newlabel{fig:dist_wn}{{5.5a}{52}{\relax }{figure.caption.49}{}}
-\newlabel{sub@fig:dist_wn}{{a}{52}{\relax }{figure.caption.49}{}}
-\newlabel{fig:dist_gb}{{5.5b}{52}{\relax }{figure.caption.49}{}}
-\newlabel{sub@fig:dist_gb}{{b}{52}{\relax }{figure.caption.49}{}}
-\newlabel{fig:dist_jp}{{5.5c}{52}{\relax }{figure.caption.49}{}}
-\newlabel{sub@fig:dist_jp}{{c}{52}{\relax }{figure.caption.49}{}}
-\newlabel{fig:dist_jk}{{5.5d}{52}{\relax }{figure.caption.49}{}}
-\newlabel{sub@fig:dist_jk}{{d}{52}{\relax }{figure.caption.49}{}}
-\newlabel{fig:dist_ff}{{5.5e}{52}{\relax }{figure.caption.49}{}}
-\newlabel{sub@fig:dist_ff}{{e}{52}{\relax }{figure.caption.49}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Histograms representing the distribution of image quality for the five distortions trained from the \gls {live} image quality dataset. The distortions shown are white noise (a), Gaussian blur (b), JPEG compression (c), JP2k compression (d), fast fading (e).\relax }}{52}{figure.caption.49}}
-\newlabel{fig:iqdist}{{5.5}{52}{Histograms representing the distribution of image quality for the five distortions trained from the \gls {live} image quality dataset. The distortions shown are white noise (a), Gaussian blur (b), JPEG compression (c), JP2k compression (d), fast fading (e).\relax }{figure.caption.49}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.7}{\ignorespaces My caption\relax }}{53}{table.caption.50}}
-\newlabel{tab:iq_splits}{{5.7}{53}{My caption\relax }{table.caption.50}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.8}{\ignorespaces Higher Quality\relax }}{53}{table.caption.51}}
-\newlabel{tab:highcomp}{{5.8}{53}{Higher Quality\relax }{table.caption.51}{}}
-\@writefile{tdo}{\contentsline {todo}{gls for FF}{53}{section*.53}}
-\pgfsyspdfmark {pgfid9}{21296906}{8685340}
-\@writefile{lot}{\contentsline {table}{\numberline {5.9}{\ignorespaces Lower Quality\relax }}{54}{table.caption.52}}
-\newlabel{tab:lowcomp}{{5.9}{54}{Lower Quality\relax }{table.caption.52}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.10}{\ignorespaces Lower / Upper\relax }}{54}{table.caption.54}}
-\newlabel{tab:lowhighcomp}{{5.10}{54}{Lower / Upper\relax }{table.caption.54}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.6}{\ignorespaces Average results from 10 trained deep IQA models for each distortion type.\relax }}{51}{table.caption.46}}
+\newlabel{tab:iqaavg}{{5.6}{51}{Average results from 10 trained deep IQA models for each distortion type.\relax }{table.caption.46}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2.3}PASCAL VOC Data Split}{52}{subsection.5.2.3}}
+\newlabel{fig:dist_wn}{{5.5a}{52}{\relax }{figure.caption.47}{}}
+\newlabel{sub@fig:dist_wn}{{a}{52}{\relax }{figure.caption.47}{}}
+\newlabel{fig:dist_gb}{{5.5b}{52}{\relax }{figure.caption.47}{}}
+\newlabel{sub@fig:dist_gb}{{b}{52}{\relax }{figure.caption.47}{}}
+\newlabel{fig:dist_jp}{{5.5c}{52}{\relax }{figure.caption.47}{}}
+\newlabel{sub@fig:dist_jp}{{c}{52}{\relax }{figure.caption.47}{}}
+\newlabel{fig:dist_jk}{{5.5d}{52}{\relax }{figure.caption.47}{}}
+\newlabel{sub@fig:dist_jk}{{d}{52}{\relax }{figure.caption.47}{}}
+\newlabel{fig:dist_ff}{{5.5e}{52}{\relax }{figure.caption.47}{}}
+\newlabel{sub@fig:dist_ff}{{e}{52}{\relax }{figure.caption.47}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.5}{\ignorespaces Histograms representing the distribution of image quality for the five distortions trained from the \gls {live} image quality dataset. The distortions shown are white noise (a), Gaussian blur (b), JPEG compression (c), JP2k compression (d), fast fading (e).\relax }}{52}{figure.caption.47}}
+\newlabel{fig:iqdist}{{5.5}{52}{Histograms representing the distribution of image quality for the five distortions trained from the \gls {live} image quality dataset. The distortions shown are white noise (a), Gaussian blur (b), JPEG compression (c), JP2k compression (d), fast fading (e).\relax }{figure.caption.47}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.7}{\ignorespaces My caption\relax }}{53}{table.caption.48}}
+\newlabel{tab:iq_splits}{{5.7}{53}{My caption\relax }{table.caption.48}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.8}{\ignorespaces Higher Quality\relax }}{53}{table.caption.49}}
+\newlabel{tab:highcomp}{{5.8}{53}{Higher Quality\relax }{table.caption.49}{}}
+\@writefile{tdo}{\contentsline {todo}{gls for FF}{53}{section*.51}}
+\pgfsyspdfmark {pgfid7}{21296906}{5120180}
+\@writefile{lot}{\contentsline {table}{\numberline {5.9}{\ignorespaces Lower Quality\relax }}{54}{table.caption.50}}
+\newlabel{tab:lowcomp}{{5.9}{54}{Lower Quality\relax }{table.caption.50}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.10}{\ignorespaces Lower / Upper\relax }}{54}{table.caption.52}}
+\newlabel{tab:lowhighcomp}{{5.10}{54}{Lower / Upper\relax }{table.caption.52}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.2.4}Evaluating Image Quality Experts}{54}{subsection.5.2.4}}
 \newlabel{sec:iq_experts}{{5.2.4}{54}{Evaluating Image Quality Experts}{subsection.5.2.4}{}}
-\@writefile{toc}{\contentsline {section}{\numberline {5.3}Ensemble}{54}{section.5.3}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.11}{\ignorespaces Gaussian Blur Experts\relax }}{55}{table.caption.55}}
-\newlabel{tab:gb_experts}{{5.11}{55}{Gaussian Blur Experts\relax }{table.caption.55}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.12}{\ignorespaces JPEG Experts\relax }}{55}{table.caption.56}}
-\newlabel{tab:jpeg_experts}{{5.12}{55}{JPEG Experts\relax }{table.caption.56}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.13}{\ignorespaces JP2K Experts\relax }}{56}{table.caption.57}}
-\newlabel{tab:jp2k_experts}{{5.13}{56}{JP2K Experts\relax }{table.caption.57}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.14}{\ignorespaces FF Experts\relax }}{56}{table.caption.58}}
-\newlabel{tab:ff_experts}{{5.14}{56}{FF Experts\relax }{table.caption.58}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces \relax }}{56}{figure.caption.59}}
-\newlabel{fig:ensemble_general}{{5.6}{56}{\relax }{figure.caption.59}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.11}{\ignorespaces Gaussian Blur Experts\relax }}{55}{table.caption.53}}
+\newlabel{tab:gb_experts}{{5.11}{55}{Gaussian Blur Experts\relax }{table.caption.53}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.12}{\ignorespaces JPEG Experts\relax }}{55}{table.caption.54}}
+\newlabel{tab:jpeg_experts}{{5.12}{55}{JPEG Experts\relax }{table.caption.54}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5.3}Ensemble}{55}{section.5.3}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.13}{\ignorespaces JP2K Experts\relax }}{56}{table.caption.55}}
+\newlabel{tab:jp2k_experts}{{5.13}{56}{JP2K Experts\relax }{table.caption.55}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.14}{\ignorespaces FF Experts\relax }}{56}{table.caption.56}}
+\newlabel{tab:ff_experts}{{5.14}{56}{FF Experts\relax }{table.caption.56}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.6}{\ignorespaces \relax }}{56}{figure.caption.57}}
+\newlabel{fig:ensemble_general}{{5.6}{56}{\relax }{figure.caption.57}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.3.1}Average Ensemble}{57}{subsection.5.3.1}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.3.2}Weighted Average Ensemble}{57}{subsection.5.3.2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces \relax }}{58}{figure.caption.60}}
-\newlabel{fig:blur_dist}{{5.7}{58}{\relax }{figure.caption.60}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.7}{\ignorespaces \relax }}{58}{figure.caption.58}}
+\newlabel{fig:blur_dist}{{5.7}{58}{\relax }{figure.caption.58}{}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {5.3.3}Ensemble Results}{58}{subsection.5.3.3}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.15}{\ignorespaces Results for the two ensemble combination strategies and for the baseline model on the 2007 test set.\relax }}{59}{table.caption.61}}
-\newlabel{tab:avgres1}{{5.15}{59}{Results for the two ensemble combination strategies and for the baseline model on the 2007 test set.\relax }{table.caption.61}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.16}{\ignorespaces Results for the the image quality ensemble members and resolution members individually combined using average strategy on the 2007 test set.\relax }}{59}{table.caption.62}}
-\newlabel{tab:avgresind}{{5.16}{59}{Results for the the image quality ensemble members and resolution members individually combined using average strategy on the 2007 test set.\relax }{table.caption.62}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.17}{\ignorespaces Results for the the image quality ensemble members and resolution members individually combined using the weighted average strategy on the 2007 test set.\relax }}{59}{table.caption.63}}
-\newlabel{tab:weiavgind}{{5.17}{59}{Results for the the image quality ensemble members and resolution members individually combined using the weighted average strategy on the 2007 test set.\relax }{table.caption.63}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.18}{\ignorespaces Results for the the image quality ensemble members and resolution members with both combinations of average and weighted average on the 2007 test set.\relax }}{60}{table.caption.64}}
-\newlabel{tab:weandavgres}{{5.18}{60}{Results for the the image quality ensemble members and resolution members with both combinations of average and weighted average on the 2007 test set.\relax }{table.caption.64}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.19}{\ignorespaces Results for the two ensemble combination strategies and for the baseline model on the 2007 test set. Shown is both the results with the expert ensemble members only and experts plus the baseline model.\relax }}{61}{table.caption.65}}
-\newlabel{tab:ensemble_base}{{5.19}{61}{Results for the two ensemble combination strategies and for the baseline model on the 2007 test set. Shown is both the results with the expert ensemble members only and experts plus the baseline model.\relax }{table.caption.65}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.20}{\ignorespaces Results for the the image quality ensemble members and resolution members individually combined using average strategy on the 2007 test set. Shown is both the results with the expert ensemble members only and experts plus the baseline model.\relax }}{61}{table.caption.66}}
-\newlabel{tab:ensembleavg_base}{{5.20}{61}{Results for the the image quality ensemble members and resolution members individually combined using average strategy on the 2007 test set. Shown is both the results with the expert ensemble members only and experts plus the baseline model.\relax }{table.caption.66}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.21}{\ignorespaces Results for the the image quality ensemble members and resolution members individually combined using weighted average strategy on the 2007 test set. Shown is both the results with the expert ensemble members only and experts plus the baseline model.\relax }}{61}{table.caption.67}}
-\newlabel{tab:ensemblewavg_base}{{5.21}{61}{Results for the the image quality ensemble members and resolution members individually combined using weighted average strategy on the 2007 test set. Shown is both the results with the expert ensemble members only and experts plus the baseline model.\relax }{table.caption.67}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.22}{\ignorespaces Results for the the image quality ensemble members and resolution members with both combinations of average and weighted average on the 2007 test set. Shown is both the results with the expert ensemble members only and experts plus the baseline model.\relax }}{62}{table.caption.68}}
-\newlabel{tab:ensemble_comb_base}{{5.22}{62}{Results for the the image quality ensemble members and resolution members with both combinations of average and weighted average on the 2007 test set. Shown is both the results with the expert ensemble members only and experts plus the baseline model.\relax }{table.caption.68}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.23}{\ignorespaces Results for the individual classes in the 2007 test set. Shown are the results for the baseline model and Resolution$_{base}$. Additionally the difference between the two methods are presented for a given class.\relax }}{62}{table.caption.69}}
-\newlabel{tab:resbaseclasses}{{5.23}{62}{Results for the individual classes in the 2007 test set. Shown are the results for the baseline model and Resolution$_{base}$. Additionally the difference between the two methods are presented for a given class.\relax }{table.caption.69}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {5.24}{\ignorespaces Results for the individual classes in the 2007 test set. Shown are the results for the baseline model and Image Quality$_{WAvg}$ / Resolution$_{Avgbase}$ . Additionally the difference between the two methods are presented for a given class\relax }}{63}{table.caption.70}}
-\newlabel{tab:bestbaseclasses}{{5.24}{63}{Results for the individual classes in the 2007 test set. Shown are the results for the baseline model and Image Quality$_{WAvg}$ / Resolution$_{Avgbase}$ . Additionally the difference between the two methods are presented for a given class\relax }{table.caption.70}{}}
-\newlabel{fig:}{{5.8a}{63}{\relax }{figure.caption.71}{}}
-\newlabel{sub@fig:}{{a}{63}{\relax }{figure.caption.71}{}}
-\newlabel{fig:}{{5.8b}{63}{\relax }{figure.caption.71}{}}
-\newlabel{sub@fig:}{{b}{63}{\relax }{figure.caption.71}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces Detections for the boat class from an image in the 2007 test set. Shown are the bounding boxes for the ground truth annotation, baseline, Resolution$_{base}$ (Res) and Image Quality$_{WAvg}$ / Resolution$_{Avgbase}$ (IQ / Res). The \gls {iou} between the ground truth and bounding box is shown in parentheses for each method.\relax }}{63}{figure.caption.71}}
-\newlabel{fig:boatres}{{5.8}{63}{Detections for the boat class from an image in the 2007 test set. Shown are the bounding boxes for the ground truth annotation, baseline, Resolution$_{base}$ (Res) and Image Quality$_{WAvg}$ / Resolution$_{Avgbase}$ (IQ / Res). The \gls {iou} between the ground truth and bounding box is shown in parentheses for each method.\relax }{figure.caption.71}{}}
-\newlabel{fig:}{{5.9a}{64}{\relax }{figure.caption.72}{}}
-\newlabel{sub@fig:}{{a}{64}{\relax }{figure.caption.72}{}}
-\newlabel{fig:}{{5.9b}{64}{\relax }{figure.caption.72}{}}
-\newlabel{sub@fig:}{{b}{64}{\relax }{figure.caption.72}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5.9}{\ignorespaces Detections for the train class from an image in the 2007 test set. Shown are the bounding boxes for the ground truth annotation, baseline, Resolution$_{base}$ (Res) and Image Quality$_{WAvg}$ / Resolution$_{Avgbase}$ (IQ / Res). The \gls {iou} between the ground truth and bounding box is shown in parentheses for each method.\relax }}{64}{figure.caption.72}}
-\newlabel{fig:trainres}{{5.9}{64}{Detections for the train class from an image in the 2007 test set. Shown are the bounding boxes for the ground truth annotation, baseline, Resolution$_{base}$ (Res) and Image Quality$_{WAvg}$ / Resolution$_{Avgbase}$ (IQ / Res). The \gls {iou} between the ground truth and bounding box is shown in parentheses for each method.\relax }{figure.caption.72}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.15}{\ignorespaces Results for the two ensemble combination strategies and for the baseline model on the 2007 test set.\relax }}{59}{table.caption.59}}
+\newlabel{tab:avgres1}{{5.15}{59}{Results for the two ensemble combination strategies and for the baseline model on the 2007 test set.\relax }{table.caption.59}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.16}{\ignorespaces Results for the the image quality ensemble members and resolution members individually combined using average strategy on the 2007 test set.\relax }}{59}{table.caption.60}}
+\newlabel{tab:avgresind}{{5.16}{59}{Results for the the image quality ensemble members and resolution members individually combined using average strategy on the 2007 test set.\relax }{table.caption.60}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.17}{\ignorespaces Results for the the image quality ensemble members and resolution members individually combined using the weighted average strategy on the 2007 test set.\relax }}{59}{table.caption.61}}
+\newlabel{tab:weiavgind}{{5.17}{59}{Results for the the image quality ensemble members and resolution members individually combined using the weighted average strategy on the 2007 test set.\relax }{table.caption.61}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.18}{\ignorespaces Results for the the image quality ensemble members and resolution members with both combinations of average and weighted average on the 2007 test set.\relax }}{60}{table.caption.62}}
+\newlabel{tab:weandavgres}{{5.18}{60}{Results for the the image quality ensemble members and resolution members with both combinations of average and weighted average on the 2007 test set.\relax }{table.caption.62}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.19}{\ignorespaces Results for the two ensemble combination strategies and for the baseline model on the 2007 test set. Shown is both the results with the expert ensemble members only and experts plus the baseline model.\relax }}{61}{table.caption.63}}
+\newlabel{tab:ensemble_base}{{5.19}{61}{Results for the two ensemble combination strategies and for the baseline model on the 2007 test set. Shown is both the results with the expert ensemble members only and experts plus the baseline model.\relax }{table.caption.63}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.20}{\ignorespaces Results for the the image quality ensemble members and resolution members individually combined using average strategy on the 2007 test set. Shown is both the results with the expert ensemble members only and experts plus the baseline model.\relax }}{61}{table.caption.64}}
+\newlabel{tab:ensembleavg_base}{{5.20}{61}{Results for the the image quality ensemble members and resolution members individually combined using average strategy on the 2007 test set. Shown is both the results with the expert ensemble members only and experts plus the baseline model.\relax }{table.caption.64}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.21}{\ignorespaces Results for the the image quality ensemble members and resolution members individually combined using weighted average strategy on the 2007 test set. Shown is both the results with the expert ensemble members only and experts plus the baseline model.\relax }}{61}{table.caption.65}}
+\newlabel{tab:ensemblewavg_base}{{5.21}{61}{Results for the the image quality ensemble members and resolution members individually combined using weighted average strategy on the 2007 test set. Shown is both the results with the expert ensemble members only and experts plus the baseline model.\relax }{table.caption.65}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.22}{\ignorespaces Results for the the image quality ensemble members and resolution members with both combinations of average and weighted average on the 2007 test set. Shown is both the results with the expert ensemble members only and experts plus the baseline model.\relax }}{62}{table.caption.66}}
+\newlabel{tab:ensemble_comb_base}{{5.22}{62}{Results for the the image quality ensemble members and resolution members with both combinations of average and weighted average on the 2007 test set. Shown is both the results with the expert ensemble members only and experts plus the baseline model.\relax }{table.caption.66}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.23}{\ignorespaces Results for the individual classes in the 2007 test set. Shown are the results for the baseline model and Resolution$_{base}$. Additionally the difference between the two methods are presented for a given class.\relax }}{62}{table.caption.67}}
+\newlabel{tab:resbaseclasses}{{5.23}{62}{Results for the individual classes in the 2007 test set. Shown are the results for the baseline model and Resolution$_{base}$. Additionally the difference between the two methods are presented for a given class.\relax }{table.caption.67}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5.24}{\ignorespaces Results for the individual classes in the 2007 test set. Shown are the results for the baseline model and Image Quality$_{WAvg}$ / Resolution$_{Avgbase}$ . Additionally the difference between the two methods are presented for a given class\relax }}{63}{table.caption.68}}
+\newlabel{tab:bestbaseclasses}{{5.24}{63}{Results for the individual classes in the 2007 test set. Shown are the results for the baseline model and Image Quality$_{WAvg}$ / Resolution$_{Avgbase}$ . Additionally the difference between the two methods are presented for a given class\relax }{table.caption.68}{}}
+\newlabel{fig:}{{5.8a}{63}{\relax }{figure.caption.69}{}}
+\newlabel{sub@fig:}{{a}{63}{\relax }{figure.caption.69}{}}
+\newlabel{fig:}{{5.8b}{63}{\relax }{figure.caption.69}{}}
+\newlabel{sub@fig:}{{b}{63}{\relax }{figure.caption.69}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.8}{\ignorespaces Detections for the boat class from an image in the 2007 test set. Shown are the bounding boxes for the ground truth annotation, baseline, Resolution$_{base}$ (Res) and Image Quality$_{WAvg}$ / Resolution$_{Avgbase}$ (IQ / Res). The \gls {iou} between the ground truth and bounding box is shown in parentheses for each method.\relax }}{63}{figure.caption.69}}
+\newlabel{fig:boatres}{{5.8}{63}{Detections for the boat class from an image in the 2007 test set. Shown are the bounding boxes for the ground truth annotation, baseline, Resolution$_{base}$ (Res) and Image Quality$_{WAvg}$ / Resolution$_{Avgbase}$ (IQ / Res). The \gls {iou} between the ground truth and bounding box is shown in parentheses for each method.\relax }{figure.caption.69}{}}
+\newlabel{fig:}{{5.9a}{64}{\relax }{figure.caption.70}{}}
+\newlabel{sub@fig:}{{a}{64}{\relax }{figure.caption.70}{}}
+\newlabel{fig:}{{5.9b}{64}{\relax }{figure.caption.70}{}}
+\newlabel{sub@fig:}{{b}{64}{\relax }{figure.caption.70}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5.9}{\ignorespaces Detections for the train class from an image in the 2007 test set. Shown are the bounding boxes for the ground truth annotation, baseline, Resolution$_{base}$ (Res) and Image Quality$_{WAvg}$ / Resolution$_{Avgbase}$ (IQ / Res). The \gls {iou} between the ground truth and bounding box is shown in parentheses for each method.\relax }}{64}{figure.caption.70}}
+\newlabel{fig:trainres}{{5.9}{64}{Detections for the train class from an image in the 2007 test set. Shown are the bounding boxes for the ground truth annotation, baseline, Resolution$_{base}$ (Res) and Image Quality$_{WAvg}$ / Resolution$_{Avgbase}$ (IQ / Res). The \gls {iou} between the ground truth and bounding box is shown in parentheses for each method.\relax }{figure.caption.70}{}}
 \@writefile{toc}{\contentsline {chapter}{\numberline {6}Discussion}{65}{chapter.6}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{toc}{\contentsline {section}{\numberline {6.1}Choice of Ensemble Factors}{65}{section.6.1}}
 \@writefile{toc}{\contentsline {section}{\numberline {6.2}Choice of Object Detector}{65}{section.6.2}}
 \@writefile{toc}{\contentsline {section}{\numberline {6.3}Training the Ensemble}{65}{section.6.3}}
-\@writefile{tdo}{\contentsline {todo}{what is discussed}{65}{section*.73}}
-\pgfsyspdfmark {pgfid10}{21296906}{5050412}
+\@writefile{tdo}{\contentsline {todo}{what is discussed}{65}{section*.71}}
+\pgfsyspdfmark {pgfid8}{21296906}{5050412}
 \@writefile{toc}{\contentsline {subsection}{\numberline {6.3.1}Creating the Data Subsets}{66}{subsection.6.3.1}}
-\newlabel{fig:}{{6.1a}{66}{\relax }{figure.caption.74}{}}
-\newlabel{sub@fig:}{{a}{66}{\relax }{figure.caption.74}{}}
-\newlabel{fig:}{{6.1b}{66}{\relax }{figure.caption.74}{}}
-\newlabel{sub@fig:}{{b}{66}{\relax }{figure.caption.74}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces Differences in distribution of ground truth object sizes for the classes car (a) and cat (b) in 07++12.\relax }}{66}{figure.caption.74}}
-\newlabel{fig:classskew}{{6.1}{66}{Differences in distribution of ground truth object sizes for the classes car (a) and cat (b) in 07++12.\relax }{figure.caption.74}{}}
+\newlabel{fig:}{{6.1a}{66}{\relax }{figure.caption.72}{}}
+\newlabel{sub@fig:}{{a}{66}{\relax }{figure.caption.72}{}}
+\newlabel{fig:}{{6.1b}{66}{\relax }{figure.caption.72}{}}
+\newlabel{sub@fig:}{{b}{66}{\relax }{figure.caption.72}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6.1}{\ignorespaces Differences in distribution of ground truth object sizes for the classes car (a) and cat (b) in 07++12.\relax }}{66}{figure.caption.72}}
+\newlabel{fig:classskew}{{6.1}{66}{Differences in distribution of ground truth object sizes for the classes car (a) and cat (b) in 07++12.\relax }{figure.caption.72}{}}
 \citation{deepres}
 \citation{tid2013}
 \citation{cisq}
@@ -476,10 +473,10 @@
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \bibdata{bibtex}
-\bibcite{pascalvoc2012}{1}
-\bibcite{imagenet}{2}
-\bibcite{mscoco}{3}
-\bibcite{zhang}{4}
+\bibcite{zhang}{1}
+\bibcite{pascalvoc2012}{2}
+\bibcite{imagenet}{3}
+\bibcite{mscoco}{4}
 \bibcite{schroff}{5}
 \bibcite{pascalvoc2010}{6}
 \bibcite{pascalvoc2015}{7}
@@ -489,11 +486,11 @@
 \bibcite{fastrcnn}{11}
 \bibcite{alexnet}{12}
 \bibcite{vgg16}{13}
-\newlabel{bibtex}{{7}{71}{Conclusion}{section*.75}{}}
-\@writefile{toc}{\contentsline {chapter}{Literature}{71}{section*.75}}
+\newlabel{bibtex}{{7}{71}{Conclusion}{section*.73}{}}
+\@writefile{toc}{\contentsline {chapter}{Literature}{71}{section*.73}}
 \bibcite{fasterrcnn}{14}
-\bibcite{deepres}{15}
-\bibcite{cocolead}{16}
+\bibcite{cocolead}{15}
+\bibcite{deepres}{16}
 \bibcite{incepres}{17}
 \bibcite{speedacc}{18}
 \bibcite{multipath}{19}
@@ -510,70 +507,73 @@
 \bibcite{rfcn}{30}
 \bibcite{semfcn}{31}
 \bibcite{instancefcn}{32}
-\bibcite{lenet}{33}
-\bibcite{ensemblebook}{34}
-\bibcite{caffe}{35}
-\bibcite{livepaper}{36}
-\bibcite{liveweb}{37}
-\bibcite{tid2013}{38}
-\bibcite{csiq}{39}
-\bibcite{deepiqa}{40}
-\bibcite{adam}{41}
-\newlabel{appendices}{{7}{74}{Conclusion}{chapter*.76}{}}
-\@writefile{toc}{\contentsline {chapter}{Appendices}{75}{section*.77}}
+\bibcite{cs321n}{33}
+\bibcite{lenet}{34}
+\bibcite{xavier}{35}
+\bibcite{ensemblebook}{36}
+\bibcite{caffe}{37}
+\bibcite{deepiqa}{38}
+\bibcite{livepaper}{39}
+\bibcite{liveweb}{40}
+\bibcite{tid2013}{41}
+\bibcite{csiq}{42}
+\bibcite{chainer}{43}
+\bibcite{adam}{44}
+\newlabel{appendices}{{7}{74}{Conclusion}{chapter*.74}{}}
+\@writefile{toc}{\contentsline {chapter}{Appendices}{75}{section*.75}}
 \@writefile{toc}{\contentsline {chapter}{\numberline {A}Appendix A}{76}{Appendix.a.A}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{toc}{\contentsline {section}{\numberline {A.1}Resolution-Aware Object Detection}{76}{section.a.A.1}}
-\@writefile{lot}{\contentsline {table}{\numberline {A.1}{\ignorespaces Results Test07$_{small}$\relax }}{76}{table.caption.78}}
-\newlabel{my-label}{{A.1}{76}{Results Test07$_{small}$\relax }{table.caption.78}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {A.2}{\ignorespaces Results Test07$_{larger}$\relax }}{76}{table.caption.79}}
-\newlabel{my-label}{{A.2}{76}{Results Test07$_{larger}$\relax }{table.caption.79}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {A.3}{\ignorespaces Results 07\relax }}{76}{table.caption.80}}
-\newlabel{my-label}{{A.3}{76}{Results 07\relax }{table.caption.80}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {A.1}{\ignorespaces Results Test07$_{small}$\relax }}{76}{table.caption.76}}
+\newlabel{my-label}{{A.1}{76}{Results Test07$_{small}$\relax }{table.caption.76}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {A.2}{\ignorespaces Results Test07$_{larger}$\relax }}{76}{table.caption.77}}
+\newlabel{my-label}{{A.2}{76}{Results Test07$_{larger}$\relax }{table.caption.77}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {A.3}{\ignorespaces Results 07\relax }}{76}{table.caption.78}}
+\newlabel{my-label}{{A.3}{76}{Results 07\relax }{table.caption.78}{}}
 \@writefile{toc}{\contentsline {section}{\numberline {A.2}Deep IQA Models}{76}{section.a.A.2}}
 \@writefile{toc}{\contentsline {section}{\numberline {A.3}Detection Examples}{76}{section.a.A.3}}
 \newlabel{sec:detectionappendix}{{A.3}{76}{Detection Examples}{section.a.A.3}{}}
-\newlabel{fig:}{{A.1a}{76}{\relax }{figure.caption.86}{}}
-\newlabel{sub@fig:}{{a}{76}{\relax }{figure.caption.86}{}}
-\newlabel{fig:}{{A.1b}{76}{\relax }{figure.caption.86}{}}
-\newlabel{sub@fig:}{{b}{76}{\relax }{figure.caption.86}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.1}{\ignorespaces \relax }}{76}{figure.caption.86}}
-\newlabel{fig:}{{A.1}{76}{\relax }{figure.caption.86}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {A.4}{\ignorespaces Gaussian Blur\relax }}{77}{table.caption.81}}
-\newlabel{my-label}{{A.4}{77}{Gaussian Blur\relax }{table.caption.81}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {A.5}{\ignorespaces White Noise\relax }}{77}{table.caption.82}}
-\newlabel{my-label}{{A.5}{77}{White Noise\relax }{table.caption.82}{}}
-\newlabel{fig:}{{A.2a}{77}{\relax }{figure.caption.87}{}}
-\newlabel{sub@fig:}{{a}{77}{\relax }{figure.caption.87}{}}
-\newlabel{fig:}{{A.2b}{77}{\relax }{figure.caption.87}{}}
-\newlabel{sub@fig:}{{b}{77}{\relax }{figure.caption.87}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.2}{\ignorespaces \relax }}{77}{figure.caption.87}}
-\newlabel{fig:}{{A.2}{77}{\relax }{figure.caption.87}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {A.6}{\ignorespaces JPEG\relax }}{78}{table.caption.83}}
-\newlabel{my-label}{{A.6}{78}{JPEG\relax }{table.caption.83}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {A.7}{\ignorespaces JP2K\relax }}{78}{table.caption.84}}
-\newlabel{my-label}{{A.7}{78}{JP2K\relax }{table.caption.84}{}}
-\newlabel{fig:}{{A.3a}{78}{\relax }{figure.caption.88}{}}
-\newlabel{sub@fig:}{{a}{78}{\relax }{figure.caption.88}{}}
-\newlabel{fig:}{{A.3b}{78}{\relax }{figure.caption.88}{}}
-\newlabel{sub@fig:}{{b}{78}{\relax }{figure.caption.88}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.3}{\ignorespaces \relax }}{78}{figure.caption.88}}
-\newlabel{fig:}{{A.3}{78}{\relax }{figure.caption.88}{}}
-\@writefile{lot}{\contentsline {table}{\numberline {A.8}{\ignorespaces Fast Fading\relax }}{79}{table.caption.85}}
-\newlabel{my-label}{{A.8}{79}{Fast Fading\relax }{table.caption.85}{}}
-\newlabel{fig:}{{A.4a}{79}{\relax }{figure.caption.89}{}}
-\newlabel{sub@fig:}{{a}{79}{\relax }{figure.caption.89}{}}
-\newlabel{fig:}{{A.4b}{79}{\relax }{figure.caption.89}{}}
-\newlabel{sub@fig:}{{b}{79}{\relax }{figure.caption.89}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.4}{\ignorespaces \relax }}{79}{figure.caption.89}}
-\newlabel{fig:}{{A.4}{79}{\relax }{figure.caption.89}{}}
-\newlabel{fig:}{{A.5a}{79}{\relax }{figure.caption.90}{}}
-\newlabel{sub@fig:}{{a}{79}{\relax }{figure.caption.90}{}}
-\newlabel{fig:}{{A.5b}{79}{\relax }{figure.caption.90}{}}
-\newlabel{sub@fig:}{{b}{79}{\relax }{figure.caption.90}{}}
-\@writefile{lof}{\contentsline {figure}{\numberline {A.5}{\ignorespaces \relax }}{79}{figure.caption.90}}
-\newlabel{fig:}{{A.5}{79}{\relax }{figure.caption.90}{}}
+\newlabel{fig:}{{A.1a}{76}{\relax }{figure.caption.84}{}}
+\newlabel{sub@fig:}{{a}{76}{\relax }{figure.caption.84}{}}
+\newlabel{fig:}{{A.1b}{76}{\relax }{figure.caption.84}{}}
+\newlabel{sub@fig:}{{b}{76}{\relax }{figure.caption.84}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.1}{\ignorespaces \relax }}{76}{figure.caption.84}}
+\newlabel{fig:}{{A.1}{76}{\relax }{figure.caption.84}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {A.4}{\ignorespaces Gaussian Blur\relax }}{77}{table.caption.79}}
+\newlabel{my-label}{{A.4}{77}{Gaussian Blur\relax }{table.caption.79}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {A.5}{\ignorespaces White Noise\relax }}{77}{table.caption.80}}
+\newlabel{my-label}{{A.5}{77}{White Noise\relax }{table.caption.80}{}}
+\newlabel{fig:}{{A.2a}{77}{\relax }{figure.caption.85}{}}
+\newlabel{sub@fig:}{{a}{77}{\relax }{figure.caption.85}{}}
+\newlabel{fig:}{{A.2b}{77}{\relax }{figure.caption.85}{}}
+\newlabel{sub@fig:}{{b}{77}{\relax }{figure.caption.85}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.2}{\ignorespaces \relax }}{77}{figure.caption.85}}
+\newlabel{fig:}{{A.2}{77}{\relax }{figure.caption.85}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {A.6}{\ignorespaces JPEG\relax }}{78}{table.caption.81}}
+\newlabel{my-label}{{A.6}{78}{JPEG\relax }{table.caption.81}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {A.7}{\ignorespaces JP2K\relax }}{78}{table.caption.82}}
+\newlabel{my-label}{{A.7}{78}{JP2K\relax }{table.caption.82}{}}
+\newlabel{fig:}{{A.3a}{78}{\relax }{figure.caption.86}{}}
+\newlabel{sub@fig:}{{a}{78}{\relax }{figure.caption.86}{}}
+\newlabel{fig:}{{A.3b}{78}{\relax }{figure.caption.86}{}}
+\newlabel{sub@fig:}{{b}{78}{\relax }{figure.caption.86}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.3}{\ignorespaces \relax }}{78}{figure.caption.86}}
+\newlabel{fig:}{{A.3}{78}{\relax }{figure.caption.86}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {A.8}{\ignorespaces Fast Fading\relax }}{79}{table.caption.83}}
+\newlabel{my-label}{{A.8}{79}{Fast Fading\relax }{table.caption.83}{}}
+\newlabel{fig:}{{A.4a}{79}{\relax }{figure.caption.87}{}}
+\newlabel{sub@fig:}{{a}{79}{\relax }{figure.caption.87}{}}
+\newlabel{fig:}{{A.4b}{79}{\relax }{figure.caption.87}{}}
+\newlabel{sub@fig:}{{b}{79}{\relax }{figure.caption.87}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.4}{\ignorespaces \relax }}{79}{figure.caption.87}}
+\newlabel{fig:}{{A.4}{79}{\relax }{figure.caption.87}{}}
+\newlabel{fig:}{{A.5a}{79}{\relax }{figure.caption.88}{}}
+\newlabel{sub@fig:}{{a}{79}{\relax }{figure.caption.88}{}}
+\newlabel{fig:}{{A.5b}{79}{\relax }{figure.caption.88}{}}
+\newlabel{sub@fig:}{{b}{79}{\relax }{figure.caption.88}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {A.5}{\ignorespaces \relax }}{79}{figure.caption.88}}
+\newlabel{fig:}{{A.5}{79}{\relax }{figure.caption.88}{}}
 \newlabel{LastPage}{{}{80}{}{page.80}{}}
 \xdef\lastpage@lastpage{80}
 \xdef\lastpage@lastpageHy{80}

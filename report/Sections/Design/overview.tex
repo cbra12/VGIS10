@@ -64,7 +64,7 @@ Based upon these issues the following design requirements are set with respect t
 
 Now that the general requirements have been outlined the following sections will cover the architectural considerations to ensure that the above requirements can be met.
 
-\section{Training Ensemble Members}
+\section{Training Ensemble Members}\label{sec:trainens}
 The training of the R-FCN members will be done using \gls{caffe} \cite{caffe}. This was chosen due to the research being provided by the authors of R-FCN through training code and pre-trained \gls{caffe} models. However, as there is the requirement to combine detections between ensemble members, then the detections must be found based upon the same input to each model. One solution to this is to use the region proposals found using the \gls{rpn}. In a standard R-FCN the \gls{rpn} is an internal part of the network and is trained end-to-end. However, as these proposals must be constant between all ensemble members this method is not appropriate. Additionally, due to the nature of the \gls{caffe} framework, once a network has been defined and trained it is difficult to change it. For example, a standard R-FCN takes the entire image as inputs but in this work the requirement is that it takes smaller region proposals. The solution to these points is to train the networks using a method inspired by the 4-step alternating training method presented by the Faster R-CNN authors \cite{fasterrcnn}. The process can be seen in \figref{4steptrain}.
 
  \begin{figure}[H]
@@ -107,6 +107,9 @@ Weight decay         & 0.0005 \\ \hline
  Both networks are trained with a batchsize of one example per iteration. In the \gls{rpn} models the batches are simply one ground truth example per iteration. Whereas, the training of the \glspl{rfcn} sample 128 mini-batches from a given image. These mini-batches can consist of both object class samples and background samples. 
  The only data augmentation used in training is horizontal flipping of images, effectively creating double the amount of training examples.
 
- \subsection{Object Detection Benchmark Choice}
+ \subsection{Object Detection Benchmark}
+ The choice of object detection benchmark is \gls{pascalvoc}. A common strategy in object detection systems is the conduct preliminary experiments on \gls{pascalvoc} data. Then if applicable a potential system can be trained on a larger dataset such as \gls{mscoco}. By training on \gls{pascalvoc} a larger number of ensemble members can be trained on the single GPU available.
+ \\\\
+ The data used will follow the leading methods for \gls{pascalvoc} 2007 object detection. Training will be done on the 07+12 train sets and testing will be conducted on the 07 test set.
 
 

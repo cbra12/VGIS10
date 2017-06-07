@@ -30,15 +30,15 @@
 \contentsline {subsection}{\numberline {4.1.1}Object Size Data Sampling}{43}{subsection.4.1.1}
 \contentsline {subsection}{\numberline {4.1.2}Image Quality Data Sampling}{43}{subsection.4.1.2}
 \contentsline {subsection}{\numberline {4.1.3}\gls {rfcn} Training}{43}{subsection.4.1.3}
-\contentsline {subsection}{\numberline {4.1.4}Object Detection Benchmark Choice}{44}{subsection.4.1.4}
+\contentsline {subsection}{\numberline {4.1.4}Object Detection Benchmark}{44}{subsection.4.1.4}
 \contentsline {chapter}{\numberline {5}Implementation}{45}{chapter.5}
 \contentsline {section}{\numberline {5.1}Resolution-Aware Object Detection}{45}{section.5.1}
 \contentsline {section}{\numberline {5.2}Image Quality Assessment}{47}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}LIVE Image Quality Database}{48}{subsection.5.2.1}
 \contentsline {subsection}{\numberline {5.2.2}Training Deep IQA}{50}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}PASCAL VOC Data Split}{51}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.3}PASCAL VOC Data Split}{52}{subsection.5.2.3}
 \contentsline {subsection}{\numberline {5.2.4}Evaluating Image Quality Experts}{54}{subsection.5.2.4}
-\contentsline {section}{\numberline {5.3}Ensemble}{54}{section.5.3}
+\contentsline {section}{\numberline {5.3}Ensemble}{55}{section.5.3}
 \contentsline {subsection}{\numberline {5.3.1}Average Ensemble}{57}{subsection.5.3.1}
 \contentsline {subsection}{\numberline {5.3.2}Weighted Average Ensemble}{57}{subsection.5.3.2}
 \contentsline {subsection}{\numberline {5.3.3}Ensemble Results}{58}{subsection.5.3.3}
@@ -53,8 +53,8 @@
 \contentsline {section}{\numberline {6.6}Ensemble Member Experts}{68}{section.6.6}
 \contentsline {section}{\numberline {6.7}Future Work}{68}{section.6.7}
 \contentsline {chapter}{\numberline {7}Conclusion}{69}{chapter.7}
-\contentsline {chapter}{Literature}{71}{section*.75}
-\contentsline {chapter}{Appendices}{75}{section*.77}
+\contentsline {chapter}{Literature}{71}{section*.73}
+\contentsline {chapter}{Appendices}{75}{section*.75}
 \contentsline {chapter}{\numberline {A}Appendix A}{76}{Appendix.a.A}
 \contentsline {section}{\numberline {A.1}Resolution-Aware Object Detection}{76}{section.a.A.1}
 \contentsline {section}{\numberline {A.2}Deep IQA Models}{76}{section.a.A.2}

@@ -46,16 +46,16 @@
 \end{comment}
 
 
-
+This chapter will cover the implementation aspects of the ensemble members outlined in the previous chapter. This includes determining how to sample the 07+12 training data, combination of ensemble members and overall final results detection results.
 
 \section{Resolution-Aware Object Detection}\label{sec:resawareSec}
-Object detectors are commonly more accurate on objects that cover a larger number of pixels in an image. This is intuitive as objects with a lower resolution objectively have less details that can describe them. The poorer performance can be seen in \tableref{cocores}, for all object detectors the \gls{ap} is considerably lower for smaller objects in comparison to both medium and large. The best performing detector from \cite{deepres}, has an \gls{ap} difference of 35.3\%, from 50.9\% for large objects to 15.6\% for small. 
-A potential method of tackling this issue is to train multiple detectors on separate partitions of the training data according to the size of the object. While deep-based \gls{cnn} have millions of parameters to generalise from training to tesitng, the difference between small and large objects may skew the learning towards the latter. In order to test this hypothesis an initial test will be conducted on the \gls{pascalvoc} dataset. However, \gls{pascalvoc} does not have the same definition of objects sizes as in \gls{mscoco}. Therefore, the distribution of the bounding boxes from the training set must be analysed in order to determine an appropriate split of data based on object size. This was done by parsing all of the bounding box coordinates in the 07++12 training set and calculating the area. A histogram of the area can be seen in \figref{0712hist}. There is a clear tendency to smaller objects in the training set with a clear skew towards the left of the figure.
+As determined earlier object detectors are generally more accurate on objects that cover a larger number of pixels in an image. This is intuitive as objects with a lower resolution objectively have less details that can describe them. The poorer performance can be seen in \tableref{cocores}, for all object detectors the \gls{ap} is considerably lower for smaller objects in comparison to both medium and large. The best performing detector from \cite{deepres}, has an \gls{ap} difference of 35.3\%, from 50.9\% for large objects to 15.6\% for small. 
+A potential method of tackling this issue is to train multiple detectors on separate partitions of the training data according to the size of the object. While deep-based \gls{cnn} have millions of parameters to generalise from training to tesitng, the difference between small and large objects may skew the learning towards the latter. In order to test this hypothesis an initial test will be conducted on the 07+12 train set. However, \gls{pascalvoc} does not have the same definition of objects sizes as in \gls{mscoco}. Therefore, the distribution of the ground truth bounding boxes from the 07+12 set must be analysed in order to determine if an appropriate split of data based on object size can be made. This was done by parsing all of the bounding box coordinates in the set and calculating the area. A histogram of the all of the ground truth areas can be seen in \figref{0712hist}. There is a clear tendency to smaller objects in the training set with a clear skew towards the left of the figure.
 
 \begin{figure}[H]
   \centering
     \includegraphics[width=0.6\textwidth]{Figs/Implementation/0712histred.pdf}
-      \caption{Histogram of the \gls{pascalvoc} 07++12 bounding box area.}
+      \caption{Histogram of the \gls{pascalvoc} 07+12 bounding box area.}
     \label{fig:0712hist}
 \end{figure}
 
@@ -123,18 +123,18 @@ A potential method of tackling this issue is to train multiple detectors on sepa
 
 \end{comment}
 \change[inline]{update following explanation}
-Ensemble of above networks proved not to be possible due to Caffe network architecture. Once networks have been trained as an end-to-end method, the networks were not able to take object proposals as inputs. Solution instead to train the network in 5 stages. Much slower. Result on VOC2007: 79.59 vs end to end: 76.35 
-
-While \tableref{resresults} shows that it is possible for a \gls{rfcn} network to be optimised to objects of a certain size, a more powerful approach is to combine the two networks in an ensemble during testing. Given a potential object, the ensemble should weight one of the networks outputs accordingly. A simple example in this case would be to weight one of the outputs by 100\%, if the potential object is below or above the threshold found in the training data. The results gathered in \tableref{resresults} are much more naive than this, simply splitting the testing data and only using one trained network at a time. Object proposals will needed to be known during inference to ensure that the outputs of the networks in an ensemble are performing classification in the same locations. On top of this, new networks will needed to be trained on subsets of smaller and larger data due to the internal architecture of \gls{caffe} networks. The networks in the ensemble will need to take object proposals as inputs, however, the above mentioned networks are trained based upon the end-to-end versions of the \gls{rfcn}. These do not take proposals as inputs but rather have an internal \gls{rpn}. Therefore, the new networks are trained using 4-step alternating training used in the original Faster R-CNN paper \cite{fasterrcnn}. 
+The data in \figref{0712hist} can be split into two equal subsets if the median area of 19,205.5 is used. However, as covered in \sectionref{trainens}, the ensemble \gls{rfcn} members are trained with region proposal inputs of both ground truth positives and negative examples found using a \gls{rpn}.
 \begin{comment}
+    While \tableref{resresults} shows that it is possible for a \gls{rfcn} network to be optimised to objects of a certain size, a more powerful approach is to combine the two networks in an ensemble during testing. Given a potential object, the ensemble should weight one of the networks outputs accordingly. A simple example in this case would be to weight one of the outputs by 100\%, if the potential object is below or above the threshold found in the training data. The results gathered in \tableref{resresults} are much more naive than this, simply splitting the testing data and only using one trained network at a time. Object proposals will needed to be known during inference to ensure that the outputs of the networks in an ensemble are performing classification in the same locations. On top of this, new networks will needed to be trained on subsets of smaller and larger data due to the internal architecture of \gls{caffe} networks. The networks in the ensemble will need to take object proposals as inputs, however, the above mentioned networks are trained based upon the end-to-end versions of the \gls{rfcn}. These do not take proposals as inputs but rather have an internal \gls{rpn}. Therefore, the new networks are trained using 4-step alternating training used in the original Faster R-CNN paper \cite{fasterrcnn}. 
+
     In this approach the overall network in trained in multiple steps rather than an end-to-end method. In step one a \gls{rpn} is trained to determine region proposals, the \gls{rpn} is initialised from a pre-trained ImageNet model and fine-tuned to the proposal task. Next a \gls{rfcn} is trained based upon the proposals found in the previous step. This network is also initialised with a pre-trained ImageNet model. In step three, another \gls{rpn} is trained but initialised using the \gls{rfcn} from step two. In this step the convolutional layers that are shared between the \gls{rfcn} and \gls{rpn} are fixed and only the layers unique to the \gls{rpn} are updated. In this final step, the shared layers between the two networks are again kept fixed and the layers unique to the \gls{rfcn} are updated. By training a model with this approach a testing image is able to run through the same steps as a \gls{rfcn} trained end-to-end, however, as the networks are split into different models it is also possible to use the stages of the method individually. Creating a solution for finding region proposals with an \gls{rpn} and having a \gls{rfcn} that can take the proposals as inputs. 
 \end{comment}
 \\\\
-A potential shortcoming of using \gls{rpn} proposals as inputs to training a \gls{rfcn} rather than using ground truth bounding boxes is that a \gls{rpn} likely finds many more examples of objects that actually exist in an image. For a given image, an \gls{rpn} may find hundreds of potential objects despite an image only containing a couple of true positive examples. This can be solved by setting the proposals with the highest confidence as the ground truth examples and labelling the remaining proposals as the background class. This is a stark comparison to the end-to-end training approach as there are now many more training examples and a large skew towards the background class. Whereas the end-to-end approach does not train on any background examples. With this approach, the total number of training examples is increased from 80,116 to 9,979,345. The median of the almost 10 million proposals is 4,684 pixels, significantly smaller than the threshold of 19,205.5 determined using only ground truth boxes. This large increase in training examples and skew in data poses a question on how to split the \gls{rpn} proposals such that two networks can be trained towards small and large objects respectively. As mentioned earlier, a pre-requisite in creating subsets of data is that the multiple sets should be roughly equal in size in order for training to be conducted fairly. If the subsets were split by the median of the \gls{rpn} proposals (4,684) the two sets of data would have equal numbers of examples. However, upon inspection there seems to be a large skew in \gls{rpn} proposals to smaller objects as there are significantly more true positive examples in the subset of data containing larger objects. This can be seen in \tableref{splitrpn}, where despite there being an almost even split in data subsets there are significantly more ground truth annotations in the \gls{rpn}$_{larger}$ subset.
+A potential shortcoming of using proposals as inputs to training ensemble members is a \gls{rpn} likely finds many more examples of possible objects than actually are present. For a given image, an \gls{rpn} may find hundreds of potential objects despite an image only containing a couple of true positive examples. This can be solved by setting the proposals with the highest confidence as the ground truth examples and labelling the remaining proposals as the background class. This is a stark comparison to the end-to-end training approach as there are now many more training examples and a large skew towards the background class. With this approach, the total number of training examples is increased from 80,116 ground truth object instances to 9,979,345 region proposals. The median of the almost 10 million proposals is 4,684 pixels, significantly smaller than the threshold of 19,205.5 determined using only ground truth boxes. This large increase in training examples and skew in data poses a question on how to split the \gls{rpn} proposals such that two networks can be trained towards small and large objects equally. As mentioned earlier, a pre-requisite in creating subsets of data is that the multiple sets should be roughly equal in regards to ground truth examples. If the subsets were split by the median of the \gls{rpn} proposals (4,684) the two sets of data would have equal numbers of examples. However, the large skew in \gls{rpn} proposals to smaller objects means that there significantly more ground truth samples in the subset of data containing larger objects. This can be seen in \tableref{splitrpn}, where despite there being an almost even split in data subsets there are significantly more ground truth annotations in the \gls{rpn}$_{larger}$ subset.
 
 \begin{table}[h]
 \centering
-\caption{My caption}
+\caption{Creating object resolution data subsets. If split by the median area of all region proposals training samples the larger dataset has significantly more ground truth object instance samples.}
 \label{tab:splitrpn}
 \begin{tabular}{|l|l|l|}
 \hline
@@ -145,11 +145,11 @@ Total        & 4,989,361 & 4,989,413  \\ \hline
 \end{tabular}
 \end{table}
 
-Another option is to use the threshold of 19,205.5 found on only ground truth boxes used in the initial test. The data distribution based on this threshold can be seen in \tableref{splitgt}. In this instance there is significantly more data in the \gls{rpn}$_{larger}$ subset, however, the skew is solely due to the many more background examples. The ground truth annotations are shared equally with 40,058 in each.
+Another option is to use the median of 19,205.5 found on only ground truth boxes. The data distribution based on this threshold can be seen in \tableref{splitgt}. In this instance there is significantly more data in the \gls{rpn}$_{larger}$ subset, however, the skew is solely due to the many more background examples. The ground truth annotations are shared equally with 40,058 samples in each.
 
 \begin{table}[h]
 \centering
-\caption{My caption}
+\caption{Creating object resolution data subsets. If split by the median of area from ground truth objects there is an equal number of ground truth instances. However, \gls{rpn}$_larger$ has significantly more background samples.}
 \label{tab:splitgt}
 \begin{tabular}{|l|l|l|}
 \hline
@@ -160,51 +160,95 @@ Total        & 3,568,428 & 6,410,917  \\ \hline
 \end{tabular}
 \end{table}
 
-As the overall goal of object detectors is to find objects within the $C$ classes, the decision was made to use the threshold of 19,205.5 to create the split in data. Despite there being significantly more background examples. 
+As the overall goal of object detectors is to find objects within the classes, the decision was made to use the threshold of 19,205.5 to create the split in data. Despite there being significantly more background examples in one of the datasets. 
 \\\\
-A baseline 4-step \gls{rfcn} with ResNet-101 model was trained on all the data (07++12).
+\gls{rfcn} ensemble members were trained on the two subsets of \gls{rpn} according to the design guidelines. To evaluate how well the expert resolution members perform on the respective subsets of data tests were performed on splits of the 07 test data. This data was split by using the same median threshold of 19,205.5 used in creating the training subsets. Firstly, the results for small objects from 07 test can be seen in \tableref{small07res}. Shown are \glspl{rfcn} trained on \gls{rpn}$_{small}$, \gls{rpn}$_{larger}$ and a baseline model trained on all 07+12 data. The shows that the model trained towards smaller object proposals on \gls{rpn}$_{small}$ performs best. This trend is similarly true for large objects as seen in \tableref{large07res}. Finally, for all ground truth objects the baseline model is the best performing as seen in \tableref{alldatares}.
+
 
 \begin{table}[h]
 \centering
-\caption{My caption}
-\label{my-label}
+\caption{Results for \gls{rfcn} models trained on three different subsets of data and tested on only small objects from the 07 test set.}
+\label{tab:small07res}
 \begin{tabular}{|l|l|}
 \hline
 \textbf{Train Data} & \textbf{\gls{ap}}      \\ \hline
-Small      & 46.74\% \\ \hline
-Large      & 62.48\% \\ \hline
-All        & \textbf{79.59\%} \\ \hline
+\gls{rpn}$_{small}$      & \textbf{55.00\%} \\ \hline
+\gls{rpn}$_{larger}$      & 20.92\% \\ \hline
+07+12        & 43.80\% \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[h]
+\centering
+\caption{Results for \gls{rfcn} models trained on three different subsets of data and tested on only large objects from the 07 test set.}
+\label{tab:large07res}
+\begin{tabular}{|l|l|}
+\hline
+\textbf{Train Data} & \textbf{\gls{ap}}      \\ \hline
+\gls{rpn}$_{small}$      & 21.28\% \\ \hline
+\gls{rpn}$_{larger}$      & \textbf{81.81\%} \\ \hline
+07+12        & 75.14\% \\ \hline
 \end{tabular}
 \end{table}
 
 
 \begin{table}[h]
 \centering
-\caption{My caption}
-\label{my-label}
+\caption{Results for \gls{rfcn} models trained on three different subsets of data and tested on all of the 07 test set.}
+\label{tab:alldatares}
 \begin{tabular}{|l|l|}
 \hline
 \textbf{Train Data} & \textbf{\gls{ap}}      \\ \hline
-Small      & \textbf{55.00\%} \\ \hline
-Large      & 10.86\% \\ \hline
-All        & 43.80\% \\ \hline
+\gls{rpn}$_{small}$      & 46.74\% \\ \hline
+\gls{rpn}$_{larger}$      & 62.48\% \\ \hline
+07+12        & \textbf{79.59\%} \\ \hline
 \end{tabular}
 \end{table}
 
+Based upon these results it was determined that the ensemble member experts towards object size was suitable. The following section will explain the data sampling and training for image quality ensemble members.
 
-\begin{table}[h]
-\centering
-\caption{My caption}
-\label{my-label}
-\begin{tabular}{|l|l|}
-\hline
-\textbf{Train Data} & \textbf{\gls{ap}}      \\ \hline
-Small      & 21.28\% \\ \hline
-Large      & \textbf{80.10\%} \\ \hline
-All        & 75.14\% \\ \hline
-\end{tabular}
-\end{table}
+\begin{comment}
+    \begin{table}[h]
+    \centering
+    \caption{My caption}
+    \label{tab:}
+    \begin{tabular}{|l|l|}
+    \hline
+    \textbf{Train Data} & \textbf{\gls{ap}}      \\ \hline
+    Small      & 46.74\% \\ \hline
+    Large      & 62.48\% \\ \hline
+    All        & \textbf{79.59\%} \\ \hline
+    \end{tabular}
+    \end{table}
 
+
+    \begin{table}[h]
+    \centering
+    \caption{My caption}
+    \label{my-label}
+    \begin{tabular}{|l|l|}
+    \hline
+    \textbf{Train Data} & \textbf{\gls{ap}}      \\ \hline
+    Small      & \textbf{55.00\%} \\ \hline
+    Large      & 10.86\% \\ \hline
+    All        & 43.80\% \\ \hline
+    \end{tabular}
+    \end{table}
+
+
+    \begin{table}[h]
+    \centering
+    \caption{My caption}
+    \label{my-label}
+    \begin{tabular}{|l|l|}
+    \hline
+    \textbf{Train Data} & \textbf{\gls{ap}}      \\ \hline
+    Small      & 21.28\% \\ \hline
+    Large      & \textbf{80.10\%} \\ \hline
+    All        & 75.14\% \\ \hline
+    \end{tabular}
+    \end{table}
+\end{comment}
 
 
 
