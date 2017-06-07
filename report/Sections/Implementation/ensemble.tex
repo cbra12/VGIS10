@@ -28,11 +28,9 @@ Each of then 10 trained networks will be used on all object proposals found usin
 Weights are determined in pairs for each of the 5 ensemble factors, where the total sum of weights is equal to $n$. If each detection were to be weighted equally all $w$ would be equal to 1. As the weights are calculated in pairs each ensemble factor is overall weighted equally as the pair of weights can at most be equal to 2. By using this tactic in between the two sets of network for a given factor can be weighted differently but overall each factor is weighted equally.
 Weights for a given factor is found according to where the the test image lies for that factors training distribution data. For example, the subsets of training data for Gaussian blur was determined according to the line shown in \figref{blur_dist}. 
 
-\add[inline]{line showing split in training data}
-
 \begin{figure}[H]
   \centering
-    \includegraphics[width=0.8\textwidth]{Figs/Implementation/GaussianBlurdist.pdf}
+    \includegraphics[width=0.8\textwidth]{Figs/Implementation/GaussianBlurdistred.pdf}
       \caption{}
     \label{fig:blur_dist}
 \end{figure}
