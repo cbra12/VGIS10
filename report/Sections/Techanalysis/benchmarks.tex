@@ -1,11 +1,11 @@
 \section{Benchmark Datasets}
-This section will outline some of the commonly used object detection datasets. This will include their purpose and the general setup.
+This section will outline some of the key object detection benchmark datasets. This will include their purpose and the general data statistics.
 
 
 \subsection{PASCAL Visual Object Classes Challenge}
-The \gls{pascalvoc} challenge \cite{pascalvoc2012} was held yearly between 2005 to 2012 and provided datasets for benchmarking within vision tasks of visual object category recognition and detection. Between that time period is was considered the top benchmark for the respective challenges. While being an annual competition, \gls{pascalvoc} evaluation in state-of-the-art literature is most often performed on data from the years 2007 and 2012. The competition saw a large shift in the former year as the number of classes increased from 10 to 20, in turn also significantly increasing the total amount of data. Additional data was added individually for the various recognition tasks between 2007 and 2012 and the performance metric was altered slightly between this time period, however, the overall ecosystem remained largely the same from 2007 until the competition's end. This section will be largely based upon the two retrospective papers, \cite{pascalvoc2010} and \cite{pascalvoc2015}, published by authors who were involved in the challenge and for the most part will be in respect to the challenge after 2007.
+The \gls{pascalvoc} challenge \cite{pascalvoc2012} was held yearly between 2005 to 2012 and provided datasets for benchmarking within computer vision tasks of visual object category recognition and detection. Between the time period \gls{pascalvoc} was considered the top benchmark for the respective challenges. While being an annual competition, \gls{pascalvoc} evaluation in state-of-the-art literature is most often performed on data from the years 2007 and 2012. The competition saw a large shift in the former year as the number of classes increased from 10 to 20, in turn also significantly increasing the total amount of data. Additional data was added individually for the various recognition tasks between 2007 and 2012 and the performance metric was altered slightly between this time period. However, the overall ecosystem remained largely the same from 2007 until the competitions end. This section will be largely based upon the two retrospective papers, \cite{pascalvoc2010} and \cite{pascalvoc2015}, published by authors who were involved in the challenge and for the most part will be in respect to the challenge after 2007.
 \\\\
-Images were obtained from the website flickr \cite{flickr} with the aim in mind to collect natural images for the recognition challenges. Ideally the dataset was to contain a significant level of visual variability in regards to object size, orientation, pose, illumination, position, and occlusion. A total of 20 classes were present in the 2007 challenges and these remained the same until 2012. The classes can be considered as a part of a taxonomy with 4 main branches, where each has finer-grain objects in sub-classes. The 20 classes and the branching taxonomy can be seen in \tableref{vocclasses}.
+Images were obtained for the dataset from the website flickr \cite{flickr} with the aim in mind to collect natural images for the recognition challenges. Ideally the dataset was to contain a significant level of visual variability in regards to object size, orientation, pose, illumination, position, and occlusion. The 20 classes in the detection challenge can be considered as a part of a taxonomy with 4 main branches, where each has finer-grain objects in sub-classes. The 20 classes and the branching taxonomy can be seen in \tableref{vocclasses}.
 
 
 \begin{table}[h]
@@ -25,7 +25,7 @@ Train    &  &  &  \\ \hline
 \end{tabular}
 \end{table}
 
-A total of 500,000 potential images were collected randomly based upon different combinations of queries for a given class. For example of class bird, potential queries were bird, birdie, birdwatching, nest, sea, aviary, birdcage, bird feeder, and bird table. Of these potential images the majority were discarded for potential annotation due to not meeting the considerations of visual variability mentioned earlier. The annotation process was completed by a team from the University of Leeds based upon strict guidelines. The aim was to ensure that the annotations resulted in a consistent, accurate, and exhaustive dataset. The annotations are stored in XML format which contains the following information:
+A total of 500,000 potential images were collected randomly based upon different combinations of queries for a given class. For example, for class bird, potential queries were bird, birdie, birdwatching, nest, sea, aviary, birdcage, bird feeder, and bird table. Of these potential images the majority were discarded due to not meeting the considerations of visual variability mentioned earlier. The annotation process was completed by a team from the University of Leeds based upon strict guidelines. The aim was to ensure that the annotations resulted in a consistent, accurate, and exhaustive dataset. The annotations are stored in XML format which contains the following information:
 
 \begin{itemize}
 	\item Class: one of the 20 shown in \tableref{vocclasses}.
@@ -60,23 +60,23 @@ An example of the XML format for the object chair can be seen in Code \ref{lst:x
     \label{fig:xml_eximg}
 \end{figure}
 
-Of the 500,000 potential images, 9,963 were annotated for the VOC2007 challenges based upon the annotation guidelines. \gls{pascalvoc} datasets is split into two subsets; \lstinline{trainval}, consisting of training and validation data and \lstinline{test}, consisting of the testing data. A histogram showing the frequency of an object class in an image and the total number of objects for the VOC2007 dataset can be seen in \figref{vochist07}.
+Of the 500,000 potential images, 9,963 were annotated for the VOC2007 challenges based upon the annotation guidelines. \gls{pascalvoc} datasets are split into two subsets; \lstinline{trainval}, consisting of training and validation data and \lstinline{test}, consisting of the testing data. A histogram showing the frequency of an object class in an image and the total number of objects for the VOC2007 dataset can be seen in \figref{vochist07}.
 
 \begin{figure}[H]
   \centering
     \includegraphics[width=0.5\textwidth]{Figs/Techanal/vochist07.png}
-    \caption{Image from the \gls{pascalvoc} 2007 dataset. The bounding box represents the annotated XML data shown in Code \ref{lst:vochist07}.}
+    \caption{Frequency of object instances for each class in the 2007 test set \cite{pascalvoc2012}.}
     \label{fig:vochist07}
 \end{figure}
 
 
-Evaluation of a object detector on \gls{pascalvoc} is based upon \gls{ap} which summarises the precision and recall of detections. The metric requires that for each detection both a bounding-box and an associated confidence. With these a precision/curve can be calculated and the overall \gls{ap} for the curve represents the performance of the detector. By altering the threshold corresponding to the confidence of each detection a precision and recall curve can be calculated and the \gls{ap} summarises the shape of the this. Precision is the number of true positives in relation to both true positives and false positives. Whereas, recall is the number of true positives in relation to all detections. However firstly, a detection must be classified as either a true or false positive. This is determined by measuring the bounding-box overlap between the detection and ground truth annotation. In \gls{pascalvoc} a bounding box is a true positive if the overlap is above 50\% according to the following calculation:
+Evaluation of a object detector on \gls{pascalvoc} is based upon \gls{ap} which summarises the precision and recall of detections. The metric requires for each detection both a bounding-box and an associated confidence. By altering the threshold corresponding to the confidence of each detection, a precision and recall curve can be calculated and the \gls{ap} summarises the shape of the curve. Precision is the number of true positives in relation to both true positives and false positives. Whereas, recall is the number of true positives in relation to all detections. First, a detection must be classified as either a true or false positive. This is determined by measuring the bounding-box overlap between the detection and ground truth annotation. In \gls{pascalvoc} a bounding box is a true positive if the overlap is above 50\% according to the following calculation:
 
 \begin{equation}\label{pascalBB}
 	a_o = \frac{area(B_p \bigcap B_{gt})}{area(B_p \bigcup B_{gt})}
 \end{equation}
  
-where $B_p \bigcap B_{gt}$ is the intersection of the predicted bounding box and the ground truth and $B_p \bigcup G_{gt}$ is the union between the two. It should also be noted that for a given ground truth object it is only possible to have one true positive detection. If multiple detections satisfy Equation \ref{pascalBB} the remaining will be denoted as a false positive. Now that detections can be as classified as either a true or false positive \gls{ap} can be calculated. Before 2007, in \gls{pascalvoc} this was calculated as the mean precision at eleven equally space recalls [0, 0.1, ..., 1] by:
+where $B_p \bigcap B_{gt}$ is the intersection of the predicted bounding box and the ground truth and $B_p \bigcup G_{gt}$ is the union between the two. It should also be noted that for a given ground truth object it is only possible to have one true positive detection. If multiple detections satisfy Equation \ref{pascalBB}, the remaining will be denoted as a false positive. Now that detections can be as classified as either a true or false positive \gls{ap} can be calculated. Before 2007, in \gls{pascalvoc} this was calculated as the mean precision at eleven equally space recalls [0, 0.1, ..., 1] by:
 
 \begin{equation}
 	AP = \frac{1}{11} \sum_{r\epsilon[0, 0.1, ..., 1]}p_{interp}(r)  
@@ -87,9 +87,9 @@ where $r$ is the recall and $p_{interp}$ is the interpolated precision.
 \add[inline]{explanation of new metric}
 
 \subsection{ImageNet Large Scale Visual Recognition Challenge}
-\gls{ilsvrc} is an extremely large benchmark in object recognition. The challenge has been held since 2010 with multiple challenge tasks such as image classification, scene recognition and object detection. Currently, in 2017 the only challenges being held are object detection in both images and video. The aim of \gls{ilsvrc} was to create an image recognition challenge on such a scale that had not been previously seen. Before this, the main challenge was \gls{pascalvoc} with 20 categories in the object detection challenge. \gls{ilsvrc} has 200 classes, roughly 500,000 annotated positive and negative images and just under 500,000 annotated objects in the positive examples. Once again, the goal of an algorithm is to learn object detection towards to 200 classes and return a bounding-box with an associated confidence for each object detected in an image.
+\gls{ilsvrc} has been held since 2010, with multiple challenge tasks such as image classification, scene recognition and object detection. Currently, in 2017, the only challenges held are object detection in both images and video. The aim of \gls{ilsvrc} was to create an image recognition challenge on such a scale that had not been previously seen. Before this, the main challenge was \gls{pascalvoc} with 20 categories in the object detection challenge. \gls{ilsvrc} has 200 classes, roughly 500,000 annotated positive and negative images and just under 500,000 annotated objects in the positive examples. Once again, the goal of an algorithm is to learn to detect objects. In this case towards 200 classes and return a bounding-box with an associated confidence.
 \\\\
-Creating such a large dataset is a difficult and cumbersome task. The majority of images come from another \gls{ilsvrc} challenge of single-object localisation, where the aim was to only return a single object detection. Additional images were supplemented from Flickr queries. Examples of images from the dataset can be seen in \figref{imagenet_ex}.
+Creating such a large dataset is a difficult and cumbersome task. The majority of images come from another \gls{ilsvrc} challenge of single-object localisation. Where the aim was to only return a single object detection. Additional images were supplemented from flickr queries. Examples of images from the dataset can be seen in \figref{imagenet_ex}.
 
 
 \begin{figure}[H]
@@ -104,14 +104,12 @@ Creating such a large dataset is a difficult and cumbersome task. The majority o
         \includegraphics[width=\textwidth]{Figs/Problem/in2.jpeg}
         \caption{}\label{}
     \end{subfigure}
-    \caption{Example of images in the \gls{ilsvrc} object detection challenges.}
+    \caption{Example of images in the \gls{ilsvrc} object detection challenge \cite{imagenet}.}
     \label{fig:imagenet_ex}
 \end{figure} 
 
 Evaluation of detections was inspired by the \gls{ap} metric used in \gls{pascalvoc}. Again detections are determine to be correct or incorrect based on if the \gls{iou} is above 0.5. 
 While being a challenging dataset in terms of the number of classes present, the object sizes and number of objects is similar to that of \gls{pascalvoc}. Next will be an explanation of a new benchmark that addresses such challenges.
-
-
 
 \subsection{Microsoft Common Objects in Context}
 \gls{mscoco} \cite{mscoco} is a relatively new dataset within the realm of object recognition appearing in 2015. \gls{mscoco} holds competitions in object detection and segmentation. The object detection challenge is similar to \gls{pascalvoc}, in that detections must be shown using bounding-boxes. However, for the segmentation challenge \gls{mscoco} requires the results to be of more challenging instance form rather than semantic. The creators of the dataset had three core research problems they wanted to be present, these include:
