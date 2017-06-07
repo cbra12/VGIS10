@@ -8,11 +8,11 @@
 \BOOKMARK [1][-]{section.2.5}{Problem Statement}{chapter.2}% 8
 \BOOKMARK [0][-]{chapter.3}{Technical Analysis}{}% 9
 \BOOKMARK [1][-]{section.3.1}{Convolutional Neural Networks}{chapter.3}% 10
-\BOOKMARK [1][-]{section.3.2}{Object Detectors with Convolutional Neural Networks}{chapter.3}% 11
+\BOOKMARK [1][-]{section.3.2}{Object Detection with Convolutional Neural Networks}{chapter.3}% 11
 \BOOKMARK [1][-]{section.3.3}{Models}{chapter.3}% 12
 \BOOKMARK [1][-]{section.3.4}{Ensemble Methods}{chapter.3}% 13
 \BOOKMARK [0][-]{chapter.4}{Design}{}% 14
-\BOOKMARK [1][-]{section.4.1}{Design Overview}{chapter.4}% 15
+\BOOKMARK [1][-]{section.4.1}{Training Ensemble Members}{chapter.4}% 15
 \BOOKMARK [0][-]{chapter.5}{Implementation}{}% 16
 \BOOKMARK [1][-]{section.5.1}{Resolution-Aware Object Detection}{chapter.5}% 17
 \BOOKMARK [1][-]{section.5.2}{Image Quality Assessment}{chapter.5}% 18
@@ -24,10 +24,11 @@
 \BOOKMARK [1][-]{section.6.4}{Ensemble Combination}{chapter.6}% 24
 \BOOKMARK [1][-]{section.6.5}{Image Quality Distortions}{chapter.6}% 25
 \BOOKMARK [1][-]{section.6.6}{Ensemble Member Experts}{chapter.6}% 26
-\BOOKMARK [0][-]{chapter.7}{Conclusion}{}% 27
-\BOOKMARK [0][-]{section*.82}{Literature}{}% 28
-\BOOKMARK [0][-]{section*.84}{Appendices}{}% 29
-\BOOKMARK [0][-]{Appendix.a.A}{Appendix A}{}% 30
-\BOOKMARK [1][-]{section.a.A.1}{Resolution-Aware Object Detection}{Appendix.a.A}% 31
-\BOOKMARK [1][-]{section.a.A.2}{Deep IQA Models}{Appendix.a.A}% 32
-\BOOKMARK [1][-]{section.a.A.3}{Detection Examples}{Appendix.a.A}% 33
+\BOOKMARK [1][-]{section.6.7}{Future Work}{chapter.6}% 27
+\BOOKMARK [0][-]{chapter.7}{Conclusion}{}% 28
+\BOOKMARK [0][-]{section*.75}{Literature}{}% 29
+\BOOKMARK [0][-]{section*.77}{Appendices}{}% 30
+\BOOKMARK [0][-]{Appendix.a.A}{Appendix A}{}% 31
+\BOOKMARK [1][-]{section.a.A.1}{Resolution-Aware Object Detection}{Appendix.a.A}% 32
+\BOOKMARK [1][-]{section.a.A.2}{Deep IQA Models}{Appendix.a.A}% 33
+\BOOKMARK [1][-]{section.a.A.3}{Detection Examples}{Appendix.a.A}% 34
