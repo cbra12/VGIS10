@@ -22,10 +22,12 @@
 \BOOKMARK [1][-]{section.6.2}{Choice of Object Detector}{chapter.6}% 22
 \BOOKMARK [1][-]{section.6.3}{Training the Ensemble}{chapter.6}% 23
 \BOOKMARK [1][-]{section.6.4}{Ensemble Combination}{chapter.6}% 24
-\BOOKMARK [0][-]{chapter.7}{Conclusion}{}% 25
-\BOOKMARK [0][-]{section*.82}{Literature}{}% 26
-\BOOKMARK [0][-]{section*.84}{Appendices}{}% 27
-\BOOKMARK [0][-]{Appendix.a.A}{Appendix A}{}% 28
-\BOOKMARK [1][-]{section.a.A.1}{Resolution-Aware Object Detection}{Appendix.a.A}% 29
-\BOOKMARK [1][-]{section.a.A.2}{Deep IQA Models}{Appendix.a.A}% 30
-\BOOKMARK [1][-]{section.a.A.3}{Detection Examples}{Appendix.a.A}% 31
+\BOOKMARK [1][-]{section.6.5}{Image Quality Distortions}{chapter.6}% 25
+\BOOKMARK [1][-]{section.6.6}{Ensemble Member Experts}{chapter.6}% 26
+\BOOKMARK [0][-]{chapter.7}{Conclusion}{}% 27
+\BOOKMARK [0][-]{section*.82}{Literature}{}% 28
+\BOOKMARK [0][-]{section*.84}{Appendices}{}% 29
+\BOOKMARK [0][-]{Appendix.a.A}{Appendix A}{}% 30
+\BOOKMARK [1][-]{section.a.A.1}{Resolution-Aware Object Detection}{Appendix.a.A}% 31
+\BOOKMARK [1][-]{section.a.A.2}{Deep IQA Models}{Appendix.a.A}% 32
+\BOOKMARK [1][-]{section.a.A.3}{Detection Examples}{Appendix.a.A}% 33

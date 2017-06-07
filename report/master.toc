@@ -49,10 +49,12 @@
 \contentsline {subsection}{\numberline {6.3.1}Creating the Data Subsets}{66}{subsection.6.3.1}
 \contentsline {subsection}{\numberline {6.3.2}Training \gls {rfcn} Members}{67}{subsection.6.3.2}
 \contentsline {section}{\numberline {6.4}Ensemble Combination}{67}{section.6.4}
-\contentsline {chapter}{\numberline {7}Conclusion}{68}{chapter.7}
-\contentsline {chapter}{Literature}{69}{section*.82}
-\contentsline {chapter}{Appendices}{73}{section*.84}
-\contentsline {chapter}{\numberline {A}Appendix A}{74}{Appendix.a.A}
-\contentsline {section}{\numberline {A.1}Resolution-Aware Object Detection}{74}{section.a.A.1}
-\contentsline {section}{\numberline {A.2}Deep IQA Models}{74}{section.a.A.2}
-\contentsline {section}{\numberline {A.3}Detection Examples}{74}{section.a.A.3}
+\contentsline {section}{\numberline {6.5}Image Quality Distortions}{67}{section.6.5}
+\contentsline {section}{\numberline {6.6}Ensemble Member Experts}{68}{section.6.6}
+\contentsline {chapter}{\numberline {7}Conclusion}{69}{chapter.7}
+\contentsline {chapter}{Literature}{71}{section*.82}
+\contentsline {chapter}{Appendices}{75}{section*.84}
+\contentsline {chapter}{\numberline {A}Appendix A}{76}{Appendix.a.A}
+\contentsline {section}{\numberline {A.1}Resolution-Aware Object Detection}{76}{section.a.A.1}
+\contentsline {section}{\numberline {A.2}Deep IQA Models}{76}{section.a.A.2}
+\contentsline {section}{\numberline {A.3}Detection Examples}{76}{section.a.A.3}
