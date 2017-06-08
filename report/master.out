@@ -9,25 +9,24 @@
 \BOOKMARK [0][-]{chapter.3}{Technical Analysis}{}% 9
 \BOOKMARK [1][-]{section.3.1}{Convolutional Neural Networks}{chapter.3}% 10
 \BOOKMARK [1][-]{section.3.2}{Object Detection with Convolutional Neural Networks}{chapter.3}% 11
-\BOOKMARK [1][-]{section.3.3}{Models}{chapter.3}% 12
-\BOOKMARK [1][-]{section.3.4}{Ensemble Methods}{chapter.3}% 13
-\BOOKMARK [0][-]{chapter.4}{Design}{}% 14
-\BOOKMARK [1][-]{section.4.1}{Training Ensemble Members}{chapter.4}% 15
-\BOOKMARK [0][-]{chapter.5}{Implementation}{}% 16
-\BOOKMARK [1][-]{section.5.1}{Resolution-Aware Object Detection}{chapter.5}% 17
-\BOOKMARK [1][-]{section.5.2}{Image Quality Assessment}{chapter.5}% 18
-\BOOKMARK [1][-]{section.5.3}{Ensemble}{chapter.5}% 19
-\BOOKMARK [0][-]{chapter.6}{Discussion}{}% 20
-\BOOKMARK [1][-]{section.6.1}{Choice of Ensemble Factors}{chapter.6}% 21
-\BOOKMARK [1][-]{section.6.2}{Choice of Object Detector}{chapter.6}% 22
-\BOOKMARK [1][-]{section.6.3}{Training the Ensemble}{chapter.6}% 23
-\BOOKMARK [1][-]{section.6.4}{Ensemble Combination}{chapter.6}% 24
-\BOOKMARK [1][-]{section.6.5}{Image Quality Distortions}{chapter.6}% 25
-\BOOKMARK [1][-]{section.6.6}{Ensemble Member Experts}{chapter.6}% 26
-\BOOKMARK [1][-]{section.6.7}{Additional Future Work}{chapter.6}% 27
-\BOOKMARK [0][-]{chapter.7}{Conclusion}{}% 28
-\BOOKMARK [0][-]{section*.70}{Literature}{}% 29
-\BOOKMARK [0][-]{section*.72}{Appendices}{}% 30
-\BOOKMARK [0][-]{Appendix.a.A}{Appendix A}{}% 31
-\BOOKMARK [1][-]{section.a.A.1}{Deep IQA Models}{Appendix.a.A}% 32
-\BOOKMARK [1][-]{section.a.A.2}{Detection Examples}{Appendix.a.A}% 33
+\BOOKMARK [1][-]{section.3.3}{Ensemble Methods}{chapter.3}% 12
+\BOOKMARK [0][-]{chapter.4}{Design}{}% 13
+\BOOKMARK [1][-]{section.4.1}{Training Ensemble Members}{chapter.4}% 14
+\BOOKMARK [0][-]{chapter.5}{Implementation}{}% 15
+\BOOKMARK [1][-]{section.5.1}{Resolution-Aware Object Detection}{chapter.5}% 16
+\BOOKMARK [1][-]{section.5.2}{Image Quality Assessment}{chapter.5}% 17
+\BOOKMARK [1][-]{section.5.3}{Ensemble}{chapter.5}% 18
+\BOOKMARK [0][-]{chapter.6}{Discussion}{}% 19
+\BOOKMARK [1][-]{section.6.1}{Choice of Ensemble Factors}{chapter.6}% 20
+\BOOKMARK [1][-]{section.6.2}{Choice of Object Detector}{chapter.6}% 21
+\BOOKMARK [1][-]{section.6.3}{Training the Ensemble}{chapter.6}% 22
+\BOOKMARK [1][-]{section.6.4}{Ensemble Combination}{chapter.6}% 23
+\BOOKMARK [1][-]{section.6.5}{Image Quality Distortions}{chapter.6}% 24
+\BOOKMARK [1][-]{section.6.6}{Ensemble Member Experts}{chapter.6}% 25
+\BOOKMARK [1][-]{section.6.7}{Additional Future Work}{chapter.6}% 26
+\BOOKMARK [0][-]{chapter.7}{Conclusion}{}% 27
+\BOOKMARK [0][-]{section*.69}{Literature}{}% 28
+\BOOKMARK [0][-]{section*.71}{Appendices}{}% 29
+\BOOKMARK [0][-]{Appendix.a.A}{Appendix A}{}% 30
+\BOOKMARK [1][-]{section.a.A.1}{Deep IQA Models}{Appendix.a.A}% 31
+\BOOKMARK [1][-]{section.a.A.2}{Detection Examples}{Appendix.a.A}% 32

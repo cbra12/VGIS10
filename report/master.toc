@@ -8,9 +8,9 @@
 \contentsline {section}{\numberline {2.3}Benchmark Datasets}{8}{section.2.3}
 \contentsline {subsection}{\numberline {2.3.1}PASCAL Visual Object Classes Challenge}{8}{subsection.2.3.1}
 \contentsline {subsection}{\numberline {2.3.2}ImageNet Large Scale Visual Recognition Challenge}{11}{subsection.2.3.2}
-\contentsline {subsection}{\numberline {2.3.3}Microsoft Common Objects in Context}{11}{subsection.2.3.3}
-\contentsline {section}{\numberline {2.4}Related Work}{13}{section.2.4}
-\contentsline {section}{\numberline {2.5}Problem Statement}{19}{section.2.5}
+\contentsline {subsection}{\numberline {2.3.3}Microsoft Common Objects in Context}{12}{subsection.2.3.3}
+\contentsline {section}{\numberline {2.4}Related Work}{14}{section.2.4}
+\contentsline {section}{\numberline {2.5}Problem Statement}{20}{section.2.5}
 \contentsline {chapter}{\numberline {3}Technical Analysis}{21}{chapter.3}
 \contentsline {section}{\numberline {3.1}Convolutional Neural Networks}{21}{section.3.1}
 \contentsline {section}{\numberline {3.2}Object Detection with Convolutional Neural Networks}{23}{section.3.2}
@@ -18,13 +18,13 @@
 \contentsline {subsection}{\numberline {3.2.2}Region-Based Fully-Connected Network}{25}{subsection.3.2.2}
 \contentsline {subsection}{\numberline {3.2.3}You Only Look Once}{27}{subsection.3.2.3}
 \contentsline {subsection}{\numberline {3.2.4}Benchmark Results}{30}{subsection.3.2.4}
-\contentsline {subsubsection}{\gls {pascalvoc}}{30}{subsubsection*.23}
-\contentsline {subsubsection}{\gls {mscoco}}{31}{subsubsection*.26}
-\contentsline {section}{\numberline {3.3}Models}{32}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}VGG}{33}{subsection.3.3.1}
-\contentsline {subsection}{\numberline {3.3.2}Residual Networks}{35}{subsection.3.3.2}
-\contentsline {section}{\numberline {3.4}Ensemble Methods}{37}{section.3.4}
-\contentsline {subsection}{\numberline {3.4.1}Building an Ensemble System}{38}{subsection.3.4.1}
+\contentsline {subsubsection}{\gls {pascalvoc}}{30}{subsubsection*.21}
+\contentsline {subsubsection}{\gls {mscoco}}{31}{subsubsection*.24}
+\contentsline {subsection}{\numberline {3.2.5}Backbone Models}{32}{subsection.3.2.5}
+\contentsline {subsubsection}{VGG}{33}{subsubsection*.26}
+\contentsline {subsubsection}{Residual Networks}{35}{subsubsection*.28}
+\contentsline {section}{\numberline {3.3}Ensemble Methods}{37}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}Building an Ensemble System}{38}{subsection.3.3.1}
 \contentsline {chapter}{\numberline {4}Design}{40}{chapter.4}
 \contentsline {section}{\numberline {4.1}Training Ensemble Members}{41}{section.4.1}
 \contentsline {subsection}{\numberline {4.1.1}Object Size Data Sampling}{43}{subsection.4.1.1}
@@ -46,15 +46,15 @@
 \contentsline {section}{\numberline {6.1}Choice of Ensemble Factors}{65}{section.6.1}
 \contentsline {section}{\numberline {6.2}Choice of Object Detector}{65}{section.6.2}
 \contentsline {section}{\numberline {6.3}Training the Ensemble}{65}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Creating the Data Subsets}{65}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.1}Creating the Data Subsets}{66}{subsection.6.3.1}
 \contentsline {subsection}{\numberline {6.3.2}Training \gls {rfcn} Members}{67}{subsection.6.3.2}
 \contentsline {section}{\numberline {6.4}Ensemble Combination}{67}{section.6.4}
 \contentsline {section}{\numberline {6.5}Image Quality Distortions}{67}{section.6.5}
 \contentsline {section}{\numberline {6.6}Ensemble Member Experts}{68}{section.6.6}
 \contentsline {section}{\numberline {6.7}Additional Future Work}{68}{section.6.7}
 \contentsline {chapter}{\numberline {7}Conclusion}{69}{chapter.7}
-\contentsline {chapter}{Literature}{71}{section*.70}
-\contentsline {chapter}{Appendices}{75}{section*.72}
+\contentsline {chapter}{Literature}{71}{section*.69}
+\contentsline {chapter}{Appendices}{75}{section*.71}
 \contentsline {chapter}{\numberline {A}Appendix A}{76}{Appendix.a.A}
 \contentsline {section}{\numberline {A.1}Deep IQA Models}{76}{section.a.A.1}
 \contentsline {section}{\numberline {A.2}Detection Examples}{77}{section.a.A.2}

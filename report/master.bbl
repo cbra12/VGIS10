@@ -56,6 +56,13 @@ F.~Schroff, \emph{Semantic Image Segmentation and Web-supervised Visual
   [Online]. Available: \url{https://books.google.dk/books?id=4EqZYgEACAAJ}
 \BIBentrySTDinterwordspacing
 
+\bibitem{iqDNN}
+\BIBentryALTinterwordspacing
+S.~F. Dodge and L.~J. Karam, ``Understanding how image quality affects deep
+  neural networks,'' \emph{CoRR}, vol. abs/1604.04004, 2016. [Online].
+  Available: \url{http://arxiv.org/abs/1604.04004}
+\BIBentrySTDinterwordspacing
+
 \bibitem{pascalvoc2010}
 \BIBentryALTinterwordspacing
 M.~Everingham, L.~Van~Gool, C.~K.~I. Williams, J.~Winn, and A.~Zisserman, ``The

@@ -82,9 +82,7 @@ where $B_p \bigcap B_{gt}$ is the intersection of the predicted bounding box and
 	AP = \frac{1}{11} \sum_{r\epsilon[0, 0.1, ..., 1]}p_{interp}(r)  
 \end{equation}
 
-where $r$ is the recall and $p_{interp}$ is the interpolated precision.
-\add[inline]{explanation of interpolated precision}
-\add[inline]{explanation of new metric}
+where $r$ is the recall and $p_{interp}$ is the interpolated precision between spacings.
 
 \subsection{ImageNet Large Scale Visual Recognition Challenge}
 \gls{ilsvrc} has been held since 2010, with multiple challenge tasks such as image classification, scene recognition and object detection. Currently, in 2017, the only challenges held are object detection in both images and video. The aim of \gls{ilsvrc} was to create an image recognition challenge on such a scale that had not been previously seen. Before this, the main challenge was \gls{pascalvoc} with 20 categories in the object detection challenge. \gls{ilsvrc} has 200 classes, roughly 500,000 annotated positive and negative images and just under 500,000 annotated objects in the positive examples. Once again, the goal of an algorithm is to learn to detect objects. In this case towards 200 classes and return a bounding-box with an associated confidence.
