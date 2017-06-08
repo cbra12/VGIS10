@@ -1,14 +1,14 @@
 \section{Image Quality Assessment}\label{sec:iqaimp}
-To evaluate the amount of distortions in the dataset a method for \gls{iqa} is needed. A recent state of the art method is that of Deep IQA \cite{deepiqa}. Deep IQA is a \gls{cnn}-based \gls{nr} \gls{iqa} method that can be trained to measure the subjective visual quality of an image. It is deeper than previous \gls{cnn}-based \gls{iqa} methods with the architecture being inspired by VGG nets \cite{vgg16}. Deep IQA consists of 14 convolutional layers, 5 max-pooling layers and 2 fully-connected layers. The architecture is shown in \figref{deepiqa_arch}. The convolutional layers are all 3$\times$3 convolution kernels and activated using \gls{relu}. Inputs to each convolutional layer are zero-padded to ensure output size is equal to the input. Max-pooling layers consist of 2 $\times$ 2 sized kernels. The network is trained on mini-batches of 32 $\times$ 32 patches. During inference non-overlapping patches are sampled from the image and image quality scores are predicted for each instance. The patch scores are averaged for the final score for the entire image. 
+To evaluate the amount of distortions in the dataset a method for \gls{iqa} is needed. A recent state of the art method is that of deep IQA \cite{deepiqa}. Deep IQA is a \gls{cnn}-based \gls{nr} \gls{iqa} method that can be trained to measure the subjective visual quality of an image. It is deeper than previous \gls{cnn}-based \gls{iqa} methods with the architecture being inspired by VGG nets \cite{vgg16}. Deep IQA consists of 14 convolutional layers, 5 max-pooling layers and 2 fully-connected layers. The architecture is shown in \figref{deepiqa_arch}. The convolutional layers are all 3$\times$3 convolution kernels and activated using \gls{relu}. Inputs to each convolutional layer are zero-padded to ensure output size is equal to the input. Max-pooling layers consist of 2 $\times$ 2 sized kernels. The network is trained on mini-batches of 32 $\times$ 32 patches. During inference non-overlapping patches are sampled from the image and image quality scores are predicted for each instance. The patch scores are averaged for the final score for the entire image. 
 
 \begin{figure}[H]
   \centering
     \includegraphics[width=0.3\textwidth]{Figs/Implementation/deepiqa_arch.pdf}
-      \caption{Architecture of the Deep IQA network. Notation for convolutional layers are conv(receptive field size)-(number of channels) and fully-connected layers are FC(number of channels).}
+      \caption{Architecture of the deep IQA network. Notation for convolutional layers are conv(receptive field size)-(number of channels) and fully-connected layers are FC(number of channels).}
     \label{fig:deepiqa_arch}
 \end{figure}
 
-Training Deep IQA requires a database of annotated images with both reference images and distorted counterparts. The following section will outline the database used in this project for \gls{iqa} training.
+Training deep IQA requires a database of annotated images with both reference images and distorted counterparts. The following section will outline the database used in this project for \gls{iqa} training.
 
 \subsection{LIVE Image Quality Database}
 Deep IQA assesses three different datasets for this purpose. These are \gls{live} which consists of 5 different distortions \cite{livepaper}, TID2013 \cite{tid2013} with 24 different distortions and CSIQ \cite{csiq} with 5 types. For simplicity purposes the only \gls{live} dataset is chosen for this project. The dataset was made for the purposes of evaluating the subjective visual quality of images in regards to the five distortion types. The distortions are generated from 29 colour reference images that are of both high-resolution and high quality. An example of images from the dataset can be seen in \figref{live_ex}. The references image were collected to have a wide variety in different content, this includes faces, people, animals, nature and man-made objects.
@@ -77,7 +77,7 @@ Subjective image quality values were calculated by showing human subjects all im
     \label{fig:gb_ex}
 \end{figure} 
 
-Given the annotated \gls{dmos} values a system can be trained to predict the image quality of an image. The following section will outline how to train Deep IQA for this purpose.
+Given the annotated \gls{dmos} values a system can be trained to predict the image quality of an image. The following section will outline how to train deep IQA for this purpose.
 
 \subsection{Training Deep IQA}
 In the original work the deep IQA model \cite{deepiqa} is trained for all five distortion types present in \gls{live} \cite{livepaper} \cite{liveweb}. While this can provide insights into general image quality, individual models are needed to create a potentially more powerful ensemble. The \gls{nriqa} model was provided by the authors and by taking advantage of the fine-tuning technique, models for each of the individual distortions can be trained in a timely manner. The model was provided for the Chainer framework \cite{chainer} and fine-tuning of individual models were done using this. Fine-tuning takes a previously trained model and uses these parameters as a starting point, rather than other commonly used initialisation techniques such as using a Gaussian distribution. As the model is already trained towards all distortions the assumption can be made that only a shorter training cycle is necessary to the new task. The five fine-tuned models are trained in a similar manner to that of the provided model following the guidelines in the original work \cite{deepiqa}. 
@@ -257,86 +257,87 @@ As in the resolution-aware R-FCN networks individual tests are run to evaluate w
 \\\\
 Firstly, the results for the Gaussian blur experts can be seen in \tableref{gb_experts}. Unfortunately, the models trained on each of the subsets of data do not appear to give any advantage over training on all of the 07+12 data. Regardless of the test data the best performing model is that trained on all of the data, outperforming by 3-5\%. Similar results can be seen in \tableref{jpeg_experts}, \tableref{jp2k_experts} and \tableref{ff_experts} for each the remaining models trained on subsets of JPEG, JP2K, and fast fading distortions. This seems to indicate that the distortions are not as apparent for the R-FCN models such that it is possible to train expert members to either subset.
 
-\begin{table}[h]
+\begin{table}[!htbp]
 \centering
 \caption{Results for the Gaussian blur experts on the various subsets of 07 test data.}
 \label{tab:gb_experts}
 \begin{tabular}{|l|l|l|}
 \hline
 \textbf{Train Data}           & \textbf{Test Data}        & \textbf{AP (\%)} \\ \hline
-07++12 Gaussian Blur$_{lower}$ & 07 Gaussian Blur$_{lower}$ & 75.76\% \\ \hline
-07++12 Gaussian Blur$_{upper}$ & 07 Gaussian Blur$_{lower}$ & 74.75\% \\ \hline
-07++12               & 07 Gaussian Blur$_{lower}$ & \textbf{79.08\%} \\ \hline
-07++12 Gaussian Blur$_{lower}$ & 07 Gaussian Blur$_{upper}$ & 76.33\% \\ \hline
-07++12 Gaussian Blur$_{upper}$ & 07 Gaussian Blur$_{upper}$ & 76.50\% \\ \hline
-07++12               & 07 Gaussian Blur$_{upper}$ & \textbf{80.22\%} \\ \hline
-07++12 Gaussian Blur$_{lower}$ & 07               & 76.25\% \\ \hline
-07++12 Gaussian Blur$_{upper}$ & 07               & 75.39\% \\ \hline
-07++12               & 07               & \textbf{79.59\%} \\ \hline
+07+12 Gaussian Blur$_{lower}$ & 07 Gaussian Blur$_{lower}$ & 75.76\% \\ \hline
+07+12 Gaussian Blur$_{upper}$ & 07 Gaussian Blur$_{lower}$ & 74.75\% \\ \hline
+07+12               & 07 Gaussian Blur$_{lower}$ & \textbf{79.08\%} \\ \hline
+07+12 Gaussian Blur$_{lower}$ & 07 Gaussian Blur$_{upper}$ & 76.33\% \\ \hline
+07+12 Gaussian Blur$_{upper}$ & 07 Gaussian Blur$_{upper}$ & 76.50\% \\ \hline
+07+12               & 07 Gaussian Blur$_{upper}$ & \textbf{80.22\%} \\ \hline
+07+12 Gaussian Blur$_{lower}$ & 07               & 76.25\% \\ \hline
+07+12 Gaussian Blur$_{upper}$ & 07               & 75.39\% \\ \hline
+07+12               & 07               & \textbf{79.59\%} \\ \hline
 \end{tabular}
 \end{table}
 
 
 
-\begin{table}[h]
+\begin{table}[!htbp]
 \centering
 \caption{Results for the JPEG compression experts on the various subsets of 07 test data.}
 \label{tab:jpeg_experts}
 \begin{tabular}{|l|l|l|}
 \hline
 \textbf{Train Data}           & \textbf{Test Data}        & \textbf{AP (\%)} \\ \hline
-07++12 JPEG$_{lower}$ & 07 JPEG$_{lower}$ & 74.33\% \\ \hline
-07++12 JPEG$_{upper}$ & 07 JPEG$_{lower}$ & 73.46\% \\ \hline
-07++12               & 07 JPEG$_{lower}$ & \textbf{78.51\%} \\ \hline
-07++12 JPEG$_{lower}$ & 07 JPEG$_{upper}$ & 76.69\% \\ \hline
-07++12 JPEG$_{upper}$ & 07 JPEG$_{upper}$ & 76.27\% \\ \hline
-07++12               & 07 JPEG$_{upper}$ & \textbf{80.05\%} \\ \hline
-07++12 JPEG$_{lower}$ & 07               & 76.01\% \\ \hline
-07++12 JPEG$_{upper}$ & 07               & 75.26\% \\ \hline
-07++12               & 07               & \textbf{79.59\%} \\ \hline
+07+12 JPEG$_{lower}$ & 07 JPEG$_{lower}$ & 74.33\% \\ \hline
+07+12 JPEG$_{upper}$ & 07 JPEG$_{lower}$ & 73.46\% \\ \hline
+07+12               & 07 JPEG$_{lower}$ & \textbf{78.51\%} \\ \hline
+07+12 JPEG$_{lower}$ & 07 JPEG$_{upper}$ & 76.69\% \\ \hline
+07+12 JPEG$_{upper}$ & 07 JPEG$_{upper}$ & 76.27\% \\ \hline
+07+12               & 07 JPEG$_{upper}$ & \textbf{80.05\%} \\ \hline
+07+12 JPEG$_{lower}$ & 07               & 76.01\% \\ \hline
+07+12 JPEG$_{upper}$ & 07               & 75.26\% \\ \hline
+07+12               & 07               & \textbf{79.59\%} \\ \hline
 \end{tabular}
 \end{table}
 
-\begin{table}[h]
+\begin{table}[!htbp]
 \centering
 \caption{Results for the JP2K compression experts on the various subsets of 07 test data.}
 \label{tab:jp2k_experts}
 \begin{tabular}{|l|l|l|}
 \hline
 \textbf{Train Data}           & \textbf{Test Data}        & \textbf{AP (\%)} \\ \hline
-07++12 JP2K$_{lower}$ & 07 JP2K$_{lower}$ & 74.75\% \\ \hline
-07++12 JP2K$_{upper}$ & 07 JP2K$_{lower}$ & 74.65\% \\ \hline
-07++12               & 07 JP2K$_{lower}$ & \textbf{79.18\%} \\ \hline
-07++12 JP2K$_{lower}$ & 07 JP2K$_{upper}$ & 75.86\% \\ \hline
-07++12 JP2K$_{upper}$ & 07 JP2K$_{upper}$ & 76.66\% \\ \hline
-07++12               & 07 JP2K$_{upper}$ & \textbf{80.01\%} \\ \hline
-07++12 JP2K$_{lower}$ & 07               & 75.69\% \\ \hline
-07++12 JP2K$_{upper}$ & 07               & 75.64\% \\ \hline
-07++12               & 07               & \textbf{79.59\%} \\ \hline
+07+12 JP2K$_{lower}$ & 07 JP2K$_{lower}$ & 74.75\% \\ \hline
+07+12 JP2K$_{upper}$ & 07 JP2K$_{lower}$ & 74.65\% \\ \hline
+07+12               & 07 JP2K$_{lower}$ & \textbf{79.18\%} \\ \hline
+07+12 JP2K$_{lower}$ & 07 JP2K$_{upper}$ & 75.86\% \\ \hline
+07+12 JP2K$_{upper}$ & 07 JP2K$_{upper}$ & 76.66\% \\ \hline
+07+12               & 07 JP2K$_{upper}$ & \textbf{80.01\%} \\ \hline
+07+12 JP2K$_{lower}$ & 07               & 75.69\% \\ \hline
+07+12 JP2K$_{upper}$ & 07               & 75.64\% \\ \hline
+07+12               & 07               & \textbf{79.59\%} \\ \hline
 \end{tabular}
 \end{table}
 
 
-\begin{table}[h]
+\begin{table}[!htbp]
 \centering
 \caption{Results for the fast fading experts on the various subsets of 07 test data.}
 \label{tab:ff_experts}
 \begin{tabular}{|l|l|l|}
 \hline
 \textbf{Train Data}           & \textbf{Test Data}        & \textbf{AP (\%)} \\ \hline
-07++12 FF$_{lower}$ & 07 FF$_{lower}$ & 75.94\% \\ \hline
-07++12 FF$_{upper}$ & 07 FF$_{lower}$ & 74.56\% \\ \hline
-07++12               & 07 FF$_{lower}$ & \textbf{79.02\%} \\ \hline
-07++12 FF$_{lower}$ & 07 FF$_{upper}$ & 77.18\% \\ \hline
-07++12 FF$_{upper}$ & 07 FF$_{upper}$ & 76.26\% \\ \hline
-07++12               & 07 FF$_{upper}$ & \textbf{80.79\%} \\ \hline
-07++12 FF$_{lower}$ & 07               & 76.40\% \\ \hline
-07++12 FF$_{upper}$ & 07               & 74.93\% \\ \hline
-07++12               & 07               & \textbf{79.59\%} \\ \hline
+07+12 FF$_{lower}$ & 07 FF$_{lower}$ & 75.94\% \\ \hline
+07+12 FF$_{upper}$ & 07 FF$_{lower}$ & 74.56\% \\ \hline
+07+12               & 07 FF$_{lower}$ & \textbf{79.02\%} \\ \hline
+07+12 FF$_{lower}$ & 07 FF$_{upper}$ & 77.18\% \\ \hline
+07+12 FF$_{upper}$ & 07 FF$_{upper}$ & 76.26\% \\ \hline
+07+12               & 07 FF$_{upper}$ & \textbf{80.79\%} \\ \hline
+07+12 FF$_{lower}$ & 07               & 76.40\% \\ \hline
+07+12 FF$_{upper}$ & 07               & 74.93\% \\ \hline
+07+12               & 07               & \textbf{79.59\%} \\ \hline
 \end{tabular}
 \end{table}
 
 Regardless of this result the following section will present a method to ensemble these members and the models trained for smaller and larger object sizes. Future methods may still be able to benefit from an ensemble where a clearer factor that the four distortions covered here.
+\newpage
 
 \begin{comment}
 	Results of training Deep IQA for LIVE distortions
