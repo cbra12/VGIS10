@@ -103,7 +103,7 @@ FF     & 0.9679 & 0.9505 \\ \hline
 
 
 \subsection{PASCAL VOC Data Split}
-Each model for the five distortion types and run through the 07++12 dataset in order to give an indication to the respective distributions, as done for the object sizes in \sectionref{resawareSec}. The distributions can been seen in the histograms in \figref{iqdist}.
+Each model for the five distortion types and run through the 07+12 dataset in order to give an indication to the respective distributions, as done for the object sizes in \sectionref{resawareSec}. The distributions can been seen in the histograms in \figref{iqdist}.
 
 \begin{figure}[H]
     \centering
@@ -140,7 +140,7 @@ The distribution for white noise and Gaussian blur is skewed towards a higher im
 
 \begin{table}[h]
 \centering
-\caption{My caption}
+\caption{Threshold values used for each distortion type to create even subsets of training data from 07+12.}
 \label{tab:iq_splits}
 \begin{tabular}{|l|l|}
 \hline
@@ -153,13 +153,13 @@ Fast Fading       & 13.373 \\ \hline
 \end{tabular}
 \end{table}
 
-A skewed distribution of data was also present for object sizes, however, creating two subsets of data for high and low white noise image quality does not appear to be feasible. The combination of both the heavy skew and half of the data lying below 0.599 indicates that a minimal amount of white noise distortion is present in the 07++12 dataset. Therefore, this distortion is not considered for part of the ensemble. While the Gaussian blur image quality is also skewed it is similar to that of the the object sizes and therefore is deemed appropriate to split based upon its median of 5.607. The remaining distributions are much less skewed and therefore a total of eight R-FCN models will be trained for the high and low levels of image quality for the distortions Gaussian blur, JPEG compression, JP2K compression and fast fading. Therefore, in total there will be ten R-FCN models trained including the two for smaller and larger object sizes.
+A skewed distribution of data was also present for object sizes, however, creating two subsets of data for high and low white noise image quality does not appear to be feasible. The combination of both the heavy skew and half of the data lying below 0.599 indicates that a minimal amount of white noise distortion is present in the 07+12 dataset. Therefore, this distortion is not considered for part of the ensemble. While the Gaussian blur image quality is also skewed it is similar to that of the the object sizes and therefore is deemed appropriate to split based upon its median of 5.607. The remaining distributions are much less skewed and a total of eight R-FCN models will be trained for the high and low levels of image quality for the distortions Gaussian blur, JPEG compression, JP2K compression and fast fading. Therefore, in total there will be ten R-FCN models trained including the two for smaller and larger object sizes.
 \\\\
-The 07++12 dataset has a total of 16,551 images and as this data is to be distributed into eight different subsets there is a possibility that there is a high level of overlap between the sets. As the aim of the ensemble is to learn to detect objects based upon different information, if subsets are two similar there may be potentially no advantage gained between two or more models. Therefore, a comparison matrix is used to evaluate how much the different combinations of 07++12 match. This can be seen for higher quality subsets in \tableref{highcomp}, lower quality in \tableref{lowcomp} and between lower and higher quality in \tableref{lowhighcomp}.
+The 07+12 dataset has a total of 16,551 images and as this data is to be distributed into eight different subsets there is a possibility that there is a high level of overlap between the sets. As the aim of the ensemble is to learn to detect objects based upon different information, if subsets are two similar there may be potentially no advantage gained between two or more models. Therefore, a comparison matrix is used to evaluate how much the different combinations of 07+12 match. This can be seen for higher quality subsets in \tableref{highcomp}, lower quality in \tableref{lowcomp} and between lower and higher quality in \tableref{lowhighcomp}.
 
 \begin{table}[h]
 \centering
-\caption{Higher Quality}
+\caption{Comparison matrix for the percentage of matching data for image quality data for higher quality.}
 \label{tab:highcomp}
 \begin{tabular}{|l|l|l|l|l|}
 \hline
@@ -173,7 +173,7 @@ The 07++12 dataset has a total of 16,551 images and as this data is to be distri
 
 \begin{table}[h]
 \centering
-\caption{Lower Quality}
+\caption{Comparison matrix for the percentage of matching data for image quality data for lower quality.}
 \label{tab:lowcomp}
 \begin{tabular}{|l|l|l|l|l|}
 \hline
@@ -185,9 +185,9 @@ The 07++12 dataset has a total of 16,551 images and as this data is to be distri
 \end{tabular}
 \end{table}
 
-For the subsets of data for both higher and lower quality there are a few instances of relatively high overlap in images. The largest is between \gls{ff} \add[inline]{gls for FF} and Gaussian blur with 83.12\% and 83.11\%. Other instances of overlap also appears between JPEG and JP2K compression which could be intuitively explained due to their similarities in their distortions. However, in general it is deemed that enough difference is present between the splits to train variants of R-FCN networks.
+For the subsets of data for both higher and lower quality there are a few instances of relatively high overlap in images. The largest is between \gls{ff} and Gaussian blur with 83.12\% and 83.11\%. Other instances of overlap also appears between JPEG and JP2K compression which could be intuitively explained due to their similarities in their distortions. 
 
-Finally, \tableref{lowhighcomp} shows the comparison matrix between all eight data subsets. There is much less overlap between these sets as much of the overlaps are present in respective higher and lower configurations as seen in \tableref{highcomp} and \tableref{lowcomp}.
+Finally, \tableref{lowhighcomp} shows the comparison matrix between factors for all eight data subsets. There is much less overlap between these sets as much of the overlaps are present in respective higher and lower configurations as seen in \tableref{highcomp} and \tableref{lowcomp}. In general it is deemed that enough difference is present between the splits to train variants of R-FCN networks. The following section will cover the performance of individual members with respect to their respective image quality subsets.
 
 \begin{table}[]
 \centering
@@ -253,13 +253,13 @@ Finally, \tableref{lowhighcomp} shows the comparison matrix between all eight da
 \end{comment}
 
 \subsection{Evaluating Image Quality Experts}\label{sec:iq_experts}
-As in the resolution-aware R-FCN networks individual tests are run to evaluate whether or not the models trained on the above data are candidate experts. Firstly, using the same measures as in \sectionref{resawareSec}, the 07 test set is split into lower and upper subsets for each distortion type according to their respective medians. The two respective experts trained on each of their subset and the baseline R-FCN model are evaluated on each split of the test set to see if experts have been trained.
+As in the resolution-aware R-FCN networks individual tests are run to evaluate whether or not the models trained on the above data are candidate experts. Firstly, using the same measures as in \sectionref{resawareSec}, the 07 test set is split into lower and upper subsets for each distortion type according to their respective medians. The two respective experts trained on each of their subset and the baseline R-FCN model are evaluated on their respective subsets.
 \\\\
-Firstly, the results for the Gaussian blur experts can be seen in \tableref{gblur_experts}. Unfortunately, the models trained on each of the subsets of data do not appear to give any advantage over training on all of the 07++12 data. Regardless of the test data the best performing model is that trained on all of the data, outperforming by 3-5\%. Similar results can be seen in \tableref{jpeg_experts}, \tableref{jp2k_experts} and \tableref{ff_experts} for each the remaining models trained on subsets of JPEG, JP2K, and fast fading distortions. This seems to indicate that the distortions are not as apparent for the R-FCN models such that it is possible to train expert members to either subset.
+Firstly, the results for the Gaussian blur experts can be seen in \tableref{gb_experts}. Unfortunately, the models trained on each of the subsets of data do not appear to give any advantage over training on all of the 07+12 data. Regardless of the test data the best performing model is that trained on all of the data, outperforming by 3-5\%. Similar results can be seen in \tableref{jpeg_experts}, \tableref{jp2k_experts} and \tableref{ff_experts} for each the remaining models trained on subsets of JPEG, JP2K, and fast fading distortions. This seems to indicate that the distortions are not as apparent for the R-FCN models such that it is possible to train expert members to either subset.
 
 \begin{table}[h]
 \centering
-\caption{Gaussian Blur Experts}
+\caption{Results for the Gaussian blur experts on the various subsets of 07 test data.}
 \label{tab:gb_experts}
 \begin{tabular}{|l|l|l|}
 \hline
@@ -280,7 +280,7 @@ Firstly, the results for the Gaussian blur experts can be seen in \tableref{gblu
 
 \begin{table}[h]
 \centering
-\caption{JPEG Experts}
+\caption{Results for the JPEG compression experts on the various subsets of 07 test data.}
 \label{tab:jpeg_experts}
 \begin{tabular}{|l|l|l|}
 \hline
@@ -299,7 +299,7 @@ Firstly, the results for the Gaussian blur experts can be seen in \tableref{gblu
 
 \begin{table}[h]
 \centering
-\caption{JP2K Experts}
+\caption{Results for the JP2K compression experts on the various subsets of 07 test data.}
 \label{tab:jp2k_experts}
 \begin{tabular}{|l|l|l|}
 \hline
@@ -319,7 +319,7 @@ Firstly, the results for the Gaussian blur experts can be seen in \tableref{gblu
 
 \begin{table}[h]
 \centering
-\caption{FF Experts}
+\caption{Results for the fast fading experts on the various subsets of 07 test data.}
 \label{tab:ff_experts}
 \begin{tabular}{|l|l|l|}
 \hline
@@ -336,7 +336,7 @@ Firstly, the results for the Gaussian blur experts can be seen in \tableref{gblu
 \end{tabular}
 \end{table}
 
-Regardless, of this result the following section will present a method to ensemble these members and the models trained for smaller and larger object sizes. Future methods may still be able to benefit from an ensemble where a clearer factor that the four distortions covered here.
+Regardless of this result the following section will present a method to ensemble these members and the models trained for smaller and larger object sizes. Future methods may still be able to benefit from an ensemble where a clearer factor that the four distortions covered here.
 
 \begin{comment}
 	Results of training Deep IQA for LIVE distortions
