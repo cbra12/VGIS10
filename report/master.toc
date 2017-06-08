@@ -36,7 +36,7 @@
 \contentsline {section}{\numberline {5.2}Image Quality Assessment}{47}{section.5.2}
 \contentsline {subsection}{\numberline {5.2.1}LIVE Image Quality Database}{48}{subsection.5.2.1}
 \contentsline {subsection}{\numberline {5.2.2}Training Deep IQA}{50}{subsection.5.2.2}
-\contentsline {subsection}{\numberline {5.2.3}PASCAL VOC Data Split}{52}{subsection.5.2.3}
+\contentsline {subsection}{\numberline {5.2.3}PASCAL VOC Data Split}{51}{subsection.5.2.3}
 \contentsline {subsection}{\numberline {5.2.4}Evaluating Image Quality Experts}{54}{subsection.5.2.4}
 \contentsline {section}{\numberline {5.3}Ensemble}{55}{section.5.3}
 \contentsline {subsection}{\numberline {5.3.1}Average Ensemble}{57}{subsection.5.3.1}
@@ -46,16 +46,15 @@
 \contentsline {section}{\numberline {6.1}Choice of Ensemble Factors}{65}{section.6.1}
 \contentsline {section}{\numberline {6.2}Choice of Object Detector}{65}{section.6.2}
 \contentsline {section}{\numberline {6.3}Training the Ensemble}{65}{section.6.3}
-\contentsline {subsection}{\numberline {6.3.1}Creating the Data Subsets}{66}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.1}Creating the Data Subsets}{65}{subsection.6.3.1}
 \contentsline {subsection}{\numberline {6.3.2}Training \gls {rfcn} Members}{67}{subsection.6.3.2}
 \contentsline {section}{\numberline {6.4}Ensemble Combination}{67}{section.6.4}
 \contentsline {section}{\numberline {6.5}Image Quality Distortions}{67}{section.6.5}
 \contentsline {section}{\numberline {6.6}Ensemble Member Experts}{68}{section.6.6}
-\contentsline {section}{\numberline {6.7}Future Work}{68}{section.6.7}
+\contentsline {section}{\numberline {6.7}Additional Future Work}{68}{section.6.7}
 \contentsline {chapter}{\numberline {7}Conclusion}{69}{chapter.7}
-\contentsline {chapter}{Literature}{71}{section*.72}
-\contentsline {chapter}{Appendices}{75}{section*.74}
+\contentsline {chapter}{Literature}{71}{section*.70}
+\contentsline {chapter}{Appendices}{75}{section*.72}
 \contentsline {chapter}{\numberline {A}Appendix A}{76}{Appendix.a.A}
-\contentsline {section}{\numberline {A.1}Resolution-Aware Object Detection}{76}{section.a.A.1}
-\contentsline {section}{\numberline {A.2}Deep IQA Models}{76}{section.a.A.2}
-\contentsline {section}{\numberline {A.3}Detection Examples}{76}{section.a.A.3}
+\contentsline {section}{\numberline {A.1}Deep IQA Models}{76}{section.a.A.1}
+\contentsline {section}{\numberline {A.2}Detection Examples}{77}{section.a.A.2}
