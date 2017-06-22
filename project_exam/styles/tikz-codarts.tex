@@ -1,0 +1,191 @@
+\tikzset{>=stealth',shorten >=1pt,
+  object node/.style={
+    circle,align=center,
+    minimum size=2cm,inner sep=0pt,
+    draw
+    % font=\sffamily\normalsize\bfseries
+  },
+  control node/.style={
+    circle,dashed,align=center,
+    minimum size=2cm,inner sep=0pt,
+    draw
+    % font=\sffamily\Large\bfseries
+  },
+  labelA node/.style={
+    midway,align=center,above=-0.08cm,sloped,
+    font=\footnotesize,
+    execute at begin node=\setlength{\baselineskip}{0.7em},
+    node distance=5cm
+  },
+  labelB node/.style={
+    midway,align=center,below=-0.08cm,sloped,
+    font=\footnotesize,
+    execute at begin node=\setlength{\baselineskip}{0.7em},
+    node distance=5cm
+  },
+  labelKrillo node/.style={
+    midway,align=center,right=-0.08cm,yshift=2,
+    font=\footnotesize,
+    execute at begin node=\setlength{\baselineskip}{0.7em},
+    node distance=5cm
+  },
+  labelInvKrillo node/.style={
+    midway,align=center,left=-0.08cm,yshift=2,
+    font=\footnotesize,
+    execute at begin node=\setlength{\baselineskip}{0.7em},
+    node distance=5cm
+  },
+  data node/.style={
+    align=center,
+    execute at begin node=\setlength{\baselineskip}{1em},
+    append after command={%
+      \pgfextra
+      \draw [-]  (\tikzlastnode.south east) to (\tikzlastnode.south west);
+      \draw [-]  (\tikzlastnode.north east) to (\tikzlastnode.north west);
+      \endpgfextra
+    }
+  },
+  terminate node/.style={
+    align=center,
+    execute at begin node=\setlength{\baselineskip}{0.7em}
+  },
+  task node/.style={
+    trapezium,
+    trapezium left angle=50,
+    trapezium right angle=-50,
+    align=center,
+    minimum height=1cm, minimum width=4cm, draw,
+    append after command={%
+    \pgfextra
+        \node[draw=none,fill=none, align=center] at (\tikzlastnode.center) {#1};
+    \endpgfextra
+    }
+  },
+  harry_potter1 node/.style={
+    align=center,minimum height=1.5cm,
+    minimum width=0.5cm, rotate=25, anchor = south,
+    append after command={%
+    \pgfextra
+        \node[draw=none,fill=none, align=center] at ([xshift=10, yshift=7]\tikzlastnode.north) (1) {#1};
+        \draw  plot [tension=1] coordinates {(\tikzlastnode.north east) ([xshift=5, yshift=-5]\tikzlastnode.center) ([xshift=-5, yshift=5]\tikzlastnode.center) (\tikzlastnode.south west)};
+    \endpgfextra
+    }
+  },
+  harry_potter2 node/.style={
+    align=center,minimum height=1.5cm,
+    minimum width=0.5cm, rotate=25, anchor = south,
+    append after command={%
+    \pgfextra
+        \node[draw=none,fill=none, align=center] at ([xshift=-5, yshift=-10]\tikzlastnode.south) (1) {#1};
+        \draw  plot [tension=1] coordinates {(\tikzlastnode.south west) ([xshift=-5, yshift=5]\tikzlastnode.center) ([xshift=5, yshift=-5]\tikzlastnode.center) (\tikzlastnode.north east)};
+    \endpgfextra
+    }
+  },
+  queue_v node/.style n args={3}{
+    align=center,midway,anchor=center,
+    rotate around={#2:(0,0)},
+    minimum height = 10, minimum width = 15,
+    append after command={%
+    \pgfextra
+        \draw node[draw=none, fill=white, anchor=south west, rotate=#2, minimum height = 10, minimum width = 15,] at (\tikzlastnode.south west) {};
+        \draw node[anchor=north, rotate=90, align=center, font=\footnotesize,
+  execute at begin node=\setlength{\baselineskip}{0.9em}] at ([xshift=10]\tikzlastnode.center) {\footnotesize #1};
+          \draw[-] plot coordinates {([yshift=#3*4]\tikzlastnode.north west) (\tikzlastnode.south west) (\tikzlastnode.south east) ([yshift=#3*5]\tikzlastnode.north east)};
+          \draw[-] plot coordinates {(\tikzlastnode.north east) (\tikzlastnode.north west) (\tikzlastnode.west) (\tikzlastnode.east) (\tikzlastnode.south east)};
+    \endpgfextra
+    }
+  },
+  queue_h node/.style n args={3}{
+    align=center,midway,anchor=center,
+    rotate around={#2:(0,0)},
+    minimum height = 15, minimum width = 10,
+    append after command={%
+    \pgfextra
+        \draw node[draw=none, fill=white, anchor=south west, rotate=#2, minimum height = 15, minimum width = 10] at (\tikzlastnode.south west) {};
+        \draw node[anchor=south, rotate=0, align=center, font=\footnotesize,execute at begin node=\setlength{\baselineskip}{0.9em}] at ([yshift=8]\tikzlastnode.center) {#1};
+          \draw[-] plot coordinates {([xshift=-#3*4]\tikzlastnode.south west) (\tikzlastnode.south east) (\tikzlastnode.north east) ([xshift=-#3*5]\tikzlastnode.north west)};
+          \draw[-] plot coordinates {(\tikzlastnode.north west) (\tikzlastnode.south west) (\tikzlastnode.south) (\tikzlastnode.north) (\tikzlastnode.north west)};
+    \endpgfextra
+    }
+  },
+  loose_v node/.style n args={3}{
+    align=center,midway,anchor=center,
+    rotate around={#2:(0,0)},
+    minimum height = 10, minimum width = 15,
+    append after command={%
+    \pgfextra
+        \draw node[draw=none, anchor=south west, rotate=#2, minimum height = 10, minimum width = 15,] at (\tikzlastnode.south west) {};
+        \draw node[anchor=north, rotate=90, align=center, font=\footnotesize,execute at begin node=\setlength{\baselineskip}{0.9em}] at ([xshift=10]\tikzlastnode.center) {\footnotesize #1};
+        \draw[-] plot coordinates {([yshift=#3*4]\tikzlastnode.north west) (\tikzlastnode.south west) (\tikzlastnode.south east) ([yshift=#3*5]\tikzlastnode.north east)};
+    \endpgfextra
+    }
+  },
+  loose_h node/.style n args={3}{
+    align=center,midway,anchor=center,
+    rotate around={#2:(0,0)},
+    minimum height = 15, minimum width = 10,
+    append after command={%
+    \pgfextra
+        \draw node[draw=none, anchor=south west, rotate=#2, minimum height = 15, minimum width = 10] at (\tikzlastnode.south west) {};
+        \draw node[anchor=south, rotate=0, align=center, font=\footnotesize,execute at begin node=\setlength{\baselineskip}{0.9em}] at ([yshift=8]\tikzlastnode.center) {#1};
+          \draw[-] plot coordinates {([xshift=-#3*4]\tikzlastnode.south west) (\tikzlastnode.south east) (\tikzlastnode.north east) ([xshift=-#3*5]\tikzlastnode.north west)};
+    \endpgfextra
+    }
+  },
+  reply_h node/.style n args={4}{
+    align=center,midway,anchor=center,
+    rotate around={#3:(0,0)},
+    minimum height = 15, minimum width = 15,
+    append after command={%
+    \pgfextra
+        \draw node[anchor=center, rotate=0, align=center, font=\footnotesize,execute at begin node=\setlength{\baselineskip}{0.9em}] at ([yshift=(#4*16)+#4*16]\tikzlastnode.center) {\footnotesize #1};
+        \draw node[anchor=center, rotate=0, align=center, font=\footnotesize,execute at begin node=\setlength{\baselineskip}{0.9em}] at ([yshift=-#4*22]\tikzlastnode.center) {\footnotesize #2};
+        \draw[-] plot coordinates {(\tikzlastnode.south east) (\tikzlastnode.south west) (\tikzlastnode.north west) (\tikzlastnode.north east) ([yshift=#4*15]\tikzlastnode.north east) ([yshift=#4*15,xshift=-#4*16]\tikzlastnode.north east)};
+    \endpgfextra
+    }
+  },
+  reply_v node/.style n args={4}{
+    align=center,midway,anchor=center,
+    rotate around={#3:(0,0)},
+    minimum height = 15, minimum width = 15,
+    append after command={%
+    \pgfextra
+        \draw node[anchor=west, rotate=0, align=center, font=\footnotesize,execute at begin node=\setlength{\baselineskip}{0.9em}] at ([xshift=(1+#4)*-24+(1-#4)*8]\tikzlastnode.west) {\footnotesize #1};
+        \draw node[anchor=east, rotate=0, align=center, font=\footnotesize, execute at begin node=\setlength{\baselineskip}{0.9em}] at ([xshift=(1+#4)*15]\tikzlastnode.east) {\footnotesize #2};
+        \draw[-] plot coordinates {(\tikzlastnode.north east) (\tikzlastnode.south east) (\tikzlastnode.south west) (\tikzlastnode.north west) ([xshift=-#4*15]\tikzlastnode.north west) ([xshift=-#4*15,yshift=-#4*16]\tikzlastnode.north west)};
+    \endpgfextra
+    }
+  },
+  data node/.style={
+    rectangle,align=center,
+    minimum width=2cm,minimum height=1.cm,
+    inner sep=0pt,
+    draw
+   },
+   start node/.style={
+     circle,fill=black,align=center,
+     minimum size=0.75cm,inner sep=0pt,draw
+  },
+  end node/.style={
+     circle, align=center, minimum size=0.75cm, draw,
+     append after command = {
+     \pgfextra
+        \draw node[circle, align=center, minimum size = 0.5cm, fill=black] at (\tikzlastnode.center) {};
+     \endpgfextra
+     }
+  },
+  single_queue_v node/.style n args={3}{
+    align=center,midway,anchor=center,
+    rotate around={#2:(0,0)},
+    minimum height = 10, minimum width = 15,
+    append after command={%
+    \pgfextra
+        \draw node[draw=none, fill=white, anchor=south west, rotate=#2, minimum height = 4, minimum width = 15,] at (\tikzlastnode.south west) {};
+        \draw node[anchor=north, rotate=90, align=center, font=\footnotesize,
+  execute at begin node=\setlength{\baselineskip}{0.9em}] at ([xshift=10]\tikzlastnode.center) {\footnotesize #1};
+          \draw[-] plot coordinates {([yshift=#3*4]\tikzlastnode.north west) (\tikzlastnode.south west) (\tikzlastnode.south east) ([yshift=#3*5]\tikzlastnode.north east)};
+          \draw[-] plot coordinates { ([yshift=-4]\tikzlastnode.north west) ([yshift=-4]\tikzlastnode.north east) ([yshift=0]\tikzlastnode.south east)};
+    \endpgfextra
+    }
+  }
+}

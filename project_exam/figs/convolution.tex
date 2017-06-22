@@ -1,0 +1,40 @@
+%!tikz editor 1.0
+\documentclass{article}
+\usepackage{tikz}
+\usepackage[graphics, active, tightpage]{preview}
+\PreviewEnvironment{tikzpicture}
+
+%!tikz preamble begin
+
+%!tikz preamble end
+
+
+\begin{document}
+%!tikz source begin
+\begin{tikzpicture}[node distance=2cm]
+\usetikzlibrary{shapes.geometric, arrows}
+\tikzstyle{neuron} = [circle, minimum width=1.2cm, minimum height=1.2cm, text centered, draw=black, fill=white]
+\tikzstyle{mytext} = [text centered]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+\tikzstyle{inv} = [circle, minimum width=0cm, minimum height=0cm, text centered, draw=white, fill=white]
+
+\draw[step=0.125cm,color=gray] (0.0,0.0) grid (0.625,0.625);
+\node at (0.125,1.125) {\tiny $w_1$};
+\node at (0.125,+0.75) {\tiny B};
+\node at (0.125,+0.75) {\tiny C};
+\node at (0.125,+0.75) {\tiny D};
+\node at (0.125,+0.25) {\tiny E};
+\node at (-0.25,+0.25) {\tiny F};
+\node at (+0.25,+0.25) {\tiny G};
+\node at (+0.75,+0.25) {\tiny H};
+% ...
+\node at (+0.75,-0.75) {Q};
+
+
+
+
+
+\end{tikzpicture}
+%!tikz source end
+
+\end{document}

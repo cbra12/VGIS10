@@ -1,0 +1,106 @@
+%!tikz editor 1.0
+\documentclass{article}
+\usepackage{tikz}
+\usepackage[graphics, active, tightpage]{preview}
+\PreviewEnvironment{tikzpicture}
+
+%!tikz preamble begin
+
+%!tikz preamble end
+
+
+\begin{document}
+%!tikz source begin
+\begin{tikzpicture}[node distance=3cm]
+\usetikzlibrary{shapes.geometric, arrows}
+\tikzstyle{neuron} = [circle, minimum width=1.2cm, minimum height=1.2cm, text centered, draw=black, fill=white]
+\tikzstyle{dot} = [circle,inner sep=2pt, text centered, draw=black, fill=black]
+\tikzstyle{mytext} = [text centered]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+\tikzstyle{inv} = [circle, minimum width=0cm, minimum height=0cm, text centered, draw=white, fill=white]
+
+%\node (input) [neuron] {$x_1$};%
+%\node (start) [inv, left of=input, yshift] {};
+
+
+\node (input2) [neuron, below of=input, yshift=1.5cm] {LR};
+%\node (input3) [neuron, below of=input2, yshift=1.5cm] {$x_3$};
+%\node (start2) [inv, left of=input2] {};
+%\node (start3) [inv, left of=input3] {};
+\node (inputtext) [mytext, above of=input,yshift=-1cm] {Input Layer};
+\node (hid1) [neuron, right of=input, yshift=0.8cm] {act()};
+\node (hid2) [neuron, below of=hid1, yshift=1.5cm] {act()};
+\node (hid3) [neuron, below of=hid2, yshift=1.5cm] {act()};
+\node (dot1) [dot, below of=hid3, yshift=1.5cm] {};
+\node (dot2) [dot, below of=dot1, yshift=2.5cm] {};
+\node (dot3) [dot, below of=dot2, yshift=2.5cm] {};
+\node (hid4) [neuron, below of=dot3, yshift=1.5cm] {act()};
+
+\node (hid21) [neuron, right of=hid1] {act()};
+\node (hid22) [neuron, below of=hid21, yshift=1.5cm] {act()};
+\node (hid23) [neuron, below of=hid22, yshift=1.5cm] {act()};
+\node (dot21) [dot, below of=hid23, yshift=1.5cm] {};
+\node (dot22) [dot, below of=dot21, yshift=2.5cm] {};
+\node (dot23) [dot, below of=dot22, yshift=2.5cm] {};
+\node (hid24) [neuron, below of=dot23, yshift=1.5cm] {act()};
+
+
+
+\node (inputtext) [mytext, above of=hid1,yshift=-1.8cm] {Patch Extraction};
+\node (output) [neuron, right of=input2, xshift=7.5cm] {HR};
+\node (nonlinear) [mytext, above of=hid21,yshift=-1.8cm] {Non-Linear Mapping};
+\node (recon) [mytext, right of=nonlinear, xshift=1.5cm] {Reconstruction};
+\node (end) [inv, right of=output] {};
+
+
+
+%\draw [arrow] -- (input);
+%\draw [arrow] (input) -- (hid1);
+%\draw [arrow] (input) -- (hid2);
+%\draw [arrow] (input) -- (hid3);
+%\draw [arrow] (input) -- (hid4);
+\draw [arrow] (input2) -- (hid1);
+\draw [arrow] (input2) -- (hid2);
+\draw [arrow] (input2) -- (hid3);
+\draw [arrow] (input2) -- (hid4);
+%\draw [arrow] (input3) -- (hid1);
+%\draw [arrow] (input3) -- (hid2);
+%\draw [arrow] (input3) -- (hid3);
+%draw [arrow] (input3) -- (hid4);
+\draw [arrow] (hid1) -- (hid21);
+\draw [arrow] (hid2) -- (hid21);
+\draw [arrow] (hid3) -- (hid21);
+\draw [arrow] (hid4) -- (hid21);
+\draw [arrow] (hid1) -- (hid22);
+\draw [arrow] (hid2) -- (hid22);
+\draw [arrow] (hid3) -- (hid22);
+\draw [arrow] (hid4) -- (hid22);
+\draw [arrow] (hid1) -- (hid23);
+\draw [arrow] (hid2) -- (hid23);
+\draw [arrow] (hid3) -- (hid23);
+\draw [arrow] (hid4) -- (hid23);
+\draw [arrow] (hid1) -- (hid24);
+\draw [arrow] (hid2) -- (hid24);
+\draw [arrow] (hid3) -- (hid24);
+\draw [arrow] (hid4) -- (hid24);
+
+\draw [arrow] (hid21) -- (output);
+\draw [arrow] (hid22) -- (output);
+\draw [arrow] (hid23) -- (output);
+\draw [arrow] (hid24) -- (output);
+
+
+
+
+
+%\draw [arrow] (hid1) -- node[anchor=south] {$w_2$}(hid2);
+%\draw [arrow] (hid2) -- node[anchor=south] {$w_3$}(output);
+%\draw [arrow] (output) -- (end);
+%\draw [arrow] (start) -- node[anchor=south] {Input 1}(input);
+%\draw [arrow] (start2) -- node[anchor=south] {Input 2}(input2);
+%\draw [arrow] (start3) -- node[anchor=south] {Input 3}(input3);
+
+\end{tikzpicture}
+%!tikz source end
+
+\end{document}

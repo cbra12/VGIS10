@@ -1,0 +1,49 @@
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usepackage{tikzscale}
+\usepackage{tabularx}
+\usepackage{standalone}
+\usepackage{bm}
+\usetikzlibrary{chains}
+\usepgflibrary{shapes.geometric}
+\usetikzlibrary{shapes}
+\usetikzlibrary{calc}
+\usetikzlibrary{arrows}
+\usetikzlibrary{automata}
+\usetikzlibrary{patterns}
+\usepackage{ifthen}
+\usepackage{xifthen}
+\usepackage{xstring}
+\usepackage{pgfopts}
+\usepackage{calc}
+\usepackage{rotating}
+\usepackage{styles/tikz-uml}
+\usepackage{multirow}
+\input{styles/tikz-uml-krillo}
+\input{styles/tikz-codarts}
+\input{styles/tikz-telecom}
+\input{styles/tikz-computer}
+\usepackage{circuitikz}
+%\usepackage{handoutWithNotes}
+\usepackage{subcaption}
+
+\newcommand{\figureimport}[2]{
+  \begin{figure}[ht]
+    \centering
+    \includegraphics[width=#2\textwidth]{#1}
+  \end{figure}
+}
+%\usepackage[acronym,toc,nomain]{glossaries}
+
+
+\usepackage{epstopdf}
+\tikzset{
+  ciscorouter/.style={align=center,label={center:
+      \includegraphics[]{../../styles/cisco/router.eps}
+    },minimum width=0.9cm,minimum height=0.9cm}
+}
+\tikzset{
+  ciscotap/.style={align=center,label={center:
+      \includegraphics[]{../../styles/cisco/smallhub.eps}
+    },minimum width=0.9cm,minimum height=0.9cm}
+}

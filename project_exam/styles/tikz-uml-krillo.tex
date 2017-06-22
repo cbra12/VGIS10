@@ -1,0 +1,32 @@
+\tikzset{
+  labelC node/.style={
+    at end,align=center,above=-0.08cm,xshift=-6,sloped,
+    font=\footnotesize,
+    execute at begin node=\setlength{\baselineskip}{0.7em},
+    node distance=5cm        
+%     append after command={%    
+%     \pgfextra
+%       \node[draw,near end]{#1};
+%       \node[labelB node,middle]{#2}
+%       \node[draw,near start]{#3} 
+% %      \node[at end, above right]{#2};     
+% %      \node[at end, above right]{#3};
+%     \endpgfextra
+%     }
+  },
+  labelD node/.style={    
+    at start,align=center,sloped,right=-0.08cm,xshift=6,
+    rotate=-90,
+    font=\footnotesize,
+    execute at begin node=\setlength{\baselineskip}{0.7em},
+    node distance=5cm        
+  }
+}
+\newcommand{\conceptionalclassbox}[2]{%
+\begin{tikzpicture}
+\draw (0,0)  node[rectangle,minimum height=0.7cm,draw,minimum width=2.1cm,align=center](satellite){};
+\draw (satellite) node[align=center,font=\scriptsize] {#1};
+\draw (satellite) node[minimum height=1cm,minimum width=2.1cm,draw,below of=satellite,align=left,font=\scriptsize,node distance =0.85cm](diagram){};
+\draw (diagram.north west) node[anchor=north west,align=left,font=\scriptsize] {#2};
+\end{tikzpicture}
+}

@@ -1,0 +1,70 @@
+\section{Deep Learning}
+\begin{frame}{Deep Learning}{Overview}
+    \begin{block}{Convolutional Neural Networks}
+        \begin{itemize}
+            \item Based on Artificial Neural Networks
+            \item Originally presented in 1979 \footnote{K. Fukushima, "Neocognitron: A self-organizing neural network model for a mechanism of pattern recognition unaffected by a shift in position," Biological Cybernetics, vol. 36, no. 4, pp. 193-202, 1980}
+                \begin{itemize}
+                    \item Renaissance due to GPU computing
+                \end{itemize}
+        \end{itemize}
+    \end{block}
+    % \begin{figure}
+    % \includegraphics[width=0.5\linewidth]{../../Figs/Techanal/ann.tex}
+    % \caption*{Artificial Neural Network}
+    %\end{figure}
+\end{frame}
+
+\begin{frame}{Deep Learning}{CNN Architecture}
+    \begin{block}{Layers}
+        \begin{itemize}
+            \item Convolutional
+            \item Activation
+                \begin{itemize}
+                    \item ReLU, Sigmoid
+                \end{itemize}
+            \item Final
+                \begin{itemize}
+                    \item Classification: Fully-connected output scores
+                    \item Regression: Single output activation map
+                \end{itemize}
+        \end{itemize}
+        \begin{figure}
+            \includegraphics[width=0.6\linewidth]{../../Figs/Introduction/cnn.tex}
+            \caption*{\scriptsize CNN architecture}
+        \end{figure}
+    \end{block}
+\end{frame}
+
+\begin{frame}{Deep Learning}{CNN Architecture}
+    \begin{block}{Convolutional Layer}
+        \begin{itemize}
+            \item A set of learnable filters
+            \item Forward pass: convolve each filter across image to produce activation maps
+            \item Local connectivity: Each neuron is connected to a small region of input
+            \item Parameter sharing: Filters useful at different positions
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}{Deep Learning}{Training}
+    \begin{columns}
+        \column{0.5\textwidth}
+        \begin{block}{Gradient Descent}
+            \begin{itemize}
+                \item Minimising a loss function
+                \item Backpropagate loss to update weights \& biases
+            \end{itemize}
+
+            \begin{figure}
+                \includegraphics[width=0.9\linewidth]{figs/ann.tex}
+            \end{figure}
+
+        \end{block}
+        \column{0.5\textwidth}
+        \begin{figure}
+            \includegraphics[width=0.9\linewidth]{../../Figs/Design/minimisation.tex}
+        \end{figure}
+
+    \end{columns}
+\end{frame}

@@ -1,0 +1,90 @@
+%!tikz editor 1.0
+\documentclass{article}
+\usepackage{tikz}
+\usepackage[graphics, active, tightpage]{preview}
+\PreviewEnvironment{tikzpicture}
+
+%!tikz preamble begin
+
+%!tikz preamble end
+
+
+\begin{document}
+%!tikz source begin
+\begin{tikzpicture}[node distance = 2cm, auto]
+\usetikzlibrary{shapes,arrows, fit}
+\usetikzlibrary{chains,positioning,shapes.symbols}
+\tikzset{
+    bound/.style={
+      draw,
+      minimum height=1cm,
+      minimum width=1.5cm,
+      inner sep=0.2em,
+      rounded corners=2pt,
+    },
+}
+
+% STEP 1 %
+  \node[bound, align=center] (a) {AR500};
+  \node[bound, below=1.2cm of a.south west, anchor=north east, align=center] (2) {9-1-5};
+  \node[bound, below=1.2cm of a.south east, anchor=north west, align=center] (3) {9-5-5};
+  \node[bound, below=1.2cm of 2.south, anchor=north] (retrainer) {Retrain};
+  \node[bound, below=1.2cm of 3.south, anchor=north] (retrainer2) {Retrain};
+  \draw[->] (a.south) -- (2.north);
+  \draw[->] (a.south) -- (3.north);
+  \draw[->] (2.south) -- (retrainer.north);
+  \draw[->] (3.south) -- (retrainer2.north);
+
+% STEP 2 %
+  \node[bound, align=center, right=4cm of a] (b) {AR500};
+  \node[bound, below=1.2cm of b.south, anchor=north, align=center] (struct3) {9-5-5};
+  \node[bound, below=1.2cm of struct3, anchor=north, minimum width=3cm] (type) {Fine-tune};
+  \node[bound, minimum width= 1cm, below=1.2cm of type.south west, anchor=north, align=center] (layer1) {1/2/3};
+  \node[bound, minimum width= 1cm, below=1.2cm of type.south, anchor=north, align=center] (layer2) {2/3};
+  \node[bound, minimum width= 1cm, below=1.2cm of type.south east, anchor=north, align=center] (layer3) {3};
+  \draw[->] (b.south) -- (struct3.north);
+  \draw[->] (struct3.south) -- (type.north);
+  \draw[->] (type.south) -- (layer1.north);
+  \draw[->] (type.south) -- (layer2.north);
+  \draw[->] (type.south) -- (layer3.north);
+
+% STEP 3 %
+  \node[bound, align=center, right=4cm of b] (c) {AToF};
+  \node[bound, below=1.2cm of c.south, anchor=north, align=center] (struct4) {9-5-5};
+  \node[bound, below=1.2cm of struct4, anchor=north, minimum width=3cm] (type2) {Fine-tune};
+  \node[bound, minimum width= 1cm, below=1.2cm of type2.south west, anchor=north, align=center] (layer4) {1/2/3};
+  \node[bound, minimum width= 1cm, below=1.2cm of type2.south, anchor=north, align=center] (layer5) {2/3};
+  \node[bound, minimum width= 1cm, below=1.2cm of type2.south east, anchor=north, align=center] (layer6) {3};
+  \draw[->] (c.south) -- (struct4.north);
+  \draw[->] (struct4.south) -- (type2.north);
+  \draw[->] (type2.south) -- (layer4.north);
+  \draw[->] (type2.south) -- (layer5.north);
+  \draw[->] (type2.south) -- (layer6.north);
+
+% Lines and stuff %
+  %\draw[color=gray] (-2.5,1.5) node[above,align=left, color=black, text width=8cm] {\textsc{\Large \textbf{Face Optimisation}}} (-7,1.5) -- (12.5,1.5);
+  \draw[dotted,color=gray] (-5,-0.3) node[above,align=left, color=black, text width=4cm] {\textbf{\Large Dataset}} (-7,-1) -- (13,-1);
+  \draw[dotted,color=gray] (-5,-2.5) node[above,align=left, color=black, text width=4cm] {\textbf{\Large Layer structure}} (-7,-3.2) -- (13,-3.2);
+  \draw[dotted,color=gray] (-5,-4.7) node[above,align=left, color=black, text width=4cm] {\textbf{\Large Training type}} (-7,-5.4)-- (13,-5.4);
+  \draw[dotted,color=gray] (-5,-6.9) node[above,align=left, color=black, text width=4cm] {\textbf{\Large Layers}} (-7,-7.6)-- (13,-7.6);
+  %\draw[] (-5,-8.2) node[above,align=left, color=black, text width=4cm] {\textbf{\Large Name}};
+
+% Boxes %
+  \draw[fill=gray, opacity=0.2] (-2.5,1) rectangle (2.5,-8.5); % BOX 1 %
+  \draw[fill=gray, opacity=0.2] (3.0,1) rectangle (8.0,-8.5); % BOX 2 %
+  \draw[fill=gray, opacity=0.2] (8.5,1) rectangle (13.5,-8.5); % BOX 3 %
+  \draw[color=red, line width=0.5em] (8.5,1) rectangle (13.5,-8.5); % BOX 3 %
+      
+
+% Names %
+      \draw[] (0,-7.9) node[below, align=center, color=black, text width=4cm] {Name: \underline{AR Retrain}};
+      \draw[] (5.45,-7.9) node[below, align=center, color=black, text width=4cm] {Name: \underline{AR Fine-tune}}; 
+      \draw[] (10.9,-7.9) node[below, align=center, color=black, text width=4cm] {Name: \underline{AToF Fine-tune}};
+
+
+\end{tikzpicture}
+%!tikz source end
+
+\end{document}
+
+

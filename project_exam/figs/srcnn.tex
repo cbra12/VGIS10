@@ -1,0 +1,48 @@
+\documentclass{standalone}
+\usepackage{tikz, xifthen, calc}
+\usetikzlibrary{shapes.geometric, 3d, calc}
+\def\inline{\lstinline[keywordstyle={}]}
+\tikzstyle{img}=[]
+
+\begin{document}
+\begin{tikzpicture}[]
+
+    \node (lr) [inner sep = 0, outer sep = 0, anchor = west, label=above:LR] at (-5., 5.5) {\includegraphics[width=20pt]{figs/lr_butterfly_GT.jpeg}};
+
+    \node (hr) [inner sep = 0, outer sep = 0, anchor = west, label=above:LR input] at (-3.5, 5.5) {\includegraphics[width=60pt]{figs/bicubic_butterfly_GT.jpeg}};
+
+\draw[->](lr) -- node[align=center,yshift=-1.7cm] {Bicubic\\Interpolation} (hr);
+
+\draw[dotted] (-6,3) -- (-0.5,3) -- (-0.5,8) -- (-6,8) -- (-6, 3);
+\node[] at (-4.6,8.5) {\textbf{Pre-processing}};
+
+%\node (conv) at (1.7,5.5) [draw, label=above:Input Input, minimum width=2cm,minimum height=2cm] {};
+
+\node (conv1) at (1.5,5.5) [draw,minimum width=2cm,minimum height=2cm] {};
+\node (rect1) at (1.6,5.6) [draw,fill=white,minimum width=2cm,minimum height=2cm] {};
+\node (convEnd1) at (1.7,5.7) [draw,fill=white,minimum width=2cm,minimum height=2cm] {};
+\node[anchor=south,align=left]  at ([yshift=0.2cm]conv1.north) {Patch\\extraction}; 
+
+\draw[->](hr) -- node[align=center,xshift=1.1cm, yshift=-2cm]{} (conv1);
+
+\node (conv2) at (4.2,5.5) [draw,minimum width=2cm,minimum height=2cm] {};
+\node (rect2) at (4.3,5.6) [draw,fill=white,minimum width=2cm,minimum height=2cm] {};
+\node (convEnd2) at (4.4,5.7) [draw,fill=white,minimum width=2cm,minimum height=2cm] {};
+\node[anchor=south,align=left] at ([yshift=0.18cm]conv2.north) {Non-linear\\mapping}; 
+
+\draw[->](convEnd1) -- node[align=center, yshift=-2cm] {} (convEnd2);
+
+\node (conv3) at (6.9,5.7) [draw,minimum width=2cm,minimum height=2cm] {};
+\draw[->](convEnd2) -- node[align=center, yshift=-2cm] {} (conv3);
+\node[anchor=south,align=left] at ([yshift=0.05cm,xshift=0.2cm]conv3.north) {Reconstruction};
+
+\draw[dotted] (0.2,3) -- (8.8,3) -- (8.8,8) -- (0.2,8) -- (0.2,3);
+\node[] at (0.8,8.5) {\textbf{SRCNN}};
+
+\node (out) [inner sep = 0, outer sep = 0, anchor = west, label=above:HR output] at (9.2, 5.7) {\includegraphics[width=60pt]{figs/srcnn_butterfly_GT.jpeg}};
+
+\draw[->](conv3) -- node[align=center, yshift=-2cm] {} (out);
+
+
+\end{tikzpicture}
+\end{document}

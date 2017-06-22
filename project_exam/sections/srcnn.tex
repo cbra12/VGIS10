@@ -1,0 +1,163 @@
+
+\section{Super Resolution Convolutional Neural Network}
+\begin{frame}{SRCNN}{Overview}
+    \begin{block}{SRCNN outline}
+    \begin{itemize}
+        \item Pre-processing: Up-scaling via bicubic interpolation
+        \item Three convolutional layers
+    \end{itemize}
+        \begin{figure}
+            \includegraphics[width=1.0\linewidth]{figs/srcnn.tex}
+        \end{figure}
+    \end{block}
+\end{frame}
+
+\begin{frame}{SRCNN}{Training}
+    \begin{block}{SRCNN Training}
+        \begin{itemize}
+            \item Supervised learning
+            \item Patch-wise training
+        \end{itemize}
+
+\begin{figure}[H]
+\centering
+    \begin{subfigure}[b]{0.20\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{../../Figs/Design/aleix_patch3_l.png}
+        \caption{\scriptsize LR eye}
+    \end{subfigure}
+    \quad
+    \begin{subfigure}[b]{0.20\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{../../Figs/Design/aleix_patch3.png}
+        \caption{\scriptsize HR eye}
+    \end{subfigure}
+    \quad
+    \begin{subfigure}[b]{0.20\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{../../Figs/Design/aleix_patch1_l.png}
+        \caption{\scriptsize LR mouth}
+    \end{subfigure}
+    \quad
+    \begin{subfigure}[b]{0.20\textwidth}
+        \centering
+        \includegraphics[width=\textwidth]{../../Figs/Design/aleix_patch1.png}
+        \caption{\scriptsize HR mouth}
+    \end{subfigure}
+\end{figure}
+    \end{block}
+\end{frame}
+
+\begin{frame}{SRCNN}{Convolutional Filters}
+    \begin{columns}
+        \column{0.35\textwidth}
+        \begin{block}{Patch Extraction}
+        \begin{figure}
+            \includegraphics[width=0.8\textwidth]{figs/finetune_conv1.png}
+        \end{figure}
+
+        \begin{figure}[H]
+            \centering
+            \begin{subfigure}[b]{0.40\textwidth}
+            \centering
+                \includegraphics[width=\textwidth]{figs/conv1_f1.png}
+            \end{subfigure}
+        \quad
+            \begin{subfigure}[b]{0.40\textwidth}
+            \centering
+                \includegraphics[width=\textwidth]{figs/conv1_f2.png}
+            \end{subfigure}
+        \end{figure}
+    \end{block} 
+        \column{0.7\textwidth}
+        \begin{figure}
+            \includegraphics[width=0.9\textwidth]{figs/network_filters.tex}
+        \end{figure}
+\end{columns}
+\end{frame}
+
+\begin{frame}{SRCNN}{Convolutional Filters}
+    \begin{columns}
+        \column{0.35\textwidth}
+        \begin{block}{Non-linear Mapping}
+        \begin{figure}
+            \includegraphics[width=0.8\textwidth]{figs/finetune_conv2.pdf}
+        \end{figure}
+
+        \begin{figure}[H]
+            \centering
+            \begin{subfigure}[b]{0.40\textwidth}
+            \centering
+                \includegraphics[width=\textwidth]{figs/conv2_f4.png}
+            \end{subfigure}
+        \quad
+            \begin{subfigure}[b]{0.40\textwidth}
+            \centering
+                \includegraphics[width=\textwidth]{figs/conv2_f10.png}
+            \end{subfigure}
+        \end{figure}
+    \end{block}
+        \column{0.7\textwidth}
+    \only<1>{
+        \begin{figure}
+            \includegraphics[width=0.9\textwidth]{figs/network_filters1.tex}
+        \end{figure}
+    }
+    \only<2>{
+        \begin{figure}
+            \includegraphics[width=0.9\textwidth]{figs/network_filters11.tex}
+        \end{figure}
+    }
+    \only<3>{
+        \begin{figure}
+            \includegraphics[width=0.9\textwidth]{figs/network_filters12.tex}
+        \end{figure}
+    }
+    \only<4>{
+        \begin{figure}
+            \includegraphics[width=0.9\textwidth]{figs/network_filters13.tex}
+        \end{figure}
+    }
+\end{columns}
+\end{frame}
+
+\begin{frame}{SRCNN}{Convolutional Filters}
+    \begin{columns}
+        \column{0.35\textwidth}
+        \begin{block}{Reconstruction}
+            \begin{figure}
+            \includegraphics[width=0.8\textwidth]{figs/finetune_conv3.pdf}
+        \end{figure}
+
+        \begin{figure}[H]
+            \centering  
+            \includegraphics[width=0.5\textwidth]{figs/butterfly_high.jpg}
+        \end{figure}
+    \end{block}
+        \column{0.7\textwidth}
+        \begin{figure}
+            \includegraphics[width=0.9\textwidth]{figs/network_filters2.tex}
+            \vspace*{0.05cm}
+        \end{figure}
+\end{columns}
+\end{frame}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

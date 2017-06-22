@@ -1,0 +1,132 @@
+%!tikz editor 1.0
+\documentclass{article}
+\usepackage{tikz}
+\usepackage[graphics, active, tightpage]{preview}
+\PreviewEnvironment{tikzpicture}
+
+%!tikz preamble begin
+
+%!tikz preamble end
+
+
+\begin{document}
+%!tikz source begin
+\begin{tikzpicture}[node distance=3cm]
+\usetikzlibrary{shapes.geometric, arrows}
+\tikzstyle{neuron} = [rectangle, minimum width=1.2cm, minimum height=1.2cm, text centered, draw=black, fill=white]
+\tikzstyle{dot} = [circle,inner sep=2pt, text centered, draw=black, fill=black]
+\tikzstyle{mytext} = [text centered]
+\tikzstyle{arrow} = [thick,->,>=stealth, opacity=0.3]
+\tikzstyle{arrowred} = [thick,->,>=stealth, color=red]
+\tikzstyle{inv} = [circle, minimum width=0cm, minimum height=0cm, text centered, draw=white, fill=white]
+
+%\node (input) [neuron] {$x_1$};%
+%\node (start) [inv, left of=input, yshift] {};
+
+
+\node (input2) [neuron, below of=input, yshift=1.5cm] {};
+%\node (input3) [neuron, below of=input2, yshift=1.5cm] {$x_3$};
+%\node (start2) [inv, left of=input2] {};
+%\node (start3) [inv, left of=input3] {};
+\node (inputtext) [mytext, above of=input,yshift=-1cm] {Input Layer};
+
+\node (in1) [draw, rectangle, minimum height = 0.3cm, minimum width = 0.3cm, below=0.2cm of input2.north, anchor=north, align=center] {};
+
+%	\node[bound, align=center, right=4cm of a] (b) {AR500};
+%  \node[bound, below=1.2cm of b.south, anchor=north, align=center] (struct3) {9-5-5};
+
+\node (hid1) [neuron, right of=input, yshift=0.8cm] {};
+\node (hid2) [neuron, below of=hid1, yshift=1.5cm] {};
+\node (hid3) [neuron, below of=hid2, yshift=1.5cm] {};
+\node (dot1) [dot, below of=hid3, yshift=1.5cm] {};
+\node (dot2) [dot, below of=dot1, yshift=2.5cm] {};
+\node (dot3) [dot, below of=dot2, yshift=2.5cm] {};
+\node (hid4) [neuron, below of=dot3, yshift=1.5cm] {};
+\node (in11) [draw, circle, inner sep=1pt, draw=black, fill=black, below=0.2cm of hid1.north, anchor=north, align=center] {};
+\node (in12) [draw, circle, inner sep=1pt, draw=black, fill=black, below=0.2cm of hid2.north, anchor=north, align=center] {};
+\node (in13) [draw, circle, inner sep=1pt, draw=black, fill=black, below=0.2cm of hid3.north, anchor=north, align=center] {};
+\node (in14) [draw, circle, inner sep=1pt, draw=black, fill=black, below=0.2cm of hid4.north, anchor=north, align=center] {};
+\node (in111) [draw, rectangle, minimum height = 0.3cm, minimum width = 0.3cm, left=0.2cm of hid1.330, anchor=east, align=center] {};
+\node (in121) [draw, rectangle, minimum height = 0.3cm, minimum width = 0.3cm, left=0.2cm of hid2.330, anchor=east, align=center] {};
+\node (in131) [draw, rectangle, minimum height = 0.3cm, minimum width = 0.3cm, left=0.2cm of hid3.330, anchor=east, align=center] {};
+\node (in141) [draw, rectangle, minimum height = 0.3cm, minimum width = 0.3cm, left=0.2cm of hid4.330, anchor=east, align=center] {};
+
+
+\node (hid21) [neuron, right of=hid1] {};
+\node (hid22) [neuron, below of=hid21, yshift=1.5cm] {};
+\node (hid23) [neuron, below of=hid22, yshift=1.5cm] {};
+\node (dot21) [dot, below of=hid23, yshift=1.5cm] {};
+\node (dot22) [dot, below of=dot21, yshift=2.5cm] {};
+\node (dot23) [dot, below of=dot22, yshift=2.5cm] {};
+\node (hid24) [neuron, below of=dot23, yshift=1.5cm] {};
+\node (in21) [draw, circle, inner sep=1pt, draw=black, fill=black, left=0.2cm of hid21.330, anchor=east, align=center] {};
+\node (in22) [draw, circle, inner sep=1pt, draw=black, fill=black, left=0.2cm of hid22.330, anchor=east, align=center] {};
+\node (in23) [draw, circle, inner sep=1pt, draw=black, fill=black, left=0.2cm of hid23.330, anchor=east, align=center] {};
+\node (in24) [draw, circle, inner sep=1pt, draw=black, fill=black, left=0.2cm of hid24.330, anchor=east, align=center] {};
+
+\node (in211) [draw, rectangle, minimum height = 0.3cm, minimum width = 0.3cm, left=0.2cm of hid21.25, anchor=east, align=center] {};
+\node (in221) [draw, rectangle, minimum height = 0.3cm, minimum width = 0.3cm, left=0.2cm of hid22.25, anchor=east, align=center] {};
+\node (in231) [draw, rectangle, minimum height = 0.3cm, minimum width = 0.3cm, left=0.2cm of hid23.25, anchor=east, align=center] {};
+\node (in241) [draw, rectangle, minimum height = 0.3cm, minimum width = 0.3cm, left=0.2cm of hid24.25, anchor=east, align=center] {};
+
+
+
+\node (inputtext) [mytext, above of=hid1,yshift=-1.8cm] {Patch Extraction};
+\node (output) [neuron, right of=input2, xshift=7.5cm] {};
+\node (nonlinear) [mytext, above of=hid21,yshift=-1.8cm] {Non-Linear Mapping};
+\node (recon) [mytext, right of=nonlinear, xshift=1.5cm] {Reconstruction};
+\node (end) [inv, right of=output] {};
+\node (output1) [draw, circle, inner sep=1pt, draw=black, fill=black, left=0.2cm of output.25, anchor=east, align=center] {};
+
+
+
+%\draw [arrow] -- (input);
+%\draw [arrow] (input) -- (hid1);
+%\draw [arrow] (input) -- (hid2);
+%\draw [arrow] (input) -- (hid3);
+%\draw [arrow] (input) -- (hid4);
+\draw [arrow] (in1.east) -- (in11.west);
+\draw [arrow] (in1.east) -- (in12.west);
+\draw [arrow] (in1.east) -- (in13.west);
+\draw [arrow] (in1.east) -- (in14.west);
+%\draw [arrow] (input3) -- (hid1);
+%\draw [arrow] (input3) -- (hid2);
+%\draw [arrow] (input3) -- (hid3);
+%draw [arrow] (input3) -- (hid4);
+\draw [arrow] (in111.east) -- (in21.west);
+\draw [arrow] (in121.east) -- (in21.west);
+\draw [arrow] (in131.east) -- (in21.west);
+\draw [arrow] (in141.east) -- (in21.west);
+\draw [arrowred] (in111.east) -- (in22.west);
+\draw [arrowred] (in121.east) -- (in22.west);
+\draw [arrowred] (in131.east) -- (in22.west);
+\draw [arrowred] (in141.east) -- (in22.west);
+\draw [arrow] (in111.east) -- (in23.west);
+\draw [arrow] (in121.east) -- (in23.west);
+\draw [arrow] (in131.east) -- (in23.west);
+\draw [arrow] (in141.east) -- (in23.west);
+\draw [arrow] (in111.east) -- (in24.west);
+\draw [arrow] (in121.east) -- (in24.west);
+\draw [arrow] (in131.east) -- (in24.west);
+\draw [arrow] (in141.east) -- (in24.west);
+
+\draw [arrow] (in211.east) -- (output1.west);
+\draw [arrow] (in221.east) -- (output1.west);
+\draw [arrow] (in231.east) -- (output1.west);
+\draw [arrow] (in241.east) -- (output1.west);
+
+
+
+
+
+%\draw [arrow] (hid1) -- node[anchor=south] {$w_2$}(hid2);
+%\draw [arrow] (hid2) -- node[anchor=south] {$w_3$}(output);
+%\draw [arrow] (output) -- (end);
+%\draw [arrow] (start) -- node[anchor=south] {Input 1}(input);
+%\draw [arrow] (start2) -- node[anchor=south] {Input 2}(input2);
+%\draw [arrow] (start3) -- node[anchor=south] {Input 3}(input3);
+
+\end{tikzpicture}
+%!tikz source end
+
+\end{document}
