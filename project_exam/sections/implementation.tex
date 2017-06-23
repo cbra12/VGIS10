@@ -193,3 +193,38 @@
     \end{columns}
 \end{frame}
 
+
+
+\begin{frame}{Ensemble Combination}{Average Ensemble}
+\begin{columns}
+    \column{0.5\textwidth}
+        \begin{block}{Averaging detections}
+        \begin{itemize}
+            \item For each factor measure in relation to training data
+            \item Pick appropriate model detection
+            \item Average 5 detections
+        \end{itemize}
+    \end{block}
+    \column{0.5\textwidth}
+        \begin{figure}
+            \includegraphics[width=1.0 \textwidth]{figs/JPEGCompressiondistred.pdf}
+        \end{figure}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Ensemble Combination}{Weighted Average Ensemble}
+\begin{columns}
+    \column{0.5\textwidth}
+        \begin{block}{Weighted averaging detections}
+        \begin{itemize}
+            \item For each factor and network measure in relation to training data
+            \item Weigh detection according to a normalised measurement
+            \item Average up to 10 weighted detections
+        \end{itemize}
+    \end{block}
+    \column{0.5\textwidth}
+        \begin{figure}
+            \includegraphics[width=1.0 \textwidth]{figs/JPEGCompressiondistred.pdf}
+        \end{figure}
+    \end{columns}
+\end{frame}

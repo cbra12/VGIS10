@@ -1,0 +1,110 @@
+\section{Results}
+% motivation for creating this theme
+\begin{frame}{Results}{}
+\begin{columns}
+    \column{0.5\textwidth}
+    \begin{block}{Ensemble strategies}
+    \begin{itemize}
+        \item No improvement vs baseline
+    \end{itemize}  
+\end{block}  
+    \column{0.5\textwidth}
+    \begin{table}[h]
+    \centering
+    \begin{tabular}{|l|l|}
+    \hline
+    \textbf{Method}           & \textbf{AP} \\ \hline
+    Average          & 79.21 \\ \hline
+    Weighted Average & 79.13 \\ \hline
+    Baseline         & \textbf{79.59} \\ \hline
+    \end{tabular}
+    \end{table}   
+
+\end{columns}
+\end{frame}
+
+\begin{frame}{Results}{}
+\begin{columns}
+    \column{0.5\textwidth}
+    \begin{block}{Ensemble strategies}
+    \begin{itemize}
+        \item Some strategies may not be suitable for factors
+        \begin{itemize}
+            \item IQA: weighted average
+            \item Object resolution: average
+        \end{itemize}    
+    \end{itemize}  
+    
+
+\end{block} 
+\column{0.5\textwidth} 
+    \begin{table}[h]
+    \centering
+    \caption{Average}
+    \begin{tabular}{|l|l|}
+    \hline
+    \textbf{Ensemble Members}        & \textbf{AP (\%)} \\ \hline
+    Image Quality & 78.15\% \\ \hline
+    Resolution    & 78.13\% \\ \hline
+    \end{tabular}
+    \end{table}
+
+    \begin{table}[h]
+    \centering
+    \caption{Weighted average}
+    \begin{tabular}{|l|l|}
+    \hline
+    \textbf{Ensemble Members}        & \textbf{AP (\%)} \\ \hline
+    Image Quality & 78.44\% \\ \hline
+    Resolution    & 75.00\% \\ \hline
+    \end{tabular}
+    \end{table}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}{Results}{}
+    \begin{block}{Ensemble strategies}
+    \begin{itemize}
+        \item Combining with both strategies  
+    \end{itemize}  
+\end{block} 
+    \begin{table}[h]
+    \centering
+    \begin{tabular}{|l|l|}
+    \hline
+    \textbf{Ensemble Members}                  & \textbf{AP (\%)} \\ \hline
+    Image Quality$_{WAvg}$ / Resolution$_{Avg}$ & \textbf{79.90\%} \\ \hline
+    Image Quality$_{Avg}$ / Resolution$_{WAvg}$ & 78.71\% \\ \hline
+    Baseline                          & 79.59\% \\ \hline
+    \end{tabular}
+    \end{table}
+\end{frame}
+
+\begin{frame}{Results}{}
+    \begin{block}{Ensemble strategies}
+    \begin{itemize}
+        \item Adding the baseline model
+        \item All baseline detection weighted 1.0
+        \item 0.54 AP improvement
+    \end{itemize}  
+\end{block} 
+    \begin{table}[h]
+    \centering
+    \begin{tabular}{|l|l|}
+    \hline
+    \textbf{Ensemble Members}                  & \textbf{AP (\%)} \\ \hline
+    Image Quality$_{WAvg}$ / Resolution$_{Avg}$  & 79.90\% \\ \hline
+    Image Quality$_{WAvg}$ / Resolution$_{Avg}$ $_{base}$ & \textbf{80.15\%} \\ \hline
+    Image Quality$_{Avg}$ / Resolution$_{WAvg}$ & 78.71\% \\ \hline
+    Image Quality$_{Avg}$ / Resolution$_{WAvg}$ $_{base}$ & 79.10\% \\ \hline
+    Baseline                          & 79.59\% \\ \hline
+    \end{tabular}
+    \end{table}
+\end{frame}
+
+\begin{frame}{Results}{}
+    \begin{block}{Demo}
+
+\end{block} 
+\end{frame}
