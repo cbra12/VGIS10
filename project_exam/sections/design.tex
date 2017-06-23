@@ -1,34 +1,46 @@
-\section{Design}
-\begin{frame}{Design}{}
-    \begin{block}{}
-        Combining classic and CNN
-        \begin{itemize}
-            \item VideoFeed $\rightarrow$ Extract relevant frames $\rightarrow$ ROI $\rightarrow$ Apply Classic SR $\rightarrow$ Apply CNN SR $\rightarrow$ Output
-        \end{itemize}
-
-        Classic method
-        \begin{itemize}
-            \item Motion Estimation - SIFT
-            \item MAP SR
-        \end{itemize}
-
-        Other Options
-        \begin{itemize}
-            \item Combining/complementing deep methods
-        \end{itemize}
-    \end{block}
-\end{frame}
-
-\begin{frame}{Timeline}{}
-    \begin{block}{}
+\section{Ensemble Design}
+% motivation for creating this theme
+\begin{frame}{Designing the Ensemble}{R-FCN ResNet-101}
+    \begin{block}{Overview}
     \begin{itemize}
-        \item Project design \& course miniprojects - Weeks 12-16
-        \item Implementation - Weeks 16-19 
-        \item Evaluation - Week 19
-        \item Conclusion, discussion and final results - Week 20
-        \item Finish report and final corrections - Week 21
-        \item Hand-in 26/5
+        \item Ensemble of R-FCNs with ResNet-101
+        \item Data sampling \& selection
+        \begin{itemize}
+            \item Object resolution
+            \item Image quality
+        \end{itemize}
+        \item Training member classifiers
+        \begin{itemize}
+            \item Kept constant
+        \end{itemize}
+        \item Combining ensemble members
+        \begin{itemize}
+            \item Average
+            \item Weighted Average
+        \end{itemize}       
     \end{itemize}
 \end{block}
 \end{frame}
 
+\begin{frame}{Designing the Ensemble}{Pipeline}
+    \begin{figure}
+        \includegraphics[width=0.8 \textwidth]{figs/ensembledesign.pdf}
+    \end{figure}
+\end{frame}
+
+\begin{frame}{Training R-FCNs}{Ensemble Members}
+\begin{columns}
+    \column{0.5\textwidth}
+        \begin{block}{Multi-step training}
+        \begin{itemize}
+            \item Train classifier with proposal inputs
+            \item Ensure ensemble members infer from same input
+            \item Simplify training process
+        \end{itemize}
+    \end{block}
+    \column{0.5\textwidth}
+        \begin{figure}
+            \includegraphics[width=1.0 \textwidth]{figs/4step-crop.pdf}
+        \end{figure}
+    \end{columns}
+\end{frame}
