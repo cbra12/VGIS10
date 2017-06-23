@@ -124,19 +124,72 @@
     \end{columns}
 \end{frame}
 
-\begin{frame}{Training R-FCNs}{Ensemble Members}
+\begin{frame}{Image Quality}{Training Members}
 \begin{columns}
     \column{0.5\textwidth}
-        \begin{block}{Multi-step training}
+        \begin{block}{Deep IQA}
         \begin{itemize}
-            \item Train classifier with proposal inputs
-            \item Ensure ensemble members infer from same input
-            \item Simplify training process
+            \item VGG-inspired NR-IQA
+            \item Trained on LIVE IQA dataset
+            \item 5 models trained on distortion types
+            \begin{itemize}
+                \item Gaussian blur, white noise, JPEG compression, JP2K compression, fast fading bit errors
+            \end{itemize}
         \end{itemize}
     \end{block}
     \column{0.5\textwidth}
         \begin{figure}
-            \includegraphics[width=1.0 \textwidth]{figs/4step-crop.pdf}
+            \includegraphics[width=0.5 \textwidth]{figs/img173.pdf}
+        \end{figure}
+        \begin{figure}
+            \includegraphics[width=0.5 \textwidth]{figs/img11.pdf}
         \end{figure}
     \end{columns}
 \end{frame}
+
+\begin{frame}{Image Quality}{Training Members}
+\vspace{-0.5cm}
+\begin{columns}
+
+    \column{0.5\textwidth}
+    \begin{figure}
+        \includegraphics[width=0.5 \textwidth]{figs/WhiteNoisedistred.pdf}
+    \end{figure}
+    \vspace{-0.5cm}
+    \begin{figure}
+        \includegraphics[width=0.5 \textwidth]{figs/GaussianBlurdistred.pdf}
+    \end{figure}
+    \vspace{-0.5cm}
+    \begin{figure}
+        \includegraphics[width=0.5 \textwidth]{figs/JPEGCompressiondistred.pdf}
+    \end{figure}
+
+    \column{0.5\textwidth}
+    \vspace{-0.5cm}
+      \begin{figure}
+        \includegraphics[width=0.5 \textwidth]{figs/JP2KCompressiondistred.pdf}
+    \end{figure}
+    \vspace{-0.5cm}
+    \begin{figure}
+        \includegraphics[width=0.5 \textwidth]{figs/FastFadingdistred.pdf}
+    \end{figure}
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Ensemble Combination}{General Overview}
+\begin{columns}
+    \column{0.5\textwidth}
+        \begin{block}{Combining detections}
+        \begin{itemize}
+            \item 5 ensemble factors, 10 ensemble members
+            \item Each factor weighted equally
+            \item Combine bounding box and confidence
+        \end{itemize}
+    \end{block}
+    \column{0.5\textwidth}
+        \begin{figure}
+            \includegraphics[width=1.0 \textwidth]{figs/ensemble.pdf}
+        \end{figure}
+    \end{columns}
+\end{frame}
+
