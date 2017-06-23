@@ -1,0 +1,142 @@
+\section{Implementation}
+% motivation for creating this theme
+\begin{frame}{Designing the Ensemble}{R-FCN ResNet-101}
+    \begin{block}{Overview}
+    \begin{itemize}
+        \item Ensemble of R-FCNs with ResNet-101
+        \item Data sampling \& selection
+        \begin{itemize}
+            \item Object resolution
+            \item Image quality
+        \end{itemize}
+        \item Training member classifiers
+        \begin{itemize}
+            \item Kept constant
+        \end{itemize}
+        \item Combining ensemble members
+        \begin{itemize}
+            \item Average
+            \item Weighted Average
+        \end{itemize}       
+    \end{itemize}
+\end{block}
+\end{frame}
+
+\begin{frame}{Object Resolution}{Training Members}
+        \begin{block}{Subset creation}
+        \begin{itemize}
+            \item Ground truth bounding box area
+            \begin{itemize}
+                \item 19,205.5 pixels
+            \end{itemize}
+            \item RPN proposals bounding box area
+            \begin{itemize}
+                \item 4,684 pixels
+            \end{itemize}
+            \item R-FCN trained with proposals inputs
+            \begin{itemize}
+                \item RPN finds examples
+            \end{itemize}
+        \end{itemize}
+    \end{block}
+\end{frame}
+
+\begin{frame}{Object Resolution}{Training Members}
+\begin{columns}
+    \column{0.3\textwidth}
+        \begin{figure}
+            \includegraphics[width=1.4 \textwidth]{figs/trainvalhistred.pdf}
+        \end{figure}
+
+ \column{0.7\textwidth}
+        \begin{table}[h]
+            \centering
+            \begin{tabular}{|l|l|l|}
+                \hline
+                \textbf{Data} & \textbf{RPN$_{small}$} & \textbf{RPN$_{larger}$} \\ \hline
+                Ground Truth & 19,992    & 60,116     \\ 
+                Background   & 4,969,369 & 4,929,297  \\ \hline
+                Total        & 4,989,361 & 4,989,413  \\ \hline
+            \end{tabular}
+        \end{table}
+
+        \begin{table}[h]
+            \centering  
+            \begin{tabular}{|l|l|l|}
+                \hline
+                \textbf{Data} & \textbf{RPN$_{small}$} & \textbf{RPN$_{larger}$} \\ \hline
+                Ground Truth & 40,058    & 40,058     \\ 
+                Background   & 3,528,370 & 6,370,859  \\ \hline
+                Total        & 3,568,428 & 6,410,917  \\ \hline
+            \end{tabular}
+        \end{table}
+        \end{columns}
+\end{frame}
+
+\begin{frame}{Object Resolution}{Training Members}
+\begin{columns}
+    \column{0.3\textwidth}
+      \begin{block}{Evaluating experts}
+        \begin{itemize}
+            \item Initial results promising
+        \end{itemize}
+    \end{block}
+       
+    \column{0.7\textwidth}
+
+        
+        \begin{table}[h]
+        \centering
+        \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Train Data} & \textbf{AP}      \\ \hline
+        RPN$_{small}$      & \textbf{55.00\%} \\ \hline
+        RPN$_{larger}$      & 20.92\% \\ \hline
+        07+12        & 43.80\% \\ \hline
+        \end{tabular}
+        \end{table}
+
+        \begin{table}[h]
+        \centering
+        \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Train Data} & \textbf{AP}      \\ \hline
+        RPN$_{small}$      & 21.28\% \\ \hline
+        RPN$_{larger}$      & \textbf{81.81\%} \\ \hline
+        07+12        & 75.14\% \\ \hline
+        \end{tabular}
+        \end{table}
+
+
+        \begin{table}[h]
+        \centering
+        \begin{tabular}{|l|l|}
+        \hline
+        \textbf{Train Data} & \textbf{AP}      \\ \hline
+        RPN$_{small}$      & 46.74\% \\ \hline
+        RPN$_{larger}$      & 62.48\% \\ \hline
+        07+12        & \textbf{79.59\%} \\ \hline
+        \end{tabular}
+        \end{table}
+
+
+      
+    \end{columns}
+\end{frame}
+
+\begin{frame}{Training R-FCNs}{Ensemble Members}
+\begin{columns}
+    \column{0.5\textwidth}
+        \begin{block}{Multi-step training}
+        \begin{itemize}
+            \item Train classifier with proposal inputs
+            \item Ensure ensemble members infer from same input
+            \item Simplify training process
+        \end{itemize}
+    \end{block}
+    \column{0.5\textwidth}
+        \begin{figure}
+            \includegraphics[width=1.0 \textwidth]{figs/4step-crop.pdf}
+        \end{figure}
+    \end{columns}
+\end{frame}
