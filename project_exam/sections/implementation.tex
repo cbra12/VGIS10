@@ -1,27 +1,4 @@
 \section{Implementation}
-% motivation for creating this theme
-\begin{frame}{Designing the Ensemble}{R-FCN ResNet-101}
-    \begin{block}{Overview}
-    \begin{itemize}
-        \item Ensemble of R-FCNs with ResNet-101
-        \item Data sampling \& selection
-        \begin{itemize}
-            \item Object resolution
-            \item Image quality
-        \end{itemize}
-        \item Training member classifiers
-        \begin{itemize}
-            \item Kept constant
-        \end{itemize}
-        \item Combining ensemble members
-        \begin{itemize}
-            \item Average
-            \item Weighted Average
-        \end{itemize}       
-    \end{itemize}
-\end{block}
-\end{frame}
-
 \begin{frame}{Object Resolution}{Training Members}
         \begin{block}{Subset creation}
         \begin{itemize}
@@ -90,9 +67,9 @@
         \begin{tabular}{|l|l|}
         \hline
         \textbf{Train Data} & \textbf{AP}      \\ \hline
-        RPN$_{small}$      & \textbf{55.00\%} \\ \hline
-        RPN$_{larger}$      & 20.92\% \\ \hline
-        07+12        & 43.80\% \\ \hline
+        RPN$_{small}$      & \textbf{55.00} \\ \hline
+        RPN$_{larger}$      & 20.92 \\ \hline
+        07+12        & 43.80 \\ \hline
         \end{tabular}
         \end{table}
 
@@ -101,9 +78,9 @@
         \begin{tabular}{|l|l|}
         \hline
         \textbf{Train Data} & \textbf{AP}      \\ \hline
-        RPN$_{small}$      & 21.28\% \\ \hline
-        RPN$_{larger}$      & \textbf{81.81\%} \\ \hline
-        07+12        & 75.14\% \\ \hline
+        RPN$_{small}$      & 21.28 \\ \hline
+        RPN$_{larger}$      & \textbf{81.81} \\ \hline
+        07+12        & 75.14 \\ \hline
         \end{tabular}
         \end{table}
 
@@ -113,9 +90,9 @@
         \begin{tabular}{|l|l|}
         \hline
         \textbf{Train Data} & \textbf{AP}      \\ \hline
-        RPN$_{small}$      & 46.74\% \\ \hline
-        RPN$_{larger}$      & 62.48\% \\ \hline
-        07+12        & \textbf{79.59\%} \\ \hline
+        RPN$_{small}$      & 46.74 \\ \hline
+        RPN$_{larger}$      & 62.48 \\ \hline
+        07+12        & \textbf{79.59} \\ \hline
         \end{tabular}
         \end{table}
 

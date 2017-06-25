@@ -43,9 +43,9 @@
     \caption{Average}
     \begin{tabular}{|l|l|}
     \hline
-    \textbf{Ensemble Members}        & \textbf{AP (\%)} \\ \hline
-    Image Quality & 78.15\% \\ \hline
-    Resolution    & 78.13\% \\ \hline
+    \textbf{Ensemble Members}        & \textbf{AP} \\ \hline
+    Image Quality & 78.15 \\ \hline
+    Resolution    & 78.13 \\ \hline
     \end{tabular}
     \end{table}
 
@@ -96,11 +96,11 @@
     \begin{tabular}{|l|l|l|}
     \hline
     \textbf{Ensemble Members}                  & \textbf{AP$_{report}$} & \textbf{AP$_{new}$} \\ \hline
-    Image Quality$_{WAvg}$ / Resolution$_{Avg}$  & 79.90\% & 79.83 \\ \hline
-    Image Quality$_{WAvg}$ / Resolution$_{Avg}$ $_{base}$ & \textbf{80.15\%} & 80.09 \\ \hline
-    Image Quality$_{Avg}$ / Resolution$_{WAvg}$ & 78.71\% & 79.17 \\ \hline
-    Image Quality$_{Avg}$ / Resolution$_{WAvg}$ $_{base}$ & 79.10\% & 79.54\\ \hline
-    Baseline                          & 79.59\% & -\\ \hline
+    Image Quality$_{WAvg}$ / Resolution$_{Avg}$  & 79.90 & 79.83 \\ \hline
+    Image Quality$_{WAvg}$ / Resolution$_{Avg}$ $_{base}$ & \textbf{80.15} & 80.09 \\ \hline
+    Image Quality$_{Avg}$ / Resolution$_{WAvg}$ & 78.71 & 79.17 \\ \hline
+    Image Quality$_{Avg}$ / Resolution$_{WAvg}$ $_{base}$ & 79.10 & 79.54\\ \hline
+    Baseline                          & 79.59 & -\\ \hline
     \end{tabular}
     \end{table}
 \end{frame}
@@ -126,22 +126,22 @@
         \end{block}
     }
     \only<4>{
-        \begin{block}{Baseline added}
+        \begin{block}{Combined Gaussian blur}
         
         \end{block}
     }
     \only<5>{
-        \begin{block}{Fast fading}
+        \begin{block}{Baseline added}
         
         \end{block}
     }
     \only<6>{
-        \begin{block}{Gaussian blur}
+        \begin{block}{Fast fading}
         
         \end{block}
     }
     \only<7>{
-        \begin{block}{JP2k}
+        \begin{block}{JP2K}
         
         \end{block}
     }
@@ -158,6 +158,20 @@
     \only<10>{
         \begin{block}{Final combined detection}
         
+        \end{block}
+    }
+    \only<11>{
+        \begin{block}{Final combined detection}
+        
+        \end{block}
+    }
+    \only<12>{
+        \begin{block}{Intersection-over-union}
+        \begin{itemize}
+            \item {\color{green}Ground truth}
+            \item {\color{red}Baseline: 0.80}
+            \item {\color{blue}Ensemble: 0.85}
+        \end{itemize}
         \end{block}
     }
     
@@ -211,6 +225,16 @@
     \only<10>{
         \begin{figure}
             \includegraphics[width=0.9\textwidth]{figs/demo/000069_detfinal.jpg}
+        \end{figure}
+    }
+    \only<11>{
+        \begin{figure}
+            \includegraphics[width=0.9\textwidth]{figs/demo/000069_detfinal2.jpg}
+        \end{figure}
+    }
+    \only<12>{
+        \begin{figure}
+            \includegraphics[width=0.9\textwidth]{figs/demo/000069_detfinal2.jpg}
         \end{figure}
     }
 
