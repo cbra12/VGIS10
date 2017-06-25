@@ -2,30 +2,30 @@
 % motivation for creating this theme
 \begin{frame}{Results}{}
 \begin{columns}
-    \column{0.5\textwidth}
+    \column{0.3\textwidth}
     \begin{block}{Ensemble strategies}
     \begin{itemize}
         \item No improvement vs baseline
     \end{itemize}  
 \end{block}  
-    \column{0.5\textwidth}
-    \begin{table}[h]
+    \column{0.7\textwidth}
+    \begin{table}[]
     \centering
-    \begin{tabular}{|l|l|}
+    \begin{tabular}{|l|l|l|}
     \hline
-    \textbf{Method}           & \textbf{AP} \\ \hline
-    Average          & 79.21 \\ \hline
-    Weighted Average & 79.13 \\ \hline
-    Baseline         & \textbf{79.59} \\ \hline
+    \textbf{Method} & \textbf{AP$_{report}$} & \textbf{AP$_{new}$} \\ \hline
+    Average          & 79.21     & 79.45  \\ \hline
+    Weighted Average & 79.13     & 79.47  \\ \hline
+    Baseline         & \textbf{79.59}     & -  \\ \hline
     \end{tabular}
-    \end{table}   
+    \end{table} 
 
 \end{columns}
 \end{frame}
 
 \begin{frame}{Results}{}
 \begin{columns}
-    \column{0.5\textwidth}
+    \column{0.3\textwidth}
     \begin{block}{Ensemble strategies}
     \begin{itemize}
         \item Some strategies may not be suitable for factors
@@ -37,7 +37,7 @@
     
 
 \end{block} 
-\column{0.5\textwidth} 
+\column{0.7\textwidth} 
     \begin{table}[h]
     \centering
     \caption{Average}
@@ -49,16 +49,17 @@
     \end{tabular}
     \end{table}
 
-    \begin{table}[h]
+    \begin{table}[]
     \centering
     \caption{Weighted average}
-    \begin{tabular}{|l|l|}
+    \begin{tabular}{|l|l|l|}
     \hline
-    \textbf{Ensemble Members}        & \textbf{AP (\%)} \\ \hline
-    Image Quality & 78.44\% \\ \hline
-    Resolution    & 75.00\% \\ \hline
+     \textbf{Ensemble Members} &  \textbf{AP$_{report}$} & \textbf{AP$_{new}$} \\ \hline
+    Image Quality                                              & 78.44     & 79.04  \\ \hline
+    Weighted Average                                           & 75.00     & 77.84  \\ \hline
     \end{tabular}
     \end{table}
+
 \end{columns}
 \end{frame}
 
@@ -69,14 +70,15 @@
         \item Combining with both strategies  
     \end{itemize}  
 \end{block} 
-    \begin{table}[h]
+
+    \begin{table}[]
     \centering
-    \begin{tabular}{|l|l|}
+    \begin{tabular}{|l|l|l|}
     \hline
-    \textbf{Ensemble Members}                  & \textbf{AP (\%)} \\ \hline
-    Image Quality$_{WAvg}$ / Resolution$_{Avg}$ & \textbf{79.90\%} \\ \hline
-    Image Quality$_{Avg}$ / Resolution$_{WAvg}$ & 78.71\% \\ \hline
-    Baseline                          & 79.59\% \\ \hline
+    \textbf{Ensemble Members} & \textbf{AP$_{report}$} & \textbf{AP$_{new}$} \\ \hline
+    Image Quality$_{WAvg}$ / Resolution$_{Avg}$ avg                                          & 79.90     & 79.83  \\ \hline
+    Image Quality$_{Avg}$ / Resolution$_{WAvg}$                                         & 78.71     & 79.17  \\ \hline
+    Baseline                                                   & 79.59     & -      \\ \hline
     \end{tabular}
     \end{table}
 \end{frame}
@@ -91,20 +93,127 @@
 \end{block} 
     \begin{table}[h]
     \centering
-    \begin{tabular}{|l|l|}
+    \begin{tabular}{|l|l|l|}
     \hline
-    \textbf{Ensemble Members}                  & \textbf{AP (\%)} \\ \hline
-    Image Quality$_{WAvg}$ / Resolution$_{Avg}$  & 79.90\% \\ \hline
-    Image Quality$_{WAvg}$ / Resolution$_{Avg}$ $_{base}$ & \textbf{80.15\%} \\ \hline
-    Image Quality$_{Avg}$ / Resolution$_{WAvg}$ & 78.71\% \\ \hline
-    Image Quality$_{Avg}$ / Resolution$_{WAvg}$ $_{base}$ & 79.10\% \\ \hline
-    Baseline                          & 79.59\% \\ \hline
+    \textbf{Ensemble Members}                  & \textbf{AP$_{report}$} & \textbf{AP$_{new}$} \\ \hline
+    Image Quality$_{WAvg}$ / Resolution$_{Avg}$  & 79.90\% & 79.83 \\ \hline
+    Image Quality$_{WAvg}$ / Resolution$_{Avg}$ $_{base}$ & \textbf{80.15\%} & 80.09 \\ \hline
+    Image Quality$_{Avg}$ / Resolution$_{WAvg}$ & 78.71\% & 79.17 \\ \hline
+    Image Quality$_{Avg}$ / Resolution$_{WAvg}$ $_{base}$ & 79.10\% & 79.54\\ \hline
+    Baseline                          & 79.59\% & -\\ \hline
     \end{tabular}
     \end{table}
 \end{frame}
 
 \begin{frame}{Results}{}
-    \begin{block}{Demo}
+    \begin{columns}
+    \column{0.3\textwidth}
+    \only<1>{
+        \begin{block}{Demonstration of system}
+        \end{block}
+    }
+    \only<2>{
+        \begin{block}{Region proposal}
+        \end{block}
+    }
+    \only<3>{
+        \begin{block}{Gaussian blur detections}
+        \begin{itemize}
+            \item 4.807 deep IQA Gaussian blur
+            \item Lower weight: 1.14
+            \item Upper weight: 0.86
+        \end{itemize}
+        \end{block}
+    }
+    \only<4>{
+        \begin{block}{Baseline added}
+        
+        \end{block}
+    }
+    \only<5>{
+        \begin{block}{Fast fading}
+        
+        \end{block}
+    }
+    \only<6>{
+        \begin{block}{Gaussian blur}
+        
+        \end{block}
+    }
+    \only<7>{
+        \begin{block}{JP2k}
+        
+        \end{block}
+    }
+    \only<8>{
+        \begin{block}{JPEG}
+        
+        \end{block}
+    }
+    \only<9>{
+        \begin{block}{Resolution}
+        
+        \end{block}
+    }
+    \only<10>{
+        \begin{block}{Final combined detection}
+        
+        \end{block}
+    }
+    
+     
+\column{0.7\textwidth} 
+    \only<1>{
+        \begin{figure}
+            \includegraphics[width=0.9\textwidth]{figs/demo/000069_gt.jpg}
+        \end{figure}
+    }
+    \only<2>{
+        \begin{figure}
+            \includegraphics[width=0.9\textwidth]{figs/demo/000069_proposal.jpg}
+        \end{figure}
+    }
+    \only<3>{
+        \begin{figure}
+            \includegraphics[width=0.9\textwidth]{figs/demo/000069_blurboth.jpg}
+        \end{figure}
+    }
+    \only<4>{
+        \begin{figure}
+            \includegraphics[width=0.9\textwidth]{figs/demo/000069_blurboth_comb.jpg}
+        \end{figure}
+    }
+    \only<5>{
+        \begin{figure}
+            \includegraphics[width=0.9\textwidth]{figs/demo/000069_dets3.jpg}
+        \end{figure}
+    }
+    \only<6>{
+        \begin{figure}
+            \includegraphics[width=0.9\textwidth]{figs/demo/000069_dets5.jpg}
+        \end{figure}
+    }
+    \only<7>{
+        \begin{figure}
+            \includegraphics[width=0.9\textwidth]{figs/demo/000069_dets7.jpg}
+        \end{figure}
+    }
+    \only<8>{
+        \begin{figure}
+            \includegraphics[width=0.9\textwidth]{figs/demo/000069_dets9.jpg}
+        \end{figure}
+    }
+    \only<9>{
+        \begin{figure}
+            \includegraphics[width=0.9\textwidth]{figs/demo/000069_dets10.jpg}
+        \end{figure}
+    }
+    \only<10>{
+        \begin{figure}
+            \includegraphics[width=0.9\textwidth]{figs/demo/000069_detfinal.jpg}
+        \end{figure}
+    }
 
-\end{block} 
+\end{columns}
+
 \end{frame}
